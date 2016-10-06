@@ -1,0 +1,151 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-31984
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32620($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       00400470 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32624($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       004001f0 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       004004a0 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+main():
+ap_gps_nav1.c:79
+004001f0 <main> lbu       $5,-32656($28)
+004001f8 <main+0x8> sltiu     $2,$5,7
+00400200 <main+0x10> beq       $2,$0,00400238
+ap_gps_nav1.c:80
+00400208 <main+0x18> lbu       $2,-32651($28)
+ap_gps_nav1.c:81
+00400210 <main+0x20> lbu       $3,-32650($28)
+ap_gps_nav1.c:80
+00400218 <main+0x28> addu      $2,$2,$4
+ap_gps_nav1.c:81
+00400220 <main+0x30> addu      $3,$3,$2
+ap_gps_nav1.c:80
+00400228 <main+0x38> sb        $2,-32651($28)
+ap_gps_nav1.c:81
+00400230 <main+0x40> sb        $3,-32650($28)
+ap_gps_nav1.c:83
+00400238 <main+0x48> sltiu     $2,$5,9
+00400240 <main+0x50> beq       $2,$0,00400460
+00400248 <main+0x58> sll       $2,$5,0x2
+00400250 <main+0x60> lui       $1,4096
+00400258 <main+0x68> addu      $1,$1,$2
+00400260 <main+0x70> lw        $2,0($1)
+00400268 <main+0x78> jr        $2
+ap_gps_nav1.c:85
+00400270 <main+0x80> andi      $3,$4,255
+00400278 <main+0x88> addiu     $2,$0,181
+00400280 <main+0x90> bne       $3,$2,00400460
+ap_gps_nav1.c:87
+00400288 <main+0x98> j         00400410
+ap_gps_nav1.c:89
+00400290 <main+0xa0> andi      $3,$4,255
+00400298 <main+0xa8> addiu     $2,$0,98
+004002a0 <main+0xb0> bne       $3,$2,00400458
+ap_gps_nav1.c:93
+004002a8 <main+0xb8> lbu       $2,-32656($28)
+ap_gps_nav1.c:91
+004002b0 <main+0xc0> sb        $0,-32651($28)
+ap_gps_nav1.c:92
+004002b8 <main+0xc8> sb        $0,-32650($28)
+ap_gps_nav1.c:94
+004002c0 <main+0xd0> j         00400418
+ap_gps_nav1.c:96
+004002c8 <main+0xd8> lbu       $2,-32596($28)
+004002d0 <main+0xe0> beq       $2,$0,004002f8
+ap_gps_nav1.c:98
+004002d8 <main+0xe8> lbu       $2,-32572($28)
+004002e0 <main+0xf0> addiu     $2,$2,1
+004002e8 <main+0xf8> sb        $2,-32572($28)
+ap_gps_nav1.c:99
+004002f0 <main+0x100> j         00400458
+ap_gps_nav1.c:102
+004002f8 <main+0x108> lbu       $2,-32656($28)
+ap_gps_nav1.c:101
+00400300 <main+0x110> sb        $4,-32648($28)
+ap_gps_nav1.c:103
+00400308 <main+0x118> j         00400418
+ap_gps_nav1.c:106
+00400310 <main+0x120> lbu       $2,-32656($28)
+ap_gps_nav1.c:105
+00400318 <main+0x128> sb        $4,-32649($28)
+ap_gps_nav1.c:107
+00400320 <main+0x130> j         00400418
+ap_gps_nav1.c:110
+00400328 <main+0x138> lbu       $2,-32656($28)
+ap_gps_nav1.c:109
+00400330 <main+0x140> andi      $3,$4,255
+00400338 <main+0x148> sh        $3,-32654($28)
+ap_gps_nav1.c:111
+00400340 <main+0x150> j         00400418
+ap_gps_nav1.c:113
+00400348 <main+0x158> lhu       $3,-32654($28)
+00400350 <main+0x160> andi      $2,$4,255
+00400358 <main+0x168> sll       $2,$2,0x8
+00400360 <main+0x170> or        $3,$3,$2
+00400368 <main+0x178> sh        $3,-32654($28)
+ap_gps_nav1.c:114
+00400370 <main+0x180> sltiu     $3,$3,256
+00400378 <main+0x188> beq       $3,$0,00400458
+ap_gps_nav1.c:117
+00400380 <main+0x190> lbu       $2,-32656($28)
+ap_gps_nav1.c:116
+00400388 <main+0x198> sb        $0,-32652($28)
+ap_gps_nav1.c:118
+00400390 <main+0x1a0> j         00400418
+ap_gps_nav1.c:120
+00400398 <main+0x1a8> lbu       $2,-32652($28)
+004003a0 <main+0x1b0> lui       $1,4096
+004003a8 <main+0x1b8> addu      $1,$1,$2
+004003b0 <main+0x1c0> sb        $4,1072($1)
+ap_gps_nav1.c:121
+004003b8 <main+0x1c8> lbu       $2,-32652($28)
+ap_gps_nav1.c:122
+004003c0 <main+0x1d0> lhu       $3,-32654($28)
+ap_gps_nav1.c:121
+004003c8 <main+0x1d8> addiu     $2,$2,1
+004003d0 <main+0x1e0> sb        $2,-32652($28)
+ap_gps_nav1.c:122
+004003d8 <main+0x1e8> andi      $2,$2,255
+004003e0 <main+0x1f0> sltu      $2,$2,$3
+004003e8 <main+0x1f8> bne       $2,$0,00400460
+ap_gps_nav1.c:125
+004003f0 <main+0x200> j         00400410
+ap_gps_nav1.c:127
+004003f8 <main+0x208> lbu       $3,-32651($28)
+00400400 <main+0x210> andi      $2,$4,255
+00400408 <main+0x218> bne       $2,$3,00400458
+ap_gps_nav1.c:129
+00400410 <main+0x220> lbu       $2,-32656($28)
+00400418 <main+0x228> addiu     $2,$2,1
+00400420 <main+0x230> sb        $2,-32656($28)
+ap_gps_nav1.c:130
+00400428 <main+0x238> j         00400460
+ap_gps_nav1.c:132
+00400430 <main+0x240> lbu       $3,-32650($28)
+00400438 <main+0x248> andi      $2,$4,255
+00400440 <main+0x250> bne       $2,$3,00400458
+ap_gps_nav1.c:134
+00400448 <main+0x258> addiu     $2,$0,1
+00400450 <main+0x260> sb        $2,-32596($28)
+ap_gps_nav1.c:141
+00400458 <main+0x268> sb        $0,-32656($28)
+ap_gps_nav1.c:143
+00400460 <main+0x270> jr        $31
+00400468 <main+0x278> nop       
+end_addr

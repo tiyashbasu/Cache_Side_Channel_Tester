@@ -1,0 +1,169 @@
+
+ap_gps_0:     file format ss-coff-little
+
+Disassembly of section .text:
+00400140 <__start> lw $16,0($29)
+00400148 <__start+0x8> lui $28,4097
+00400150 <__start+0x10> addiu $28,$28,-32032
+00400158 <__start+0x18> addiu $17,$29,4
+00400160 <__start+0x20> addiu $3,$17,4
+00400168 <__start+0x28> sll $2,$16,0x2
+00400170 <__start+0x30> addu $3,$3,$2
+00400178 <__start+0x38> addu $18,$0,$3
+00400180 <__start+0x40> sw $18,-32604($28)
+00400188 <__start+0x48> addiu $29,$29,-24
+00400190 <__start+0x50> addu $4,$0,$16
+00400198 <__start+0x58> addu $5,$0,$17
+004001a0 <__start+0x60> addu $6,$0,$18
+004001a8 <__start+0x68> jal 00400380 <__libc_init>
+004001b0 <__start+0x70> sw $0,-32608($28)
+004001b8 <__start+0x78> addu $4,$0,$16
+004001c0 <__start+0x80> addu $5,$0,$17
+004001c8 <__start+0x88> addu $6,$0,$18
+004001d0 <__start+0x90> jal 004002f8 <main>
+004001d8 <__start+0x98> addu $4,$0,$2
+004001e0 <__start+0xa0> jal 004003b0 <exit>
+004001e8 <__start+0xa8> nop 
+uart0_init():
+ap_gps_0.c:68
+int UCSR0C;
+
+/** autopilot/uart.c */
+void uart0_init( void )
+{
+004001f0 <uart0_init> addiu $29,$29,-8
+004001f8 <uart0_init+0x8> sw $30,0($29)
+00400200 <uart0_init+0x10> addu $30,$0,$29
+ap_gps_0.c:70
+  // Baudrate is 38.4k
+  UBRR0H = 0; 
+00400208 <uart0_init+0x18> sw $0,-32584($28)
+ap_gps_0.c:71
+  UBRR0L = 25; // 38.4
+00400210 <uart0_init+0x20> addiu $2,$0,25
+00400218 <uart0_init+0x28> sw $2,-32588($28)
+ap_gps_0.c:74
+  // UBRR0L = 103; //9600
+  // single speed
+  UCSR0A = 0; 
+00400220 <uart0_init+0x30> sw $0,-32576($28)
+ap_gps_0.c:76
+  // Enable receiver and transmitter 
+  UCSR0B = _BV(RXEN) | _BV(TXEN);
+00400228 <uart0_init+0x38> addiu $2,$0,24
+00400230 <uart0_init+0x40> sw $2,-32568($28)
+ap_gps_0.c:78
+  // Set frame format: 8data, 1stop bit
+  UCSR0C = _BV(UCSZ1) | _BV(UCSZ0);
+00400238 <uart0_init+0x48> addiu $2,$0,6
+00400240 <uart0_init+0x50> sw $2,-32580($28)
+ap_gps_0.c:80
+  // Enable uart receive interrupt
+  sbi(UCSR0B, RXCIE ); 
+00400248 <uart0_init+0x58> lw $2,-32568($28)
+00400250 <uart0_init+0x60> ori $3,$2,128
+00400258 <uart0_init+0x68> sw $3,-32568($28)
+ap_gps_0.c:81
+}
+00400260 <uart0_init+0x70> addu $29,$0,$30
+00400268 <uart0_init+0x78> lw $30,0($29)
+00400270 <uart0_init+0x80> addiu $29,$29,8
+00400278 <uart0_init+0x88> jr $31
+gps_init():
+ap_gps_0.c:100
+
+
+/** autopilot/gps_ubx.c */
+#define UNINIT        0
+#define GOT_SYNC1     1
+#define GOT_SYNC2     2
+#define GOT_CLASS     3
+#define GOT_ID        4
+#define GOT_LEN1      5
+#define GOT_LEN2      6
+#define GOT_PAYLOAD   7
+#define GOT_CHECKSUM1 8
+
+volatile int16_t simul_ir_roll;
+volatile int16_t simul_ir_pitch;
+static uint8_t  ubx_status;
+
+void gps_init( void )
+{
+00400280 <gps_init> addiu $29,$29,-24
+00400288 <gps_init+0x8> sw $31,20($29)
+00400290 <gps_init+0x10> sw $30,16($29)
+00400298 <gps_init+0x18> addu $30,$0,$29
+ap_gps_0.c:103
+  // Enable uart
+  //#ifdef SIMUL
+  uart0_init();
+004002a0 <gps_init+0x20> jal 004001f0 <uart0_init>
+ap_gps_0.c:104
+  simul_ir_roll = ir_roll_neutral;
+004002a8 <gps_init+0x28> lhu $2,-32764($28)
+004002b0 <gps_init+0x30> sh $2,-32592($28)
+ap_gps_0.c:105
+  simul_ir_pitch = ir_pitch_neutral;
+004002b8 <gps_init+0x38> lhu $2,-32760($28)
+004002c0 <gps_init+0x40> sh $2,-32572($28)
+ap_gps_0.c:109
+  //#else
+  //uart1_init();
+  //#endif
+  ubx_status = UNINIT;
+004002c8 <gps_init+0x48> sb $0,-32640($28)
+ap_gps_0.c:110
+}
+004002d0 <gps_init+0x50> addu $29,$0,$30
+004002d8 <gps_init+0x58> lw $31,20($29)
+004002e0 <gps_init+0x60> lw $30,16($29)
+004002e8 <gps_init+0x68> addiu $29,$29,24
+004002f0 <gps_init+0x70> jr $31
+main():
+ap_gps_0.c:118
+
+
+//#include "mpi.h"
+
+
+/** autopilot/mainloop.c */
+int main( void ) 
+{
+004002f8 <main> addiu $29,$29,-280
+00400300 <main+0x8> sw $31,276($29)
+00400308 <main+0x10> sw $30,272($29)
+00400310 <main+0x18> addu $30,$0,$29
+ap_gps_0.c:119
+  while( 1 )
+00400318 <main+0x20> nop 
+00400320 <main+0x28> j 00400330 <main+0x38>
+00400328 <main+0x30> j 00400348 <main+0x50>
+ap_gps_0.c:127
+  {
+    //MPI_Comm intercomm;
+    char str[256];
+
+    //if( MPI_Irecv(str, 1, MPI_CHAR, 1, 0, intercomm, NULL) == MPI_SUCCESS
+    //&& str[0] == 'G' )
+    {
+      gps_init();
+00400330 <main+0x38> jal 00400280 <gps_init>
+ap_gps_0.c:128
+      break;
+00400338 <main+0x40> j 00400348 <main+0x50>
+ap_gps_0.c:130
+    }
+  }
+00400340 <main+0x48> j 00400320 <main+0x28>
+ap_gps_0.c:131
+  return 0;
+00400348 <main+0x50> addu $2,$0,$0
+00400350 <main+0x58> j 00400358 <main+0x60>
+ap_gps_0.c:132
+}
+00400358 <main+0x60> addu $29,$0,$30
+00400360 <main+0x68> lw $31,276($29)
+00400368 <main+0x70> lw $30,272($29)
+00400370 <main+0x78> addiu $29,$29,280
+00400378 <main+0x80> jr $31

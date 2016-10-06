@@ -1,0 +1,32 @@
+enter Q
+maximize
+306Y0 + 408Y1 + 203Y2 + 101Y28 + 204Y31 + 306Y3
+st
+Y3 - Y2~3 = 0
+Y31 - Y28~31 = 0
+Y28 - Y2~28 = 0
+Y28 - Y28~31 = 0
+Y2 - Y1~2 - Y0~2 = 0
+Y2 - Y2~3 - Y2~28 = 0
+Y1 - Y0~1 = 0
+Y1 - Y1~2 = 0
+Y0 - Y0~1 - Y0~2 = 0
+Y3 = 1
+Y0 = 1
+end
+change problem milp
+change type Y0 B
+change type Y0~1 B
+change type Y0~2 B
+change type Y1 B
+change type Y1~2 B
+change type Y2 B
+change type Y2~3 B
+change type Y2~28 B
+change type Y28 B
+change type Y28~31 B
+change type Y31 B
+change type Y3 B
+optimize
+display solution variables -
+quit

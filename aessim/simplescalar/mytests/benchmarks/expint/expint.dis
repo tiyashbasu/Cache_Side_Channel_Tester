@@ -1,0 +1,157 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-32032
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32636($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       00400530 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32640($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       004001f0 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       00400560 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+main():
+expint.c:17
+004001f0 <main> addiu     $29,$29,-24
+004001f8 <main+0x8> sw        $31,16($29)
+expint.c:18
+00400200 <main+0x10> addiu     $4,$0,50
+00400208 <main+0x18> addiu     $5,$0,1
+00400210 <main+0x20> jal       00400230 <expint> 
+00400218 <main+0x28> lw        $31,16($29)
+00400220 <main+0x30> addiu     $29,$29,24
+00400228 <main+0x38> jr        $31
+expint():
+expint.c:68
+00400230 <expint> addiu     $9,$0,1000
+expint.c:36
+00400238 <expint+0x8> addiu     $4,$4,-1
+expint.c:68
+00400240 <expint+0x10> beq       $4,$0,00400250
+00400248 <expint+0x18> addiu     $9,$0,2
+expint.c:69
+00400250 <expint+0x20> addiu     $7,$0,1
+expint.c:70
+00400258 <expint+0x28> addiu     $3,$0,1
+00400260 <expint+0x30> blez      $4,00400280
+00400268 <expint+0x38> addiu     $3,$3,1
+00400270 <expint+0x40> slt       $2,$4,$3
+00400278 <expint+0x48> beq       $2,$0,00400268
+expint.c:72
+00400280 <expint+0x50> addiu     $6,$0,1
+00400288 <expint+0x58> addiu     $10,$4,-1
+00400290 <expint+0x60> blez      $10,00400370
+00400298 <expint+0x68> subu      $8,$0,$5
+expint.c:74
+004002a0 <expint+0x70> div       $8,$6
+004002a8 <expint+0x78> bne       $6,$0,004002b8
+004002b0 <expint+0x80> break     00000007
+004002b8 <expint+0x88> addiu     $1,$0,-1
+004002c0 <expint+0x90> bne       $6,$1,004002e0
+004002c8 <expint+0x98> lui       $1,32768
+004002d0 <expint+0xa0> bne       $8,$1,004002e0
+004002d8 <expint+0xa8> break     00000006
+004002e0 <expint+0xb0> mflo      $2
+004002e8 <expint+0xb8> mult      $7,$2
+004002f0 <expint+0xc0> mflo      $7
+expint.c:75
+004002f8 <expint+0xc8> subu      $2,$6,$4
+00400300 <expint+0xd0> subu      $3,$0,$7
+00400308 <expint+0xd8> div       $3,$2
+00400310 <expint+0xe0> bne       $2,$0,00400320
+00400318 <expint+0xe8> break     00000007
+00400320 <expint+0xf0> addiu     $1,$0,-1
+00400328 <expint+0xf8> bne       $2,$1,00400348
+00400330 <expint+0x100> lui       $1,32768
+00400338 <expint+0x108> bne       $3,$1,00400348
+00400340 <expint+0x110> break     00000006
+00400348 <expint+0x118> mflo      $3
+expint.c:72
+00400350 <expint+0x120> addiu     $6,$6,1
+expint.c:76
+00400358 <expint+0x128> addu      $9,$9,$3
+expint.c:72
+00400360 <expint+0x130> slt       $2,$10,$6
+00400368 <expint+0x138> beq       $2,$0,004002a0
+expint.c:78
+00400370 <expint+0x140> subu      $8,$0,$5
+00400378 <expint+0x148> div       $8,$4
+00400380 <expint+0x150> bne       $4,$0,00400390
+00400388 <expint+0x158> break     00000007
+00400390 <expint+0x160> addiu     $1,$0,-1
+00400398 <expint+0x168> bne       $4,$1,004003b8
+004003a0 <expint+0x170> lui       $1,32768
+004003a8 <expint+0x178> bne       $8,$1,004003b8
+004003b0 <expint+0x180> break     00000006
+004003b8 <expint+0x188> mflo      $2
+004003c0 <expint+0x190> mult      $7,$2
+004003c8 <expint+0x198> mflo      $7
+expint.c:80
+004003d0 <expint+0x1a0> mult      $5,$5
+004003d8 <expint+0x1a8> mflo      $2
+004003e0 <expint+0x1b0> sll       $3,$5,0x3
+004003e8 <expint+0x1b8> addu      $3,$2,$3
+004003f0 <expint+0x1c0> addiu     $2,$0,4
+004003f8 <expint+0x1c8> subu      $2,$2,$5
+00400400 <expint+0x1d0> sllv      $3,$3,$2
+00400408 <expint+0x1d8> mult      $7,$3
+00400410 <expint+0x1e0> mflo      $2
+expint.c:83
+00400418 <expint+0x1e8> addiu     $6,$4,1
+expint.c:80
+00400420 <expint+0x1f0> addiu     $3,$2,255
+expint.c:81
+00400428 <expint+0x1f8> addu      $9,$9,$3
+expint.c:83
+00400430 <expint+0x200> slti      $2,$6,101
+00400438 <expint+0x208> beq       $2,$0,00400518
+00400440 <expint+0x210> addu      $5,$0,$8
+expint.c:85
+00400448 <expint+0x218> div       $5,$6
+00400450 <expint+0x220> bne       $6,$0,00400460
+00400458 <expint+0x228> break     00000007
+00400460 <expint+0x230> addiu     $1,$0,-1
+00400468 <expint+0x238> bne       $6,$1,00400488
+00400470 <expint+0x240> lui       $1,32768
+00400478 <expint+0x248> bne       $5,$1,00400488
+00400480 <expint+0x250> break     00000006
+00400488 <expint+0x258> mflo      $2
+00400490 <expint+0x260> mult      $7,$2
+00400498 <expint+0x268> mflo      $7
+expint.c:86
+004004a0 <expint+0x270> subu      $2,$6,$4
+004004a8 <expint+0x278> subu      $3,$0,$7
+004004b0 <expint+0x280> div       $3,$2
+004004b8 <expint+0x288> bne       $2,$0,004004c8
+004004c0 <expint+0x290> break     00000007
+004004c8 <expint+0x298> addiu     $1,$0,-1
+004004d0 <expint+0x2a0> bne       $2,$1,004004f0
+004004d8 <expint+0x2a8> lui       $1,32768
+004004e0 <expint+0x2b0> bne       $3,$1,004004f0
+004004e8 <expint+0x2b8> break     00000006
+004004f0 <expint+0x2c0> mflo      $3
+expint.c:83
+004004f8 <expint+0x2c8> addiu     $6,$6,1
+expint.c:87
+00400500 <expint+0x2d0> addu      $9,$9,$3
+expint.c:83
+00400508 <expint+0x2d8> slti      $2,$6,101
+00400510 <expint+0x2e0> bne       $2,$0,00400448
+expint.c:95
+00400518 <expint+0x2e8> addu      $2,$0,$9
+expint.c:96
+00400520 <expint+0x2f0> jr        $31
+00400528 <expint+0x2f8> nop       
+end_addr

@@ -1,0 +1,12 @@
+main 100002e4 desired_pitch       Type: float 4
+main 10000308 course_pgain       Type: float 4
+main 100002e0 desired_roll       Type: float 4
+main 100003f8 estimator_rad_of_ir       Type: float 4
+main 1000030c max_roll       Type: float 4
+main 10000404 estimator_ir       Type: float 4
+main 10000408 slider_2_val       Type: float 4
+main 10000410 slider_1_val       Type: float 4
+main 100002ec pitch_pgain       Type: float 4
+main 10000418 estimator_rad       Type: float 4
+main 100002e8 roll_pgain       Type: float 4
+main fffffef8 str       Type: array [256 {8 bits}] of char 4

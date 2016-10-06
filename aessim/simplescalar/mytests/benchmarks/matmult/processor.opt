@@ -1,0 +1,1 @@
+-cache:il1 none -cache:dl1 none -cache:il2 none -cache:dl2 none -mem:lat 36 2 -bpred perfect -fetch:ifqsize 4 -ruu:size 8

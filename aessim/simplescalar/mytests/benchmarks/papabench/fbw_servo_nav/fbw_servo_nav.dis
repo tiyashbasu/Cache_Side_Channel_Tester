@@ -1,0 +1,105 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-32032
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32620($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       004003b0 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32624($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       00400278 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       004003e0 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+uart_transmit():
+fbw_servo_nav.c:158
+004001f0 <uart_transmit> lbu       $2,-32601($28)
+004001f8 <uart_transmit+0x8> andi      $2,$2,64
+00400200 <uart_transmit+0x10> beq       $2,$0,00400268
+fbw_servo_nav.c:161
+00400208 <uart_transmit+0x18> lbu       $2,-32655($28)
+00400210 <uart_transmit+0x20> lbu       $5,-32656($28)
+00400218 <uart_transmit+0x28> andi      $2,$2,255
+00400220 <uart_transmit+0x30> addiu     $3,$5,1
+00400228 <uart_transmit+0x38> beq       $2,$3,00400270
+fbw_servo_nav.c:166
+00400230 <uart_transmit+0x40> lui       $1,4096
+00400238 <uart_transmit+0x48> addu      $1,$1,$5
+00400240 <uart_transmit+0x50> sb        $4,976($1)
+fbw_servo_nav.c:167
+00400248 <uart_transmit+0x58> lbu       $2,-32656($28)
+00400250 <uart_transmit+0x60> addiu     $2,$2,1
+00400258 <uart_transmit+0x68> sb        $2,-32656($28)
+fbw_servo_nav.c:168
+00400260 <uart_transmit+0x70> j         00400270
+fbw_servo_nav.c:171
+00400268 <uart_transmit+0x78> sb        $4,-32602($28)
+fbw_servo_nav.c:174
+00400270 <uart_transmit+0x80> jr        $31
+main():
+fbw_servo_nav.c:183
+00400278 <main> addiu     $29,$29,-296
+00400280 <main+0x8> sw        $18,280($29)
+fbw_servo_nav.c:192
+00400288 <main+0x10> addu      $18,$0,$0
+fbw_servo_nav.c:183
+00400290 <main+0x18> sw        $19,284($29)
+fbw_servo_nav.c:192
+00400298 <main+0x20> lui       $19,4096
+004002a0 <main+0x28> addiu     $19,$19,1232
+fbw_servo_nav.c:183
+004002a8 <main+0x30> sw        $31,288($29)
+004002b0 <main+0x38> sw        $17,276($29)
+004002b8 <main+0x40> sw        $16,272($29)
+fbw_servo_nav.c:194
+004002c0 <main+0x48> addu      $4,$0,$0
+004002c8 <main+0x50> jal       004001f0 <uart_transmit> 
+004002d0 <main+0x58> addu      $4,$0,$0
+004002d8 <main+0x60> jal       004001f0 <uart_transmit> 
+fbw_servo_nav.c:196
+004002e0 <main+0x68> addu      $17,$0,$0
+fbw_servo_nav.c:198
+004002e8 <main+0x70> andi      $16,$17,255
+004002f0 <main+0x78> sll       $16,$16,0x1
+004002f8 <main+0x80> addu      $16,$16,$19
+00400300 <main+0x88> lhu       $4,0($16)
+00400308 <main+0x90> srl       $4,$4,0x8
+00400310 <main+0x98> jal       004001f0 <uart_transmit> 
+fbw_servo_nav.c:199
+00400318 <main+0xa0> lbu       $4,0($16)
+fbw_servo_nav.c:196
+00400320 <main+0xa8> addiu     $17,$17,1
+fbw_servo_nav.c:199
+00400328 <main+0xb0> jal       004001f0 <uart_transmit> 
+fbw_servo_nav.c:196
+00400330 <main+0xb8> andi      $2,$17,255
+00400338 <main+0xc0> sltiu     $2,$2,10
+00400340 <main+0xc8> bne       $2,$0,004002e8
+fbw_servo_nav.c:201
+00400348 <main+0xd0> addiu     $4,$0,10
+00400350 <main+0xd8> jal       004001f0 <uart_transmit> 
+fbw_servo_nav.c:192
+00400358 <main+0xe0> addiu     $18,$18,1
+00400360 <main+0xe8> slti      $2,$18,10
+00400368 <main+0xf0> bne       $2,$0,004002c0
+fbw_servo_nav.c:204
+00400370 <main+0xf8> lw        $31,288($29)
+00400378 <main+0x100> lw        $19,284($29)
+00400380 <main+0x108> lw        $18,280($29)
+00400388 <main+0x110> lw        $17,276($29)
+00400390 <main+0x118> lw        $16,272($29)
+00400398 <main+0x120> addiu     $29,$29,296
+004003a0 <main+0x128> jr        $31
+004003a8 <main+0x130> nop       
+end_addr

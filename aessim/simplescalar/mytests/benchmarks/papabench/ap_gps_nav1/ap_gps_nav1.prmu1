@@ -1,0 +1,6 @@
+ap_gps_nav1 [    4166,    67340)
+[ap_gps_nav1] wcrt = 331
+[ap_gps_nav1] latestReq = 67009
+[ap_gps_nav1] latestFin = 67340
+--> [ap_gps_nav2] latestReq = 67340
+--> [ap_gps_nav2] latestReq = 67340

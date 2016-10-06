@@ -1,0 +1,5 @@
+fbw_spi_rcvnav [    7122,    71780)
+[fbw_spi_rcvnav] wcrt = 872
+[fbw_spi_rcvnav] latestReq = 70908
+[fbw_spi_rcvnav] latestFin = 71780
+--> [fbw_main_getnav] latestReq = 71780

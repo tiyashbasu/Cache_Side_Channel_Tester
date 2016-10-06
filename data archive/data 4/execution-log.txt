@@ -1,0 +1,606 @@
+Initializing...Initial objective: 35
+Temperature: 3
+Trial #1. Objective: 38 - Accepted
+Trial #2. Objective: 35 - Accepted
+Trial #3. Objective: 39 - Accepted
+Trial #4. Objective: 41 - Accepted
+Trial #5. Objective: 38
+Trial #6. Objective: 36 - Accepted
+Trial #7. Objective: 38 - Accepted
+Trial #8. Objective: 34
+Trial #9. Objective: 37 - Accepted
+Trial #10. Objective: 45 - Accepted
+Temperature: 2.7
+Trial #1. Objective: 39
+Trial #2. Objective: 40
+Trial #3. Objective: 39
+Trial #4. Objective: 37
+Trial #5. Objective: 40
+Trial #6. Objective: 38
+Trial #7. Objective: 37 - Accepted
+Trial #8. Objective: 40 - Accepted
+Trial #9. Objective: 39
+Trial #10. Objective: 39
+Temperature: 2.43
+Trial #1. Objective: 37
+Trial #2. Objective: 38
+Trial #3. Objective: 39
+Trial #4. Objective: 35
+Trial #5. Objective: 38 - Accepted
+Trial #6. Objective: 40 - Accepted
+Trial #7. Objective: 37 - Accepted
+Trial #8. Objective: 35
+Trial #9. Objective: 36
+Trial #10. Objective: 41 - Accepted
+Temperature: 2.187
+Trial #1. Objective: 38 - Accepted
+Trial #2. Objective: 36 - Accepted
+Trial #3. Objective: 35
+Trial #4. Objective: 42 - Accepted
+Trial #5. Objective: 37
+Trial #6. Objective: 44 - Accepted
+Trial #7. Objective: 36
+Trial #8. Objective: 43 - Accepted
+Trial #9. Objective: 34
+Trial #10. Objective: 39
+Temperature: 1.9683
+Trial #1. Objective: 40
+Trial #2. Objective: 36
+Trial #3. Objective: 39
+Trial #4. Objective: 41 - Accepted
+Trial #5. Objective: 43 - Accepted
+Trial #6. Objective: 42 - Accepted
+Trial #7. Objective: 41 - Accepted
+Trial #8. Objective: 41
+Trial #9. Objective: 38
+Trial #10. Objective: 38
+Temperature: 1.77147
+Trial #1. Objective: 41
+Trial #2. Objective: 44 - Accepted
+Trial #3. Objective: 34
+Trial #4. Objective: 41
+Trial #5. Objective: 37
+Trial #6. Objective: 42 - Accepted
+Trial #7. Objective: 39
+Trial #8. Objective: 40 - Accepted
+Trial #9. Objective: 44 - Accepted
+Trial #10. Objective: 40
+Temperature: 1.59432
+Trial #1. Objective: 37
+Trial #2. Objective: 38
+Trial #3. Objective: 39
+Trial #4. Objective: 38
+Trial #5. Objective: 45 - Accepted
+Trial #6. Objective: 39
+Trial #7. Objective: 38
+Trial #8. Objective: 37
+Trial #9. Objective: 42
+Trial #10. Objective: 37
+Temperature: 1.43489
+Trial #1. Objective: 41
+Trial #2. Objective: 39
+Trial #3. Objective: 41
+Trial #4. Objective: 39
+Trial #5. Objective: 41
+Trial #6. Objective: 34
+Trial #7. Objective: 38
+Trial #8. Objective: 41
+Trial #9. Objective: 41
+Trial #10. Objective: 41
+Temperature: 1.2914
+Trial #1. Objective: 38
+Trial #2. Objective: 38
+Trial #3. Objective: 39
+Trial #4. Objective: 37
+Trial #5. Objective: 41
+Trial #6. Objective: 34
+Trial #7. Objective: 39
+Trial #8. Objective: 39
+Trial #9. Objective: 38
+Trial #10. Objective: 45
+Temperature: 1.16226
+Trial #1. Objective: 37
+Trial #2. Objective: 43
+Trial #3. Objective: 38
+Trial #4. Objective: 39
+Trial #5. Objective: 36
+Trial #6. Objective: 40
+Trial #7. Objective: 38
+Trial #8. Objective: 42
+Trial #9. Objective: 34
+Trial #10. Objective: 40
+Temperature: 1.04604
+Trial #1. Objective: 35
+Trial #2. Objective: 41
+Trial #3. Objective: 39
+Trial #4. Objective: 41
+Trial #5. Objective: 42
+Trial #6. Objective: 38
+Trial #7. Objective: 40
+Trial #8. Objective: 42
+Trial #9. Objective: 40
+Trial #10. Objective: 41
+Temperature: 0.941432
+Trial #1. Objective: 41
+Trial #2. Objective: 39
+Trial #3. Objective: 40
+Trial #4. Objective: 40
+Trial #5. Objective: 41
+Trial #6. Objective: 43 - Accepted
+Trial #7. Objective: 44 - Accepted
+Trial #8. Objective: 40
+Trial #9. Objective: 38
+Trial #10. Objective: 43 - Accepted
+Temperature: 0.847289
+Trial #1. Objective: 39
+Trial #2. Objective: 42
+Trial #3. Objective: 43
+Trial #4. Objective: 38
+Trial #5. Objective: 40
+Trial #6. Objective: 37
+Trial #7. Objective: 42
+Trial #8. Objective: 42
+Trial #9. Objective: 39
+Trial #10. Objective: 41
+Temperature: 0.76256
+Trial #1. Objective: 41
+Trial #2. Objective: 43
+Trial #3. Objective: 40
+Trial #4. Objective: 44 - Accepted
+Trial #5. Objective: 37
+Trial #6. Objective: 38
+Trial #7. Objective: 38
+Trial #8. Objective: 40
+Trial #9. Objective: 38
+Trial #10. Objective: 39
+Temperature: 0.686304
+Trial #1. Objective: 38
+Trial #2. Objective: 42
+Trial #3. Objective: 42
+Trial #4. Objective: 39
+Trial #5. Objective: 40
+Trial #6. Objective: 40
+Trial #7. Objective: 40
+Trial #8. Objective: 43
+Trial #9. Objective: 45 - Accepted
+Trial #10. Objective: 38
+Temperature: 0.617673
+Trial #1. Objective: 36
+Trial #2. Objective: 38
+Trial #3. Objective: 39
+Trial #4. Objective: 42
+Trial #5. Objective: 36
+Trial #6. Objective: 39
+Trial #7. Objective: 41
+Trial #8. Objective: 41
+Trial #9. Objective: 42
+Trial #10. Objective: 36
+Temperature: 0.555906
+Trial #1. Objective: 37
+Trial #2. Objective: 40
+Trial #3. Objective: 41
+Trial #4. Objective: 40
+Trial #5. Objective: 41
+Trial #6. Objective: 44
+Trial #7. Objective: 37
+Trial #8. Objective: 37
+Trial #9. Objective: 36 - Accepted
+Trial #10. Objective: 39 - Accepted
+Temperature: 0.500315
+Trial #1. Objective: 36
+Trial #2. Objective: 34
+Trial #3. Objective: 40 - Accepted
+Trial #4. Objective: 33
+Trial #5. Objective: 44 - Accepted
+Trial #6. Objective: 41
+Trial #7. Objective: 38
+Trial #8. Objective: 38
+Trial #9. Objective: 40
+Trial #10. Objective: 35
+Temperature: 0.450284
+Trial #1. Objective: 38
+Trial #2. Objective: 37
+Trial #3. Objective: 41
+Trial #4. Objective: 44
+Trial #5. Objective: 41
+Trial #6. Objective: 37
+Trial #7. Objective: 38
+Trial #8. Objective: 39
+Trial #9. Objective: 36
+Trial #10. Objective: 34
+Temperature: 0.405256
+Trial #1. Objective: 42
+Trial #2. Objective: 41
+Trial #3. Objective: 36
+Trial #4. Objective: 36
+Trial #5. Objective: 38
+Trial #6. Objective: 42
+Trial #7. Objective: 42
+Trial #8. Objective: 39
+Trial #9. Objective: 35
+Trial #10. Objective: 36
+Temperature: 0.36473
+Trial #1. Objective: 36
+Trial #2. Objective: 38
+Trial #3. Objective: 36
+Trial #4. Objective: 37
+Trial #5. Objective: 41
+Trial #6. Objective: 38
+Trial #7. Objective: 38
+Trial #8. Objective: 38
+Trial #9. Objective: 38
+Trial #10. Objective: 41
+Temperature: 0.328257
+Trial #1. Objective: 36
+Trial #2. Objective: 45 - Accepted
+Trial #3. Objective: 34
+Trial #4. Objective: 43
+Trial #5. Objective: 34
+Trial #6. Objective: 34
+Trial #7. Objective: 38
+Trial #8. Objective: 39
+Trial #9. Objective: 41
+Trial #10. Objective: 40
+Temperature: 0.295431
+Trial #1. Objective: 42
+Trial #2. Objective: 38
+Trial #3. Objective: 41
+Trial #4. Objective: 37
+Trial #5. Objective: 41
+Trial #6. Objective: 38
+Trial #7. Objective: 36
+Trial #8. Objective: 43
+Trial #9. Objective: 39
+Trial #10. Objective: 41
+Temperature: 0.265888
+Trial #1. Objective: 43
+Trial #2. Objective: 35
+Trial #3. Objective: 39
+Trial #4. Objective: 41
+Trial #5. Objective: 41
+Trial #6. Objective: 42
+Trial #7. Objective: 40
+Trial #8. Objective: 39
+Trial #9. Objective: 33
+Trial #10. Objective: 44
+Temperature: 0.239299
+Trial #1. Objective: 37
+Trial #2. Objective: 39
+Trial #3. Objective: 38
+Trial #4. Objective: 39
+Trial #5. Objective: 36
+Trial #6. Objective: 39
+Trial #7. Objective: 37
+Trial #8. Objective: 39
+Trial #9. Objective: 37
+Trial #10. Objective: 40
+Temperature: 0.215369
+Trial #1. Objective: 41
+Trial #2. Objective: 38
+Trial #3. Objective: 36
+Trial #4. Objective: 38
+Trial #5. Objective: 35
+Trial #6. Objective: 42
+Trial #7. Objective: 37
+Trial #8. Objective: 39
+Trial #9. Objective: 41
+Trial #10. Objective: 38
+Temperature: 0.193832
+Trial #1. Objective: 35
+Trial #2. Objective: 43
+Trial #3. Objective: 40
+Trial #4. Objective: 39
+Trial #5. Objective: 38
+Trial #6. Objective: 38
+Trial #7. Objective: 36
+Trial #8. Objective: 42
+Trial #9. Objective: 39
+Trial #10. Objective: 33
+Temperature: 0.174449
+Trial #1. Objective: 39
+Trial #2. Objective: 37
+Trial #3. Objective: 42
+Trial #4. Objective: 41
+Trial #5. Objective: 34
+Trial #6. Objective: 39
+Trial #7. Objective: 39
+Trial #8. Objective: 41
+Trial #9. Objective: 37
+Trial #10. Objective: 40
+Temperature: 0.157004
+Trial #1. Objective: 37
+Trial #2. Objective: 35
+Trial #3. Objective: 42
+Trial #4. Objective: 43
+Trial #5. Objective: 41
+Trial #6. Objective: 34
+Trial #7. Objective: 39
+Trial #8. Objective: 39
+Trial #9. Objective: 42
+Trial #10. Objective: 39
+Temperature: 0.141304
+Trial #1. Objective: 38
+Trial #2. Objective: 36
+Trial #3. Objective: 44
+Trial #4. Objective: 44
+Trial #5. Objective: 38
+Trial #6. Objective: 37
+Trial #7. Objective: 40
+Trial #8. Objective: 39
+Trial #9. Objective: 34
+Trial #10. Objective: 41
+Temperature: 0.127173
+Trial #1. Objective: 40
+Trial #2. Objective: 36
+Trial #3. Objective: 39
+Trial #4. Objective: 43
+Trial #5. Objective: 39
+Trial #6. Objective: 36
+Trial #7. Objective: 41
+Trial #8. Objective: 39
+Trial #9. Objective: 35
+Trial #10. Objective: 36
+Temperature: 0.114456
+Trial #1. Objective: 42
+Trial #2. Objective: 36
+Trial #3. Objective: 38
+Trial #4. Objective: 36
+Trial #5. Objective: 36
+Trial #6. Objective: 36
+Trial #7. Objective: 43
+Trial #8. Objective: 43
+Trial #9. Objective: 39
+Trial #10. Objective: 42
+Temperature: 0.103011
+Trial #1. Objective: 36
+Trial #2. Objective: 40
+Trial #3. Objective: 40
+Trial #4. Objective: 40
+Trial #5. Objective: 41
+Trial #6. Objective: 39
+Trial #7. Objective: 43
+Trial #8. Objective: 40
+Trial #9. Objective: 37
+Trial #10. Objective: 33
+Temperature: 0.0927095
+Trial #1. Objective: 35
+Trial #2. Objective: 36
+Trial #3. Objective: 39
+Trial #4. Objective: 37
+Trial #5. Objective: 42
+Trial #6. Objective: 40
+Trial #7. Objective: 38
+Trial #8. Objective: 44
+Trial #9. Objective: 43
+Trial #10. Objective: 37
+Temperature: 0.0834385
+Trial #1. Objective: 36
+Trial #2. Objective: 40
+Trial #3. Objective: 36
+Trial #4. Objective: 41
+Trial #5. Objective: 35
+Trial #6. Objective: 39
+Trial #7. Objective: 41
+Trial #8. Objective: 36
+Trial #9. Objective: 36
+Trial #10. Objective: 41
+Temperature: 0.0750947
+Trial #1. Objective: 41
+Trial #2. Objective: 36
+Trial #3. Objective: 38
+Trial #4. Objective: 40
+Trial #5. Objective: 38
+Trial #6. Objective: 41
+Trial #7. Objective: 39
+Trial #8. Objective: 42
+Trial #9. Objective: 42
+Trial #10. Objective: 39
+Temperature: 0.0675852
+Trial #1. Objective: 37
+Trial #2. Objective: 36
+Trial #3. Objective: 37
+Trial #4. Objective: 42
+Trial #5. Objective: 39
+Trial #6. Objective: 42
+Trial #7. Objective: 36
+Trial #8. Objective: 37
+Trial #9. Objective: 39
+Trial #10. Objective: 38
+Temperature: 0.0608267
+Trial #1. Objective: 42
+Trial #2. Objective: 40
+Trial #3. Objective: 40
+Trial #4. Objective: 38
+Trial #5. Objective: 38
+Trial #6. Objective: 37
+Trial #7. Objective: 34
+Trial #8. Objective: 39
+Trial #9. Objective: 40
+Trial #10. Objective: 40
+Temperature: 0.054744
+Trial #1. Objective: 41
+Trial #2. Objective: 39
+Trial #3. Objective: 37
+Trial #4. Objective: 39
+Trial #5. Objective: 37
+Trial #6. Objective: 38
+Trial #7. Objective: 36
+Trial #8. Objective: 39
+Trial #9. Objective: 40
+Trial #10. Objective: 39
+Temperature: 0.0492696
+Trial #1. Objective: 43
+Trial #2. Objective: 36
+Trial #3. Objective: 43
+Trial #4. Objective: 41
+Trial #5. Objective: 38
+Trial #6. Objective: 43
+Trial #7. Objective: 42
+Trial #8. Objective: 44
+Trial #9. Objective: 36
+Trial #10. Objective: 37
+Temperature: 0.0443426
+Trial #1. Objective: 38
+Trial #2. Objective: 37
+Trial #3. Objective: 45
+Trial #4. Objective: 45
+Trial #5. Objective: 39
+Trial #6. Objective: 44
+Trial #7. Objective: 35
+Trial #8. Objective: 36
+Trial #9. Objective: 37
+Trial #10. Objective: 38
+Temperature: 0.0399084
+Trial #1. Objective: 44
+Trial #2. Objective: 37
+Trial #3. Objective: 37
+Trial #4. Objective: 34
+Trial #5. Objective: 42
+Trial #6. Objective: 38
+Trial #7. Objective: 36
+Trial #8. Objective: 40
+Trial #9. Objective: 43
+Trial #10. Objective: 38
+Temperature: 0.0359175
+Trial #1. Objective: 37
+Trial #2. Objective: 38
+Trial #3. Objective: 41
+Trial #4. Objective: 39
+Trial #5. Objective: 39
+Trial #6. Objective: 40
+Trial #7. Objective: 38
+Trial #8. Objective: 40
+Trial #9. Objective: 38
+Trial #10. Objective: 39
+Temperature: 0.0323258
+Trial #1. Objective: 38
+Trial #2. Objective: 38
+Trial #3. Objective: 37
+Trial #4. Objective: 39
+Trial #5. Objective: 40
+Trial #6. Objective: 40
+Trial #7. Objective: 41
+Trial #8. Objective: 37
+Trial #9. Objective: 38
+Trial #10. Objective: 43
+Temperature: 0.0290932
+Trial #1. Objective: 37
+Trial #2. Objective: 36
+Trial #3. Objective: 41
+Trial #4. Objective: 37
+Trial #5. Objective: 39
+Trial #6. Objective: 40
+Trial #7. Objective: 40
+Trial #8. Objective: 42
+Trial #9. Objective: 38
+Trial #10. Objective: 38
+Temperature: 0.0261839
+Trial #1. Objective: 40
+Trial #2. Objective: 36
+Trial #3. Objective: 38
+Trial #4. Objective: 39
+Trial #5. Objective: 37
+Trial #6. Objective: 38
+Trial #7. Objective: 35
+Trial #8. Objective: 40
+Trial #9. Objective: 40
+Trial #10. Objective: 38
+Temperature: 0.0235655
+Trial #1. Objective: 38
+Trial #2. Objective: 37
+Trial #3. Objective: 42
+Trial #4. Objective: 41
+Trial #5. Objective: 42
+Trial #6. Objective: 38
+Trial #7. Objective: 39
+Trial #8. Objective: 35
+Trial #9. Objective: 40
+Trial #10. Objective: 36
+Temperature: 0.021209
+Trial #1. Objective: 39
+Trial #2. Objective: 38
+Trial #3. Objective: 41
+Trial #4. Objective: 36
+Trial #5. Objective: 36
+Trial #6. Objective: 37
+Trial #7. Objective: 42
+Trial #8. Objective: 38
+Trial #9. Objective: 42
+Trial #10. Objective: 40
+Temperature: 0.0190881
+Trial #1. Objective: 36
+Trial #2. Objective: 37
+Trial #3. Objective: 41
+Trial #4. Objective: 37
+Trial #5. Objective: 36
+Trial #6. Objective: 36
+Trial #7. Objective: 43
+Trial #8. Objective: 39
+Trial #9. Objective: 37
+Trial #10. Objective: 39
+Temperature: 0.0171793
+Trial #1. Objective: 38
+Trial #2. Objective: 37
+Trial #3. Objective: 35
+Trial #4. Objective: 38
+Trial #5. Objective: 39
+Trial #6. Objective: 39
+Trial #7. Objective: 40
+Trial #8. Objective: 37
+Trial #9. Objective: 40
+Trial #10. Objective: 42
+Temperature: 0.0154613
+Trial #1. Objective: 40
+Trial #2. Objective: 40
+Trial #3. Objective: 40
+Trial #4. Objective: 35
+Trial #5. Objective: 40
+Trial #6. Objective: 39
+Trial #7. Objective: 40
+Trial #8. Objective: 39
+Trial #9. Objective: 36
+Trial #10. Objective: 43
+Temperature: 0.0139152
+Trial #1. Objective: 37
+Trial #2. Objective: 36
+Trial #3. Objective: 37
+Trial #4. Objective: 37
+Trial #5. Objective: 44
+Trial #6. Objective: 41
+Trial #7. Objective: 40
+Trial #8. Objective: 39
+Trial #9. Objective: 42
+Trial #10. Objective: 38
+Temperature: 0.0125237
+Trial #1. Objective: 37
+Trial #2. Objective: 37
+Trial #3. Objective: 40
+Trial #4. Objective: 44
+Trial #5. Objective: 42
+Trial #6. Objective: 42
+Trial #7. Objective: 40
+Trial #8. Objective: 35
+Trial #9. Objective: 39
+Trial #10. Objective: 37
+Temperature: 0.0112713
+Trial #1. Objective: 40
+Trial #2. Objective: 42
+Trial #3. Objective: 42
+Trial #4. Objective: 36
+Trial #5. Objective: 42
+Trial #6. Objective: 37
+Trial #7. Objective: 37
+Trial #8. Objective: 40
+Trial #9. Objective: 41
+Trial #10. Objective: 39
+Temperature: 0.0101442
+Trial #1. Objective: 42
+Trial #2. Objective: 38
+Trial #3. Objective: 38
+Trial #4. Objective: 38
+Trial #5. Objective: 38
+Trial #6. Objective: 41
+Trial #7. Objective: 39
+Trial #8. Objective: 42
+Trial #9. Objective: 38
+Trial #10. Objective: 38

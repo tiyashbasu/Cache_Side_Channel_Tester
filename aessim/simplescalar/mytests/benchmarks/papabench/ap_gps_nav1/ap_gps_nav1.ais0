@@ -1,0 +1,43 @@
+
+Welcome to CPLEX Interactive Optimizer 9.1.0
+  with Simplex, Mixed Integer & Barrier Optimizers
+Copyright (c) ILOG 1997-2005
+CPLEX is a registered trademark of ILOG
+
+Type 'help' for a list of available commands.
+Type 'help' followed by a command name for more
+information on commands.
+
+CPLEX> Enter new problem ['end' on a separate line terminates]:
+CPLEX> Problem changed to MILP.
+CPLEX> New type of variable 'Y0' is Binary.
+CPLEX> New type of variable 'Y0~1' is Binary.
+CPLEX> New type of variable 'Y0~2' is Binary.
+CPLEX> New type of variable 'Y1' is Binary.
+CPLEX> New type of variable 'Y1~2' is Binary.
+CPLEX> New type of variable 'Y2' is Binary.
+CPLEX> New type of variable 'Y2~3' is Binary.
+CPLEX> New type of variable 'Y2~28' is Binary.
+CPLEX> New type of variable 'Y28' is Binary.
+CPLEX> New type of variable 'Y28~31' is Binary.
+CPLEX> New type of variable 'Y31' is Binary.
+CPLEX> New type of variable 'Y3' is Binary.
+CPLEX> Tried aggregator 1 time.
+MIP Presolve eliminated 8 rows and 9 columns.
+Aggregator did 3 substitutions.
+All rows and columns eliminated.
+Presolve time =    0.00 sec.
+
+Integer optimal solution:  Objective =    1.2230000000e+03
+Solution time =    0.00 sec.  Iterations = 0  Nodes = 0
+
+CPLEX> Variable Name           Solution Value
+Y0                            1.000000
+Y1                            1.000000
+Y2                            1.000000
+Y3                            1.000000
+Y2~3                          1.000000
+Y1~2                          1.000000
+Y0~1                          1.000000
+All other variables in the range 1-12 are zero.
+CPLEX> 

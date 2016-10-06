@@ -1,0 +1,1 @@
+sudo kill -9 $(ps -e | grep $1 | cut -c-5)
