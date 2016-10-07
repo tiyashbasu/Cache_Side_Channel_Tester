@@ -2,10 +2,12 @@
 #include <sstream>
 #include "optimal_data_finder.h"
 
-void read_config_file(std::string config_filename, std::string* prog_path, std::string* prog_name, std::string* results_filename, int* no_of_params, int* counts, int* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
+int read_config_file(std::string config_filename, std::string* prog_path, std::string* prog_name, std::string* results_filename, int* no_of_params, int* counts, int* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
     std::ifstream config_file;
     std::string line;
     config_file.open(config_filename, std::ios::in);
+    if (!config_file.is_open())
+        return 1;
     while (!config_file.eof()) {
         std::getline(config_file, line);
         if (line.empty() || line[0] == '#')
@@ -55,9 +57,15 @@ void read_config_file(std::string config_filename, std::string* prog_path, std::
         }
     }
     config_file.close();
+    return 0;
 }
 
 int main(int argc, char *argv[]) {
+	if (argc != 2) {
+		std::cout << "Usage example: ./thesisdev config.txt\n";
+		return 1;
+	}
+	
     int no_of_params = 16;
     int counts[no_of_params];
     for (int i = 0; i < no_of_params; i++)
@@ -70,7 +78,9 @@ int main(int argc, char *argv[]) {
     double t_init = 2.0, t_final = 0.01, alpha = 0.9;
     int max_trials = 5;
 
-    read_config_file(argv[1], &program_path, &program_name, &results, &no_of_params, counts, &exec_times, &t_init, &t_final, &alpha, &max_trials);
-    thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times, results);
-    data_finder.sim_ann(t_init, t_final, alpha, max_trials);
+    int status = read_config_file(argv[1], &program_path, &program_name, &results, &no_of_params, counts, &exec_times, &t_init, &t_final, &alpha, &max_trials);
+    if (!status) {
+        thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times, results);
+        data_finder.sim_ann(t_init, t_final, alpha, max_trials);
+    }
 }

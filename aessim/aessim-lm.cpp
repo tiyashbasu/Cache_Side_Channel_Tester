@@ -25,12 +25,7 @@ int main(int argc, char *argv[]) {
 
     /*getting cache miss outputs*/
     system("./simplescalar/sim-outorder -config ./simplescalar/processor.config ./data/aes.o > ./data/sim-outorder.log 2>&1");
-    system("grep \'data accesses\' data/sim-outorder.log | cut -d\" \" -f10 > data/da.log");
-    system("grep \'load misses\' data/sim-outorder.log | cut -d\" \" -f12 > data/lm.log");
-    system("grep \'store misses\' data/sim-outorder.log | cut -d\" \" -f11 > data/sm.log");
-    system("grep \'dcache misses\' data/sim-outorder.log | cut -d\" \" -f10 > data/dm.log");
-    system("sed 's/,/'\\\\t'/g' data/key.csv > data/keys.txt");
-    system("paste ./data/keys.txt ./data/da.log ./data/lm.log ./data/sm.log ./data/dm.log >> ./output/aessim-results.log");
+    system("grep \'load misses\' data/sim-outorder.log | cut -d\" \" -f12");
 
     return 0;
 }

@@ -37,22 +37,51 @@ namespace thesis {
                     dataset[i][j] = bkp_dataset[i][j];
         }
 
-        void run_program(int times) {
-            int i, j;
+        void run_program() {
+            int j, i;
             int temp;
-            std::string command = "rm " + results_filename;
+            std::string pwd;
+            system("pwd > ./temp/pwd.txt");
+            std::ifstream stream("./temp/pwd.txt", std::ios::in);
+            stream >> pwd;
+            std::string command = "rm " + results_filename + " > run_program.log 2>&1";
             system(command.data());
             std::string path = "cd " + program_path + " && ./";
             std::string param_list;
-            for (j = 0; j < times; j++) {
-                param_list = "";
-                for (i = 0; i < no_of_params; i++) {
-                    temp = dataset[i][rand1000(seed) % counts[i]];
+            for (i = 0; i < execution_rounds; i++) {
+                temp = dataset[0][rand1000(seed) % counts[0]];
+                param_list = std::to_string(temp);
+                for (j = 1; j < no_of_params; j++) {
+                    temp = dataset[j][rand1000(seed) % counts[j]];
                     param_list += " " + std::to_string(temp);
                 }
-                command = path + program + param_list;
+                command = "echo " + param_list + " > ./temp/inputs.dat";
+                system(command.data());
+                command = path + program + " " + param_list + " > " + pwd + "/temp/temp_results.dat";
+                system(command.data());
+                command = "paste ./temp/inputs.dat ./temp/temp_results.dat >> " + results_filename;
                 system(command.data());
             }
+            system("rm ./temp/inputs.dat ./temp/temp_results.dat ./temp/pwd.txt");
+        }
+
+        long get_objective(std::string results_filename) {
+            std::ifstream out_file;
+            long unique_count = 0;
+            int i, j;
+            long data[execution_rounds][no_of_params], output[execution_rounds];
+            out_file.open(results_filename, std::ios::in);
+            for (i = 0; i < execution_rounds; i++) {
+                for (j = 0; j < no_of_params; j++)
+                    out_file >> data[i][j];
+                out_file >> output[i];
+                for (j = 0; j < i; j++)
+                    if (output[i] == output[j])
+                        break;
+                if (j == i)
+                    unique_count++;
+            }
+            return unique_count;
         }
 
     protected:
@@ -91,28 +120,6 @@ namespace thesis {
             }
         }
 
-        virtual long get_objective(std::string results_filename) {
-            std::ifstream out_file;
-            long output = 0;
-            int i, j;
-            long keys[execution_rounds][no_of_params], da[execution_rounds], lm[execution_rounds], sm[execution_rounds], dm[execution_rounds];
-            out_file.open(results_filename, std::ios::in);
-            for (i = 0; i < execution_rounds; i++) {
-                for (j = 0; j < no_of_params; j++)
-                    out_file >> keys[i][j];
-                out_file >> da[i];
-                out_file >> lm[i];
-                out_file >> sm[i];
-                out_file >> dm[i];
-                for (j = 0; j < i; j++)
-                    if (lm[i] == lm[j])
-                        break;
-                if (j == i)
-                    output++;
-            }
-            return output;
-        }
-
     public:
 
         optimal_data_finder(int no_of_params, int* counts, std::string program_path, std::string program, int execution_rounds, std::string results_filename) {
@@ -143,7 +150,7 @@ namespace thesis {
             saveresults += results_filename + " data/best-results.dat";
 
             std::cout << "Initializing..." << std::flush;
-            run_program(execution_rounds);
+            run_program();
             dataset_to_file("data/best-dataset.csv");
             system(saveresults.data());
             long obj = get_objective(results_filename);
@@ -153,7 +160,7 @@ namespace thesis {
                 for (trial = 0; trial < max_trials; trial++) {
                     std::cout << "Trial #" << trial + 1 << ". " << std::flush;
                     mutate_dataset(5);
-                    run_program(execution_rounds);
+                    run_program();
                     new_obj = get_objective(results_filename);
                     std::cout << "Objective: " << new_obj;
                     acceptable = new_obj > obj;

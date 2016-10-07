@@ -1,0 +1,14 @@
+aessim:
+Writes the input, the total number of cache hits, the number of load misses, the number of store misses and the number of data cache misses, respectively, to the file aessim-results.log.
+
+aessim-all
+Outputs in terminal the total number of cache hits, the number of load misses, the number of store misses and the number of data cache misses, respectively.
+
+aessim-lm
+Outputs in terminal the number of load misses.
+
+aessim-sm
+Outputs in terminal the number of store misses.
+
+aessim-dm
+Outputs in terminal the number of data cache misses.

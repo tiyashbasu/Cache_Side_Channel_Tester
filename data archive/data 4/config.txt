@@ -4,10 +4,10 @@
 program_path: ./aessim
 
 # The name of the executable file
-program_name: aessim-lm
+program_name: aessim
 
 # The full filename of the results file of the program
-results_filename: ./temp/aessim-results.log
+results_filename: ./aessim/output/aessim-results.log
 
 # The number of parameters the program accepts
 no_of_params: 16
