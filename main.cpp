@@ -1,5 +1,4 @@
 #include <iomanip>
-#include <sstream>
 #include "optimal_data_finder.h"
 
 int read_config_file(std::string config_filename, std::string* prog_path, std::string* prog_name, std::string* results_filename, int* no_of_params, int* counts, int* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
@@ -83,4 +82,5 @@ int main(int argc, char *argv[]) {
         thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times, results);
         data_finder.sim_ann(t_init, t_final, alpha, max_trials);
     }
+
 }

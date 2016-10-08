@@ -7,6 +7,8 @@
 #include <iostream>
 #include <fstream>
 #include <random>
+#include <thread>
+#include <unistd.h>
 
 namespace thesis {
     std::mt19937_64 seed(time(NULL));
@@ -44,6 +46,7 @@ namespace thesis {
             system("pwd > ./temp/pwd.txt");
             std::ifstream stream("./temp/pwd.txt", std::ios::in);
             stream >> pwd;
+            stream.close();
             std::string command = "rm " + results_filename + " > run_program.log 2>&1";
             system(command.data());
             std::string path = "cd " + program_path + " && ./";
@@ -121,7 +124,6 @@ namespace thesis {
         }
 
     public:
-
         optimal_data_finder(int no_of_params, int* counts, std::string program_path, std::string program, int execution_rounds, std::string results_filename) {
             this->no_of_params = no_of_params;
             this->counts = new int[no_of_params];
@@ -138,6 +140,13 @@ namespace thesis {
             this->execution_rounds = execution_rounds;
             randomize_dataset();
             backup_dataset();
+        }
+
+        ~optimal_data_finder() {
+            for (int i = 0; i < no_of_params; i++) {
+                delete(dataset[i]);
+            }
+            delete(counts);
         }
 
         void sim_ann(double t_init, double t_final, double alpha, int max_trials) {
@@ -181,7 +190,6 @@ namespace thesis {
                     std::cout << std::endl;
                 }
             }
-
         }
 
         void dataset_to_file(std::string filename) {

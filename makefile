@@ -3,7 +3,7 @@ CXX=g++
 all: thesisdev
 
 thesisdev: main.cpp
-	@$(CXX) -std=c++14 -o thesisdev main.cpp
+	@$(CXX) -std=c++14 -pthread -o thesisdev main.cpp
 	-@mkdir data
 	-@mkdir temp
 	@echo
