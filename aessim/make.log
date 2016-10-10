@@ -793,3 +793,143 @@ aessim.cpp:28:126: warning: ignoring return value of ‘int system(const char*)�
 aessim.cpp:48:76: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
   system("grep \'store misses\' ./data/sim-outorder.log | cut -d\" \" -f11");
                                                                             ^
+aessim.cpp: In function ‘int main(int, char**)’:
+aessim.cpp:20:88: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cat ./data/aes.c.prefix ./data/key.csv ./data/aes.c.suffix > ./data/aes.c");
+                                                                                        ^
+aessim.cpp:23:57: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cp ./data/aes.c ./cde-package/cde-root/src");
+                                                         ^
+aessim.cpp:24:74: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./cde-package/sslittle-na-sstrix-gcc.cde -o aes.o src/aes.c");
+                                                                          ^
+aessim.cpp:25:56: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("mv -f ./cde-package/cde-root/aes.o ./data");
+                                                        ^
+aessim.cpp:28:126: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./simplescalar/sim-outorder -config ./simplescalar/processor.config ./data/aes.o > ./data/sim-outorder.log 2>&1");
+                                                                                                                              ^
+aessim.cpp:30:93: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'data accesses\' ./data/sim-outorder.log | cut -d\" \" -f10 > ./data/da.log");
+                                                                                             ^
+aessim.cpp:31:91: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'load misses\' ./data/sim-outorder.log | cut -d\" \" -f12 > ./data/lm.log");
+                                                                                           ^
+aessim.cpp:32:92: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'store misses\' ./data/sim-outorder.log | cut -d\" \" -f11 > ./data/sm.log");
+                                                                                            ^
+aessim.cpp:33:93: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'dcache misses\' ./data/sim-outorder.log | cut -d\" \" -f10 > ./data/dm.log");
+                                                                                             ^
+aessim.cpp:34:64: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("sed 's/,/'\\\\t'/g' ./data/key.csv > ./data/keys.txt");
+                                                                ^
+aessim.cpp:35:111: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("paste ./data/keys.txt ./data/da.log ./data/lm.log ./data/sm.log ./data/dm.log >> aessim-results.log");
+                                                                                                               ^
+aessim.cpp:50:38: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("rm ./data/sim-outorder.log");
+                                      ^
+aessim.cpp: In function ‘int main(int, char**)’:
+aessim.cpp:20:88: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cat ./data/aes.c.prefix ./data/key.csv ./data/aes.c.suffix > ./data/aes.c");
+                                                                                        ^
+aessim.cpp:23:57: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cp ./data/aes.c ./cde-package/cde-root/src");
+                                                         ^
+aessim.cpp:24:74: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./cde-package/sslittle-na-sstrix-gcc.cde -o aes.o src/aes.c");
+                                                                          ^
+aessim.cpp:25:56: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("mv -f ./cde-package/cde-root/aes.o ./data");
+                                                        ^
+aessim.cpp:28:126: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./simplescalar/sim-outorder -config ./simplescalar/processor.config ./data/aes.o > ./data/sim-outorder.log 2>&1");
+                                                                                                                              ^
+aessim.cpp:37:93: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'data accesses\' ./data/sim-outorder.log | cut -d\" \" -f10 > ./data/da.log");
+                                                                                             ^
+aessim.cpp:38:91: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'load misses\' ./data/sim-outorder.log | cut -d\" \" -f12 > ./data/lm.log");
+                                                                                           ^
+aessim.cpp:39:92: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'store misses\' ./data/sim-outorder.log | cut -d\" \" -f11 > ./data/sm.log");
+                                                                                            ^
+aessim.cpp:40:93: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'dcache misses\' ./data/sim-outorder.log | cut -d\" \" -f10 > ./data/dm.log");
+                                                                                             ^
+aessim.cpp:41:64: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("sed 's/,/'\\\\t'/g' ./data/key.csv > ./data/keys.txt");
+                                                                ^
+aessim.cpp:42:89: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("paste ./data/keys.txt ./data/da.log ./data/lm.log ./data/sm.log ./data/dm.log");
+                                                                                         ^
+aessim.cpp:50:38: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("rm ./data/sim-outorder.log");
+                                      ^
+aessim.cpp: In function ‘int main(int, char**)’:
+aessim.cpp:20:88: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cat ./data/aes.c.prefix ./data/key.csv ./data/aes.c.suffix > ./data/aes.c");
+                                                                                        ^
+aessim.cpp:23:57: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cp ./data/aes.c ./cde-package/cde-root/src");
+                                                         ^
+aessim.cpp:24:74: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./cde-package/sslittle-na-sstrix-gcc.cde -o aes.o src/aes.c");
+                                                                          ^
+aessim.cpp:25:56: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("mv -f ./cde-package/cde-root/aes.o ./data");
+                                                        ^
+aessim.cpp:28:126: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./simplescalar/sim-outorder -config ./simplescalar/processor.config ./data/aes.o > ./data/sim-outorder.log 2>&1");
+                                                                                                                              ^
+aessim.cpp:44:77: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'dcache misses\' ./data/sim-outorder.log | cut -d\" \" -f10");
+                                                                             ^
+aessim.cpp:50:38: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("rm ./data/sim-outorder.log");
+                                      ^
+aessim.cpp: In function ‘int main(int, char**)’:
+aessim.cpp:20:88: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cat ./data/aes.c.prefix ./data/key.csv ./data/aes.c.suffix > ./data/aes.c");
+                                                                                        ^
+aessim.cpp:23:57: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cp ./data/aes.c ./cde-package/cde-root/src");
+                                                         ^
+aessim.cpp:24:74: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./cde-package/sslittle-na-sstrix-gcc.cde -o aes.o src/aes.c");
+                                                                          ^
+aessim.cpp:25:56: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("mv -f ./cde-package/cde-root/aes.o ./data");
+                                                        ^
+aessim.cpp:28:126: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./simplescalar/sim-outorder -config ./simplescalar/processor.config ./data/aes.o > ./data/sim-outorder.log 2>&1");
+                                                                                                                              ^
+aessim.cpp:46:75: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'load misses\' ./data/sim-outorder.log | cut -d\" \" -f12");
+                                                                           ^
+aessim.cpp:50:38: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("rm ./data/sim-outorder.log");
+                                      ^
+aessim.cpp: In function ‘int main(int, char**)’:
+aessim.cpp:20:88: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cat ./data/aes.c.prefix ./data/key.csv ./data/aes.c.suffix > ./data/aes.c");
+                                                                                        ^
+aessim.cpp:23:57: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("cp ./data/aes.c ./cde-package/cde-root/src");
+                                                         ^
+aessim.cpp:24:74: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./cde-package/sslittle-na-sstrix-gcc.cde -o aes.o src/aes.c");
+                                                                          ^
+aessim.cpp:25:56: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("mv -f ./cde-package/cde-root/aes.o ./data");
+                                                        ^
+aessim.cpp:28:126: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system("./simplescalar/sim-outorder -config ./simplescalar/processor.config ./data/aes.o > ./data/sim-outorder.log 2>&1");
+                                                                                                                              ^
+aessim.cpp:48:76: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("grep \'store misses\' ./data/sim-outorder.log | cut -d\" \" -f11");
+                                                                            ^
+aessim.cpp:50:38: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  system("rm ./data/sim-outorder.log");
+                                      ^

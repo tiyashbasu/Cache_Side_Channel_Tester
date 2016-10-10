@@ -47,6 +47,6 @@ int main(int argc, char *argv[]) {
 #elif defined SM
 	system("grep \'store misses\' ./data/sim-outorder.log | cut -d\" \" -f11");
 #endif
-
+	system("rm ./data/sim-outorder.log");
     return 0;
 }

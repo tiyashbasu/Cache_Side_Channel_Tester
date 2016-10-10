@@ -90,7 +90,7 @@ namespace thesis {
     protected:
         virtual void randomize_dataset() {
             int i, j, k;
-            int temp_rand;
+            int temp_rand = 0;
             bool not_unique;
             for (i = 0; i < no_of_params; i++) {
                 for (j = 0; j < counts[i]; j++) {

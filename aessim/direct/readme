@@ -1,0 +1,10 @@
+This folder contains tools to cross-compile aes.c only once, and then execute it multiple times with command line arguments.
+
+Compile:
+$ ./compile.sh aes.c aes.o
+
+Execute:
+$ ./execute.sh aes.o 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+
+The above statement shows the following, in order: Total data accesses, Load misses, Store misses, Dcache misses, for example,
+8060	163		34		197
