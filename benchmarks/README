@@ -1,0 +1,32 @@
+Subject programs: 
+==================
+
+For all the subject programs, just use gcc to compile 
+the respective ".c" file listed. These files already 
+contain a main function. 
+
+1. AES from basic crypto (currently used by Tiyash)
+	- benchmarks/aes_basic_crypto/aes.c
+	- input: key[16] in function "main"
+
+
+2. AES from OpenSSL
+	- benchmarks/openssl/crypto/aes/aes_core.c
+	- input: key[16] in function "main" 
+
+3. DES from OpenSSL
+	- benchmarks/openssl/crypto/des/des_core.c
+	- input: key_data[8] in function "main" 
+
+4. RC4 from OpenSSL
+	- benchmarks/openssl/crypto/rc4/rc4_core.c
+	- input: keys[10] in function "main" 
+
+5. gdk_keyname from GDK
+	- benchmarks/gdklib/gdkkeyuni_test.c
+	- input: keyval in function "main"
+
+6. gdk_keyuni from GDK
+	- benchmarks/gdklib/gdkkeyname_test.c
+	- input: keystroke in function "main"
+
