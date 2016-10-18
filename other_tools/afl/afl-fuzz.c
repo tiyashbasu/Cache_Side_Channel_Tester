@@ -1973,6 +1973,7 @@ EXP_ST void init_forkserver(char** argv) {
   int st_pipe[2], ctl_pipe[2];
   int status;
   s32 rlen;
+  char buff1[255];
 
   ACTF("Spinning up the fork server...");
 
@@ -2256,6 +2257,7 @@ static u8 run_target(char** argv) {
 
   static struct itimerval it;
   static u32 prev_timed_out = 0;
+  char buff1[255];
 
   int status = 0;
   u32 tb4;
@@ -2342,6 +2344,10 @@ static u8 run_target(char** argv) {
                              "msan_track_origins=0", 0);
 
       execv(target_path, argv);
+      strcpy(buff1, "cat ");
+      strcat(buff1, argv[1]);
+      strcat(buff1, " >> ./afl-inputs");
+      system(buff1);
 
       /* Use a distinctive bitmap value to tell the parent about execv()
          falling through. */

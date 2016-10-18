@@ -10,7 +10,10 @@ int main(int argc, char *argv[]) {
     }
 
     /*preparing aes.c source file*/
-    system("cat ./data/aes.c.prefix ./data/key.csv ./data/aes.c.suffix > ./data/aes.c");
+    std::string command = "cat ./data/aes.c.prefix ";
+    command += argv[1];
+    command += " ./data/aes.c.suffix > ./data/aes.c";
+    system(command.data());
 
     /*cross compiling aes.c*/
     system("cp ./data/aes.c ./cde-package/cde-root/src");
@@ -24,7 +27,10 @@ int main(int argc, char *argv[]) {
 	system("grep \'load misses\' ./data/sim-outorder.log | cut -d\" \" -f12 > ./data/lm.log");
 	system("grep \'store misses\' ./data/sim-outorder.log | cut -d\" \" -f11 > ./data/sm.log");
 	system("grep \'dcache misses\' ./data/sim-outorder.log | cut -d\" \" -f10 > ./data/dm.log");
-	system("sed 's/,/'\\\\t'/g' ./data/key.csv > ./data/keys.txt");
+    command = "sed 's/,/\\t/g' ";
+    command += argv[1];
+    command += " > ./data/keys.txt";
+	system(command.data());
 	system("paste ./data/keys.txt ./data/da.log ./data/lm.log ./data/sm.log ./data/dm.log >> aessim-results.log");
 #elif defined ALL
 	system("grep \'data accesses\' ./data/sim-outorder.log | cut -d\" \" -f10 > ./data/da.log");

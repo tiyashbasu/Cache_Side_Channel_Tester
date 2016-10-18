@@ -143,6 +143,8 @@ int aes_ccm_test();
 /*************************** HEADER FILES ***************************/
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <memory.h>
 
 /****************************** MACROS ******************************/
 // The least significant byte of the word is rotated to the end.
@@ -1190,7 +1192,7 @@ void aes_decrypt(const BYTE in[], BYTE out[], const WORD key[], int keysize)
 	out[15] = state[3][3];
 }
 
-int main (int argc, int** argv)
+int main (int argc, char* argv[])
 {
 	int i;
 	unsigned char vals[256];
@@ -1198,9 +1200,21 @@ int main (int argc, int** argv)
 	unsigned char in[16] = {0x10, 0x11, 0x02, 0x03, 0x04, 0x55, 0x76, 0x07, 0x88, 0x91, 0x0A, 0xB1, 0xCF, 0xDD, 0xEE, 0xF0};
 	unsigned char out[16];
 	unsigned char key[16];
-	
+	char buff[255];
+
+	FILE *infp, *outfp;
+	infp = fopen(argv[1], "r");
+	outfp = fopen("./afl-keys.txt", "a");
 	for (i = 0; i < 16; i++)
-		key[i] = atoi(argv[i + 1]);
+	{
+		fscanf(infp, "%s", buff);
+		key[i] = atoi(buff);
+		fputs(buff, outfp);
+		fputs(",", outfp);
+	}
+	fputs("\n", outfp);
+	fclose(infp);
+	fclose(outfp);
 	
 	aes_key_setup(key, e_key, 128);
 	aes_encrypt(in, out, e_key, 128);
