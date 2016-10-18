@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     keys_file.open(key_filename, std::ios::out);
     keys_file << argv[1];
     for (int i = 2; i < 17; i++)
-        keys_file << "," << argv[i];
+        keys_file << "," << std::to_string(std::atoi(argv[i]));
     keys_file.close();
     system("cat ./data/aes.c.prefix ./data/key.csv ./data/aes.c.suffix > ./data/aes.c");
 
@@ -38,8 +38,7 @@ int main(int argc, char *argv[]) {
 	system("grep \'load misses\' ./data/sim-outorder.log | cut -d\" \" -f12 > ./data/lm.log");
 	system("grep \'store misses\' ./data/sim-outorder.log | cut -d\" \" -f11 > ./data/sm.log");
 	system("grep \'dcache misses\' ./data/sim-outorder.log | cut -d\" \" -f10 > ./data/dm.log");
-	system("sed 's/,/'\\\\t'/g' ./data/key.csv > ./data/keys.txt");
-	system("paste ./data/keys.txt ./data/da.log ./data/lm.log ./data/sm.log ./data/dm.log");
+    system("paste ./data/da.log ./data/lm.log ./data/sm.log ./data/dm.log");
 #elif defined DM
 	system("grep \'dcache misses\' ./data/sim-outorder.log | cut -d\" \" -f10");
 #elif defined LM

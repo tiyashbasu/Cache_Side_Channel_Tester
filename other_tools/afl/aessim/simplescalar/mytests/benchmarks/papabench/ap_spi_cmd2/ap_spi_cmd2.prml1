@@ -1,0 +1,7 @@
+ap_spi_cmd2 [     888,    47370)
+[ap_spi_cmd2] wcrt = 141
+[ap_spi_cmd2] earliestReq = 888
+[ap_spi_cmd2] earliestFin = 1029
+--> [ap_spi_cmd3] earliestReq = 1029
+--> [ap_modem_update2] earliestReq = 2495
+--> [ap_spi_cmd3] earliestReq = 1029

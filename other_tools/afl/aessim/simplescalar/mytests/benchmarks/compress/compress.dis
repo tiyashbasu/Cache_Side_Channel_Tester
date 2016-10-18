@@ -1,0 +1,658 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-32000
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32556($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       00400f40 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32560($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       004001f0 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       00400f70 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+main():
+compress.c:188
+004001f0 <main> addiu     $29,$29,-24
+004001f8 <main+0x8> sw        $31,16($29)
+compress.c:191
+00400200 <main+0x10> jal       00400288 <initbuffer> 
+compress.c:197
+00400208 <main+0x18> addiu     $2,$0,16
+00400210 <main+0x20> sw        $2,-32768($28)
+compress.c:198
+00400218 <main+0x28> lui       $2,1
+00400220 <main+0x30> sw        $2,-32764($28)
+compress.c:189
+00400228 <main+0x38> addiu     $2,$0,2
+compress.c:200
+00400230 <main+0x40> sw        $2,-32512($28)
+compress.c:201
+00400238 <main+0x48> addiu     $2,$0,5
+00400240 <main+0x50> sw        $2,-32528($28)
+compress.c:202
+00400248 <main+0x58> addiu     $2,$28,-32544
+00400250 <main+0x60> sw        $2,-32540($28)
+compress.c:203
+00400258 <main+0x68> addiu     $2,$28,-32536
+00400260 <main+0x70> sw        $2,-32524($28)
+compress.c:205
+00400268 <main+0x78> jal       004003a8 <compress> 
+compress.c:207
+00400270 <main+0x80> lw        $31,16($29)
+00400278 <main+0x88> addiu     $29,$29,24
+00400280 <main+0x90> jr        $31
+initbuffer():
+compress.c:213
+00400288 <initbuffer> addiu     $3,$0,1
+compress.c:217
+00400290 <initbuffer+0x8> addu      $6,$0,$0
+00400298 <initbuffer+0x10> lui       $7,4145
+004002a0 <initbuffer+0x18> ori       $7,$7,5319
+compress.c:220
+004002a8 <initbuffer+0x20> sll       $5,$3,0x5
+004002b0 <initbuffer+0x28> addu      $5,$5,$3
+004002b8 <initbuffer+0x30> sll       $5,$5,0x2
+004002c0 <initbuffer+0x38> addu      $5,$5,$3
+004002c8 <initbuffer+0x40> addiu     $5,$5,81
+004002d0 <initbuffer+0x48> mult      $5,$7
+004002d8 <initbuffer+0x50> mfhi      $3
+004002e0 <initbuffer+0x58> mflo      $2
+004002e8 <initbuffer+0x60> srl       $2,$3,0x0
+004002f0 <initbuffer+0x68> addu      $3,$0,$0
+004002f8 <initbuffer+0x70> sra       $2,$2,0x9
+00400300 <initbuffer+0x78> sra       $4,$5,0x1f
+00400308 <initbuffer+0x80> subu      $3,$2,$4
+00400310 <initbuffer+0x88> sll       $2,$3,0x6
+00400318 <initbuffer+0x90> subu      $2,$2,$3
+00400320 <initbuffer+0x98> sll       $2,$2,0x2
+00400328 <initbuffer+0xa0> addu      $2,$2,$3
+00400330 <initbuffer+0xa8> sll       $2,$2,0x5
+00400338 <initbuffer+0xb0> subu      $2,$2,$3
+00400340 <initbuffer+0xb8> subu      $3,$5,$2
+compress.c:222
+00400348 <initbuffer+0xc0> addu      $2,$0,$3
+00400350 <initbuffer+0xc8> bgez      $3,00400360
+00400358 <initbuffer+0xd0> addiu     $2,$3,255
+00400360 <initbuffer+0xd8> sra       $2,$2,0x8
+00400368 <initbuffer+0xe0> sll       $2,$2,0x8
+00400370 <initbuffer+0xe8> subu      $2,$3,$2
+00400378 <initbuffer+0xf0> addu      $1,$6,$28
+00400380 <initbuffer+0xf8> sb        $2,-32544($1)
+compress.c:217
+00400388 <initbuffer+0x100> addiu     $6,$6,1
+00400390 <initbuffer+0x108> slti      $2,$6,2
+00400398 <initbuffer+0x110> bne       $2,$0,004002a8
+compress.c:224
+004003a0 <initbuffer+0x118> jr        $31
+compress():
+compress.c:235
+004003a8 <compress> addiu     $29,$29,-48
+compress.c:253
+004003b0 <compress+0x8> lw        $3,-32736($28)
+004003b8 <compress+0x10> addiu     $4,$0,256
+compress.c:246
+004003c0 <compress+0x18> addiu     $2,$0,3
+004003c8 <compress+0x20> sw        $2,-32520($28)
+compress.c:250
+004003d0 <compress+0x28> addiu     $2,$0,1
+004003d8 <compress+0x30> sw        $2,-32716($28)
+compress.c:251
+004003e0 <compress+0x38> addiu     $2,$0,10000
+004003e8 <compress+0x40> sw        $2,-32724($28)
+compress.c:252
+004003f0 <compress+0x48> addiu     $2,$0,9
+004003f8 <compress+0x50> sw        $2,-32516($28)
+00400400 <compress+0x58> addiu     $2,$0,511
+compress.c:235
+00400408 <compress+0x60> sw        $31,40($29)
+00400410 <compress+0x68> sw        $21,36($29)
+00400418 <compress+0x70> sw        $20,32($29)
+00400420 <compress+0x78> sw        $19,28($29)
+00400428 <compress+0x80> sw        $18,24($29)
+00400430 <compress+0x88> sw        $17,20($29)
+00400438 <compress+0x90> sw        $16,16($29)
+compress.c:245
+00400440 <compress+0x98> sw        $0,-32592($28)
+compress.c:247
+00400448 <compress+0xa0> sw        $0,-32712($28)
+compress.c:248
+00400450 <compress+0xa8> sw        $0,-32732($28)
+compress.c:249
+00400458 <compress+0xb0> sw        $0,-32728($28)
+compress.c:252
+00400460 <compress+0xb8> sw        $2,-32508($28)
+compress.c:253
+00400468 <compress+0xc0> beq       $3,$0,00400478
+00400470 <compress+0xc8> addiu     $4,$0,257
+00400478 <compress+0xd0> sw        $4,-32756($28)
+compress.c:255
+00400480 <compress+0xd8> jal       00400a50 <getbyte> 
+00400488 <compress+0xe0> addu      $17,$0,$2
+compress.c:258
+00400490 <compress+0xe8> lw        $4,-32760($28)
+compress.c:257
+00400498 <compress+0xf0> addu      $18,$0,$0
+compress.c:258
+004004a0 <compress+0xf8> ori       $2,$0,65535
+004004a8 <compress+0x100> slt       $2,$2,$4
+004004b0 <compress+0x108> bne       $2,$0,004004e0
+004004b8 <compress+0x110> ori       $3,$0,65535
+compress.c:260
+004004c0 <compress+0x118> addiu     $18,$18,1
+compress.c:258
+004004c8 <compress+0x120> sll       $4,$4,0x1
+004004d0 <compress+0x128> slt       $2,$3,$4
+004004d8 <compress+0x130> beq       $2,$0,004004c0
+compress.c:265
+004004e0 <compress+0x138> lw        $19,-32760($28)
+compress.c:263
+004004e8 <compress+0x140> addiu     $2,$0,8
+004004f0 <compress+0x148> subu      $18,$2,$18
+compress.c:266
+004004f8 <compress+0x150> addu      $4,$0,$19
+00400500 <compress+0x158> jal       00400940 <cl_hash> 
+compress.c:269
+00400508 <compress+0x160> lw        $2,-32512($28)
+00400510 <compress+0x168> blez      $2,00400720
+00400518 <compress+0x170> lui       $21,4096
+00400520 <compress+0x178> addiu     $21,$21,1104
+00400528 <compress+0x180> lui       $20,4096
+00400530 <compress+0x188> addiu     $20,$20,2240
+compress.c:271
+00400538 <compress+0x190> addu      $16,$0,$0
+compress.c:273
+00400540 <compress+0x198> jal       00400a50 <getbyte> 
+00400548 <compress+0x1a0> addu      $7,$0,$2
+compress.c:276
+00400550 <compress+0x1a8> lw        $4,-32768($28)
+compress.c:277
+00400558 <compress+0x1b0> sllv      $2,$7,$18
+00400560 <compress+0x1b8> xor       $5,$2,$17
+compress.c:275
+00400568 <compress+0x1c0> lw        $3,-32716($28)
+compress.c:279
+00400570 <compress+0x1c8> sll       $2,$5,0x2
+00400578 <compress+0x1d0> addu      $2,$2,$21
+00400580 <compress+0x1d8> lw        $2,0($2)
+compress.c:276
+00400588 <compress+0x1e0> sllv      $4,$7,$4
+00400590 <compress+0x1e8> addu      $4,$4,$17
+compress.c:275
+00400598 <compress+0x1f0> addiu     $3,$3,1
+004005a0 <compress+0x1f8> sw        $3,-32716($28)
+compress.c:279
+004005a8 <compress+0x200> beq       $2,$4,00400608
+compress.c:282
+004005b0 <compress+0x208> bltz      $2,00400650
+compress.c:287
+004005b8 <compress+0x210> subu      $3,$19,$5
+compress.c:288
+004005c0 <compress+0x218> bne       $5,$0,004005d0
+compress.c:289
+004005c8 <compress+0x220> addiu     $3,$0,1
+compress.c:294
+004005d0 <compress+0x228> subu      $5,$5,$3
+004005d8 <compress+0x230> bgez      $5,004005e8
+compress.c:295
+004005e0 <compress+0x238> addu      $5,$5,$19
+compress.c:298
+004005e8 <compress+0x240> sll       $2,$5,0x2
+004005f0 <compress+0x248> addu      $2,$2,$21
+004005f8 <compress+0x250> lw        $2,0($2)
+00400600 <compress+0x258> bne       $2,$4,00400628
+compress.c:299
+00400608 <compress+0x260> sll       $2,$5,0x1
+00400610 <compress+0x268> addu      $2,$2,$20
+00400618 <compress+0x270> lhu       $17,0($2)
+compress.c:300
+00400620 <compress+0x278> j         00400710
+compress.c:303
+00400628 <compress+0x280> blez      $2,00400650
+00400630 <compress+0x288> lw        $2,-32716($28)
+00400638 <compress+0x290> addiu     $16,$16,1
+00400640 <compress+0x298> slt       $2,$16,$2
+00400648 <compress+0x2a0> bne       $2,$0,004005d0
+compress.c:307
+00400650 <compress+0x2a8> lw        $2,-32712($28)
+compress.c:309
+00400658 <compress+0x2b0> lw        $6,-32756($28)
+00400660 <compress+0x2b8> lw        $3,-32764($28)
+compress.c:308
+00400668 <compress+0x2c0> addu      $17,$0,$7
+compress.c:307
+00400670 <compress+0x2c8> addiu     $2,$2,1
+compress.c:309
+00400678 <compress+0x2d0> slt       $3,$6,$3
+compress.c:307
+00400680 <compress+0x2d8> sw        $2,-32712($28)
+compress.c:309
+00400688 <compress+0x2e0> beq       $3,$0,004006d8
+compress.c:310
+00400690 <compress+0x2e8> addiu     $2,$6,1
+00400698 <compress+0x2f0> sw        $2,-32756($28)
+004006a0 <compress+0x2f8> sll       $2,$5,0x1
+004006a8 <compress+0x300> addu      $2,$2,$20
+004006b0 <compress+0x308> sh        $6,0($2)
+compress.c:311
+004006b8 <compress+0x310> sll       $2,$5,0x2
+004006c0 <compress+0x318> addu      $2,$2,$21
+004006c8 <compress+0x320> sw        $4,0($2)
+compress.c:312
+004006d0 <compress+0x328> j         00400710
+004006d8 <compress+0x330> lw        $2,-32716($28)
+004006e0 <compress+0x338> lw        $3,-32724($28)
+004006e8 <compress+0x340> slt       $2,$2,$3
+004006f0 <compress+0x348> bne       $2,$0,00400710
+004006f8 <compress+0x350> lw        $2,-32736($28)
+00400700 <compress+0x358> beq       $2,$0,00400710
+compress.c:313
+00400708 <compress+0x360> jal       00400798 <cl_block> 
+compress.c:316
+00400710 <compress+0x368> lw        $2,-32512($28)
+00400718 <compress+0x370> bgtz      $2,00400538
+compress.c:317
+00400720 <compress+0x378> lw        $3,-32520($28)
+00400728 <compress+0x380> lw        $2,-32716($28)
+00400730 <compress+0x388> slt       $2,$2,$3
+00400738 <compress+0x390> beq       $2,$0,00400750
+compress.c:318
+00400740 <compress+0x398> addiu     $2,$0,2
+00400748 <compress+0x3a0> sw        $2,-32752($28)
+compress.c:321
+00400750 <compress+0x3a8> lw        $31,40($29)
+00400758 <compress+0x3b0> lw        $21,36($29)
+00400760 <compress+0x3b8> lw        $20,32($29)
+00400768 <compress+0x3c0> lw        $19,28($29)
+00400770 <compress+0x3c8> lw        $18,24($29)
+00400778 <compress+0x3d0> lw        $17,20($29)
+00400780 <compress+0x3d8> lw        $16,16($29)
+00400788 <compress+0x3e0> addiu     $29,$29,48
+00400790 <compress+0x3e8> jr        $31
+cl_block():
+compress.c:325
+00400798 <cl_block> addiu     $29,$29,-24
+compress.c:328
+004007a0 <cl_block+0x8> lw        $4,-32716($28)
+compress.c:330
+004007a8 <cl_block+0x10> lui       $3,127
+004007b0 <cl_block+0x18> ori       $3,$3,65535
+compress.c:325
+004007b8 <cl_block+0x20> sw        $31,16($29)
+compress.c:328
+004007c0 <cl_block+0x28> addiu     $2,$4,10000
+compress.c:330
+004007c8 <cl_block+0x30> slt       $3,$3,$4
+compress.c:328
+004007d0 <cl_block+0x38> sw        $2,-32724($28)
+compress.c:330
+004007d8 <cl_block+0x40> beq       $3,$0,00400860
+compress.c:332
+004007e0 <cl_block+0x48> lw        $2,-32520($28)
+004007e8 <cl_block+0x50> sra       $3,$2,0x8
+compress.c:333
+004007f0 <cl_block+0x58> bne       $3,$0,00400810
+compress.c:334
+004007f8 <cl_block+0x60> lui       $3,32767
+00400800 <cl_block+0x68> ori       $3,$3,65535
+compress.c:335
+00400808 <cl_block+0x70> j         004008b8
+compress.c:336
+00400810 <cl_block+0x78> div       $4,$3
+00400818 <cl_block+0x80> bne       $3,$0,00400828
+00400820 <cl_block+0x88> break     00000007
+00400828 <cl_block+0x90> addiu     $1,$0,-1
+00400830 <cl_block+0x98> bne       $3,$1,00400850
+00400838 <cl_block+0xa0> lui       $1,32768
+00400840 <cl_block+0xa8> bne       $4,$1,00400850
+00400848 <cl_block+0xb0> break     00000006
+00400850 <cl_block+0xb8> mflo      $3
+compress.c:338
+00400858 <cl_block+0xc0> j         004008b8
+compress.c:339
+00400860 <cl_block+0xc8> lw        $2,-32520($28)
+00400868 <cl_block+0xd0> sll       $3,$4,0x8
+00400870 <cl_block+0xd8> div       $3,$2
+00400878 <cl_block+0xe0> bne       $2,$0,00400888
+00400880 <cl_block+0xe8> break     00000007
+00400888 <cl_block+0xf0> addiu     $1,$0,-1
+00400890 <cl_block+0xf8> bne       $2,$1,004008b0
+00400898 <cl_block+0x100> lui       $1,32768
+004008a0 <cl_block+0x108> bne       $3,$1,004008b0
+004008a8 <cl_block+0x110> break     00000006
+004008b0 <cl_block+0x118> mflo      $3
+compress.c:341
+004008b8 <cl_block+0x120> lw        $2,-32728($28)
+004008c0 <cl_block+0x128> slt       $2,$2,$3
+004008c8 <cl_block+0x130> beq       $2,$0,004008e0
+compress.c:342
+004008d0 <cl_block+0x138> sw        $3,-32728($28)
+compress.c:343
+004008d8 <cl_block+0x140> j         00400928
+compress.c:345
+004008e0 <cl_block+0x148> lw        $4,-32760($28)
+compress.c:344
+004008e8 <cl_block+0x150> sw        $0,-32728($28)
+compress.c:345
+004008f0 <cl_block+0x158> jal       00400940 <cl_hash> 
+compress.c:350
+004008f8 <cl_block+0x160> addiu     $4,$0,256
+compress.c:348
+00400900 <cl_block+0x168> addiu     $2,$0,257
+00400908 <cl_block+0x170> sw        $2,-32756($28)
+compress.c:349
+00400910 <cl_block+0x178> addiu     $2,$0,1
+00400918 <cl_block+0x180> sw        $2,-32732($28)
+compress.c:350
+00400920 <cl_block+0x188> jal       00400b70 <output> 
+compress.c:352
+00400928 <cl_block+0x190> lw        $31,16($29)
+00400930 <cl_block+0x198> addiu     $29,$29,24
+00400938 <cl_block+0x1a0> jr        $31
+cl_hash():
+compress.c:356
+00400940 <cl_hash> sll       $3,$4,0x2
+00400948 <cl_hash+0x8> lui       $2,4096
+00400950 <cl_hash+0x10> addiu     $2,$2,1104
+00400958 <cl_hash+0x18> addu      $3,$3,$2
+compress.c:358
+00400960 <cl_hash+0x20> addiu     $5,$0,-1
+compress.c:360
+00400968 <cl_hash+0x28> addiu     $4,$4,-16
+compress.c:361
+00400970 <cl_hash+0x30> addiu     $2,$3,-4
+compress.c:363
+00400978 <cl_hash+0x38> sw        $5,-60($2)
+compress.c:364
+00400980 <cl_hash+0x40> sw        $5,-56($2)
+compress.c:365
+00400988 <cl_hash+0x48> sw        $5,-52($2)
+compress.c:366
+00400990 <cl_hash+0x50> sw        $5,-48($2)
+compress.c:367
+00400998 <cl_hash+0x58> sw        $5,-44($2)
+compress.c:368
+004009a0 <cl_hash+0x60> sw        $5,-40($2)
+compress.c:369
+004009a8 <cl_hash+0x68> sw        $5,-36($2)
+compress.c:370
+004009b0 <cl_hash+0x70> sw        $5,-32($2)
+compress.c:371
+004009b8 <cl_hash+0x78> sw        $5,-28($2)
+compress.c:372
+004009c0 <cl_hash+0x80> sw        $5,-24($2)
+compress.c:373
+004009c8 <cl_hash+0x88> sw        $5,-20($2)
+compress.c:374
+004009d0 <cl_hash+0x90> sw        $5,-16($2)
+compress.c:375
+004009d8 <cl_hash+0x98> sw        $5,-12($2)
+compress.c:376
+004009e0 <cl_hash+0xa0> sw        $5,-8($2)
+compress.c:377
+004009e8 <cl_hash+0xa8> sw        $5,-4($2)
+compress.c:378
+004009f0 <cl_hash+0xb0> sw        $5,0($2)
+compress.c:379
+004009f8 <cl_hash+0xb8> addiu     $2,$2,-64
+00400a00 <cl_hash+0xc0> addiu     $3,$3,-64
+compress.c:380
+00400a08 <cl_hash+0xc8> addiu     $4,$4,-16
+00400a10 <cl_hash+0xd0> bgez      $4,00400978
+compress.c:381
+00400a18 <cl_hash+0xd8> addiu     $4,$4,16
+00400a20 <cl_hash+0xe0> blez      $4,00400a48
+compress.c:382
+00400a28 <cl_hash+0xe8> addiu     $3,$3,-4
+00400a30 <cl_hash+0xf0> sw        $5,0($3)
+compress.c:381
+00400a38 <cl_hash+0xf8> addiu     $4,$4,-1
+00400a40 <cl_hash+0x100> bgtz      $4,00400a28
+compress.c:384
+00400a48 <cl_hash+0x108> jr        $31
+getbyte():
+compress.c:390
+00400a50 <getbyte> lw        $4,-32512($28)
+00400a58 <getbyte+0x8> blez      $4,00400ab8
+00400a60 <getbyte+0x10> lw        $3,-32528($28)
+00400a68 <getbyte+0x18> addiu     $2,$3,-1
+00400a70 <getbyte+0x20> sw        $2,-32528($28)
+00400a78 <getbyte+0x28> blez      $3,00400ab8
+compress.c:392
+00400a80 <getbyte+0x30> lw        $2,-32540($28)
+compress.c:391
+00400a88 <getbyte+0x38> addiu     $3,$4,-1
+00400a90 <getbyte+0x40> sw        $3,-32512($28)
+compress.c:392
+00400a98 <getbyte+0x48> addiu     $3,$2,1
+00400aa0 <getbyte+0x50> sw        $3,-32540($28)
+00400aa8 <getbyte+0x58> lbu       $2,0($2)
+00400ab0 <getbyte+0x60> j         00400ac0
+compress.c:394
+00400ab8 <getbyte+0x68> addiu     $2,$0,-1
+00400ac0 <getbyte+0x70> jr        $31
+putbyte():
+compress.c:400
+00400ac8 <putbyte> lw        $3,-32524($28)
+00400ad0 <putbyte+0x8> addiu     $2,$3,1
+00400ad8 <putbyte+0x10> sw        $2,-32524($28)
+00400ae0 <putbyte+0x18> sb        $4,0($3)
+00400ae8 <putbyte+0x20> jr        $31
+writebytes():
+compress.c:405
+00400af0 <writebytes> addiu     $29,$29,-8
+compress.c:407
+00400af8 <writebytes+0x8> addu      $6,$0,$0
+00400b00 <writebytes+0x10> blez      $5,00400b60
+00400b08 <writebytes+0x18> slti      $2,$6,16
+00400b10 <writebytes+0x20> beq       $2,$0,00400b60
+compress.c:408
+00400b18 <writebytes+0x28> lw        $3,-32524($28)
+00400b20 <writebytes+0x30> addiu     $2,$3,1
+00400b28 <writebytes+0x38> sw        $2,-32524($28)
+00400b30 <writebytes+0x40> lbu       $2,0($4)
+compress.c:407
+00400b38 <writebytes+0x48> addiu     $6,$6,1
+00400b40 <writebytes+0x50> addiu     $4,$4,1
+compress.c:408
+00400b48 <writebytes+0x58> sb        $2,0($3)
+compress.c:407
+00400b50 <writebytes+0x60> slt       $2,$6,$5
+00400b58 <writebytes+0x68> bne       $2,$0,00400b08
+compress.c:410
+00400b60 <writebytes+0x70> addiu     $29,$29,8
+00400b68 <writebytes+0x78> jr        $31
+output():
+compress.c:423
+00400b70 <output> lw        $7,-32592($28)
+compress.c:418
+00400b78 <output+0x8> addiu     $29,$29,-32
+00400b80 <output+0x10> sw        $17,20($29)
+compress.c:423
+00400b88 <output+0x18> lw        $17,-32516($28)
+compress.c:418
+00400b90 <output+0x20> addu      $8,$0,$4
+00400b98 <output+0x28> sw        $16,16($29)
+compress.c:424
+00400ba0 <output+0x30> lui       $16,4096
+00400ba8 <output+0x38> addiu     $16,$16,2752
+compress.c:418
+00400bb0 <output+0x40> sw        $31,28($29)
+00400bb8 <output+0x48> sw        $18,24($29)
+compress.c:426
+00400bc0 <output+0x50> bltz      $8,00400e90
+compress.c:433
+00400bc8 <output+0x58> sra       $2,$7,0x3
+00400bd0 <output+0x60> addu      $16,$2,$16
+compress.c:434
+00400bd8 <output+0x68> andi      $7,$7,7
+compress.c:441
+00400be0 <output+0x70> addiu     $2,$17,-8
+00400be8 <output+0x78> addu      $17,$2,$7
+compress.c:439
+00400bf0 <output+0x80> lbu       $4,0($16)
+00400bf8 <output+0x88> lui       $5,4096
+00400c00 <output+0x90> addu      $5,$5,$7
+00400c08 <output+0x98> lbu       $5,108($5)
+00400c10 <output+0xa0> sllv      $6,$8,$7
+00400c18 <output+0xa8> lui       $3,4096
+00400c20 <output+0xb0> addu      $3,$3,$7
+00400c28 <output+0xb8> lbu       $3,96($3)
+compress.c:442
+00400c30 <output+0xc0> addiu     $2,$0,8
+00400c38 <output+0xc8> subu      $2,$2,$7
+00400c40 <output+0xd0> srav      $8,$8,$2
+compress.c:444
+00400c48 <output+0xd8> slti      $2,$17,8
+compress.c:439
+00400c50 <output+0xe0> and       $4,$4,$5
+00400c58 <output+0xe8> and       $3,$3,$6
+00400c60 <output+0xf0> or        $4,$4,$3
+00400c68 <output+0xf8> sb        $4,0($16)
+compress.c:440
+00400c70 <output+0x100> addiu     $16,$16,1
+compress.c:444
+00400c78 <output+0x108> bne       $2,$0,00400ca0
+compress.c:446
+00400c80 <output+0x110> sb        $8,0($16)
+00400c88 <output+0x118> addiu     $16,$16,1
+compress.c:447
+00400c90 <output+0x120> sra       $8,$8,0x8
+compress.c:448
+00400c98 <output+0x128> addiu     $17,$17,-8
+compress.c:452
+00400ca0 <output+0x130> beq       $17,$0,00400cb0
+compress.c:453
+00400ca8 <output+0x138> sb        $8,0($16)
+compress.c:456
+00400cb0 <output+0x140> lw        $2,-32592($28)
+00400cb8 <output+0x148> lw        $4,-32516($28)
+00400cc0 <output+0x150> addu      $2,$2,$4
+compress.c:457
+00400cc8 <output+0x158> sll       $3,$4,0x3
+compress.c:456
+00400cd0 <output+0x160> sw        $2,-32592($28)
+compress.c:457
+00400cd8 <output+0x168> bne       $2,$3,00400d60
+compress.c:458
+00400ce0 <output+0x170> lui       $16,4096
+00400ce8 <output+0x178> addiu     $16,$16,2752
+compress.c:460
+00400cf0 <output+0x180> lw        $2,-32520($28)
+compress.c:459
+00400cf8 <output+0x188> addu      $17,$0,$4
+compress.c:461
+00400d00 <output+0x190> addu      $18,$0,$16
+compress.c:460
+00400d08 <output+0x198> addu      $2,$2,$17
+00400d10 <output+0x1a0> sw        $2,-32520($28)
+compress.c:462
+00400d18 <output+0x1a8> lb        $4,0($16)
+compress.c:463
+00400d20 <output+0x1b0> addiu     $17,$17,-1
+compress.c:462
+00400d28 <output+0x1b8> addiu     $16,$16,1
+00400d30 <output+0x1c0> jal       00400ac8 <putbyte> 
+compress.c:463
+00400d38 <output+0x1c8> beq       $17,$0,00400d58
+00400d40 <output+0x1d0> subu      $2,$16,$18
+00400d48 <output+0x1d8> slti      $2,$2,16
+00400d50 <output+0x1e0> bne       $2,$0,00400d18
+compress.c:464
+00400d58 <output+0x1e8> sw        $0,-32592($28)
+compress.c:470
+00400d60 <output+0x1f0> lw        $3,-32756($28)
+00400d68 <output+0x1f8> lw        $2,-32508($28)
+00400d70 <output+0x200> slt       $2,$2,$3
+00400d78 <output+0x208> bne       $2,$0,00400d90
+00400d80 <output+0x210> lw        $2,-32732($28)
+00400d88 <output+0x218> blez      $2,00400f10
+compress.c:475
+00400d90 <output+0x220> lw        $2,-32592($28)
+00400d98 <output+0x228> blez      $2,00400de0
+compress.c:476
+00400da0 <output+0x230> lw        $5,-32516($28)
+00400da8 <output+0x238> lui       $4,4096
+00400db0 <output+0x240> addiu     $4,$4,2752
+00400db8 <output+0x248> jal       00400af0 <writebytes> 
+compress.c:477
+00400dc0 <output+0x250> lw        $2,-32520($28)
+00400dc8 <output+0x258> lw        $3,-32516($28)
+00400dd0 <output+0x260> addu      $2,$2,$3
+00400dd8 <output+0x268> sw        $2,-32520($28)
+compress.c:480
+00400de0 <output+0x270> lw        $2,-32732($28)
+compress.c:479
+00400de8 <output+0x278> sw        $0,-32592($28)
+compress.c:480
+00400df0 <output+0x280> beq       $2,$0,00400e28
+compress.c:481
+00400df8 <output+0x288> addiu     $2,$0,9
+00400e00 <output+0x290> sw        $2,-32516($28)
+00400e08 <output+0x298> addiu     $2,$0,511
+00400e10 <output+0x2a0> sw        $2,-32508($28)
+compress.c:482
+00400e18 <output+0x2a8> sw        $0,-32732($28)
+compress.c:483
+00400e20 <output+0x2b0> j         00400f10
+compress.c:484
+00400e28 <output+0x2b8> lw        $2,-32516($28)
+compress.c:485
+00400e30 <output+0x2c0> lw        $3,-32768($28)
+compress.c:484
+00400e38 <output+0x2c8> addiu     $4,$2,1
+00400e40 <output+0x2d0> sw        $4,-32516($28)
+compress.c:485
+00400e48 <output+0x2d8> bne       $4,$3,00400e68
+compress.c:487
+00400e50 <output+0x2e0> lw        $2,-32764($28)
+00400e58 <output+0x2e8> sw        $2,-32508($28)
+compress.c:488
+00400e60 <output+0x2f0> j         00400f10
+compress.c:491
+00400e68 <output+0x2f8> addiu     $2,$0,1
+00400e70 <output+0x300> sllv      $2,$2,$4
+00400e78 <output+0x308> addiu     $2,$2,-1
+00400e80 <output+0x310> sw        $2,-32508($28)
+compress.c:495
+00400e88 <output+0x318> j         00400f10
+compress.c:499
+00400e90 <output+0x320> blez      $7,00400ec8
+compress.c:501
+00400e98 <output+0x328> addiu     $5,$7,7
+00400ea0 <output+0x330> bgez      $5,00400eb0
+00400ea8 <output+0x338> addiu     $5,$7,14
+00400eb0 <output+0x340> addu      $4,$0,$16
+00400eb8 <output+0x348> sra       $5,$5,0x3
+00400ec0 <output+0x350> jal       00400af0 <writebytes> 
+compress.c:503
+00400ec8 <output+0x358> lw        $2,-32592($28)
+00400ed0 <output+0x360> addiu     $3,$2,7
+00400ed8 <output+0x368> bgez      $3,00400ee8
+00400ee0 <output+0x370> addiu     $3,$2,14
+00400ee8 <output+0x378> lw        $2,-32520($28)
+00400ef0 <output+0x380> sra       $3,$3,0x3
+compress.c:504
+00400ef8 <output+0x388> sw        $0,-32592($28)
+compress.c:503
+00400f00 <output+0x390> addu      $2,$2,$3
+00400f08 <output+0x398> sw        $2,-32520($28)
+compress.c:506
+00400f10 <output+0x3a0> lw        $31,28($29)
+00400f18 <output+0x3a8> lw        $18,24($29)
+00400f20 <output+0x3b0> lw        $17,20($29)
+00400f28 <output+0x3b8> lw        $16,16($29)
+00400f30 <output+0x3c0> addiu     $29,$29,32
+00400f38 <output+0x3c8> jr        $31
+end_addr

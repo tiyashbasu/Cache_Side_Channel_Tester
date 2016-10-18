@@ -1,0 +1,129 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-26192
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32636($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       00400440 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32640($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       004001f0 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       00400470 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+main():
+fir.c:191
+004001f0 <main> addiu     $29,$29,-2912
+fir.c:194
+004001f8 <main+0x8> addiu     $2,$0,35
+00400200 <main+0x10> sw        $2,16($29)
+00400208 <main+0x18> addiu     $2,$0,285
+00400210 <main+0x20> lui       $4,4096
+00400218 <main+0x28> addiu     $4,$4,240
+00400220 <main+0x30> addiu     $5,$29,24
+00400228 <main+0x38> addiu     $6,$0,700
+00400230 <main+0x40> lui       $7,4096
+00400238 <main+0x48> addiu     $7,$7,96
+fir.c:191
+00400240 <main+0x50> sw        $31,2904($29)
+fir.c:194
+00400248 <main+0x58> sw        $2,20($29)
+00400250 <main+0x60> jal       00400270 <fir_filter_int> 
+fir.c:204
+00400258 <main+0x68> lw        $31,2904($29)
+00400260 <main+0x70> addiu     $29,$29,2912
+00400268 <main+0x78> jr        $31
+fir_filter_int():
+fir.c:231
+00400270 <fir_filter_int> addiu     $29,$29,-8
+00400278 <fir_filter_int+0x8> lw        $24,24($29)
+fir.c:247
+00400280 <fir_filter_int+0x10> addu      $14,$0,$0
+fir.c:231
+00400288 <fir_filter_int+0x18> lw        $15,28($29)
+fir.c:238
+00400290 <fir_filter_int+0x20> addiu     $3,$24,1
+00400298 <fir_filter_int+0x28> sra       $3,$3,0x1
+fir.c:242
+004002a0 <fir_filter_int+0x30> sll       $2,$3,0x2
+004002a8 <fir_filter_int+0x38> addu      $2,$4,$2
+004002b0 <fir_filter_int+0x40> addiu     $13,$2,-4
+fir.c:245
+004002b8 <fir_filter_int+0x48> addu      $12,$0,$3
+fir.c:241
+004002c0 <fir_filter_int+0x50> sll       $2,$6,0x2
+004002c8 <fir_filter_int+0x58> addu      $4,$4,$2
+004002d0 <fir_filter_int+0x60> addiu     $4,$4,-4
+fir.c:247
+004002d8 <fir_filter_int+0x68> blez      $6,00400428
+fir.c:255
+004002e0 <fir_filter_int+0x70> lw        $2,0($7)
+004002e8 <fir_filter_int+0x78> lw        $3,0($13)
+004002f0 <fir_filter_int+0x80> mult      $2,$3
+004002f8 <fir_filter_int+0x88> addiu     $11,$13,-4
+00400300 <fir_filter_int+0x90> addiu     $10,$7,4
+00400308 <fir_filter_int+0x98> mflo      $9
+fir.c:256
+00400310 <fir_filter_int+0xa0> addiu     $8,$0,1
+00400318 <fir_filter_int+0xa8> slt       $2,$8,$12
+00400320 <fir_filter_int+0xb0> beq       $2,$0,00400378
+fir.c:257
+00400328 <fir_filter_int+0xb8> lw        $2,0($10)
+00400330 <fir_filter_int+0xc0> lw        $3,0($11)
+00400338 <fir_filter_int+0xc8> mult      $2,$3
+fir.c:256
+00400340 <fir_filter_int+0xd0> addiu     $8,$8,1
+fir.c:257
+00400348 <fir_filter_int+0xd8> mflo      $2
+00400350 <fir_filter_int+0xe0> addiu     $11,$11,-4
+00400358 <fir_filter_int+0xe8> addiu     $10,$10,4
+00400360 <fir_filter_int+0xf0> addu      $9,$9,$2
+fir.c:256
+00400368 <fir_filter_int+0xf8> slt       $2,$8,$12
+00400370 <fir_filter_int+0x100> bne       $2,$0,00400328
+fir.c:258
+00400378 <fir_filter_int+0x108> div       $9,$15
+00400380 <fir_filter_int+0x110> bne       $15,$0,00400390
+00400388 <fir_filter_int+0x118> break     00000007
+00400390 <fir_filter_int+0x120> addiu     $1,$0,-1
+00400398 <fir_filter_int+0x128> bne       $15,$1,004003b8
+004003a0 <fir_filter_int+0x130> lui       $1,32768
+004003a8 <fir_filter_int+0x138> bne       $9,$1,004003b8
+004003b0 <fir_filter_int+0x140> break     00000006
+004003b8 <fir_filter_int+0x148> mflo      $2
+004003c0 <fir_filter_int+0x150> sw        $2,0($5)
+004003c8 <fir_filter_int+0x158> addiu     $5,$5,4
+fir.c:262
+004003d0 <fir_filter_int+0x160> bne       $13,$4,004003f0
+fir.c:263
+004003d8 <fir_filter_int+0x168> addiu     $12,$12,-1
+fir.c:264
+004003e0 <fir_filter_int+0x170> addiu     $7,$7,4
+fir.c:265
+004003e8 <fir_filter_int+0x178> j         00400410
+fir.c:270
+004003f0 <fir_filter_int+0x180> slt       $2,$12,$24
+004003f8 <fir_filter_int+0x188> beq       $2,$0,00400408
+00400400 <fir_filter_int+0x190> addiu     $12,$12,1
+fir.c:271
+00400408 <fir_filter_int+0x198> addiu     $13,$13,4
+fir.c:247
+00400410 <fir_filter_int+0x1a0> addiu     $14,$14,1
+00400418 <fir_filter_int+0x1a8> slt       $2,$14,$6
+00400420 <fir_filter_int+0x1b0> bne       $2,$0,004002e0
+fir.c:274
+00400428 <fir_filter_int+0x1b8> addiu     $29,$29,8
+00400430 <fir_filter_int+0x1c0> jr        $31
+00400438 <fir_filter_int+0x1c8> nop       
+end_addr

@@ -1,0 +1,3655 @@
+
+ap_gps_0:     file format ss-coff-little
+
+SYMBOL TABLE:
+[  0] e 100003b0 st 1 sc e indx 2     _bytes_used
+      Type: unsigned int
+[  1] e 10000320 st 1 sc d indx 37     __morecore
+      Type: ptr to func. ret. 
+[  2] e 100003b4 st 1 sc e indx 37     __malloc_hook
+      Type: ptr to func. ret. 
+[  3] e 00401c80 st 6 sc 1 indx 32     __default_morecore
+      Local symbol: 887
+[  4] e 100003f0 st 1 sc 3 indx 2e     _fraghead
+      Type: array [1 {11 bits}] of struct list { ifd = 0, index = 569 }
+[  5] e 10000314 st 1 sc d indx 55     stdout
+      Type: ptr to struct __stdio_file { ifd = 0, index = 444 }
+[  6] e 10000060 st 1 sc 5 indx fffff     _fdata
+[  7] e 10000390 st 1 sc e indx 5     simul_ir_roll
+      Type: short
+[  8] e 00404ba0 st 6 sc 1 indx 6     _wordcopy_fwd_aligned
+      Local symbol: 1655
+[  9] e 10000340 st 1 sc d indx 9d     __default_room_functions
+      Type: struct .3fake { ifd = 0, index = 1082 }
+[ 10] e 00400550 st 6 sc 1 indx 3     __init_misc
+      Local symbol: 315
+[ 11] e 004007f0 st 6 sc 1 indx 83     _cleanup
+      Local symbol: 519
+[ 12] e 100003b8 st 1 sc e indx 2     _chunks_free
+      Type: unsigned int
+[ 13] e 00400140 st 1 sc 1 indx fffff     eprol
+[ 14] e 00405580 st 1 sc 1 indx fffff     __write
+[ 15] e 10000380 st 1 sc e indx fffff     errno
+[ 16] e 00405800 st 1 sc 1 indx fffff     _etext
+[ 17] e 100082e0 st 1 sc 5 indx fffff     _gp
+[ 18] e 00404500 st 6 sc 1 indx ae     __stdio_write
+      Local symbol: 1551
+[ 19] e 00405680 st 1 sc 1 indx fffff     __dup2
+[ 20] e 00405540 st 1 sc 1 indx fffff     __read
+[ 21] e 10000300 st 1 sc d indx 27     __exit_funcs
+      Type: ptr to struct exit_function_list { ifd = 0, index = 362 }
+[ 22] e 00401e40 st 6 sc 1 indx 4     memcpy
+      Local symbol: 920
+[ 23] e 004046a0 st 6 sc 1 indx bd     __stdio_fileno
+      Local symbol: 1566
+[ 24] e 100003bc st 1 sc e indx 2     _heapindex
+      Type: unsigned int
+[ 25] e 10000394 st 1 sc e indx 13     UBRR0L
+      Type: int
+[ 26] e 00400eb8 st 6 sc 1 indx 4d     malloc
+      Local symbol: 619
+[ 27] e 00405640 st 1 sc 1 indx fffff     __open
+[ 28] e 004053f0 st 6 sc 1 indx 94     __stdio_init_stream
+      Local symbol: 1880
+[ 29] e 100003c0 st 1 sc e indx 2     _heaplimit
+      Type: unsigned int
+[ 30] e 004047d8 st 6 sc 1 indx c5     __stdio_reopen
+      Local symbol: 1574
+[ 31] e 10000360 st 1 sc 5 indx fffff     edata
+[ 32] e 00400668 st 6 sc 1 indx 29     __new_exitfn
+      Local symbol: 370
+[ 33] e 100002e0 st 1 sc d indx 5     ir_contrast
+      Type: short
+[ 34] e 004045f8 st 6 sc 1 indx b5     __stdio_seek
+      Local symbol: 1558
+[ 35] e 1000031c st 1 sc d indx 4f     __stdio_head
+      Type: ptr to struct __stdio_file { ifd = 0, index = 444 }
+[ 36] e 10000398 st 1 sc e indx 13     UBRR0H
+      Type: int
+[ 37] e 00400380 st 6 sc 1 indx 1     __libc_init
+      Local symbol: 121
+[ 38] e 00400860 st 6 sc 1 indx 3     strrchr
+      Local symbol: 531
+[ 39] e 100003c4 st 1 sc e indx 36     __after_morecore_hook
+      Type: func. ret. 
+[ 40] e 100002e8 st 1 sc d indx 5     ir_pitch_neutral
+      Type: short
+[ 41] e 10000384 st 1 sc e indx fffff     environ
+[ 42] e 00405750 st 6 sc 1 indx 64     __isatty
+      Local symbol: 2015
+[ 43] e 10000000 st 1 sc f indx 9a     __default_io_functions
+      Type: struct .2fake { ifd = 0, index = 1074 }
+[ 44] e 10000450 st 1 sc 5 indx fffff     end
+[ 45] e 00400140 st 1 sc 1 indx fffff     __start
+[ 46] e 004044d0 st 6 sc 1 indx a9     __stdio_read
+      Local symbol: 1546
+[ 47] e 00401ac0 st 1 sc 1 indx fffff     syscall_error
+[ 48] e 00405800 st 1 sc 1 indx fffff     etext
+[ 49] e 10000310 st 1 sc d indx 52     stdin
+      Type: ptr to struct __stdio_file { ifd = 0, index = 444 }
+[ 50] e 1000039c st 1 sc e indx 13     UCSR0C
+      Type: int
+[ 51] e 004001f0 st 6 sc 1 indx 8     uart0_init
+      Local symbol: 107
+[ 52] e 00400140 st 1 sc 1 indx fffff     _ftext
+[ 53] e 100002f4 st 1 sc d indx 7     __progname
+      Type: ptr to char
+[ 54] e 00400280 st 6 sc 1 indx a     gps_init
+      Local symbol: 109
+[ 55] e 004057d0 st 1 sc 1 indx fffff     __ioctl
+[ 56] e 004051d0 st 6 sc 1 indx 2d     _wordcopy_bwd_dest_aligned
+      Local symbol: 1694
+[ 57] e 004056b0 st 1 sc 1 indx fffff     __brk
+[ 58] e 100003c8 st 1 sc e indx 2b     _heapinfo
+      Type: ptr to union .4fake { ifd = 0, index = 564 }
+[ 59] e 10000354 st 1 sc d indx fffff     __minbrk
+[ 60] e 100003cc st 1 sc e indx 3     __malloc_initialized
+      Type: int
+[ 61] e 100003a0 st 1 sc e indx 13     UCSR0A
+      Type: int
+[ 62] e 00401cd0 st 6 sc 1 indx 4     memset
+      Local symbol: 897
+[ 63] e 004002f8 st 6 sc 1 indx c     main
+      Local symbol: 111
+[ 64] e 00401840 st 6 sc 1 indx 6c     fclose
+      Local symbol: 786
+[ 65] e 004055c0 st 1 sc 1 indx fffff     __lseek
+[ 66] e 00403ec8 st 6 sc 1 indx d6     __fillbf
+      Local symbol: 1247
+[ 67] e 10000330 st 1 sc d indx 28     _aligned_blocks
+      Type: ptr to struct alignlist { ifd = 0, index = 974 }
+[ 68] e 100003d0 st 1 sc e indx 2     _bytes_free
+      Type: unsigned int
+[ 69] e 004005e0 st 6 sc 1 indx 26     atexit
+      Local symbol: 367
+[ 70] e 00404db0 st 6 sc 1 indx 15     _wordcopy_fwd_dest_aligned
+      Local symbol: 1670
+[ 71] e 10000318 st 1 sc d indx 58     stderr
+      Type: ptr to struct __stdio_file { ifd = 0, index = 444 }
+[ 72] e 00404458 st 6 sc 1 indx ed     __invalidate
+      Local symbol: 1270
+[ 73] e 004046b0 st 6 sc 1 indx c0     __stdio_open
+      Local symbol: 1569
+[ 74] e 100003a4 st 1 sc e indx 5     simul_ir_pitch
+      Type: short
+[ 75] e 00402000 st 6 sc 1 indx 32     _free_internal
+      Local symbol: 993
+[ 76] e 00402a58 st 6 sc 1 indx 68     __stdio_check_offset
+      Local symbol: 1137
+[ 77] e 100002e4 st 1 sc d indx 5     ir_roll_neutral
+      Type: short
+[ 78] e 00405600 st 1 sc 1 indx fffff     __close
+[ 79] e 100003a8 st 1 sc e indx 13     UCSR0B
+      Type: int
+[ 80] e 10000360 st 1 sc 5 indx fffff     _edata
+[ 81] e 10000450 st 1 sc 5 indx fffff     _end
+[ 82] e 00404670 st 6 sc 1 indx ba     __stdio_close
+      Local symbol: 1563
+[ 83] e 100003d4 st 1 sc e indx 2a     _heapbase
+      Type: ptr to char
+[ 84] e 10000350 st 1 sc d indx fffff     __curbrk
+[ 85] e 004003b0 st 6 sc 1 indx a4     exit
+      Local symbol: 293
+[ 86] e 100003e0 st 1 sc e indx 27     __free_hook
+      Type: func. ret. 
+[ 87] e 00405720 st 1 sc 1 indx fffff     __fstat
+[ 88] e 00400840 st 1 sc 1 indx fffff     _exit
+[ 89] e 100003d8 st 1 sc e indx 2     _chunks_used
+      Type: unsigned int
+[ 90] e 00401ae0 st 6 sc 1 indx 3     strchr
+      Local symbol: 814
+[ 91] e 00404b10 st 6 sc 1 indx 1     __sbrk
+      Local symbol: 1641
+[ 92] e 00403990 st 6 sc 1 indx ba     __flshfp
+      Local symbol: 1219
+[ 93] e 10000360 st 1 sc 5 indx fffff     _fbss
+[ 94] e 00404fb0 st 6 sc 1 indx 1e     _wordcopy_bwd_aligned
+      Local symbol: 1679
+[ 95] e 00402950 st 6 sc 1 indx 63     __stdio_check_funcs
+      Local symbol: 1132
+[ 96] e 004028b0 st 6 sc 1 indx 3d     free
+      Local symbol: 1004
+[ 97] l 00000000 st b sc 1 indx 2     /var/tmp/cca003vh.s
+      End+1 symbol: 99
+[ 98] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca003vh.s
+      First symbol: 97
+[ 99] l 00000000 st b sc 1 indx 15     ap_gps_0.c
+      End+1 symbol: 120
+[100] l 00000000 st a sc b indx 1     uint8_t
+      Type: unsigned char
+[101] l 00000000 st a sc b indx 2     uint16_t
+      Type: unsigned short
+[102] l 00000000 st a sc b indx 3     uint32_t
+      Type: unsigned long
+[103] l 00000000 st a sc b indx 4     int8_t
+      Type: char
+[104] l 00000000 st a sc b indx 5     int16_t
+      Type: short
+[105] l 00000000 st a sc b indx 6     int32_t
+      Type: long
+[106] l 00000000 st a sc b indx 1     bool_t
+      Type: unsigned char
+[107] l 004001f0 st 6 sc 1 indx 7     uart0_init
+      End+1 symbol: 109       Type:  nil
+[108] l 00000090 st 8 sc 1 indx 8     uart0_init
+      First symbol: 107
+[109] l 00400280 st 6 sc 1 indx 9     gps_init
+      End+1 symbol: 111       Type:  nil
+[110] l 00000078 st 8 sc 1 indx a     gps_init
+      First symbol: 109
+[111] l 004002f8 st 6 sc 1 indx 11     main
+      End+1 symbol: 116       Type:  int
+[112] l 00000038 st 7 sc 1 indx 10     $Lb0
+      End+1 symbol: 115
+[113] l fffffef8 st 4 sc 5 indx b     str
+      Type: array [256 {8 bits}] of char
+[114] l 00000048 st 8 sc 1 indx d     $Lb0
+      First symbol: 112
+[115] l 00000088 st 8 sc 1 indx c     main
+      First symbol: 111
+[116] l 10000360 st 2 sc e indx 1     ubx_status
+      Type: unsigned char
+[117] l 004001f0 st 5 sc 1 indx fffff     gcc2_compiled.
+[118] l 004001f0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[119] l 00000000 st 8 sc 1 indx 0     ap_gps_0.c
+      First symbol: 99
+[120] l 00000000 st b sc 1 indx 9     munch-init.c
+      End+1 symbol: 129
+[121] l 00400380 st 6 sc 1 indx 3     __libc_init
+      End+1 symbol: 126       Type:  int
+[122] l 00000004 st 3 sc 4 indx 1     argc
+      Type: int
+[123] l 00000005 st 3 sc 4 indx 2     argv
+      Type: ptr to ptr to char
+[124] l 00000006 st 3 sc 4 indx 2     envp
+      Type: ptr to ptr to char
+[125] l 00000030 st 8 sc 1 indx 1     __libc_init
+      First symbol: 121
+[126] l 00400380 st 5 sc 1 indx fffff     gcc2_compiled.
+[127] l 00400380 st 5 sc 1 indx fffff     __gnu_compiled_c
+[128] l 00000000 st 8 sc 1 indx 0     munch-init.c
+      First symbol: 120
+[129] l 00000000 st b sc 1 indx b7     exit.c
+      End+1 symbol: 312
+[130] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[131] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[132] l 00000000 st a sc b indx 3     __gnuc_va_list
+      Type: ptr to char
+[133] l 00000000 st a sc b indx 4     __u_char
+      Type: unsigned char
+[134] l 00000000 st a sc b indx 5     __u_short
+      Type: unsigned short
+[135] l 00000000 st a sc b indx 2     __u_int
+      Type: unsigned int
+[136] l 00000000 st a sc b indx 6     __u_long
+      Type: unsigned long
+[137] l 00000000 st a sc b indx 0     __u_quad_t
+      Type: nil
+[138] l 00000000 st a sc b indx 0     __quad_t
+      Type: nil
+[139] l 00000000 st a sc b indx 7     __qaddr_t
+      Type: ptr to nil
+[140] l 00000000 st a sc b indx 8     __dev_t
+      Type: int
+[141] l 00000000 st a sc b indx 2     __uid_t
+      Type: unsigned int
+[142] l 00000000 st a sc b indx 2     __gid_t
+      Type: unsigned int
+[143] l 00000000 st a sc b indx 2     __ino_t
+      Type: unsigned int
+[144] l 00000000 st a sc b indx 2     __mode_t
+      Type: unsigned int
+[145] l 00000000 st a sc b indx 5     __nlink_t
+      Type: unsigned short
+[146] l 00000000 st a sc b indx 9     __off_t
+      Type: long
+[147] l 00000000 st a sc b indx 8     __pid_t
+      Type: int
+[148] l 00000000 st a sc b indx 8     __ssize_t
+      Type: int
+[149] l 00000000 st a sc b indx 0     __fsid_t
+      Type: nil
+[150] l 00000000 st a sc b indx 9     __daddr_t
+      Type: long
+[151] l 00000000 st a sc b indx 3     __caddr_t
+      Type: ptr to char
+[152] l 00000000 st a sc b indx 9     __time_t
+      Type: long
+[153] l 00000000 st a sc b indx 9     __swblk_t
+      Type: long
+[154] l 00000020 st 7 sc b indx 1c     .0fake
+      End+1 symbol: 157
+[155] l 00000000 st 9 sc b indx a     fds_bits
+      Type: array [8 {32 bits}] of unsigned long
+[156] l 00000000 st 8 sc b indx 19     
+      First symbol: 154
+[157] l 00000000 st a sc b indx 10     __fd_set
+      Type: struct .0fake { ifd = 0, index = 154 }
+[158] l 00000000 st a sc b indx 13     FILE
+      Type: struct __stdio_file { ifd = 0, index = 183 }
+[159] l 00000000 st a sc b indx 9     fpos_t
+      Type: long
+[160] l 00000004 st 7 sc b indx 28     .1fake
+      End+1 symbol: 169
+[161] l 00000000 st 9 sc 8 indx 16     __read
+      Type: unsigned int : 1
+[162] l 00000001 st 9 sc 8 indx 18     __write
+      Type: unsigned int : 1
+[163] l 00000002 st 9 sc 8 indx 1a     __append
+      Type: unsigned int : 1
+[164] l 00000003 st 9 sc 8 indx 1c     __binary
+      Type: unsigned int : 1
+[165] l 00000004 st 9 sc 8 indx 1e     __create
+      Type: unsigned int : 1
+[166] l 00000005 st 9 sc 8 indx 20     __exclusive
+      Type: unsigned int : 1
+[167] l 00000006 st 9 sc 8 indx 22     __truncate
+      Type: unsigned int : 1
+[168] l 00000000 st 8 sc b indx 1f     
+      First symbol: 160
+[169] l 00000000 st a sc b indx 24     __io_mode
+      Type: struct .1fake { ifd = 0, index = 160 }
+[170] l 00000014 st 7 sc b indx 30     .2fake
+      End+1 symbol: 177
+[171] l 00000000 st 9 sc b indx 27     __read
+      Type: func. ret. 
+[172] l 00000020 st 9 sc b indx 27     __write
+      Type: func. ret. 
+[173] l 00000040 st 9 sc b indx 27     __seek
+      Type: func. ret. 
+[174] l 00000060 st 9 sc b indx 27     __close
+      Type: func. ret. 
+[175] l 00000080 st 9 sc b indx 27     __fileno
+      Type: func. ret. 
+[176] l 00000000 st 8 sc b indx 29     
+      First symbol: 170
+[177] l 00000000 st a sc b indx 28     __io_functions
+      Type: struct .2fake { ifd = 0, index = 170 }
+[178] l 00000008 st 7 sc b indx 35     .3fake
+      End+1 symbol: 182
+[179] l 00000000 st 9 sc b indx 27     __input
+      Type: func. ret. 
+[180] l 00000020 st 9 sc b indx 27     __output
+      Type: func. ret. 
+[181] l 00000000 st 8 sc b indx 31     
+      First symbol: 178
+[182] l 00000000 st a sc b indx 2b     __room_functions
+      Type: struct .3fake { ifd = 0, index = 178 }
+[183] l 00000050 st 7 sc b indx 4f     __stdio_file
+      End+1 symbol: 208
+[184] l 00000000 st 9 sc b indx 8     __magic
+      Type: int
+[185] l 00000020 st 9 sc b indx 3     __bufp
+      Type: ptr to char
+[186] l 00000040 st 9 sc b indx 3     __get_limit
+      Type: ptr to char
+[187] l 00000060 st 9 sc b indx 3     __put_limit
+      Type: ptr to char
+[188] l 00000080 st 9 sc b indx 3     __buffer
+      Type: ptr to char
+[189] l 000000a0 st 9 sc b indx 2     __bufsize
+      Type: unsigned int
+[190] l 000000c0 st 9 sc b indx 2e     __cookie
+      Type: ptr to int
+[191] l 000000e0 st 9 sc b indx 2f     __mode
+      Type: struct .1fake { ifd = 0, index = 160 }
+[192] l 00000100 st 9 sc b indx 32     __io_funcs
+      Type: struct .2fake { ifd = 0, index = 170 }
+[193] l 000001a0 st 9 sc b indx 35     __room_funcs
+      Type: struct .3fake { ifd = 0, index = 178 }
+[194] l 000001e0 st 9 sc b indx 9     __offset
+      Type: long
+[195] l 00000200 st 9 sc b indx 9     __target
+      Type: long
+[196] l 00000220 st 9 sc b indx 38     __next
+      Type: ptr to struct __stdio_file { ifd = 0, index = 183 }
+[197] l 00000240 st 9 sc b indx 3     __pushback_bufp
+      Type: ptr to char
+[198] l 00000260 st 9 sc b indx 4     __pushback
+      Type: unsigned char
+[199] l 00000268 st 9 sc 8 indx 3b     __pushed_back
+      Type: unsigned int : 1
+[200] l 00000269 st 9 sc 8 indx 3d     __eof
+      Type: unsigned int : 1
+[201] l 0000026a st 9 sc 8 indx 3f     __error
+      Type: unsigned int : 1
+[202] l 0000026b st 9 sc 8 indx 41     __userbuf
+      Type: unsigned int : 1
+[203] l 0000026c st 9 sc 8 indx 43     __linebuf
+      Type: unsigned int : 1
+[204] l 0000026d st 9 sc 8 indx 45     __linebuf_active
+      Type: unsigned int : 1
+[205] l 0000026e st 9 sc 8 indx 47     __seen
+      Type: unsigned int : 1
+[206] l 0000026f st 9 sc 8 indx 49     __ispipe
+      Type: unsigned int : 1
+[207] l 00000000 st 8 sc b indx 36     
+      First symbol: 183
+[208] l 00000000 st a sc b indx 9     time_t
+      Type: long
+[209] l 00000000 st a sc b indx 8     int32_t
+      Type: int
+[210] l 00000000 st a sc b indx 4b     int16_t
+      Type: short
+[211] l 00000000 st a sc b indx 4c     int8_t
+      Type: char
+[212] l 00000000 st a sc b indx 2     u_int32_t
+      Type: unsigned int
+[213] l 00000000 st a sc b indx 5     u_int16_t
+      Type: unsigned short
+[214] l 00000000 st a sc b indx 4     u_int8_t
+      Type: unsigned char
+[215] l 00000000 st a sc b indx 8     wchar_t
+      Type: int
+[216] l 00000008 st 7 sc b indx 5b     .4fake
+      End+1 symbol: 220
+[217] l 00000000 st 9 sc b indx 8     quot
+      Type: int
+[218] l 00000020 st 9 sc b indx 8     rem
+      Type: int
+[219] l 00000000 st 8 sc b indx 57     
+      First symbol: 216
+[220] l 00000000 st a sc b indx 4d     div_t
+      Type: struct .4fake { ifd = 0, index = 216 }
+[221] l 00000008 st 7 sc b indx 60     .5fake
+      End+1 symbol: 225
+[222] l 00000000 st 9 sc b indx 9     quot
+      Type: long
+[223] l 00000020 st 9 sc b indx 9     rem
+      Type: long
+[224] l 00000000 st 8 sc b indx 5c     
+      First symbol: 221
+[225] l 00000000 st a sc b indx 50     ldiv_t
+      Type: struct .5fake { ifd = 0, index = 221 }
+[226] l 00000000 st a sc b indx 27     __compar_fn_t
+      Type: func. ret. 
+[227] l 00000000 st a sc b indx 27     comparison_fn_t
+      Type: func. ret. 
+[228] l 00000004 st 7 sc b indx 6e     .6fake
+      End+1 symbol: 239
+[229] l 00000000 st 9 sc b indx 0     _PC_LINK_MAX
+      Type: nil
+[230] l 00000001 st 9 sc b indx 0     _PC_MAX_CANON
+      Type: nil
+[231] l 00000002 st 9 sc b indx 0     _PC_MAX_INPUT
+      Type: nil
+[232] l 00000003 st 9 sc b indx 0     _PC_NAME_MAX
+      Type: nil
+[233] l 00000004 st 9 sc b indx 0     _PC_PATH_MAX
+      Type: nil
+[234] l 00000005 st 9 sc b indx 0     _PC_PIPE_BUF
+      Type: nil
+[235] l 00000006 st 9 sc b indx 0     _PC_CHOWN_RESTRICTED
+      Type: nil
+[236] l 00000007 st 9 sc b indx 0     _PC_NO_TRUNC
+      Type: nil
+[237] l 00000008 st 9 sc b indx 0     _PC_VDISABLE
+      Type: nil
+[238] l 00000000 st 8 sc b indx 63     
+      First symbol: 228
+[239] l 00000004 st 7 sc b indx 8b     .7fake
+      End+1 symbol: 268
+[240] l 00000000 st 9 sc b indx 0     _SC_ARG_MAX
+      Type: nil
+[241] l 00000001 st 9 sc b indx 0     _SC_CHILD_MAX
+      Type: nil
+[242] l 00000002 st 9 sc b indx 0     _SC_CLK_TCK
+      Type: nil
+[243] l 00000003 st 9 sc b indx 0     _SC_NGROUPS_MAX
+      Type: nil
+[244] l 00000004 st 9 sc b indx 0     _SC_OPEN_MAX
+      Type: nil
+[245] l 00000005 st 9 sc b indx 0     _SC_STREAM_MAX
+      Type: nil
+[246] l 00000006 st 9 sc b indx 0     _SC_TZNAME_MAX
+      Type: nil
+[247] l 00000007 st 9 sc b indx 0     _SC_JOB_CONTROL
+      Type: nil
+[248] l 00000008 st 9 sc b indx 0     _SC_SAVED_IDS
+      Type: nil
+[249] l 00000009 st 9 sc b indx 0     _SC_VERSION
+      Type: nil
+[250] l 0000000a st 9 sc b indx 0     _SC_PAGESIZE
+      Type: nil
+[251] l 0000000b st 9 sc b indx 0     _SC_BC_BASE_MAX
+      Type: nil
+[252] l 0000000c st 9 sc b indx 0     _SC_BC_DIM_MAX
+      Type: nil
+[253] l 0000000d st 9 sc b indx 0     _SC_BC_SCALE_MAX
+      Type: nil
+[254] l 0000000e st 9 sc b indx 0     _SC_BC_STRING_MAX
+      Type: nil
+[255] l 0000000f st 9 sc b indx 0     _SC_COLL_WEIGHTS_MAX
+      Type: nil
+[256] l 00000010 st 9 sc b indx 0     _SC_EQUIV_CLASS_MAX
+      Type: nil
+[257] l 00000011 st 9 sc b indx 0     _SC_EXPR_NEST_MAX
+      Type: nil
+[258] l 00000012 st 9 sc b indx 0     _SC_LINE_MAX
+      Type: nil
+[259] l 00000013 st 9 sc b indx 0     _SC_RE_DUP_MAX
+      Type: nil
+[260] l 00000014 st 9 sc b indx 0     _SC_2_VERSION
+      Type: nil
+[261] l 00000015 st 9 sc b indx 0     _SC_2_C_BIND
+      Type: nil
+[262] l 00000016 st 9 sc b indx 0     _SC_2_C_DEV
+      Type: nil
+[263] l 00000017 st 9 sc b indx 0     _SC_2_FORT_DEV
+      Type: nil
+[264] l 00000018 st 9 sc b indx 0     _SC_2_FORT_RUN
+      Type: nil
+[265] l 00000019 st 9 sc b indx 0     _SC_2_SW_DEV
+      Type: nil
+[266] l 0000001a st 9 sc b indx 0     _SC_2_LOCALEDEF
+      Type: nil
+[267] l 00000000 st 8 sc b indx 6e     
+      First symbol: 239
+[268] l 00000004 st 7 sc b indx 8e     .8fake
+      End+1 symbol: 271
+[269] l 00000000 st 9 sc b indx 0     _CS_PATH
+      Type: nil
+[270] l 00000000 st 8 sc b indx 8b     
+      First symbol: 268
+[271] l 00000004 st 7 sc b indx 93     .9fake
+      End+1 symbol: 276
+[272] l 00000000 st 9 sc b indx 0     ef_free
+      Type: nil
+[273] l 00000001 st 9 sc b indx 0     ef_on
+      Type: nil
+[274] l 00000002 st 9 sc b indx 0     ef_at
+      Type: nil
+[275] l 00000000 st 8 sc b indx 8e     
+      First symbol: 271
+[276] l 00000008 st 7 sc b indx 97     .10fake
+      End+1 symbol: 280
+[277] l 00000000 st 9 sc b indx 27     fn
+      Type: func. ret. 
+[278] l 00000020 st 9 sc b indx 2e     arg
+      Type: ptr to int
+[279] l 00000000 st 8 sc b indx 93     
+      First symbol: 276
+[280] l 00000008 st 7 sc b indx 9b     .11fake
+      End+1 symbol: 284
+[281] l 00000000 st 9 sc b indx 27     at
+      Type: func. ret. 
+[282] l 00000000 st 9 sc b indx 53     on
+      Type: struct .10fake { ifd = 0, index = 276 }
+[283] l 00000000 st 8 sc b indx 97     
+      First symbol: 280
+[284] l 0000000c st 7 sc b indx 9f     exit_function
+      End+1 symbol: 288
+[285] l 00000000 st 9 sc b indx 56     flavor
+      Type: enum .9fake { ifd = 0, index = 271 }
+[286] l 00000020 st 9 sc b indx 59     func
+      Type: union .11fake { ifd = 0, index = 280 }
+[287] l 00000000 st 8 sc b indx 9b     
+      First symbol: 284
+[288] l 00000188 st 7 sc b indx a4     exit_function_list
+      End+1 symbol: 293
+[289] l 00000000 st 9 sc b indx 5c     next
+      Type: ptr to struct exit_function_list { ifd = 0, index = 288 }
+[290] l 00000020 st 9 sc b indx 2     idx
+      Type: unsigned int
+[291] l 00000040 st 9 sc b indx 5f     fns
+      Type: array [1 {31 bits}] of struct exit_function { ifd = 0, index = 284 }
+[292] l 00000000 st 8 sc b indx 9f     
+      First symbol: 288
+[293] l 004003b0 st 6 sc 1 indx 67     exit
+      End+1 symbol: 302       Type:  int
+[294] l 00000004 st 3 sc 4 indx 8     status
+      Type: int
+[295] l 00000068 st 7 sc 1 indx aa     $Lb0
+      End+1 symbol: 299
+[296] l 000000a8 st 7 sc 1 indx a9     $Lb1
+      End+1 symbol: 298
+[297] l 00000110 st 8 sc 1 indx a7     $Lb1
+      First symbol: 296
+[298] l 00000130 st 8 sc 1 indx a6     $Lb0
+      First symbol: 295
+[299] l 00000140 st 7 sc 1 indx ac     $Lb4
+      End+1 symbol: 301
+[300] l 00000140 st 8 sc 1 indx aa     $Lb4
+      First symbol: 299
+[301] l 000001a0 st 8 sc 1 indx a4     exit
+      First symbol: 293
+[302] l 004003b0 st 5 sc 1 indx fffff     gcc2_compiled.
+[303] l 004003b0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[304] l 004004f0 st 5 sc 1 indx fffff     $L39
+[305] l 00400418 st 5 sc 1 indx fffff     $L41
+[306] l 004004e0 st 5 sc 1 indx fffff     $L40
+[307] l 00400458 st 5 sc 1 indx fffff     $L44
+[308] l 00400488 st 5 sc 1 indx fffff     $L47
+[309] l 004004c0 st 5 sc 1 indx fffff     $L42
+[310] l 004004b0 st 5 sc 1 indx fffff     $L48
+[311] l 00000000 st 8 sc 1 indx 0     exit.c
+      First symbol: 129
+[312] l 00000000 st b sc 1 indx 11     init-misc.c
+      End+1 symbol: 329
+[313] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[314] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[315] l 00400550 st 6 sc 1 indx 5     __init_misc
+      End+1 symbol: 322       Type:  int
+[316] l 00000004 st 3 sc 4 indx 3     argc
+      Type: int
+[317] l 00000005 st 3 sc 4 indx 4     argv
+      Type: ptr to ptr to char
+[318] l 00000006 st 3 sc 4 indx 4     envp
+      Type: ptr to ptr to char
+[319] l 00000038 st 7 sc 1 indx 9     $Lb0
+      End+1 symbol: 321
+[320] l 00000070 st 8 sc 1 indx 7     $Lb0
+      First symbol: 319
+[321] l 00000090 st 8 sc 1 indx 3     __init_misc
+      First symbol: 315
+[322] l 00400550 st 5 sc 1 indx fffff     gcc2_compiled.
+[323] l 00400550 st 5 sc 1 indx fffff     __gnu_compiled_c
+[324] l 100002f0 st 2 sc d indx fffff     $LC0
+[325] l 004005c0 st 5 sc 1 indx fffff     $L6
+[326] l 004005b0 st 5 sc 1 indx fffff     $L7
+[327] l 004005b8 st 5 sc 1 indx fffff     $L9
+[328] l 00000000 st 8 sc 1 indx 0     init-misc.c
+      First symbol: 312
+[329] l 00000000 st b sc 1 indx 3b     atexit.c
+      End+1 symbol: 388
+[330] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[331] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[332] l 00000000 st a sc b indx 3     wchar_t
+      Type: int
+[333] l 00000008 st 7 sc b indx 8     .0fake
+      End+1 symbol: 337
+[334] l 00000000 st 9 sc b indx 3     quot
+      Type: int
+[335] l 00000020 st 9 sc b indx 3     rem
+      Type: int
+[336] l 00000000 st 8 sc b indx 4     
+      First symbol: 333
+[337] l 00000000 st a sc b indx 4     div_t
+      Type: struct .0fake { ifd = 0, index = 333 }
+[338] l 00000008 st 7 sc b indx d     .1fake
+      End+1 symbol: 342
+[339] l 00000000 st 9 sc b indx 7     quot
+      Type: long
+[340] l 00000020 st 9 sc b indx 7     rem
+      Type: long
+[341] l 00000000 st 8 sc b indx 9     
+      First symbol: 338
+[342] l 00000000 st a sc b indx 8     ldiv_t
+      Type: struct .1fake { ifd = 0, index = 338 }
+[343] l 00000000 st a sc b indx b     __compar_fn_t
+      Type: func. ret. 
+[344] l 00000000 st a sc b indx b     comparison_fn_t
+      Type: func. ret. 
+[345] l 00000004 st 7 sc b indx 15     .2fake
+      End+1 symbol: 350
+[346] l 00000000 st 9 sc b indx 0     ef_free
+      Type: nil
+[347] l 00000001 st 9 sc b indx 0     ef_on
+      Type: nil
+[348] l 00000002 st 9 sc b indx 0     ef_at
+      Type: nil
+[349] l 00000000 st 8 sc b indx 10     
+      First symbol: 345
+[350] l 00000008 st 7 sc b indx 19     .3fake
+      End+1 symbol: 354
+[351] l 00000000 st 9 sc b indx b     fn
+      Type: func. ret. 
+[352] l 00000020 st 9 sc b indx c     arg
+      Type: ptr to int
+[353] l 00000000 st 8 sc b indx 15     
+      First symbol: 350
+[354] l 00000008 st 7 sc b indx 1d     .4fake
+      End+1 symbol: 358
+[355] l 00000000 st 9 sc b indx b     at
+      Type: func. ret. 
+[356] l 00000000 st 9 sc b indx d     on
+      Type: struct .3fake { ifd = 0, index = 350 }
+[357] l 00000000 st 8 sc b indx 19     
+      First symbol: 354
+[358] l 0000000c st 7 sc b indx 21     exit_function
+      End+1 symbol: 362
+[359] l 00000000 st 9 sc b indx 10     flavor
+      Type: enum .2fake { ifd = 0, index = 345 }
+[360] l 00000020 st 9 sc b indx 13     func
+      Type: union .4fake { ifd = 0, index = 354 }
+[361] l 00000000 st 8 sc b indx 1d     
+      First symbol: 358
+[362] l 00000188 st 7 sc b indx 26     exit_function_list
+      End+1 symbol: 367
+[363] l 00000000 st 9 sc b indx 16     next
+      Type: ptr to struct exit_function_list { ifd = 0, index = 362 }
+[364] l 00000020 st 9 sc b indx 2     idx
+      Type: unsigned int
+[365] l 00000040 st 9 sc b indx 19     fns
+      Type: array [1 {31 bits}] of struct exit_function { ifd = 0, index = 358 }
+[366] l 00000000 st 8 sc b indx 21     
+      First symbol: 362
+[367] l 004005e0 st 6 sc 1 indx 21     atexit
+      End+1 symbol: 370       Type:  int
+[368] l 00000004 st 3 sc 4 indx b     func
+      Type: func. ret. 
+[369] l 00000088 st 8 sc 1 indx 26     atexit
+      First symbol: 367
+[370] l 00400668 st 6 sc 1 indx 23     __new_exitfn
+      End+1 symbol: 374       Type:  ptr to struct exit_function { ifd = 0, index = 358 }
+[371] l 00000020 st 7 sc 1 indx 2c     $Lb0
+      End+1 symbol: 373
+[372] l 000000a8 st 8 sc 1 indx 2a     $Lb0
+      First symbol: 371
+[373] l 00000188 st 8 sc 1 indx 29     __new_exitfn
+      First symbol: 370
+[374] l 10000060 st 2 sc 2 indx 2a     fnlist
+      Type: struct exit_function_list { ifd = 0, index = 362 }
+[375] l 004005e0 st 5 sc 1 indx fffff     gcc2_compiled.
+[376] l 004005e0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[377] l 00400640 st 5 sc 1 indx fffff     $L12
+[378] l 00400648 st 5 sc 1 indx fffff     $L13
+[379] l 00400720 st 5 sc 1 indx fffff     $L30
+[380] l 00400688 st 5 sc 1 indx fffff     $L32
+[381] l 004006f8 st 5 sc 1 indx fffff     $L34
+[382] l 004006b8 st 5 sc 1 indx fffff     $L36
+[383] l 00400778 st 5 sc 1 indx fffff     $L43
+[384] l 00400790 st 5 sc 1 indx fffff     $L44
+[385] l 004007d0 st 5 sc 1 indx fffff     $L41
+[386] l 004007d8 st 5 sc 1 indx fffff     $L42
+[387] l 00000000 st 8 sc 1 indx 0     atexit.c
+      First symbol: 329
+[388] l 00000000 st b sc 1 indx 89     ../sysdeps/posix/defs.c
+      End+1 symbol: 525
+[389] l 00000000 st a sc b indx 1     ptrdiff_t
+      Type: int
+[390] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[391] l 00000000 st a sc b indx 1     wchar_t
+      Type: int
+[392] l 00000000 st a sc b indx 3     __long_double_t
+      Type: double
+[393] l 00000000 st a sc b indx 4     __gnuc_va_list
+      Type: ptr to char
+[394] l 00000000 st a sc b indx 5     __u_char
+      Type: unsigned char
+[395] l 00000000 st a sc b indx 6     __u_short
+      Type: unsigned short
+[396] l 00000000 st a sc b indx 2     __u_int
+      Type: unsigned int
+[397] l 00000000 st a sc b indx 7     __u_long
+      Type: unsigned long
+[398] l 00000000 st a sc b indx 0     __u_quad_t
+      Type: nil
+[399] l 00000000 st a sc b indx 0     __quad_t
+      Type: nil
+[400] l 00000000 st a sc b indx 8     __qaddr_t
+      Type: ptr to nil
+[401] l 00000000 st a sc b indx 1     __dev_t
+      Type: int
+[402] l 00000000 st a sc b indx 2     __uid_t
+      Type: unsigned int
+[403] l 00000000 st a sc b indx 2     __gid_t
+      Type: unsigned int
+[404] l 00000000 st a sc b indx 2     __ino_t
+      Type: unsigned int
+[405] l 00000000 st a sc b indx 2     __mode_t
+      Type: unsigned int
+[406] l 00000000 st a sc b indx 6     __nlink_t
+      Type: unsigned short
+[407] l 00000000 st a sc b indx 9     __off_t
+      Type: long
+[408] l 00000000 st a sc b indx 1     __pid_t
+      Type: int
+[409] l 00000000 st a sc b indx 1     __ssize_t
+      Type: int
+[410] l 00000000 st a sc b indx 0     __fsid_t
+      Type: nil
+[411] l 00000000 st a sc b indx 9     __daddr_t
+      Type: long
+[412] l 00000000 st a sc b indx 4     __caddr_t
+      Type: ptr to char
+[413] l 00000000 st a sc b indx 9     __time_t
+      Type: long
+[414] l 00000000 st a sc b indx 9     __swblk_t
+      Type: long
+[415] l 00000020 st 7 sc b indx 1e     .0fake
+      End+1 symbol: 418
+[416] l 00000000 st 9 sc b indx a     fds_bits
+      Type: array [8 {32 bits}] of unsigned long
+[417] l 00000000 st 8 sc b indx 1b     
+      First symbol: 415
+[418] l 00000000 st a sc b indx 10     __fd_set
+      Type: struct .0fake { ifd = 0, index = 415 }
+[419] l 00000000 st a sc b indx 13     FILE
+      Type: struct __stdio_file { ifd = 0, index = 444 }
+[420] l 00000000 st a sc b indx 9     fpos_t
+      Type: long
+[421] l 00000004 st 7 sc b indx 2a     .1fake
+      End+1 symbol: 430
+[422] l 00000000 st 9 sc 8 indx 16     __read
+      Type: unsigned int : 1
+[423] l 00000001 st 9 sc 8 indx 18     __write
+      Type: unsigned int : 1
+[424] l 00000002 st 9 sc 8 indx 1a     __append
+      Type: unsigned int : 1
+[425] l 00000003 st 9 sc 8 indx 1c     __binary
+      Type: unsigned int : 1
+[426] l 00000004 st 9 sc 8 indx 1e     __create
+      Type: unsigned int : 1
+[427] l 00000005 st 9 sc 8 indx 20     __exclusive
+      Type: unsigned int : 1
+[428] l 00000006 st 9 sc 8 indx 22     __truncate
+      Type: unsigned int : 1
+[429] l 00000000 st 8 sc b indx 21     
+      First symbol: 421
+[430] l 00000000 st a sc b indx 24     __io_mode
+      Type: struct .1fake { ifd = 0, index = 421 }
+[431] l 00000014 st 7 sc b indx 32     .2fake
+      End+1 symbol: 438
+[432] l 00000000 st 9 sc b indx 27     __read
+      Type: func. ret. 
+[433] l 00000020 st 9 sc b indx 27     __write
+      Type: func. ret. 
+[434] l 00000040 st 9 sc b indx 27     __seek
+      Type: func. ret. 
+[435] l 00000060 st 9 sc b indx 27     __close
+      Type: func. ret. 
+[436] l 00000080 st 9 sc b indx 27     __fileno
+      Type: func. ret. 
+[437] l 00000000 st 8 sc b indx 2b     
+      First symbol: 431
+[438] l 00000000 st a sc b indx 28     __io_functions
+      Type: struct .2fake { ifd = 0, index = 431 }
+[439] l 00000008 st 7 sc b indx 37     .3fake
+      End+1 symbol: 443
+[440] l 00000000 st 9 sc b indx 27     __input
+      Type: func. ret. 
+[441] l 00000020 st 9 sc b indx 27     __output
+      Type: func. ret. 
+[442] l 00000000 st 8 sc b indx 33     
+      First symbol: 439
+[443] l 00000000 st a sc b indx 2b     __room_functions
+      Type: struct .3fake { ifd = 0, index = 439 }
+[444] l 00000050 st 7 sc b indx 51     __stdio_file
+      End+1 symbol: 469
+[445] l 00000000 st 9 sc b indx 1     __magic
+      Type: int
+[446] l 00000020 st 9 sc b indx 4     __bufp
+      Type: ptr to char
+[447] l 00000040 st 9 sc b indx 4     __get_limit
+      Type: ptr to char
+[448] l 00000060 st 9 sc b indx 4     __put_limit
+      Type: ptr to char
+[449] l 00000080 st 9 sc b indx 4     __buffer
+      Type: ptr to char
+[450] l 000000a0 st 9 sc b indx 2     __bufsize
+      Type: unsigned int
+[451] l 000000c0 st 9 sc b indx 2e     __cookie
+      Type: ptr to int
+[452] l 000000e0 st 9 sc b indx 2f     __mode
+      Type: struct .1fake { ifd = 0, index = 421 }
+[453] l 00000100 st 9 sc b indx 32     __io_funcs
+      Type: struct .2fake { ifd = 0, index = 431 }
+[454] l 000001a0 st 9 sc b indx 35     __room_funcs
+      Type: struct .3fake { ifd = 0, index = 439 }
+[455] l 000001e0 st 9 sc b indx 9     __offset
+      Type: long
+[456] l 00000200 st 9 sc b indx 9     __target
+      Type: long
+[457] l 00000220 st 9 sc b indx 38     __next
+      Type: ptr to struct __stdio_file { ifd = 0, index = 444 }
+[458] l 00000240 st 9 sc b indx 4     __pushback_bufp
+      Type: ptr to char
+[459] l 00000260 st 9 sc b indx 5     __pushback
+      Type: unsigned char
+[460] l 00000268 st 9 sc 8 indx 3b     __pushed_back
+      Type: unsigned int : 1
+[461] l 00000269 st 9 sc 8 indx 3d     __eof
+      Type: unsigned int : 1
+[462] l 0000026a st 9 sc 8 indx 3f     __error
+      Type: unsigned int : 1
+[463] l 0000026b st 9 sc 8 indx 41     __userbuf
+      Type: unsigned int : 1
+[464] l 0000026c st 9 sc 8 indx 43     __linebuf
+      Type: unsigned int : 1
+[465] l 0000026d st 9 sc 8 indx 45     __linebuf_active
+      Type: unsigned int : 1
+[466] l 0000026e st 9 sc 8 indx 47     __seen
+      Type: unsigned int : 1
+[467] l 0000026f st 9 sc 8 indx 49     __ispipe
+      Type: unsigned int : 1
+[468] l 00000000 st 8 sc b indx 38     
+      First symbol: 444
+[469] l 00000000 st a sc b indx 9     time_t
+      Type: long
+[470] l 00000000 st a sc b indx 1     int32_t
+      Type: int
+[471] l 00000000 st a sc b indx 4b     int16_t
+      Type: short
+[472] l 00000000 st a sc b indx 4c     int8_t
+      Type: char
+[473] l 00000000 st a sc b indx 2     u_int32_t
+      Type: unsigned int
+[474] l 00000000 st a sc b indx 6     u_int16_t
+      Type: unsigned short
+[475] l 00000000 st a sc b indx 5     u_int8_t
+      Type: unsigned char
+[476] l 00000004 st 7 sc b indx 63     .4fake
+      End+1 symbol: 487
+[477] l 00000000 st 9 sc b indx 0     _PC_LINK_MAX
+      Type: nil
+[478] l 00000001 st 9 sc b indx 0     _PC_MAX_CANON
+      Type: nil
+[479] l 00000002 st 9 sc b indx 0     _PC_MAX_INPUT
+      Type: nil
+[480] l 00000003 st 9 sc b indx 0     _PC_NAME_MAX
+      Type: nil
+[481] l 00000004 st 9 sc b indx 0     _PC_PATH_MAX
+      Type: nil
+[482] l 00000005 st 9 sc b indx 0     _PC_PIPE_BUF
+      Type: nil
+[483] l 00000006 st 9 sc b indx 0     _PC_CHOWN_RESTRICTED
+      Type: nil
+[484] l 00000007 st 9 sc b indx 0     _PC_NO_TRUNC
+      Type: nil
+[485] l 00000008 st 9 sc b indx 0     _PC_VDISABLE
+      Type: nil
+[486] l 00000000 st 8 sc b indx 58     
+      First symbol: 476
+[487] l 00000004 st 7 sc b indx 80     .5fake
+      End+1 symbol: 516
+[488] l 00000000 st 9 sc b indx 0     _SC_ARG_MAX
+      Type: nil
+[489] l 00000001 st 9 sc b indx 0     _SC_CHILD_MAX
+      Type: nil
+[490] l 00000002 st 9 sc b indx 0     _SC_CLK_TCK
+      Type: nil
+[491] l 00000003 st 9 sc b indx 0     _SC_NGROUPS_MAX
+      Type: nil
+[492] l 00000004 st 9 sc b indx 0     _SC_OPEN_MAX
+      Type: nil
+[493] l 00000005 st 9 sc b indx 0     _SC_STREAM_MAX
+      Type: nil
+[494] l 00000006 st 9 sc b indx 0     _SC_TZNAME_MAX
+      Type: nil
+[495] l 00000007 st 9 sc b indx 0     _SC_JOB_CONTROL
+      Type: nil
+[496] l 00000008 st 9 sc b indx 0     _SC_SAVED_IDS
+      Type: nil
+[497] l 00000009 st 9 sc b indx 0     _SC_VERSION
+      Type: nil
+[498] l 0000000a st 9 sc b indx 0     _SC_PAGESIZE
+      Type: nil
+[499] l 0000000b st 9 sc b indx 0     _SC_BC_BASE_MAX
+      Type: nil
+[500] l 0000000c st 9 sc b indx 0     _SC_BC_DIM_MAX
+      Type: nil
+[501] l 0000000d st 9 sc b indx 0     _SC_BC_SCALE_MAX
+      Type: nil
+[502] l 0000000e st 9 sc b indx 0     _SC_BC_STRING_MAX
+      Type: nil
+[503] l 0000000f st 9 sc b indx 0     _SC_COLL_WEIGHTS_MAX
+      Type: nil
+[504] l 00000010 st 9 sc b indx 0     _SC_EQUIV_CLASS_MAX
+      Type: nil
+[505] l 00000011 st 9 sc b indx 0     _SC_EXPR_NEST_MAX
+      Type: nil
+[506] l 00000012 st 9 sc b indx 0     _SC_LINE_MAX
+      Type: nil
+[507] l 00000013 st 9 sc b indx 0     _SC_RE_DUP_MAX
+      Type: nil
+[508] l 00000014 st 9 sc b indx 0     _SC_2_VERSION
+      Type: nil
+[509] l 00000015 st 9 sc b indx 0     _SC_2_C_BIND
+      Type: nil
+[510] l 00000016 st 9 sc b indx 0     _SC_2_C_DEV
+      Type: nil
+[511] l 00000017 st 9 sc b indx 0     _SC_2_FORT_DEV
+      Type: nil
+[512] l 00000018 st 9 sc b indx 0     _SC_2_FORT_RUN
+      Type: nil
+[513] l 00000019 st 9 sc b indx 0     _SC_2_SW_DEV
+      Type: nil
+[514] l 0000001a st 9 sc b indx 0     _SC_2_LOCALEDEF
+      Type: nil
+[515] l 00000000 st 8 sc b indx 63     
+      First symbol: 487
+[516] l 00000004 st 7 sc b indx 83     .6fake
+      End+1 symbol: 519
+[517] l 00000000 st 9 sc b indx 0     _CS_PATH
+      Type: nil
+[518] l 00000000 st 8 sc b indx 80     
+      First symbol: 516
+[519] l 004007f0 st 6 sc 1 indx 4d     _cleanup
+      End+1 symbol: 521       Type:  int
+[520] l 00000038 st 8 sc 1 indx 83     _cleanup
+      First symbol: 519
+[521] l 100001f0 st 2 sc 2 indx 5b     stdstreams
+      Type: array [1 {2 bits}] of struct __stdio_file { ifd = 0, index = 444 }
+[522] l 004007f0 st 5 sc 1 indx fffff     gcc2_compiled.
+[523] l 004007f0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[524] l 00000000 st 8 sc 1 indx 0     ../sysdeps/posix/defs.c
+      First symbol: 388
+[525] l 00000000 st b sc 1 indx 3     /var/tmp/cca00579.s
+      End+1 symbol: 528
+[526] l 00400860 st 5 sc 1 indx fffff     syse1
+[527] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca00579.s
+      First symbol: 525
+[528] l 00000000 st b sc 1 indx e     ../sysdeps/generic/strrchr.c
+      End+1 symbol: 542
+[529] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[530] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[531] l 00400860 st 6 sc 1 indx 5     strrchr
+      End+1 symbol: 535       Type:  ptr to char
+[532] l 00000004 st 3 sc 4 indx 3     s
+      Type: ptr to char
+[533] l 00000005 st 3 sc 4 indx 4     c
+      Type: int
+[534] l 000000b0 st 8 sc 1 indx 3     strrchr
+      First symbol: 531
+[535] l 00400860 st 5 sc 1 indx fffff     gcc2_compiled.
+[536] l 00400860 st 5 sc 1 indx fffff     __gnu_compiled_c
+[537] l 004008a8 st 5 sc 1 indx fffff     $L7
+[538] l 004008e8 st 5 sc 1 indx fffff     $L11
+[539] l 004008b0 st 5 sc 1 indx fffff     $L8
+[540] l 004008e0 st 5 sc 1 indx fffff     $L9
+[541] l 00000000 st 8 sc 1 indx 0     ../sysdeps/generic/strrchr.c
+      First symbol: 528
+[542] l 00000000 st b sc 1 indx 88     malloc.c
+      End+1 symbol: 678
+[543] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[544] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[545] l 00000000 st a sc b indx 3     ptrdiff_t
+      Type: int
+[546] l 00000000 st a sc b indx 3     wchar_t
+      Type: int
+[547] l 00000008 st 7 sc b indx 9     .0fake
+      End+1 symbol: 551
+[548] l 00000000 st 9 sc b indx 2     nfree
+      Type: unsigned int
+[549] l 00000020 st 9 sc b indx 2     first
+      Type: unsigned int
+[550] l 00000000 st 8 sc b indx 5     
+      First symbol: 547
+[551] l 00000008 st 7 sc b indx d     .1fake
+      End+1 symbol: 555
+[552] l 00000000 st 9 sc b indx 4     frag
+      Type: struct .0fake { ifd = 0, index = 547 }
+[553] l 00000000 st 9 sc b indx 2     size
+      Type: unsigned int
+[554] l 00000000 st 8 sc b indx 9     
+      First symbol: 551
+[555] l 0000000c st 7 sc b indx 11     .2fake
+      End+1 symbol: 559
+[556] l 00000000 st 9 sc b indx 3     type
+      Type: int
+[557] l 00000020 st 9 sc b indx 7     info
+      Type: union .1fake { ifd = 0, index = 551 }
+[558] l 00000000 st 8 sc b indx d     
+      First symbol: 555
+[559] l 0000000c st 7 sc b indx 16     .3fake
+      End+1 symbol: 564
+[560] l 00000000 st 9 sc b indx 2     size
+      Type: unsigned int
+[561] l 00000020 st 9 sc b indx 2     next
+      Type: unsigned int
+[562] l 00000040 st 9 sc b indx 2     prev
+      Type: unsigned int
+[563] l 00000000 st 8 sc b indx 11     
+      First symbol: 559
+[564] l 0000000c st 7 sc b indx 1a     .4fake
+      End+1 symbol: 568
+[565] l 00000000 st 9 sc b indx a     busy
+      Type: struct .2fake { ifd = 0, index = 555 }
+[566] l 00000000 st 9 sc b indx d     free
+      Type: struct .3fake { ifd = 0, index = 559 }
+[567] l 00000000 st 8 sc b indx 16     
+      First symbol: 564
+[568] l 00000000 st a sc b indx 10     malloc_info
+      Type: union .4fake { ifd = 0, index = 564 }
+[569] l 00000008 st 7 sc b indx 1f     list
+      End+1 symbol: 573
+[570] l 00000000 st 9 sc b indx 13     next
+      Type: ptr to struct list { ifd = 0, index = 569 }
+[571] l 00000020 st 9 sc b indx 16     prev
+      Type: ptr to struct list { ifd = 0, index = 569 }
+[572] l 00000000 st 8 sc b indx 1b     
+      First symbol: 569
+[573] l 0000000c st 7 sc b indx 24     alignlist
+      End+1 symbol: 578
+[574] l 00000000 st 9 sc b indx 19     next
+      Type: ptr to struct alignlist { ifd = 0, index = 573 }
+[575] l 00000020 st 9 sc b indx 1c     aligned
+      Type: ptr to int
+[576] l 00000040 st 9 sc b indx 1c     exact
+      Type: ptr to int
+[577] l 00000000 st 8 sc b indx 1f     
+      First symbol: 573
+[578] l 00000004 st 7 sc b indx 2b     mcheck_status
+      End+1 symbol: 585
+[579] l ffffffff st 9 sc b indx 0     MCHECK_DISABLED
+      Type: nil
+[580] l 00000000 st 9 sc b indx 0     MCHECK_OK
+      Type: nil
+[581] l 00000001 st 9 sc b indx 0     MCHECK_FREE
+      Type: nil
+[582] l 00000002 st 9 sc b indx 0     MCHECK_HEAD
+      Type: nil
+[583] l 00000003 st 9 sc b indx 0     MCHECK_TAIL
+      Type: nil
+[584] l 00000000 st 8 sc b indx 24     
+      First symbol: 578
+[585] l 00000014 st 7 sc b indx 32     mstats
+      End+1 symbol: 592
+[586] l 00000000 st 9 sc b indx 2     bytes_total
+      Type: unsigned int
+[587] l 00000020 st 9 sc b indx 2     chunks_used
+      Type: unsigned int
+[588] l 00000040 st 9 sc b indx 2     bytes_used
+      Type: unsigned int
+[589] l 00000060 st 9 sc b indx 2     chunks_free
+      Type: unsigned int
+[590] l 00000080 st 9 sc b indx 2     bytes_free
+      Type: unsigned int
+[591] l 00000000 st 8 sc b indx 2b     
+      First symbol: 585
+[592] l 00400910 st e sc 1 indx 1e     initialize
+      End+1 symbol: 600       Type:  int
+[593] l 00000000 st 7 sc 1 indx 39     $Lb0
+      End+1 symbol: 599
+[594] l 00000000 st 7 sc 1 indx 38     $Lb1
+      End+1 symbol: 598
+[595] l 00000004 st 4 sc 4 indx 1d     adj
+      Type: unsigned long
+[596] l 00000010 st 4 sc 4 indx 1c     result
+      Type: ptr to int
+[597] l 00000098 st 8 sc 1 indx 34     $Lb1
+      First symbol: 594
+[598] l 00000098 st 8 sc 1 indx 33     $Lb0
+      First symbol: 593
+[599] l 00000188 st 8 sc 1 indx 32     initialize
+      First symbol: 592
+[600] l 00400a98 st e sc 1 indx 23     morecore
+      End+1 symbol: 619       Type:  ptr to int
+[601] l 00000013 st 3 sc 4 indx 2     size
+      Type: unsigned int
+[602] l 00000012 st 4 sc 4 indx 1c     result
+      Type: ptr to int
+[603] l 00000004 st 4 sc 4 indx 20     oldinfo
+      Type: ptr to union .4fake { ifd = 0, index = 564 }
+[604] l 00000011 st 4 sc 4 indx 2     newsize
+      Type: unsigned int
+[605] l 00000000 st 7 sc 1 indx 46     $Lb4
+      End+1 symbol: 612
+[606] l 00000013 st 4 sc 4 indx 2     size
+      Type: unsigned int
+[607] l 00000000 st 7 sc 1 indx 45     $Lb5
+      End+1 symbol: 611
+[608] l 00000004 st 4 sc 4 indx 1d     adj
+      Type: unsigned long
+[609] l 00000010 st 4 sc 4 indx 1c     result
+      Type: ptr to int
+[610] l 000000a8 st 8 sc 1 indx 41     $Lb5
+      First symbol: 607
+[611] l 000000a8 st 8 sc 1 indx 3f     $Lb4
+      First symbol: 605
+[612] l 00000170 st 7 sc 1 indx 4c     $Lb8
+      End+1 symbol: 618
+[613] l 00000170 st 7 sc 1 indx 4b     $Lb9
+      End+1 symbol: 617
+[614] l 00000004 st 4 sc 4 indx 1d     adj
+      Type: unsigned long
+[615] l 00000010 st 4 sc 4 indx 1c     result
+      Type: ptr to int
+[616] l 000001f8 st 8 sc 1 indx 47     $Lb9
+      First symbol: 613
+[617] l 000001f8 st 8 sc 1 indx 46     $Lb8
+      First symbol: 612
+[618] l 00000420 st 8 sc 1 indx 3a     morecore
+      First symbol: 600
+[619] l 00400eb8 st 6 sc 1 indx 28     malloc
+      End+1 symbol: 632       Type:  ptr to int
+[620] l 00000010 st 3 sc 4 indx 2     size
+      Type: unsigned int
+[621] l 00000006 st 4 sc 4 indx 1c     result
+      Type: ptr to int
+[622] l 00000007 st 4 sc 4 indx 2     block
+      Type: unsigned int
+[623] l 00000012 st 4 sc 4 indx 2     blocks
+      Type: unsigned int
+[624] l 00000011 st 4 sc 4 indx 2     lastblocks
+      Type: unsigned int
+[625] l 00000014 st 4 sc 4 indx 2     start
+      Type: unsigned int
+[626] l 00000004 st 4 sc 4 indx 2     i
+      Type: unsigned int
+[627] l 00000002 st 4 sc 4 indx 25     next
+      Type: ptr to struct list { ifd = 0, index = 569 }
+[628] l 000000a8 st 7 sc 1 indx 59     $Lb12
+      End+1 symbol: 631
+[629] l 00000011 st 4 sc 4 indx 2     log
+      Type: unsigned int
+[630] l 00000358 st 8 sc 1 indx 56     $Lb12
+      First symbol: 628
+[631] l 00000980 st 8 sc 1 indx 4d     malloc
+      First symbol: 619
+[632] l 10000370 st 2 sc e indx 2     heapsize
+      Type: unsigned int
+[633] l 00400910 st 5 sc 1 indx fffff     gcc2_compiled.
+[634] l 00400910 st 5 sc 1 indx fffff     __gnu_compiled_c
+[635] l 00400990 st 5 sc 1 indx fffff     $L6
+[636] l 004009a8 st 5 sc 1 indx fffff     $L7
+[637] l 00400a70 st 5 sc 1 indx fffff     $L8
+[638] l 00400a78 st 5 sc 1 indx fffff     $L9
+[639] l 00400b28 st 5 sc 1 indx fffff     $L12
+[640] l 00400b40 st 5 sc 1 indx fffff     $L13
+[641] l 00400b60 st 5 sc 1 indx fffff     $L14
+[642] l 00400e78 st 5 sc 1 indx fffff     $L28
+[643] l 00400b88 st 5 sc 1 indx fffff     $L16
+[644] l 00400e30 st 5 sc 1 indx fffff     $L15
+[645] l 00400bc0 st 5 sc 1 indx fffff     $L17
+[646] l 00400bd8 st 5 sc 1 indx fffff     $L20
+[647] l 00400c08 st 5 sc 1 indx fffff     $L18
+[648] l 00400c78 st 5 sc 1 indx fffff     $L22
+[649] l 00400c90 st 5 sc 1 indx fffff     $L23
+[650] l 00400cc0 st 5 sc 1 indx fffff     $L24
+[651] l 00400d80 st 5 sc 1 indx fffff     $L25
+[652] l 00400e58 st 5 sc 1 indx fffff     $L27
+[653] l 00400f18 st 5 sc 1 indx fffff     $L30
+[654] l 004017f8 st 5 sc 1 indx fffff     $L63
+[655] l 00400f38 st 5 sc 1 indx fffff     $L31
+[656] l 004016c8 st 5 sc 1 indx fffff     $L64
+[657] l 00400f50 st 5 sc 1 indx fffff     $L33
+[658] l 004012f0 st 5 sc 1 indx fffff     $L34
+[659] l 00400f98 st 5 sc 1 indx fffff     $L36
+[660] l 00400f80 st 5 sc 1 indx fffff     $L37
+[661] l 00401110 st 5 sc 1 indx fffff     $L39
+[662] l 00401000 st 5 sc 1 indx fffff     $L40
+[663] l 00401020 st 5 sc 1 indx fffff     $L41
+[664] l 00401098 st 5 sc 1 indx fffff     $L42
+[665] l 004017f0 st 5 sc 1 indx fffff     $L52
+[666] l 004011f0 st 5 sc 1 indx fffff     $L46
+[667] l 00401180 st 5 sc 1 indx fffff     $L48
+[668] l 004011d8 st 5 sc 1 indx fffff     $L47
+[669] l 00401210 st 5 sc 1 indx fffff     $L51
+[670] l 004015a8 st 5 sc 1 indx fffff     $L54
+[671] l 00401358 st 5 sc 1 indx fffff     $L55
+[672] l 00401568 st 5 sc 1 indx fffff     $L53
+[673] l 004014a0 st 5 sc 1 indx fffff     $L57
+[674] l 004014e0 st 5 sc 1 indx fffff     $L59
+[675] l 004016d8 st 5 sc 1 indx fffff     $L61
+[676] l 00401760 st 5 sc 1 indx fffff     $L66
+[677] l 00000000 st 8 sc 1 indx 0     malloc.c
+      First symbol: 542
+[678] l 00000000 st b sc 1 indx 83     fclose.c
+      End+1 symbol: 809
+[679] l 00000000 st a sc b indx 1     ptrdiff_t
+      Type: int
+[680] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[681] l 00000000 st a sc b indx 1     wchar_t
+      Type: int
+[682] l 00000000 st a sc b indx 3     __long_double_t
+      Type: double
+[683] l 00000000 st a sc b indx 4     __gnuc_va_list
+      Type: ptr to char
+[684] l 00000000 st a sc b indx 5     __u_char
+      Type: unsigned char
+[685] l 00000000 st a sc b indx 6     __u_short
+      Type: unsigned short
+[686] l 00000000 st a sc b indx 2     __u_int
+      Type: unsigned int
+[687] l 00000000 st a sc b indx 7     __u_long
+      Type: unsigned long
+[688] l 00000000 st a sc b indx 0     __u_quad_t
+      Type: nil
+[689] l 00000000 st a sc b indx 0     __quad_t
+      Type: nil
+[690] l 00000000 st a sc b indx 8     __qaddr_t
+      Type: ptr to nil
+[691] l 00000000 st a sc b indx 1     __dev_t
+      Type: int
+[692] l 00000000 st a sc b indx 2     __uid_t
+      Type: unsigned int
+[693] l 00000000 st a sc b indx 2     __gid_t
+      Type: unsigned int
+[694] l 00000000 st a sc b indx 2     __ino_t
+      Type: unsigned int
+[695] l 00000000 st a sc b indx 2     __mode_t
+      Type: unsigned int
+[696] l 00000000 st a sc b indx 6     __nlink_t
+      Type: unsigned short
+[697] l 00000000 st a sc b indx 9     __off_t
+      Type: long
+[698] l 00000000 st a sc b indx 1     __pid_t
+      Type: int
+[699] l 00000000 st a sc b indx 1     __ssize_t
+      Type: int
+[700] l 00000000 st a sc b indx 0     __fsid_t
+      Type: nil
+[701] l 00000000 st a sc b indx 9     __daddr_t
+      Type: long
+[702] l 00000000 st a sc b indx 4     __caddr_t
+      Type: ptr to char
+[703] l 00000000 st a sc b indx 9     __time_t
+      Type: long
+[704] l 00000000 st a sc b indx 9     __swblk_t
+      Type: long
+[705] l 00000020 st 7 sc b indx 1e     .0fake
+      End+1 symbol: 708
+[706] l 00000000 st 9 sc b indx a     fds_bits
+      Type: array [8 {32 bits}] of unsigned long
+[707] l 00000000 st 8 sc b indx 1b     
+      First symbol: 705
+[708] l 00000000 st a sc b indx 10     __fd_set
+      Type: struct .0fake { ifd = 0, index = 705 }
+[709] l 00000000 st a sc b indx 13     FILE
+      Type: struct __stdio_file { ifd = 0, index = 734 }
+[710] l 00000000 st a sc b indx 9     fpos_t
+      Type: long
+[711] l 00000004 st 7 sc b indx 2a     .1fake
+      End+1 symbol: 720
+[712] l 00000000 st 9 sc 8 indx 16     __read
+      Type: unsigned int : 1
+[713] l 00000001 st 9 sc 8 indx 18     __write
+      Type: unsigned int : 1
+[714] l 00000002 st 9 sc 8 indx 1a     __append
+      Type: unsigned int : 1
+[715] l 00000003 st 9 sc 8 indx 1c     __binary
+      Type: unsigned int : 1
+[716] l 00000004 st 9 sc 8 indx 1e     __create
+      Type: unsigned int : 1
+[717] l 00000005 st 9 sc 8 indx 20     __exclusive
+      Type: unsigned int : 1
+[718] l 00000006 st 9 sc 8 indx 22     __truncate
+      Type: unsigned int : 1
+[719] l 00000000 st 8 sc b indx 21     
+      First symbol: 711
+[720] l 00000000 st a sc b indx 24     __io_mode
+      Type: struct .1fake { ifd = 0, index = 711 }
+[721] l 00000014 st 7 sc b indx 32     .2fake
+      End+1 symbol: 728
+[722] l 00000000 st 9 sc b indx 27     __read
+      Type: func. ret. 
+[723] l 00000020 st 9 sc b indx 27     __write
+      Type: func. ret. 
+[724] l 00000040 st 9 sc b indx 27     __seek
+      Type: func. ret. 
+[725] l 00000060 st 9 sc b indx 27     __close
+      Type: func. ret. 
+[726] l 00000080 st 9 sc b indx 27     __fileno
+      Type: func. ret. 
+[727] l 00000000 st 8 sc b indx 2b     
+      First symbol: 721
+[728] l 00000000 st a sc b indx 28     __io_functions
+      Type: struct .2fake { ifd = 0, index = 721 }
+[729] l 00000008 st 7 sc b indx 37     .3fake
+      End+1 symbol: 733
+[730] l 00000000 st 9 sc b indx 27     __input
+      Type: func. ret. 
+[731] l 00000020 st 9 sc b indx 27     __output
+      Type: func. ret. 
+[732] l 00000000 st 8 sc b indx 33     
+      First symbol: 729
+[733] l 00000000 st a sc b indx 2b     __room_functions
+      Type: struct .3fake { ifd = 0, index = 729 }
+[734] l 00000050 st 7 sc b indx 51     __stdio_file
+      End+1 symbol: 759
+[735] l 00000000 st 9 sc b indx 1     __magic
+      Type: int
+[736] l 00000020 st 9 sc b indx 4     __bufp
+      Type: ptr to char
+[737] l 00000040 st 9 sc b indx 4     __get_limit
+      Type: ptr to char
+[738] l 00000060 st 9 sc b indx 4     __put_limit
+      Type: ptr to char
+[739] l 00000080 st 9 sc b indx 4     __buffer
+      Type: ptr to char
+[740] l 000000a0 st 9 sc b indx 2     __bufsize
+      Type: unsigned int
+[741] l 000000c0 st 9 sc b indx 2e     __cookie
+      Type: ptr to int
+[742] l 000000e0 st 9 sc b indx 2f     __mode
+      Type: struct .1fake { ifd = 0, index = 711 }
+[743] l 00000100 st 9 sc b indx 32     __io_funcs
+      Type: struct .2fake { ifd = 0, index = 721 }
+[744] l 000001a0 st 9 sc b indx 35     __room_funcs
+      Type: struct .3fake { ifd = 0, index = 729 }
+[745] l 000001e0 st 9 sc b indx 9     __offset
+      Type: long
+[746] l 00000200 st 9 sc b indx 9     __target
+      Type: long
+[747] l 00000220 st 9 sc b indx 38     __next
+      Type: ptr to struct __stdio_file { ifd = 0, index = 734 }
+[748] l 00000240 st 9 sc b indx 4     __pushback_bufp
+      Type: ptr to char
+[749] l 00000260 st 9 sc b indx 5     __pushback
+      Type: unsigned char
+[750] l 00000268 st 9 sc 8 indx 3b     __pushed_back
+      Type: unsigned int : 1
+[751] l 00000269 st 9 sc 8 indx 3d     __eof
+      Type: unsigned int : 1
+[752] l 0000026a st 9 sc 8 indx 3f     __error
+      Type: unsigned int : 1
+[753] l 0000026b st 9 sc 8 indx 41     __userbuf
+      Type: unsigned int : 1
+[754] l 0000026c st 9 sc 8 indx 43     __linebuf
+      Type: unsigned int : 1
+[755] l 0000026d st 9 sc 8 indx 45     __linebuf_active
+      Type: unsigned int : 1
+[756] l 0000026e st 9 sc 8 indx 47     __seen
+      Type: unsigned int : 1
+[757] l 0000026f st 9 sc 8 indx 49     __ispipe
+      Type: unsigned int : 1
+[758] l 00000000 st 8 sc b indx 38     
+      First symbol: 734
+[759] l 00000000 st a sc b indx 9     time_t
+      Type: long
+[760] l 00000000 st a sc b indx 1     int32_t
+      Type: int
+[761] l 00000000 st a sc b indx 4b     int16_t
+      Type: short
+[762] l 00000000 st a sc b indx 4c     int8_t
+      Type: char
+[763] l 00000000 st a sc b indx 2     u_int32_t
+      Type: unsigned int
+[764] l 00000000 st a sc b indx 6     u_int16_t
+      Type: unsigned short
+[765] l 00000000 st a sc b indx 5     u_int8_t
+      Type: unsigned char
+[766] l 00000008 st 7 sc b indx 5c     .4fake
+      End+1 symbol: 770
+[767] l 00000000 st 9 sc b indx 1     quot
+      Type: int
+[768] l 00000020 st 9 sc b indx 1     rem
+      Type: int
+[769] l 00000000 st 8 sc b indx 58     
+      First symbol: 766
+[770] l 00000000 st a sc b indx 4d     div_t
+      Type: struct .4fake { ifd = 0, index = 766 }
+[771] l 00000008 st 7 sc b indx 61     .5fake
+      End+1 symbol: 775
+[772] l 00000000 st 9 sc b indx 9     quot
+      Type: long
+[773] l 00000020 st 9 sc b indx 9     rem
+      Type: long
+[774] l 00000000 st 8 sc b indx 5d     
+      First symbol: 771
+[775] l 00000000 st a sc b indx 50     ldiv_t
+      Type: struct .5fake { ifd = 0, index = 771 }
+[776] l 00000000 st a sc b indx 27     __compar_fn_t
+      Type: func. ret. 
+[777] l 00000000 st a sc b indx 27     comparison_fn_t
+      Type: func. ret. 
+[778] l 00000008 st 7 sc b indx 68     .6fake
+      End+1 symbol: 782
+[779] l 00000000 st 9 sc b indx 1     __magic
+      Type: int
+[780] l 00000020 st 9 sc b indx 53     __p
+      Type: ptr to ptr to struct __stdio_file { ifd = 0, index = 734 }
+[781] l 00000000 st 8 sc b indx 64     
+      First symbol: 778
+[782] l 00000008 st 7 sc b indx 6c     .7fake
+      End+1 symbol: 786
+[783] l 00000000 st 9 sc b indx 1     __magic
+      Type: int
+[784] l 00000020 st 9 sc b indx 56     __p
+      Type: ptr to ptr to struct __stdio_file { ifd = 0, index = 734 }
+[785] l 00000000 st 8 sc b indx 68     
+      First symbol: 782
+[786] l 00401840 st 6 sc 1 indx 5f     fclose
+      End+1 symbol: 793       Type:  int
+[787] l 00000010 st 3 sc 4 indx 59     stream
+      Type: ptr to struct __stdio_file { ifd = 0, index = 734 }
+[788] l 00000011 st 4 sc 4 indx 1     status
+      Type: int
+[789] l 00000038 st 7 sc 1 indx 72     $Lb0
+      End+1 symbol: 792
+[790] l 00000010 st 4 sc 4 indx 5c     f
+      Type: ptr to struct __stdio_file { ifd = 0, index = 734 }
+[791] l 000000c8 st 8 sc 1 indx 6f     $Lb0
+      First symbol: 789
+[792] l 00000278 st 8 sc 1 indx 6c     fclose
+      First symbol: 786
+[793] l 00401840 st 5 sc 1 indx fffff     gcc2_compiled.
+[794] l 00401840 st 5 sc 1 indx fffff     __gnu_compiled_c
+[795] l 00401908 st 5 sc 1 indx fffff     $L42
+[796] l 004018f8 st 5 sc 1 indx fffff     $L24
+[797] l 004018a8 st 5 sc 1 indx fffff     $L43
+[798] l 004018c8 st 5 sc 1 indx fffff     $L28
+[799] l 004018e8 st 5 sc 1 indx fffff     $L25
+[800] l 00401a88 st 5 sc 1 indx fffff     $L41
+[801] l 00401938 st 5 sc 1 indx fffff     $L32
+[802] l 00401978 st 5 sc 1 indx fffff     $L30
+[803] l 004019c8 st 5 sc 1 indx fffff     $L33
+[804] l 004019f8 st 5 sc 1 indx fffff     $L34
+[805] l 00401a28 st 5 sc 1 indx fffff     $L35
+[806] l 00401a70 st 5 sc 1 indx fffff     $L36
+[807] l 00401a68 st 5 sc 1 indx fffff     $L37
+[808] l 00000000 st 8 sc 1 indx 0     fclose.c
+      First symbol: 678
+[809] l 00000000 st b sc 1 indx 2     /var/tmp/cca003vV.s
+      End+1 symbol: 811
+[810] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca003vV.s
+      First symbol: 809
+[811] l 00000000 st b sc 1 indx 1a     ../sysdeps/generic/strchr.c
+      End+1 symbol: 837
+[812] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[813] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[814] l 00401ae0 st 6 sc 1 indx 8     strchr
+      End+1 symbol: 826       Type:  ptr to char
+[815] l 00000004 st 3 sc 4 indx 3     s
+      Type: ptr to char
+[816] l 00000005 st 3 sc 4 indx 4     c
+      Type: int
+[817] l 00000004 st 4 sc 4 indx 5     char_ptr
+      Type: ptr to unsigned char
+[818] l 00000004 st 4 sc 4 indx 6     longword_ptr
+      Type: ptr to unsigned long
+[819] l 00000006 st 4 sc 4 indx 7     longword
+      Type: unsigned long
+[820] l 00000008 st 4 sc 4 indx 7     magic_bits
+      Type: unsigned long
+[821] l 00000009 st 4 sc 4 indx 7     charmask
+      Type: unsigned long
+[822] l 000000f0 st 7 sc 1 indx e     $Lb0
+      End+1 symbol: 825
+[823] l 00000002 st 4 sc 4 indx 5     cp
+      Type: ptr to unsigned char
+[824] l 00000190 st 8 sc 1 indx b     $Lb0
+      First symbol: 822
+[825] l 000001a0 st 8 sc 1 indx 3     strchr
+      First symbol: 814
+[826] l 00401ae0 st 5 sc 1 indx fffff     gcc2_compiled.
+[827] l 00401ae0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[828] l 00401b30 st 5 sc 1 indx fffff     $L3
+[829] l 00401b00 st 5 sc 1 indx fffff     $L5
+[830] l 00401c58 st 5 sc 1 indx fffff     $L48
+[831] l 00401c68 st 5 sc 1 indx fffff     $L49
+[832] l 00401b60 st 5 sc 1 indx fffff     $L17
+[833] l 00401bd0 st 5 sc 1 indx fffff     $L21
+[834] l 00401c70 st 5 sc 1 indx fffff     $L47
+[835] l 00401c70 st 5 sc 1 indx fffff     $L31
+[836] l 00000000 st 8 sc 1 indx 0     ../sysdeps/generic/strchr.c
+      First symbol: 811
+[837] l 00000000 st b sc 1 indx 38     ../sysdeps/generic/morecore.c
+      End+1 symbol: 893
+[838] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[839] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[840] l 00000000 st a sc b indx 3     ptrdiff_t
+      Type: int
+[841] l 00000000 st a sc b indx 3     wchar_t
+      Type: int
+[842] l 00000008 st 7 sc b indx 9     .0fake
+      End+1 symbol: 846
+[843] l 00000000 st 9 sc b indx 2     nfree
+      Type: unsigned int
+[844] l 00000020 st 9 sc b indx 2     first
+      Type: unsigned int
+[845] l 00000000 st 8 sc b indx 5     
+      First symbol: 842
+[846] l 00000008 st 7 sc b indx d     .1fake
+      End+1 symbol: 850
+[847] l 00000000 st 9 sc b indx 4     frag
+      Type: struct .0fake { ifd = 0, index = 842 }
+[848] l 00000000 st 9 sc b indx 2     size
+      Type: unsigned int
+[849] l 00000000 st 8 sc b indx 9     
+      First symbol: 846
+[850] l 0000000c st 7 sc b indx 11     .2fake
+      End+1 symbol: 854
+[851] l 00000000 st 9 sc b indx 3     type
+      Type: int
+[852] l 00000020 st 9 sc b indx 7     info
+      Type: union .1fake { ifd = 0, index = 846 }
+[853] l 00000000 st 8 sc b indx d     
+      First symbol: 850
+[854] l 0000000c st 7 sc b indx 16     .3fake
+      End+1 symbol: 859
+[855] l 00000000 st 9 sc b indx 2     size
+      Type: unsigned int
+[856] l 00000020 st 9 sc b indx 2     next
+      Type: unsigned int
+[857] l 00000040 st 9 sc b indx 2     prev
+      Type: unsigned int
+[858] l 00000000 st 8 sc b indx 11     
+      First symbol: 854
+[859] l 0000000c st 7 sc b indx 1a     .4fake
+      End+1 symbol: 863
+[860] l 00000000 st 9 sc b indx a     busy
+      Type: struct .2fake { ifd = 0, index = 850 }
+[861] l 00000000 st 9 sc b indx d     free
+      Type: struct .3fake { ifd = 0, index = 854 }
+[862] l 00000000 st 8 sc b indx 16     
+      First symbol: 859
+[863] l 00000000 st a sc b indx 10     malloc_info
+      Type: union .4fake { ifd = 0, index = 859 }
+[864] l 00000008 st 7 sc b indx 1f     list
+      End+1 symbol: 868
+[865] l 00000000 st 9 sc b indx 13     next
+      Type: ptr to struct list { ifd = 0, index = 864 }
+[866] l 00000020 st 9 sc b indx 16     prev
+      Type: ptr to struct list { ifd = 0, index = 864 }
+[867] l 00000000 st 8 sc b indx 1b     
+      First symbol: 864
+[868] l 0000000c st 7 sc b indx 24     alignlist
+      End+1 symbol: 873
+[869] l 00000000 st 9 sc b indx 19     next
+      Type: ptr to struct alignlist { ifd = 0, index = 868 }
+[870] l 00000020 st 9 sc b indx 1c     aligned
+      Type: ptr to int
+[871] l 00000040 st 9 sc b indx 1c     exact
+      Type: ptr to int
+[872] l 00000000 st 8 sc b indx 1f     
+      First symbol: 868
+[873] l 00000004 st 7 sc b indx 2b     mcheck_status
+      End+1 symbol: 880
+[874] l ffffffff st 9 sc b indx 0     MCHECK_DISABLED
+      Type: nil
+[875] l 00000000 st 9 sc b indx 0     MCHECK_OK
+      Type: nil
+[876] l 00000001 st 9 sc b indx 0     MCHECK_FREE
+      Type: nil
+[877] l 00000002 st 9 sc b indx 0     MCHECK_HEAD
+      Type: nil
+[878] l 00000003 st 9 sc b indx 0     MCHECK_TAIL
+      Type: nil
+[879] l 00000000 st 8 sc b indx 24     
+      First symbol: 873
+[880] l 00000014 st 7 sc b indx 32     mstats
+      End+1 symbol: 887
+[881] l 00000000 st 9 sc b indx 2     bytes_total
+      Type: unsigned int
+[882] l 00000020 st 9 sc b indx 2     chunks_used
+      Type: unsigned int
+[883] l 00000040 st 9 sc b indx 2     bytes_used
+      Type: unsigned int
+[884] l 00000060 st 9 sc b indx 2     chunks_free
+      Type: unsigned int
+[885] l 00000080 st 9 sc b indx 2     bytes_free
+      Type: unsigned int
+[886] l 00000000 st 8 sc b indx 2b     
+      First symbol: 880
+[887] l 00401c80 st 6 sc 1 indx 1d     __default_morecore
+      End+1 symbol: 890       Type:  ptr to int
+[888] l 00000004 st 3 sc 4 indx 3     increment
+      Type: int
+[889] l 00000050 st 8 sc 1 indx 32     __default_morecore
+      First symbol: 887
+[890] l 00401c80 st 5 sc 1 indx fffff     gcc2_compiled.
+[891] l 00401c80 st 5 sc 1 indx fffff     __gnu_compiled_c
+[892] l 00000000 st 8 sc 1 indx 0     ../sysdeps/generic/morecore.c
+      First symbol: 837
+[893] l 00000000 st b sc 1 indx 17     ../sysdeps/generic/memset.c
+      End+1 symbol: 916
+[894] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[895] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[896] l 00000000 st a sc b indx 3     byte
+      Type: unsigned char
+[897] l 00401cd0 st 6 sc 1 indx 6     memset
+      End+1 symbol: 904       Type:  ptr to int
+[898] l 00000004 st 3 sc 4 indx 4     dstpp
+      Type: ptr to int
+[899] l 00000005 st 3 sc 4 indx 5     c
+      Type: int
+[900] l 00000006 st 3 sc 4 indx 2     len
+      Type: unsigned int
+[901] l 00000018 st 7 sc 1 indx a     $Lb0
+      End+1 symbol: 903
+[902] l 00000130 st 8 sc 1 indx 8     $Lb0
+      First symbol: 901
+[903] l 00000168 st 8 sc 1 indx 4     memset
+      First symbol: 897
+[904] l 00401cd0 st 5 sc 1 indx fffff     gcc2_compiled.
+[905] l 00401cd0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[906] l 00401e00 st 5 sc 1 indx fffff     $L21
+[907] l 00401d48 st 5 sc 1 indx fffff     $L39
+[908] l 00401d20 st 5 sc 1 indx fffff     $L25
+[909] l 00401dc0 st 5 sc 1 indx fffff     $L28
+[910] l 00401d60 st 5 sc 1 indx fffff     $L29
+[911] l 00401df8 st 5 sc 1 indx fffff     $L32
+[912] l 00401dd8 st 5 sc 1 indx fffff     $L33
+[913] l 00401e28 st 5 sc 1 indx fffff     $L36
+[914] l 00401e08 st 5 sc 1 indx fffff     $L37
+[915] l 00000000 st 8 sc 1 indx 0     ../sysdeps/generic/memset.c
+      First symbol: 893
+[916] l 00000000 st b sc 1 indx 1b     ../sysdeps/generic/memcpy.c
+      End+1 symbol: 943
+[917] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[918] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[919] l 00000000 st a sc b indx 3     byte
+      Type: unsigned char
+[920] l 00401e40 st 6 sc 1 indx 5     memcpy
+      End+1 symbol: 933       Type:  ptr to int
+[921] l 00000004 st 3 sc 4 indx 4     dstpp
+      Type: ptr to int
+[922] l 00000005 st 3 sc 4 indx 4     srcpp
+      Type: ptr to int
+[923] l 00000006 st 3 sc 4 indx 2     len
+      Type: unsigned int
+[924] l 00000060 st 7 sc 1 indx c     $Lb0
+      End+1 symbol: 928
+[925] l 00000088 st 7 sc 1 indx b     $Lb1
+      End+1 symbol: 927
+[926] l 00000088 st 8 sc 1 indx 9     $Lb1
+      First symbol: 925
+[927] l 000000b8 st 8 sc 1 indx 8     $Lb0
+      First symbol: 924
+[928] l 00000138 st 7 sc 1 indx 10     $Lb4
+      End+1 symbol: 932
+[929] l 00000148 st 7 sc 1 indx f     $Lb5
+      End+1 symbol: 931
+[930] l 00000148 st 8 sc 1 indx d     $Lb5
+      First symbol: 929
+[931] l 00000178 st 8 sc 1 indx c     $Lb4
+      First symbol: 928
+[932] l 000001b8 st 8 sc 1 indx 4     memcpy
+      First symbol: 920
+[933] l 00401e40 st 5 sc 1 indx fffff     gcc2_compiled.
+[934] l 00401e40 st 5 sc 1 indx fffff     __gnu_compiled_c
+[935] l 00401f78 st 5 sc 1 indx fffff     $L26
+[936] l 00401ef8 st 5 sc 1 indx fffff     $L28
+[937] l 00401ec8 st 5 sc 1 indx fffff     $L32
+[938] l 00401f30 st 5 sc 1 indx fffff     $L38
+[939] l 00401f50 st 5 sc 1 indx fffff     $L39
+[940] l 00401fb8 st 5 sc 1 indx fffff     $L42
+[941] l 00401f88 st 5 sc 1 indx fffff     $L46
+[942] l 00000000 st 8 sc 1 indx 0     ../sysdeps/generic/memcpy.c
+      First symbol: 916
+[943] l 00000000 st b sc 1 indx 5a     free.c
+      End+1 symbol: 1033
+[944] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[945] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[946] l 00000000 st a sc b indx 3     ptrdiff_t
+      Type: int
+[947] l 00000000 st a sc b indx 3     wchar_t
+      Type: int
+[948] l 00000008 st 7 sc b indx 9     .0fake
+      End+1 symbol: 952
+[949] l 00000000 st 9 sc b indx 2     nfree
+      Type: unsigned int
+[950] l 00000020 st 9 sc b indx 2     first
+      Type: unsigned int
+[951] l 00000000 st 8 sc b indx 5     
+      First symbol: 948
+[952] l 00000008 st 7 sc b indx d     .1fake
+      End+1 symbol: 956
+[953] l 00000000 st 9 sc b indx 4     frag
+      Type: struct .0fake { ifd = 0, index = 948 }
+[954] l 00000000 st 9 sc b indx 2     size
+      Type: unsigned int
+[955] l 00000000 st 8 sc b indx 9     
+      First symbol: 952
+[956] l 0000000c st 7 sc b indx 11     .2fake
+      End+1 symbol: 960
+[957] l 00000000 st 9 sc b indx 3     type
+      Type: int
+[958] l 00000020 st 9 sc b indx 7     info
+      Type: union .1fake { ifd = 0, index = 952 }
+[959] l 00000000 st 8 sc b indx d     
+      First symbol: 956
+[960] l 0000000c st 7 sc b indx 16     .3fake
+      End+1 symbol: 965
+[961] l 00000000 st 9 sc b indx 2     size
+      Type: unsigned int
+[962] l 00000020 st 9 sc b indx 2     next
+      Type: unsigned int
+[963] l 00000040 st 9 sc b indx 2     prev
+      Type: unsigned int
+[964] l 00000000 st 8 sc b indx 11     
+      First symbol: 960
+[965] l 0000000c st 7 sc b indx 1a     .4fake
+      End+1 symbol: 969
+[966] l 00000000 st 9 sc b indx a     busy
+      Type: struct .2fake { ifd = 0, index = 956 }
+[967] l 00000000 st 9 sc b indx d     free
+      Type: struct .3fake { ifd = 0, index = 960 }
+[968] l 00000000 st 8 sc b indx 16     
+      First symbol: 965
+[969] l 00000000 st a sc b indx 10     malloc_info
+      Type: union .4fake { ifd = 0, index = 965 }
+[970] l 00000008 st 7 sc b indx 1f     list
+      End+1 symbol: 974
+[971] l 00000000 st 9 sc b indx 13     next
+      Type: ptr to struct list { ifd = 0, index = 970 }
+[972] l 00000020 st 9 sc b indx 16     prev
+      Type: ptr to struct list { ifd = 0, index = 970 }
+[973] l 00000000 st 8 sc b indx 1b     
+      First symbol: 970
+[974] l 0000000c st 7 sc b indx 24     alignlist
+      End+1 symbol: 979
+[975] l 00000000 st 9 sc b indx 19     next
+      Type: ptr to struct alignlist { ifd = 0, index = 974 }
+[976] l 00000020 st 9 sc b indx 1c     aligned
+      Type: ptr to int
+[977] l 00000040 st 9 sc b indx 1c     exact
+      Type: ptr to int
+[978] l 00000000 st 8 sc b indx 1f     
+      First symbol: 974
+[979] l 00000004 st 7 sc b indx 2b     mcheck_status
+      End+1 symbol: 986
+[980] l ffffffff st 9 sc b indx 0     MCHECK_DISABLED
+      Type: nil
+[981] l 00000000 st 9 sc b indx 0     MCHECK_OK
+      Type: nil
+[982] l 00000001 st 9 sc b indx 0     MCHECK_FREE
+      Type: nil
+[983] l 00000002 st 9 sc b indx 0     MCHECK_HEAD
+      Type: nil
+[984] l 00000003 st 9 sc b indx 0     MCHECK_TAIL
+      Type: nil
+[985] l 00000000 st 8 sc b indx 24     
+      First symbol: 979
+[986] l 00000014 st 7 sc b indx 32     mstats
+      End+1 symbol: 993
+[987] l 00000000 st 9 sc b indx 2     bytes_total
+      Type: unsigned int
+[988] l 00000020 st 9 sc b indx 2     chunks_used
+      Type: unsigned int
+[989] l 00000040 st 9 sc b indx 2     bytes_used
+      Type: unsigned int
+[990] l 00000060 st 9 sc b indx 2     chunks_free
+      Type: unsigned int
+[991] l 00000080 st 9 sc b indx 2     bytes_free
+      Type: unsigned int
+[992] l 00000000 st 8 sc b indx 2b     
+      First symbol: 986
+[993] l 00402000 st 6 sc 1 indx 23     _free_internal
+      End+1 symbol: 1004      Type:  int
+[994] l 00000006 st 3 sc 4 indx 1c     ptr
+      Type: ptr to int
+[995] l 00000009 st 4 sc 4 indx 3     type
+      Type: int
+[996] l 00000010 st 4 sc 4 indx 2     block
+      Type: unsigned int
+[997] l 00000011 st 4 sc 4 indx 2     blocks
+      Type: unsigned int
+[998] l 00000006 st 4 sc 4 indx 2     i
+      Type: unsigned int
+[999] l 00000007 st 4 sc 4 indx 1d     prev
+      Type: ptr to struct list { ifd = 0, index = 970 }
+[1000] l 00000003 st 4 sc 4 indx 20     next
+      Type: ptr to struct list { ifd = 0, index = 970 }
+[1001] l 00000470 st 7 sc 1 indx 3c     $Lb0
+      End+1 symbol: 1003
+[1002] l 00000560 st 8 sc 1 indx 3a     $Lb0
+      First symbol: 1001
+[1003] l 000008b0 st 8 sc 1 indx 32     _free_internal
+      First symbol: 993
+[1004] l 004028b0 st 6 sc 1 indx 25     free
+      End+1 symbol: 1007      Type:  int
+[1005] l 00000004 st 3 sc 4 indx 1c     ptr
+      Type: ptr to int
+[1006] l 000000a0 st 8 sc 1 indx 3d     free
+      First symbol: 1004
+[1007] l 00402000 st 5 sc 1 indx fffff     gcc2_compiled.
+[1008] l 00402000 st 5 sc 1 indx fffff     __gnu_compiled_c
+[1009] l 00402058 st 5 sc 1 indx fffff     $L2
+[1010] l 00402570 st 5 sc 1 indx fffff     $L20
+[1011] l 00402168 st 5 sc 1 indx fffff     $L5
+[1012] l 00402128 st 5 sc 1 indx fffff     $L8
+[1013] l 004021d8 st 5 sc 1 indx fffff     $L10
+[1014] l 00402170 st 5 sc 1 indx fffff     $L11
+[1015] l 004021b0 st 5 sc 1 indx fffff     $L12
+[1016] l 00402260 st 5 sc 1 indx fffff     $L16
+[1017] l 004022f8 st 5 sc 1 indx fffff     $L17
+[1018] l 004023f0 st 5 sc 1 indx fffff     $L18
+[1019] l 00402560 st 5 sc 1 indx fffff     $L19
+[1020] l 00402878 st 5 sc 1 indx fffff     $L3
+[1021] l 00402778 st 5 sc 1 indx fffff     $L21
+[1022] l 00402670 st 5 sc 1 indx fffff     $L23
+[1023] l 00402650 st 5 sc 1 indx fffff     $L25
+[1024] l 00402698 st 5 sc 1 indx fffff     $L27
+[1025] l 004027e8 st 5 sc 1 indx fffff     $L29
+[1026] l 004027b8 st 5 sc 1 indx fffff     $L30
+[1027] l 00402938 st 5 sc 1 indx fffff     $L44
+[1028] l 004028f8 st 5 sc 1 indx fffff     $L47
+[1029] l 004028d8 st 5 sc 1 indx fffff     $L49
+[1030] l 00402918 st 5 sc 1 indx fffff     $L54
+[1031] l 00402930 st 5 sc 1 indx fffff     $L52
+[1032] l 00000000 st 8 sc 1 indx 0     free.c
+      First symbol: 943
+[1033] l 00000000 st b sc 1 indx 158     internals.c
+      End+1 symbol: 1377
+[1034] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[1035] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[1036] l 00000000 st a sc b indx 3     __gnuc_va_list
+      Type: ptr to char
+[1037] l 00000000 st a sc b indx 4     __u_char
+      Type: unsigned char
+[1038] l 00000000 st a sc b indx 5     __u_short
+      Type: unsigned short
+[1039] l 00000000 st a sc b indx 2     __u_int
+      Type: unsigned int
+[1040] l 00000000 st a sc b indx 6     __u_long
+      Type: unsigned long
+[1041] l 00000000 st a sc b indx 0     __u_quad_t
+      Type: nil
+[1042] l 00000000 st a sc b indx 0     __quad_t
+      Type: nil
+[1043] l 00000000 st a sc b indx 7     __qaddr_t
+      Type: ptr to nil
+[1044] l 00000000 st a sc b indx 8     __dev_t
+      Type: int
+[1045] l 00000000 st a sc b indx 2     __uid_t
+      Type: unsigned int
+[1046] l 00000000 st a sc b indx 2     __gid_t
+      Type: unsigned int
+[1047] l 00000000 st a sc b indx 2     __ino_t
+      Type: unsigned int
+[1048] l 00000000 st a sc b indx 2     __mode_t
+      Type: unsigned int
+[1049] l 00000000 st a sc b indx 5     __nlink_t
+      Type: unsigned short
+[1050] l 00000000 st a sc b indx 9     __off_t
+      Type: long
+[1051] l 00000000 st a sc b indx 8     __pid_t
+      Type: int
+[1052] l 00000000 st a sc b indx 8     __ssize_t
+      Type: int
+[1053] l 00000000 st a sc b indx 0     __fsid_t
+      Type: nil
+[1054] l 00000000 st a sc b indx 9     __daddr_t
+      Type: long
+[1055] l 00000000 st a sc b indx 3     __caddr_t
+      Type: ptr to char
+[1056] l 00000000 st a sc b indx 9     __time_t
+      Type: long
+[1057] l 00000000 st a sc b indx 9     __swblk_t
+      Type: long
+[1058] l 00000020 st 7 sc b indx 1c     .0fake
+      End+1 symbol: 1061
+[1059] l 00000000 st 9 sc b indx a     fds_bits
+      Type: array [8 {32 bits}] of unsigned long
+[1060] l 00000000 st 8 sc b indx 19     
+      First symbol: 1058
+[1061] l 00000000 st a sc b indx 10     __fd_set
+      Type: struct .0fake { ifd = 0, index = 1058 }
+[1062] l 00000000 st a sc b indx 13     FILE
+      Type: struct __stdio_file { ifd = 0, index = 1087 }
+[1063] l 00000000 st a sc b indx 9     fpos_t
+      Type: long
+[1064] l 00000004 st 7 sc b indx 28     .1fake
+      End+1 symbol: 1073
+[1065] l 00000000 st 9 sc 8 indx 16     __read
+      Type: unsigned int : 1
+[1066] l 00000001 st 9 sc 8 indx 18     __write
+      Type: unsigned int : 1
+[1067] l 00000002 st 9 sc 8 indx 1a     __append
+      Type: unsigned int : 1
+[1068] l 00000003 st 9 sc 8 indx 1c     __binary
+      Type: unsigned int : 1
+[1069] l 00000004 st 9 sc 8 indx 1e     __create
+      Type: unsigned int : 1
+[1070] l 00000005 st 9 sc 8 indx 20     __exclusive
+      Type: unsigned int : 1
+[1071] l 00000006 st 9 sc 8 indx 22     __truncate
+      Type: unsigned int : 1
+[1072] l 00000000 st 8 sc b indx 1f     
+      First symbol: 1064
+[1073] l 00000000 st a sc b indx 24     __io_mode
+      Type: struct .1fake { ifd = 0, index = 1064 }
+[1074] l 00000014 st 7 sc b indx 30     .2fake
+      End+1 symbol: 1081
+[1075] l 00000000 st 9 sc b indx 27     __read
+      Type: func. ret. 
+[1076] l 00000020 st 9 sc b indx 27     __write
+      Type: func. ret. 
+[1077] l 00000040 st 9 sc b indx 27     __seek
+      Type: func. ret. 
+[1078] l 00000060 st 9 sc b indx 27     __close
+      Type: func. ret. 
+[1079] l 00000080 st 9 sc b indx 27     __fileno
+      Type: func. ret. 
+[1080] l 00000000 st 8 sc b indx 29     
+      First symbol: 1074
+[1081] l 00000000 st a sc b indx 28     __io_functions
+      Type: struct .2fake { ifd = 0, index = 1074 }
+[1082] l 00000008 st 7 sc b indx 35     .3fake
+      End+1 symbol: 1086
+[1083] l 00000000 st 9 sc b indx 27     __input
+      Type: func. ret. 
+[1084] l 00000020 st 9 sc b indx 27     __output
+      Type: func. ret. 
+[1085] l 00000000 st 8 sc b indx 31     
+      First symbol: 1082
+[1086] l 00000000 st a sc b indx 2b     __room_functions
+      Type: struct .3fake { ifd = 0, index = 1082 }
+[1087] l 00000050 st 7 sc b indx 4f     __stdio_file
+      End+1 symbol: 1112
+[1088] l 00000000 st 9 sc b indx 8     __magic
+      Type: int
+[1089] l 00000020 st 9 sc b indx 3     __bufp
+      Type: ptr to char
+[1090] l 00000040 st 9 sc b indx 3     __get_limit
+      Type: ptr to char
+[1091] l 00000060 st 9 sc b indx 3     __put_limit
+      Type: ptr to char
+[1092] l 00000080 st 9 sc b indx 3     __buffer
+      Type: ptr to char
+[1093] l 000000a0 st 9 sc b indx 2     __bufsize
+      Type: unsigned int
+[1094] l 000000c0 st 9 sc b indx 2e     __cookie
+      Type: ptr to int
+[1095] l 000000e0 st 9 sc b indx 2f     __mode
+      Type: struct .1fake { ifd = 0, index = 1064 }
+[1096] l 00000100 st 9 sc b indx 32     __io_funcs
+      Type: struct .2fake { ifd = 0, index = 1074 }
+[1097] l 000001a0 st 9 sc b indx 35     __room_funcs
+      Type: struct .3fake { ifd = 0, index = 1082 }
+[1098] l 000001e0 st 9 sc b indx 9     __offset
+      Type: long
+[1099] l 00000200 st 9 sc b indx 9     __target
+      Type: long
+[1100] l 00000220 st 9 sc b indx 38     __next
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1101] l 00000240 st 9 sc b indx 3     __pushback_bufp
+      Type: ptr to char
+[1102] l 00000260 st 9 sc b indx 4     __pushback
+      Type: unsigned char
+[1103] l 00000268 st 9 sc 8 indx 3b     __pushed_back
+      Type: unsigned int : 1
+[1104] l 00000269 st 9 sc 8 indx 3d     __eof
+      Type: unsigned int : 1
+[1105] l 0000026a st 9 sc 8 indx 3f     __error
+      Type: unsigned int : 1
+[1106] l 0000026b st 9 sc 8 indx 41     __userbuf
+      Type: unsigned int : 1
+[1107] l 0000026c st 9 sc 8 indx 43     __linebuf
+      Type: unsigned int : 1
+[1108] l 0000026d st 9 sc 8 indx 45     __linebuf_active
+      Type: unsigned int : 1
+[1109] l 0000026e st 9 sc 8 indx 47     __seen
+      Type: unsigned int : 1
+[1110] l 0000026f st 9 sc 8 indx 49     __ispipe
+      Type: unsigned int : 1
+[1111] l 00000000 st 8 sc b indx 36     
+      First symbol: 1087
+[1112] l 00000000 st a sc b indx 9     time_t
+      Type: long
+[1113] l 00000000 st a sc b indx 8     int32_t
+      Type: int
+[1114] l 00000000 st a sc b indx 4b     int16_t
+      Type: short
+[1115] l 00000000 st a sc b indx 4c     int8_t
+      Type: char
+[1116] l 00000000 st a sc b indx 2     u_int32_t
+      Type: unsigned int
+[1117] l 00000000 st a sc b indx 5     u_int16_t
+      Type: unsigned short
+[1118] l 00000000 st a sc b indx 4     u_int8_t
+      Type: unsigned char
+[1119] l 00000000 st a sc b indx 8     wchar_t
+      Type: int
+[1120] l 00000008 st 7 sc b indx 5b     .4fake
+      End+1 symbol: 1124
+[1121] l 00000000 st 9 sc b indx 8     quot
+      Type: int
+[1122] l 00000020 st 9 sc b indx 8     rem
+      Type: int
+[1123] l 00000000 st 8 sc b indx 57     
+      First symbol: 1120
+[1124] l 00000000 st a sc b indx 4d     div_t
+      Type: struct .4fake { ifd = 0, index = 1120 }
+[1125] l 00000008 st 7 sc b indx 60     .5fake
+      End+1 symbol: 1129
+[1126] l 00000000 st 9 sc b indx 9     quot
+      Type: long
+[1127] l 00000020 st 9 sc b indx 9     rem
+      Type: long
+[1128] l 00000000 st 8 sc b indx 5c     
+      First symbol: 1125
+[1129] l 00000000 st a sc b indx 50     ldiv_t
+      Type: struct .5fake { ifd = 0, index = 1125 }
+[1130] l 00000000 st a sc b indx 27     __compar_fn_t
+      Type: func. ret. 
+[1131] l 00000000 st a sc b indx 27     comparison_fn_t
+      Type: func. ret. 
+[1132] l 00402950 st 6 sc 1 indx 56     __stdio_check_funcs
+      End+1 symbol: 1137      Type:  int
+[1133] l 00000004 st 3 sc 4 indx 53     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1134] l 00000038 st 7 sc 1 indx 67     $Lb0
+      End+1 symbol: 1136
+[1135] l 000000e8 st 8 sc 1 indx 65     $Lb0
+      First symbol: 1134
+[1136] l 00000108 st 8 sc 1 indx 63     __stdio_check_funcs
+      First symbol: 1132
+[1137] l 00402a58 st 6 sc 1 indx 61     __stdio_check_offset
+      End+1 symbol: 1158      Type:  int
+[1138] l 00000010 st 3 sc 4 indx 58     stream
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1139] l 00000000 st 7 sc 1 indx 79     $Lb2
+      End+1 symbol: 1154
+[1140] l 00000010 st 4 sc 4 indx 5b     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1141] l 00000000 st 7 sc 1 indx 78     $Lb3
+      End+1 symbol: 1153
+[1142] l 00000000 st 7 sc 1 indx 74     $Lb4
+      End+1 symbol: 1149
+[1143] l 00000010 st 4 sc 4 indx 5e     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1144] l 00000000 st 7 sc 1 indx 73     $Lb5
+      End+1 symbol: 1148
+[1145] l 00000040 st 7 sc 1 indx 72     $Lb6
+      End+1 symbol: 1147
+[1146] l 000000f0 st 8 sc 1 indx 70     $Lb6
+      First symbol: 1145
+[1147] l 000000f0 st 8 sc 1 indx 6f     $Lb5
+      First symbol: 1144
+[1148] l 000000f0 st 8 sc 1 indx 6d     $Lb4
+      First symbol: 1142
+[1149] l 00000118 st 7 sc 1 indx 77     $Lb10
+      End+1 symbol: 1152
+[1150] l 00000011 st 4 sc 4 indx 8     save
+      Type: int
+[1151] l 000001d8 st 8 sc 1 indx 74     $Lb10
+      First symbol: 1149
+[1152] l 00000210 st 8 sc 1 indx 6c     $Lb3
+      First symbol: 1141
+[1153] l 00000210 st 8 sc 1 indx 6a     $Lb2
+      First symbol: 1139
+[1154] l 00000258 st 7 sc 1 indx 7c     $Lb14
+      End+1 symbol: 1157
+[1155] l ffffffe8 st 4 sc 5 indx 9     pos
+      Type: long
+[1156] l 000002c8 st 8 sc 1 indx 79     $Lb14
+      First symbol: 1154
+[1157] l 00000320 st 8 sc 1 indx 68     __stdio_check_offset
+      First symbol: 1137
+[1158] l 00402d78 st e sc 1 indx 69     flushbuf
+      End+1 symbol: 1191      Type:  int
+[1159] l 00000010 st 3 sc 4 indx 63     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1160] l 00000014 st 3 sc 4 indx 8     c
+      Type: int
+[1161] l 00000015 st 4 sc 4 indx 8     flush_only
+      Type: int
+[1162] l 00000013 st 4 sc 4 indx 2     buffer_written
+      Type: unsigned int
+[1163] l 00000012 st 4 sc 4 indx 2     to_write
+      Type: unsigned int
+[1164] l 00000017 st 4 sc 4 indx 8     twiddled
+      Type: int
+[1165] l 00000098 st 7 sc 1 indx 8d     $Lb16
+      End+1 symbol: 1174
+[1166] l 00000013 st 4 sc 4 indx 2     buffer_offset
+      Type: unsigned int
+[1167] l 00000100 st 7 sc 1 indx 8c     $Lb17
+      End+1 symbol: 1173
+[1168] l 00000012 st 4 sc 4 indx 8     save
+      Type: int
+[1169] l 00000011 st 4 sc 4 indx 8     aligned
+      Type: int
+[1170] l 00000188 st 7 sc 1 indx 8b     $Lb18
+      End+1 symbol: 1172
+[1171] l 00000288 st 8 sc 1 indx 89     $Lb18
+      First symbol: 1170
+[1172] l 00000290 st 8 sc 1 indx 86     $Lb17
+      First symbol: 1167
+[1173] l 00000338 st 8 sc 1 indx 84     $Lb16
+      First symbol: 1165
+[1174] l 000003e0 st 7 sc 1 indx 99     $Lb22
+      End+1 symbol: 1186
+[1175] l 00000003 st 4 sc 4 indx 8     wrote
+      Type: int
+[1176] l 000003f8 st 7 sc 1 indx 98     $Lb23
+      End+1 symbol: 1185
+[1177] l 00000010 st 4 sc 4 indx 66     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1178] l 000003f8 st 7 sc 1 indx 97     $Lb24
+      End+1 symbol: 1184
+[1179] l 00000011 st 4 sc 4 indx 8     save
+      Type: int
+[1180] l 00000490 st 7 sc 1 indx 96     $Lb25
+      End+1 symbol: 1183
+[1181] l ffffffc8 st 4 sc 5 indx 9     pos
+      Type: long
+[1182] l 00000500 st 8 sc 1 indx 93     $Lb25
+      First symbol: 1180
+[1183] l 00000500 st 8 sc 1 indx 91     $Lb24
+      First symbol: 1178
+[1184] l 00000500 st 8 sc 1 indx 8f     $Lb23
+      First symbol: 1176
+[1185] l 000005c0 st 8 sc 1 indx 8d     $Lb22
+      First symbol: 1174
+[1186] l 00000628 st 7 sc 1 indx 9c     $Lb30
+      End+1 symbol: 1189
+[1187] l ffffffd0 st 4 sc 5 indx 4c     cc
+      Type: char
+[1188] l 00000680 st 8 sc 1 indx 99     $Lb30
+      First symbol: 1186
+[1189] l 00403450 st 5 sc 1 indx 0     end
+[1190] l 00000788 st 8 sc 1 indx 7d     flushbuf
+      First symbol: 1158
+[1191] l 00403500 st e sc 1 indx 71     fillbuf
+      End+1 symbol: 1215      Type:  int
+[1192] l 00000010 st 3 sc 4 indx 6b     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1193] l 00000015 st 4 sc 4 indx 2     buffer_offset
+      Type: unsigned int
+[1194] l 00000012 st 4 sc 4 indx 3     buffer
+      Type: ptr to char
+[1195] l 00000011 st 4 sc 4 indx 2     to_read
+      Type: unsigned int
+[1196] l 00000014 st 4 sc 4 indx 2     nread
+      Type: unsigned int
+[1197] l ffffffd0 st 4 sc 5 indx 4     c
+      Type: unsigned char
+[1198] l 000000c8 st 7 sc 1 indx b1     $Lb32
+      End+1 symbol: 1210
+[1199] l 00000016 st 4 sc 4 indx 8     save
+      Type: int
+[1200] l 00000160 st 7 sc 1 indx b0     $Lb33
+      End+1 symbol: 1209
+[1201] l 00000010 st 4 sc 4 indx 6e     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1202] l 00000160 st 7 sc 1 indx af     $Lb34
+      End+1 symbol: 1208
+[1203] l 00000013 st 4 sc 4 indx 8     save
+      Type: int
+[1204] l 000001f8 st 7 sc 1 indx ae     $Lb35
+      End+1 symbol: 1207
+[1205] l ffffffd8 st 4 sc 5 indx 9     pos
+      Type: long
+[1206] l 00000268 st 8 sc 1 indx ab     $Lb35
+      First symbol: 1204
+[1207] l 00000268 st 8 sc 1 indx a9     $Lb34
+      First symbol: 1202
+[1208] l 00000268 st 8 sc 1 indx a7     $Lb33
+      First symbol: 1200
+[1209] l 00000268 st 8 sc 1 indx a5     $Lb32
+      First symbol: 1198
+[1210] l 00000298 st 7 sc 1 indx b4     $Lb40
+      End+1 symbol: 1213
+[1211] l 00000003 st 4 sc 4 indx 8     count
+      Type: int
+[1212] l 00000348 st 8 sc 1 indx b1     $Lb40
+      First symbol: 1210
+[1213] l 004038b8 st 5 sc 1 indx 0     end
+[1214] l 00000490 st 8 sc 1 indx 9e     fillbuf
+      First symbol: 1191
+[1215] l 00000008 st 7 sc b indx ba     .6fake
+      End+1 symbol: 1219
+[1216] l 00000000 st 9 sc b indx 8     __magic
+      Type: int
+[1217] l 00000020 st 9 sc b indx 73     __p
+      Type: ptr to ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1218] l 00000000 st 8 sc b indx b6     
+      First symbol: 1215
+[1219] l 00403990 st 6 sc 1 indx 7f     __flshfp
+      End+1 symbol: 1239      Type:  int
+[1220] l 00000010 st 3 sc 4 indx 76     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1221] l 00000012 st 3 sc 4 indx 8     c
+      Type: int
+[1222] l 00000013 st 4 sc 4 indx 8     flush_only
+      Type: int
+[1223] l 00000138 st 7 sc 1 indx cd     $Lb42
+      End+1 symbol: 1238
+[1224] l 00000010 st 4 sc 4 indx 79     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1225] l 00000138 st 7 sc 1 indx cc     $Lb43
+      End+1 symbol: 1237
+[1226] l 00000138 st 7 sc 1 indx c8     $Lb44
+      End+1 symbol: 1233
+[1227] l 00000010 st 4 sc 4 indx 7c     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1228] l 00000138 st 7 sc 1 indx c7     $Lb45
+      End+1 symbol: 1232
+[1229] l 00000150 st 7 sc 1 indx c6     $Lb46
+      End+1 symbol: 1231
+[1230] l 00000200 st 8 sc 1 indx c4     $Lb46
+      First symbol: 1229
+[1231] l 00000200 st 8 sc 1 indx c3     $Lb45
+      First symbol: 1228
+[1232] l 00000200 st 8 sc 1 indx c1     $Lb44
+      First symbol: 1226
+[1233] l 00000228 st 7 sc 1 indx cb     $Lb50
+      End+1 symbol: 1236
+[1234] l 00000011 st 4 sc 4 indx 8     save
+      Type: int
+[1235] l 000002e8 st 8 sc 1 indx c8     $Lb50
+      First symbol: 1233
+[1236] l 00000320 st 8 sc 1 indx c0     $Lb43
+      First symbol: 1225
+[1237] l 00000320 st 8 sc 1 indx be     $Lb42
+      First symbol: 1223
+[1238] l 00000538 st 8 sc 1 indx ba     __flshfp
+      First symbol: 1219
+[1239] l 00000008 st 7 sc b indx d2     .7fake
+      End+1 symbol: 1243
+[1240] l 00000000 st 9 sc b indx 8     __magic
+      Type: int
+[1241] l 00000020 st 9 sc b indx 81     __p
+      Type: ptr to ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1242] l 00000000 st 8 sc b indx ce     
+      First symbol: 1239
+[1243] l 00000008 st 7 sc b indx d6     .8fake
+      End+1 symbol: 1247
+[1244] l 00000000 st 9 sc b indx 8     __magic
+      Type: int
+[1245] l 00000020 st 9 sc b indx 84     __p
+      Type: ptr to ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1246] l 00000000 st 8 sc b indx d2     
+      First symbol: 1243
+[1247] l 00403ec8 st 6 sc 1 indx 93     __fillbf
+      End+1 symbol: 1270      Type:  int
+[1248] l 00000011 st 3 sc 4 indx 87     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1249] l 00000004 st 4 sc 4 indx 8     c
+      Type: int
+[1250] l 00000010 st 4 sc 4 indx 9     new_target
+      Type: long
+[1251] l 00000120 st 7 sc 1 indx e9     $Lb54
+      End+1 symbol: 1266
+[1252] l 00000011 st 4 sc 4 indx 8a     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1253] l 00000120 st 7 sc 1 indx e8     $Lb55
+      End+1 symbol: 1265
+[1254] l 00000120 st 7 sc 1 indx e4     $Lb56
+      End+1 symbol: 1261
+[1255] l 00000011 st 4 sc 4 indx 8d     fp
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1256] l 00000120 st 7 sc 1 indx e3     $Lb57
+      End+1 symbol: 1260
+[1257] l 00000130 st 7 sc 1 indx e2     $Lb58
+      End+1 symbol: 1259
+[1258] l 000001e0 st 8 sc 1 indx e0     $Lb58
+      First symbol: 1257
+[1259] l 000001e0 st 8 sc 1 indx df     $Lb57
+      First symbol: 1256
+[1260] l 000001e0 st 8 sc 1 indx dd     $Lb56
+      First symbol: 1254
+[1261] l 00000208 st 7 sc 1 indx e7     $Lb62
+      End+1 symbol: 1264
+[1262] l 00000010 st 4 sc 4 indx 8     save
+      Type: int
+[1263] l 000002c8 st 8 sc 1 indx e4     $Lb62
+      First symbol: 1261
+[1264] l 00000300 st 8 sc 1 indx dc     $Lb55
+      First symbol: 1253
+[1265] l 00000300 st 8 sc 1 indx da     $Lb54
+      First symbol: 1251
+[1266] l 00000328 st 7 sc 1 indx ec     $Lb66
+      End+1 symbol: 1269
+[1267] l 00000010 st 4 sc 4 indx 90     f
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1268] l 000003e0 st 8 sc 1 indx e9     $Lb66
+      First symbol: 1266
+[1269] l 00000590 st 8 sc 1 indx d6     __fillbf
+      First symbol: 1247
+[1270] l 00404458 st 6 sc 1 indx 98     __invalidate
+      End+1 symbol: 1273      Type:  int
+[1271] l 00000004 st 3 sc 4 indx 95     stream
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1087 }
+[1272] l 00000078 st 8 sc 1 indx ed     __invalidate
+      First symbol: 1270
+[1273] l 00402950 st 5 sc 1 indx fffff     gcc2_compiled.
+[1274] l 00402950 st 5 sc 1 indx fffff     __gnu_compiled_c
+[1275] l 00402a38 st 5 sc 1 indx fffff     $L24
+[1276] l 00402b48 st 5 sc 1 indx fffff     $L40
+[1277] l 00402c30 st 5 sc 1 indx fffff     $L42
+[1278] l 00402b90 st 5 sc 1 indx fffff     $L43
+[1279] l 00402bf8 st 5 sc 1 indx fffff     $L45
+[1280] l 00402bb0 st 5 sc 1 indx fffff     $L46
+[1281] l 00402c68 st 5 sc 1 indx fffff     $L39
+[1282] l 00402d20 st 5 sc 1 indx fffff     $L52
+[1283] l 00402cb0 st 5 sc 1 indx fffff     $L53
+[1284] l 00402ca0 st 5 sc 1 indx fffff     $L59
+[1285] l 00402d50 st 5 sc 1 indx fffff     $L58
+[1286] l 00402d10 st 5 sc 1 indx fffff     $L55
+[1287] l 00402d48 st 5 sc 1 indx fffff     $L57
+[1288] l 004030b0 st 5 sc 1 indx fffff     $L72
+[1289] l 00403008 st 5 sc 1 indx fffff     $L73
+[1290] l 00402ee8 st 5 sc 1 indx fffff     $L75
+[1291] l 00402ef0 st 5 sc 1 indx fffff     $L74
+[1292] l 00403000 st 5 sc 1 indx fffff     $L76
+[1293] l 00402f80 st 5 sc 1 indx fffff     $L77
+[1294] l 004034a8 st 5 sc 1 indx fffff     $L71
+[1295] l 00402ff8 st 5 sc 1 indx fffff     $L79
+[1296] l 00403098 st 5 sc 1 indx fffff     $L84
+[1297] l 004030a8 st 5 sc 1 indx fffff     $L83
+[1298] l 00403100 st 5 sc 1 indx fffff     $L87
+[1299] l 00403108 st 5 sc 1 indx fffff     $L88
+[1300] l 00403128 st 5 sc 1 indx fffff     $L92
+[1301] l 00403158 st 5 sc 1 indx fffff     $L119
+[1302] l 00403338 st 5 sc 1 indx fffff     $L93
+[1303] l 00403278 st 5 sc 1 indx fffff     $L94
+[1304] l 004031c0 st 5 sc 1 indx fffff     $L96
+[1305] l 00403260 st 5 sc 1 indx fffff     $L120
+[1306] l 00403208 st 5 sc 1 indx fffff     $L101
+[1307] l 00403268 st 5 sc 1 indx fffff     $L121
+[1308] l 00403310 st 5 sc 1 indx fffff     $L107
+[1309] l 004032f8 st 5 sc 1 indx fffff     $L108
+[1310] l 00403308 st 5 sc 1 indx fffff     $L122
+[1311] l 004033a0 st 5 sc 1 indx fffff     $L113
+[1312] l 00403430 st 5 sc 1 indx fffff     $L112
+[1313] l 004033f8 st 5 sc 1 indx fffff     $L114
+[1314] l 00403480 st 5 sc 1 indx fffff     $L117
+[1315] l 00403590 st 5 sc 1 indx fffff     $L124
+[1316] l 004035b8 st 5 sc 1 indx fffff     $L126
+[1317] l 004035c8 st 5 sc 1 indx fffff     $L127
+[1318] l 00403768 st 5 sc 1 indx fffff     $L128
+[1319] l 00403660 st 5 sc 1 indx fffff     $L129
+[1320] l 004036b0 st 5 sc 1 indx fffff     $L131
+[1321] l 00403750 st 5 sc 1 indx fffff     $L155
+[1322] l 004036f8 st 5 sc 1 indx fffff     $L136
+[1323] l 00403758 st 5 sc 1 indx fffff     $L156
+[1324] l 00403860 st 5 sc 1 indx fffff     $L142
+[1325] l 00403788 st 5 sc 1 indx fffff     $L149
+[1326] l 004037f0 st 5 sc 1 indx fffff     $L145
+[1327] l 00403848 st 5 sc 1 indx fffff     $L141
+[1328] l 00403818 st 5 sc 1 indx fffff     $L147
+[1329] l 004038a8 st 5 sc 1 indx fffff     $L150
+[1330] l 00403898 st 5 sc 1 indx fffff     $L151
+[1331] l 00403940 st 5 sc 1 indx fffff     $L154
+[1332] l 00403920 st 5 sc 1 indx fffff     $L153
+[1333] l 00403a50 st 5 sc 1 indx fffff     $L159
+[1334] l 00403a18 st 5 sc 1 indx fffff     $L160
+[1335] l 00403a70 st 5 sc 1 indx fffff     $L158
+[1336] l 00403a60 st 5 sc 1 indx fffff     $L191
+[1337] l 00403e90 st 5 sc 1 indx fffff     $L188
+[1338] l 00403ac8 st 5 sc 1 indx fffff     $L162
+[1339] l 00403b90 st 5 sc 1 indx fffff     $L164
+[1340] l 00403c78 st 5 sc 1 indx fffff     $L166
+[1341] l 00403bd8 st 5 sc 1 indx fffff     $L167
+[1342] l 00403c40 st 5 sc 1 indx fffff     $L169
+[1343] l 00403bf8 st 5 sc 1 indx fffff     $L170
+[1344] l 00403cb0 st 5 sc 1 indx fffff     $L163
+[1345] l 00403ce8 st 5 sc 1 indx fffff     $L176
+[1346] l 00403db0 st 5 sc 1 indx fffff     $L177
+[1347] l 00403d40 st 5 sc 1 indx fffff     $L178
+[1348] l 00403d58 st 5 sc 1 indx fffff     $L179
+[1349] l 00403e78 st 5 sc 1 indx fffff     $L190
+[1350] l 00403de8 st 5 sc 1 indx fffff     $L182
+[1351] l 00403e00 st 5 sc 1 indx fffff     $L183
+[1352] l 00403e58 st 5 sc 1 indx fffff     $L185
+[1353] l 00403e88 st 5 sc 1 indx fffff     $L187
+[1354] l 00403f70 st 5 sc 1 indx fffff     $L194
+[1355] l 00403f38 st 5 sc 1 indx fffff     $L195
+[1356] l 00403f90 st 5 sc 1 indx fffff     $L193
+[1357] l 00404420 st 5 sc 1 indx fffff     $L228
+[1358] l 00403fe8 st 5 sc 1 indx fffff     $L196
+[1359] l 004040a8 st 5 sc 1 indx fffff     $L198
+[1360] l 00404190 st 5 sc 1 indx fffff     $L200
+[1361] l 004040f0 st 5 sc 1 indx fffff     $L201
+[1362] l 00404158 st 5 sc 1 indx fffff     $L203
+[1363] l 00404110 st 5 sc 1 indx fffff     $L204
+[1364] l 004041c8 st 5 sc 1 indx fffff     $L197
+[1365] l 004041f0 st 5 sc 1 indx fffff     $L211
+[1366] l 004042a8 st 5 sc 1 indx fffff     $L210
+[1367] l 00404220 st 5 sc 1 indx fffff     $L229
+[1368] l 00404240 st 5 sc 1 indx fffff     $L217
+[1369] l 00404298 st 5 sc 1 indx fffff     $L214
+[1370] l 00404300 st 5 sc 1 indx fffff     $L219
+[1371] l 00404388 st 5 sc 1 indx fffff     $L220
+[1372] l 00404370 st 5 sc 1 indx fffff     $L221
+[1373] l 00404410 st 5 sc 1 indx fffff     $L230
+[1374] l 00404400 st 5 sc 1 indx fffff     $L225
+[1375] l 00404418 st 5 sc 1 indx fffff     $L224
+[1376] l 00000000 st 8 sc 1 indx 0     internals.c
+      First symbol: 1033
+[1377] l 00000000 st b sc 1 indx 107     ../sysdeps/generic/sysd-stdio.c
+      End+1 symbol: 1640
+[1378] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[1379] l 00000000 st a sc b indx 2     ptrdiff_t
+      Type: int
+[1380] l 00000000 st a sc b indx 3     size_t
+      Type: unsigned int
+[1381] l 00000000 st a sc b indx 2     wchar_t
+      Type: int
+[1382] l 00000000 st a sc b indx 4     __gnuc_va_list
+      Type: ptr to char
+[1383] l 00000000 st a sc b indx 5     __u_char
+      Type: unsigned char
+[1384] l 00000000 st a sc b indx 6     __u_short
+      Type: unsigned short
+[1385] l 00000000 st a sc b indx 3     __u_int
+      Type: unsigned int
+[1386] l 00000000 st a sc b indx 7     __u_long
+      Type: unsigned long
+[1387] l 00000000 st a sc b indx 0     __u_quad_t
+      Type: nil
+[1388] l 00000000 st a sc b indx 0     __quad_t
+      Type: nil
+[1389] l 00000000 st a sc b indx 8     __qaddr_t
+      Type: ptr to nil
+[1390] l 00000000 st a sc b indx 2     __dev_t
+      Type: int
+[1391] l 00000000 st a sc b indx 3     __uid_t
+      Type: unsigned int
+[1392] l 00000000 st a sc b indx 3     __gid_t
+      Type: unsigned int
+[1393] l 00000000 st a sc b indx 3     __ino_t
+      Type: unsigned int
+[1394] l 00000000 st a sc b indx 3     __mode_t
+      Type: unsigned int
+[1395] l 00000000 st a sc b indx 6     __nlink_t
+      Type: unsigned short
+[1396] l 00000000 st a sc b indx 9     __off_t
+      Type: long
+[1397] l 00000000 st a sc b indx 2     __pid_t
+      Type: int
+[1398] l 00000000 st a sc b indx 2     __ssize_t
+      Type: int
+[1399] l 00000000 st a sc b indx 0     __fsid_t
+      Type: nil
+[1400] l 00000000 st a sc b indx 9     __daddr_t
+      Type: long
+[1401] l 00000000 st a sc b indx 4     __caddr_t
+      Type: ptr to char
+[1402] l 00000000 st a sc b indx 9     __time_t
+      Type: long
+[1403] l 00000000 st a sc b indx 9     __swblk_t
+      Type: long
+[1404] l 00000020 st 7 sc b indx 1e     .0fake
+      End+1 symbol: 1407
+[1405] l 00000000 st 9 sc b indx a     fds_bits
+      Type: array [8 {32 bits}] of unsigned long
+[1406] l 00000000 st 8 sc b indx 1b     
+      First symbol: 1404
+[1407] l 00000000 st a sc b indx 10     __fd_set
+      Type: struct .0fake { ifd = 0, index = 1404 }
+[1408] l 00000000 st a sc b indx 13     FILE
+      Type: struct __stdio_file { ifd = 0, index = 1433 }
+[1409] l 00000000 st a sc b indx 9     fpos_t
+      Type: long
+[1410] l 00000004 st 7 sc b indx 2a     .1fake
+      End+1 symbol: 1419
+[1411] l 00000000 st 9 sc 8 indx 16     __read
+      Type: unsigned int : 1
+[1412] l 00000001 st 9 sc 8 indx 18     __write
+      Type: unsigned int : 1
+[1413] l 00000002 st 9 sc 8 indx 1a     __append
+      Type: unsigned int : 1
+[1414] l 00000003 st 9 sc 8 indx 1c     __binary
+      Type: unsigned int : 1
+[1415] l 00000004 st 9 sc 8 indx 1e     __create
+      Type: unsigned int : 1
+[1416] l 00000005 st 9 sc 8 indx 20     __exclusive
+      Type: unsigned int : 1
+[1417] l 00000006 st 9 sc 8 indx 22     __truncate
+      Type: unsigned int : 1
+[1418] l 00000000 st 8 sc b indx 21     
+      First symbol: 1410
+[1419] l 00000000 st a sc b indx 24     __io_mode
+      Type: struct .1fake { ifd = 0, index = 1410 }
+[1420] l 00000014 st 7 sc b indx 32     .2fake
+      End+1 symbol: 1427
+[1421] l 00000000 st 9 sc b indx 27     __read
+      Type: func. ret. 
+[1422] l 00000020 st 9 sc b indx 27     __write
+      Type: func. ret. 
+[1423] l 00000040 st 9 sc b indx 27     __seek
+      Type: func. ret. 
+[1424] l 00000060 st 9 sc b indx 27     __close
+      Type: func. ret. 
+[1425] l 00000080 st 9 sc b indx 27     __fileno
+      Type: func. ret. 
+[1426] l 00000000 st 8 sc b indx 2b     
+      First symbol: 1420
+[1427] l 00000000 st a sc b indx 28     __io_functions
+      Type: struct .2fake { ifd = 0, index = 1420 }
+[1428] l 00000008 st 7 sc b indx 37     .3fake
+      End+1 symbol: 1432
+[1429] l 00000000 st 9 sc b indx 27     __input
+      Type: func. ret. 
+[1430] l 00000020 st 9 sc b indx 27     __output
+      Type: func. ret. 
+[1431] l 00000000 st 8 sc b indx 33     
+      First symbol: 1428
+[1432] l 00000000 st a sc b indx 2b     __room_functions
+      Type: struct .3fake { ifd = 0, index = 1428 }
+[1433] l 00000050 st 7 sc b indx 51     __stdio_file
+      End+1 symbol: 1458
+[1434] l 00000000 st 9 sc b indx 2     __magic
+      Type: int
+[1435] l 00000020 st 9 sc b indx 4     __bufp
+      Type: ptr to char
+[1436] l 00000040 st 9 sc b indx 4     __get_limit
+      Type: ptr to char
+[1437] l 00000060 st 9 sc b indx 4     __put_limit
+      Type: ptr to char
+[1438] l 00000080 st 9 sc b indx 4     __buffer
+      Type: ptr to char
+[1439] l 000000a0 st 9 sc b indx 3     __bufsize
+      Type: unsigned int
+[1440] l 000000c0 st 9 sc b indx 2e     __cookie
+      Type: ptr to int
+[1441] l 000000e0 st 9 sc b indx 2f     __mode
+      Type: struct .1fake { ifd = 0, index = 1410 }
+[1442] l 00000100 st 9 sc b indx 32     __io_funcs
+      Type: struct .2fake { ifd = 0, index = 1420 }
+[1443] l 000001a0 st 9 sc b indx 35     __room_funcs
+      Type: struct .3fake { ifd = 0, index = 1428 }
+[1444] l 000001e0 st 9 sc b indx 9     __offset
+      Type: long
+[1445] l 00000200 st 9 sc b indx 9     __target
+      Type: long
+[1446] l 00000220 st 9 sc b indx 38     __next
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1433 }
+[1447] l 00000240 st 9 sc b indx 4     __pushback_bufp
+      Type: ptr to char
+[1448] l 00000260 st 9 sc b indx 5     __pushback
+      Type: unsigned char
+[1449] l 00000268 st 9 sc 8 indx 3b     __pushed_back
+      Type: unsigned int : 1
+[1450] l 00000269 st 9 sc 8 indx 3d     __eof
+      Type: unsigned int : 1
+[1451] l 0000026a st 9 sc 8 indx 3f     __error
+      Type: unsigned int : 1
+[1452] l 0000026b st 9 sc 8 indx 41     __userbuf
+      Type: unsigned int : 1
+[1453] l 0000026c st 9 sc 8 indx 43     __linebuf
+      Type: unsigned int : 1
+[1454] l 0000026d st 9 sc 8 indx 45     __linebuf_active
+      Type: unsigned int : 1
+[1455] l 0000026e st 9 sc 8 indx 47     __seen
+      Type: unsigned int : 1
+[1456] l 0000026f st 9 sc 8 indx 49     __ispipe
+      Type: unsigned int : 1
+[1457] l 00000000 st 8 sc b indx 38     
+      First symbol: 1433
+[1458] l 00000000 st a sc b indx 9     time_t
+      Type: long
+[1459] l 00000000 st a sc b indx 2     int32_t
+      Type: int
+[1460] l 00000000 st a sc b indx 4b     int16_t
+      Type: short
+[1461] l 00000000 st a sc b indx 4c     int8_t
+      Type: char
+[1462] l 00000000 st a sc b indx 3     u_int32_t
+      Type: unsigned int
+[1463] l 00000000 st a sc b indx 6     u_int16_t
+      Type: unsigned short
+[1464] l 00000000 st a sc b indx 5     u_int8_t
+      Type: unsigned char
+[1465] l 00000008 st 7 sc b indx 5c     .4fake
+      End+1 symbol: 1469
+[1466] l 00000000 st 9 sc b indx 2     quot
+      Type: int
+[1467] l 00000020 st 9 sc b indx 2     rem
+      Type: int
+[1468] l 00000000 st 8 sc b indx 58     
+      First symbol: 1465
+[1469] l 00000000 st a sc b indx 4d     div_t
+      Type: struct .4fake { ifd = 0, index = 1465 }
+[1470] l 00000008 st 7 sc b indx 61     .5fake
+      End+1 symbol: 1474
+[1471] l 00000000 st 9 sc b indx 9     quot
+      Type: long
+[1472] l 00000020 st 9 sc b indx 9     rem
+      Type: long
+[1473] l 00000000 st 8 sc b indx 5d     
+      First symbol: 1470
+[1474] l 00000000 st a sc b indx 50     ldiv_t
+      Type: struct .5fake { ifd = 0, index = 1470 }
+[1475] l 00000000 st a sc b indx 27     __compar_fn_t
+      Type: func. ret. 
+[1476] l 00000000 st a sc b indx 27     comparison_fn_t
+      Type: func. ret. 
+[1477] l 00000040 st 7 sc b indx 77     stat
+      End+1 symbol: 1496
+[1478] l 00000000 st 9 sc b indx 4b     st_dev
+      Type: short
+[1479] l 00000020 st 9 sc b indx 3     st_ino
+      Type: unsigned int
+[1480] l 00000040 st 9 sc b indx 6     st_mode
+      Type: unsigned short
+[1481] l 00000050 st 9 sc b indx 6     st_nlink
+      Type: unsigned short
+[1482] l 00000060 st 9 sc b indx 6     st_uid
+      Type: unsigned short
+[1483] l 00000070 st 9 sc b indx 6     st_gid
+      Type: unsigned short
+[1484] l 00000080 st 9 sc b indx 4b     st_rdev
+      Type: short
+[1485] l 000000a0 st 9 sc b indx 9     st_size
+      Type: long
+[1486] l 000000c0 st 9 sc b indx 9     st_atime
+      Type: long
+[1487] l 000000e0 st 9 sc b indx 7     st_atime_usec
+      Type: unsigned long
+[1488] l 00000100 st 9 sc b indx 9     st_mtime
+      Type: long
+[1489] l 00000120 st 9 sc b indx 7     st_mtime_usec
+      Type: unsigned long
+[1490] l 00000140 st 9 sc b indx 9     st_ctime
+      Type: long
+[1491] l 00000160 st 9 sc b indx 7     st_ctime_usec
+      Type: unsigned long
+[1492] l 00000180 st 9 sc b indx 7     st_blksize
+      Type: unsigned long
+[1493] l 000001a0 st 9 sc b indx 7     st_blocks
+      Type: unsigned long
+[1494] l 000001c0 st 9 sc b indx 53     st_spare
+      Type: array [2 {32 bits}] of long
+[1495] l 00000000 st 8 sc b indx 64     
+      First symbol: 1477
+[1496] l 00000010 st 7 sc b indx 7e     flock
+      End+1 symbol: 1503
+[1497] l 00000000 st 9 sc b indx 4b     l_type
+      Type: short
+[1498] l 00000010 st 9 sc b indx 4b     l_whence
+      Type: short
+[1499] l 00000020 st 9 sc b indx 9     l_start
+      Type: long
+[1500] l 00000040 st 9 sc b indx 9     l_len
+      Type: long
+[1501] l 00000060 st 9 sc b indx 2     l_pid
+      Type: int
+[1502] l 00000000 st 8 sc b indx 77     
+      First symbol: 1496
+[1503] l 00000004 st 7 sc b indx 89     .6fake
+      End+1 symbol: 1514
+[1504] l 00000000 st 9 sc b indx 0     _PC_LINK_MAX
+      Type: nil
+[1505] l 00000001 st 9 sc b indx 0     _PC_MAX_CANON
+      Type: nil
+[1506] l 00000002 st 9 sc b indx 0     _PC_MAX_INPUT
+      Type: nil
+[1507] l 00000003 st 9 sc b indx 0     _PC_NAME_MAX
+      Type: nil
+[1508] l 00000004 st 9 sc b indx 0     _PC_PATH_MAX
+      Type: nil
+[1509] l 00000005 st 9 sc b indx 0     _PC_PIPE_BUF
+      Type: nil
+[1510] l 00000006 st 9 sc b indx 0     _PC_CHOWN_RESTRICTED
+      Type: nil
+[1511] l 00000007 st 9 sc b indx 0     _PC_NO_TRUNC
+      Type: nil
+[1512] l 00000008 st 9 sc b indx 0     _PC_VDISABLE
+      Type: nil
+[1513] l 00000000 st 8 sc b indx 7e     
+      First symbol: 1503
+[1514] l 00000004 st 7 sc b indx a6     .7fake
+      End+1 symbol: 1543
+[1515] l 00000000 st 9 sc b indx 0     _SC_ARG_MAX
+      Type: nil
+[1516] l 00000001 st 9 sc b indx 0     _SC_CHILD_MAX
+      Type: nil
+[1517] l 00000002 st 9 sc b indx 0     _SC_CLK_TCK
+      Type: nil
+[1518] l 00000003 st 9 sc b indx 0     _SC_NGROUPS_MAX
+      Type: nil
+[1519] l 00000004 st 9 sc b indx 0     _SC_OPEN_MAX
+      Type: nil
+[1520] l 00000005 st 9 sc b indx 0     _SC_STREAM_MAX
+      Type: nil
+[1521] l 00000006 st 9 sc b indx 0     _SC_TZNAME_MAX
+      Type: nil
+[1522] l 00000007 st 9 sc b indx 0     _SC_JOB_CONTROL
+      Type: nil
+[1523] l 00000008 st 9 sc b indx 0     _SC_SAVED_IDS
+      Type: nil
+[1524] l 00000009 st 9 sc b indx 0     _SC_VERSION
+      Type: nil
+[1525] l 0000000a st 9 sc b indx 0     _SC_PAGESIZE
+      Type: nil
+[1526] l 0000000b st 9 sc b indx 0     _SC_BC_BASE_MAX
+      Type: nil
+[1527] l 0000000c st 9 sc b indx 0     _SC_BC_DIM_MAX
+      Type: nil
+[1528] l 0000000d st 9 sc b indx 0     _SC_BC_SCALE_MAX
+      Type: nil
+[1529] l 0000000e st 9 sc b indx 0     _SC_BC_STRING_MAX
+      Type: nil
+[1530] l 0000000f st 9 sc b indx 0     _SC_COLL_WEIGHTS_MAX
+      Type: nil
+[1531] l 00000010 st 9 sc b indx 0     _SC_EQUIV_CLASS_MAX
+      Type: nil
+[1532] l 00000011 st 9 sc b indx 0     _SC_EXPR_NEST_MAX
+      Type: nil
+[1533] l 00000012 st 9 sc b indx 0     _SC_LINE_MAX
+      Type: nil
+[1534] l 00000013 st 9 sc b indx 0     _SC_RE_DUP_MAX
+      Type: nil
+[1535] l 00000014 st 9 sc b indx 0     _SC_2_VERSION
+      Type: nil
+[1536] l 00000015 st 9 sc b indx 0     _SC_2_C_BIND
+      Type: nil
+[1537] l 00000016 st 9 sc b indx 0     _SC_2_C_DEV
+      Type: nil
+[1538] l 00000017 st 9 sc b indx 0     _SC_2_FORT_DEV
+      Type: nil
+[1539] l 00000018 st 9 sc b indx 0     _SC_2_FORT_RUN
+      Type: nil
+[1540] l 00000019 st 9 sc b indx 0     _SC_2_SW_DEV
+      Type: nil
+[1541] l 0000001a st 9 sc b indx 0     _SC_2_LOCALEDEF
+      Type: nil
+[1542] l 00000000 st 8 sc b indx 89     
+      First symbol: 1514
+[1543] l 00000004 st 7 sc b indx a9     .8fake
+      End+1 symbol: 1546
+[1544] l 00000000 st 9 sc b indx 0     _CS_PATH
+      Type: nil
+[1545] l 00000000 st 8 sc b indx a6     
+      First symbol: 1543
+[1546] l 004044d0 st 6 sc 1 indx 59     __stdio_read
+      End+1 symbol: 1551      Type:  int
+[1547] l 00000004 st 3 sc 4 indx 2e     cookie
+      Type: ptr to int
+[1548] l 00000005 st 3 sc 4 indx 4     buf
+      Type: ptr to char
+[1549] l 00000006 st 3 sc 4 indx 3     n
+      Type: unsigned int
+[1550] l 00000030 st 8 sc 1 indx a9     __stdio_read
+      First symbol: 1546
+[1551] l 00404500 st 6 sc 1 indx 5b     __stdio_write
+      End+1 symbol: 1558      Type:  int
+[1552] l 00000004 st 3 sc 4 indx 2e     cookie
+      Type: ptr to int
+[1553] l 00000005 st 3 sc 4 indx 4     buf
+      Type: ptr to char
+[1554] l 00000006 st 3 sc 4 indx 3     n
+      Type: unsigned int
+[1555] l 00000058 st 7 sc 1 indx b4     $Lb0
+      End+1 symbol: 1557
+[1556] l 000000b0 st 8 sc 1 indx b2     $Lb0
+      First symbol: 1555
+[1557] l 000000f8 st 8 sc 1 indx ae     __stdio_write
+      First symbol: 1551
+[1558] l 004045f8 st 6 sc 1 indx 5e     __stdio_seek
+      End+1 symbol: 1563      Type:  int
+[1559] l 00000004 st 3 sc 4 indx 2e     cookie
+      Type: ptr to int
+[1560] l 00000005 st 3 sc 4 indx 5d     pos
+      Type: ptr to long
+[1561] l 00000006 st 3 sc 4 indx 2     whence
+      Type: int
+[1562] l 00000078 st 8 sc 1 indx b5     __stdio_seek
+      First symbol: 1558
+[1563] l 00404670 st 6 sc 1 indx 60     __stdio_close
+      End+1 symbol: 1566      Type:  int
+[1564] l 00000004 st 3 sc 4 indx 2e     cookie
+      Type: ptr to int
+[1565] l 00000030 st 8 sc 1 indx ba     __stdio_close
+      First symbol: 1563
+[1566] l 004046a0 st 6 sc 1 indx 62     __stdio_fileno
+      End+1 symbol: 1569      Type:  int
+[1567] l 00000004 st 3 sc 4 indx 2e     cookie
+      Type: ptr to int
+[1568] l 00000010 st 8 sc 1 indx bd     __stdio_fileno
+      First symbol: 1566
+[1569] l 004046b0 st 6 sc 1 indx 68     __stdio_open
+      End+1 symbol: 1574      Type:  int
+[1570] l 00000004 st 3 sc 4 indx 4     filename
+      Type: ptr to char
+[1571] l 00000005 st 3 sc 4 indx 64     m
+      Type: struct .1fake { ifd = 0, index = 1410 }
+[1572] l 00000006 st 3 sc 4 indx 67     cookieptr
+      Type: ptr to ptr to int
+[1573] l 00000128 st 8 sc 1 indx c0     __stdio_open
+      First symbol: 1569
+[1574] l 004047d8 st 6 sc 1 indx 73     __stdio_reopen
+      End+1 symbol: 1599      Type:  int
+[1575] l 00000011 st 3 sc 4 indx 4     filename
+      Type: ptr to char
+[1576] l 00000010 st 3 sc 4 indx 6a     m
+      Type: struct .1fake { ifd = 0, index = 1410 }
+[1577] l 00000012 st 3 sc 4 indx 67     cookieptr
+      Type: ptr to ptr to int
+[1578] l 00000014 st 3 sc 4 indx 27     closefn
+      Type: func. ret. 
+[1579] l ffffffe0 st 4 sc 5 indx 2e     newcookie
+      Type: ptr to int
+[1580] l 00000000 st 7 sc 1 indx d4     $Lb2
+      End+1 symbol: 1589
+[1581] l 00000011 st 4 sc 4 indx 4     filename
+      Type: ptr to char
+[1582] l 00000010 st 4 sc 4 indx 6d     m
+      Type: struct .1fake { ifd = 0, index = 1410 }
+[1583] l 00000013 st 4 sc 4 indx 67     cookieptr
+      Type: ptr to ptr to int
+[1584] l 00000000 st 7 sc 1 indx d3     $Lb3
+      End+1 symbol: 1588
+[1585] l 00000005 st 4 sc 4 indx 2     mode
+      Type: int
+[1586] l 00000002 st 4 sc 4 indx 2     fd
+      Type: int
+[1587] l 00000150 st 8 sc 1 indx cf     $Lb3
+      First symbol: 1584
+[1588] l 00000150 st 8 sc 1 indx cb     $Lb2
+      First symbol: 1580
+[1589] l 00000178 st 7 sc 1 indx dd     $Lb6
+      End+1 symbol: 1598
+[1590] l 00000011 st 4 sc 4 indx 4     filename
+      Type: ptr to char
+[1591] l 00000010 st 4 sc 4 indx 70     m
+      Type: struct .1fake { ifd = 0, index = 1410 }
+[1592] l 00000013 st 4 sc 4 indx 67     cookieptr
+      Type: ptr to ptr to int
+[1593] l 00000178 st 7 sc 1 indx dc     $Lb7
+      End+1 symbol: 1597
+[1594] l 00000005 st 4 sc 4 indx 2     mode
+      Type: int
+[1595] l 00000002 st 4 sc 4 indx 2     fd
+      Type: int
+[1596] l 00000280 st 8 sc 1 indx d8     $Lb7
+      First symbol: 1593
+[1597] l 00000280 st 8 sc 1 indx d4     $Lb6
+      First symbol: 1589
+[1598] l 00000330 st 8 sc 1 indx c5     __stdio_reopen
+      First symbol: 1574
+[1599] l 004044d0 st 5 sc 1 indx fffff     gcc2_compiled.
+[1600] l 004044d0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[1601] l 004045b8 st 5 sc 1 indx fffff     $L33
+[1602] l 00404558 st 5 sc 1 indx fffff     $L34
+[1603] l 00404598 st 5 sc 1 indx fffff     $L35
+[1604] l 004045b0 st 5 sc 1 indx fffff     $L32
+[1605] l 004045c0 st 5 sc 1 indx fffff     $L39
+[1606] l 00404648 st 5 sc 1 indx fffff     $L43
+[1607] l 00404650 st 5 sc 1 indx fffff     $L44
+[1608] l 00404700 st 5 sc 1 indx fffff     $L59
+[1609] l 00404710 st 5 sc 1 indx fffff     $L60
+[1610] l 00404728 st 5 sc 1 indx fffff     $L61
+[1611] l 00404740 st 5 sc 1 indx fffff     $L62
+[1612] l 00404758 st 5 sc 1 indx fffff     $L63
+[1613] l 00404788 st 5 sc 1 indx fffff     $L64
+[1614] l 00404790 st 5 sc 1 indx fffff     $L65
+[1615] l 004047b0 st 5 sc 1 indx fffff     $L66
+[1616] l 004047b8 st 5 sc 1 indx fffff     $L67
+[1617] l 00404860 st 5 sc 1 indx fffff     $L71
+[1618] l 00404870 st 5 sc 1 indx fffff     $L72
+[1619] l 00404888 st 5 sc 1 indx fffff     $L73
+[1620] l 004048a0 st 5 sc 1 indx fffff     $L74
+[1621] l 004048b8 st 5 sc 1 indx fffff     $L75
+[1622] l 004048f0 st 5 sc 1 indx fffff     $L76
+[1623] l 00404900 st 5 sc 1 indx fffff     $L77
+[1624] l 00404918 st 5 sc 1 indx fffff     $L78
+[1625] l 00404928 st 5 sc 1 indx fffff     $L70
+[1626] l 00404a70 st 5 sc 1 indx fffff     $L69
+[1627] l 00404990 st 5 sc 1 indx fffff     $L82
+[1628] l 004049a0 st 5 sc 1 indx fffff     $L83
+[1629] l 004049b8 st 5 sc 1 indx fffff     $L84
+[1630] l 004049d0 st 5 sc 1 indx fffff     $L85
+[1631] l 004049e8 st 5 sc 1 indx fffff     $L86
+[1632] l 00404a20 st 5 sc 1 indx fffff     $L87
+[1633] l 00404a30 st 5 sc 1 indx fffff     $L88
+[1634] l 00404a48 st 5 sc 1 indx fffff     $L89
+[1635] l 00404a58 st 5 sc 1 indx fffff     $L81
+[1636] l 00404ac8 st 5 sc 1 indx fffff     $L93
+[1637] l 00404ac0 st 5 sc 1 indx fffff     $L90
+[1638] l 00404ab0 st 5 sc 1 indx fffff     $L92
+[1639] l 00000000 st 8 sc 1 indx 0     ../sysdeps/generic/sysd-stdio.c
+      First symbol: 1377
+[1640] l 00000000 st b sc 1 indx 9     ../sysdeps/generic/__sbrk.c
+      End+1 symbol: 1649
+[1641] l 00404b10 st 6 sc 1 indx 2     __sbrk
+      End+1 symbol: 1644      Type:  ptr to int
+[1642] l 00000004 st 3 sc 4 indx 1     increment
+      Type: int
+[1643] l 00000088 st 8 sc 1 indx 1     __sbrk
+      First symbol: 1641
+[1644] l 00404b10 st 5 sc 1 indx fffff     gcc2_compiled.
+[1645] l 00404b10 st 5 sc 1 indx fffff     __gnu_compiled_c
+[1646] l 00404b40 st 5 sc 1 indx fffff     $L5
+[1647] l 00404b78 st 5 sc 1 indx fffff     $L7
+[1648] l 00000000 st 8 sc 1 indx 0     ../sysdeps/generic/__sbrk.c
+      First symbol: 1640
+[1649] l 00000000 st b sc 1 indx 53     ../sysdeps/generic/wordcopy.c
+      End+1 symbol: 1732
+[1650] l 00000000 st a sc b indx 1     ptrdiff_t
+      Type: int
+[1651] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[1652] l 00000000 st a sc b indx 1     wchar_t
+      Type: int
+[1653] l 00000000 st a sc b indx 3     __long_double_t
+      Type: double
+[1654] l 00000000 st a sc b indx 4     byte
+      Type: unsigned char
+[1655] l 00404ba0 st 6 sc 1 indx 7     _wordcopy_fwd_aligned
+      End+1 symbol: 1670      Type:  int
+[1656] l 00000004 st 3 sc 4 indx 5     dstp
+      Type: long
+[1657] l 00000005 st 3 sc 4 indx 5     srcp
+      Type: long
+[1658] l 00000006 st 3 sc 4 indx 2     len
+      Type: unsigned int
+[1659] l 00000002 st 4 sc 4 indx 6     a0
+      Type: unsigned long
+[1660] l 00000003 st 4 sc 4 indx 6     a1
+      Type: unsigned long
+[1661] l 00404d00 st 5 sc 1 indx 0     do8
+[1662] l 00404d10 st 5 sc 1 indx 0     do7
+[1663] l 00404d20 st 5 sc 1 indx 0     do6
+[1664] l 00404d30 st 5 sc 1 indx 0     do5
+[1665] l 00404d40 st 5 sc 1 indx 0     do4
+[1666] l 00404d50 st 5 sc 1 indx 0     do3
+[1667] l 00404d60 st 5 sc 1 indx 0     do2
+[1668] l 00404d70 st 5 sc 1 indx 0     do1
+[1669] l 00000210 st 8 sc 1 indx 6     _wordcopy_fwd_aligned
+      First symbol: 1655
+[1670] l 00404db0 st 6 sc 1 indx 9     _wordcopy_fwd_dest_aligned
+      End+1 symbol: 1679      Type:  int
+[1671] l 00000004 st 3 sc 4 indx 5     dstp
+      Type: long
+[1672] l 00000005 st 3 sc 4 indx 5     srcp
+      Type: long
+[1673] l 00000006 st 3 sc 4 indx 2     len
+      Type: unsigned int
+[1674] l 00404ec8 st 5 sc 1 indx 0     do4
+[1675] l 00404ef0 st 5 sc 1 indx 0     do3
+[1676] l 00404f18 st 5 sc 1 indx 0     do2
+[1677] l 00404f40 st 5 sc 1 indx 0     do1
+[1678] l 00000200 st 8 sc 1 indx 15     _wordcopy_fwd_dest_aligned
+      First symbol: 1670
+[1679] l 00404fb0 st 6 sc 1 indx b     _wordcopy_bwd_aligned
+      End+1 symbol: 1694      Type:  int
+[1680] l 00000004 st 3 sc 4 indx 5     dstp
+      Type: long
+[1681] l 00000005 st 3 sc 4 indx 5     srcp
+      Type: long
+[1682] l 00000006 st 3 sc 4 indx 2     len
+      Type: unsigned int
+[1683] l 00000002 st 4 sc 4 indx 6     a0
+      Type: unsigned long
+[1684] l 00000003 st 4 sc 4 indx 6     a1
+      Type: unsigned long
+[1685] l 00405120 st 5 sc 1 indx 0     do8
+[1686] l 00405130 st 5 sc 1 indx 0     do7
+[1687] l 00405140 st 5 sc 1 indx 0     do6
+[1688] l 00405150 st 5 sc 1 indx 0     do5
+[1689] l 00405160 st 5 sc 1 indx 0     do4
+[1690] l 00405170 st 5 sc 1 indx 0     do3
+[1691] l 00405180 st 5 sc 1 indx 0     do2
+[1692] l 00405190 st 5 sc 1 indx 0     do1
+[1693] l 00000220 st 8 sc 1 indx 1e     _wordcopy_bwd_aligned
+      First symbol: 1679
+[1694] l 004051d0 st 6 sc 1 indx d     _wordcopy_bwd_dest_aligned
+      End+1 symbol: 1703      Type:  int
+[1695] l 00000004 st 3 sc 4 indx 5     dstp
+      Type: long
+[1696] l 00000005 st 3 sc 4 indx 5     srcp
+      Type: long
+[1697] l 00000006 st 3 sc 4 indx 2     len
+      Type: unsigned int
+[1698] l 00405300 st 5 sc 1 indx 0     do4
+[1699] l 00405328 st 5 sc 1 indx 0     do3
+[1700] l 00405350 st 5 sc 1 indx 0     do2
+[1701] l 00405378 st 5 sc 1 indx 0     do1
+[1702] l 00000218 st 8 sc 1 indx 2d     _wordcopy_bwd_dest_aligned
+      First symbol: 1694
+[1703] l 00404ba0 st 5 sc 1 indx fffff     gcc2_compiled.
+[1704] l 00404ba0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[1705] l 10000020 st 2 sc f indx fffff     $L22
+[1706] l 00404cd0 st 5 sc 1 indx fffff     $L16
+[1707] l 00404ce8 st 5 sc 1 indx fffff     $L18
+[1708] l 00404be0 st 5 sc 1 indx fffff     $L3
+[1709] l 00404c08 st 5 sc 1 indx fffff     $L5
+[1710] l 00404c30 st 5 sc 1 indx fffff     $L7
+[1711] l 00404c58 st 5 sc 1 indx fffff     $L9
+[1712] l 00404c80 st 5 sc 1 indx fffff     $L11
+[1713] l 00404ca8 st 5 sc 1 indx fffff     $L13
+[1714] l 00404ea8 st 5 sc 1 indx fffff     $L56
+[1715] l 00404e80 st 5 sc 1 indx fffff     $L54
+[1716] l 00404e28 st 5 sc 1 indx fffff     $L49
+[1717] l 00404e58 st 5 sc 1 indx fffff     $L51
+[1718] l 10000040 st 2 sc f indx fffff     $L87
+[1719] l 004050e0 st 5 sc 1 indx fffff     $L81
+[1720] l 00405100 st 5 sc 1 indx fffff     $L83
+[1721] l 00404ff0 st 5 sc 1 indx fffff     $L68
+[1722] l 00405018 st 5 sc 1 indx fffff     $L70
+[1723] l 00405040 st 5 sc 1 indx fffff     $L72
+[1724] l 00405068 st 5 sc 1 indx fffff     $L74
+[1725] l 00405090 st 5 sc 1 indx fffff     $L76
+[1726] l 004050b8 st 5 sc 1 indx fffff     $L78
+[1727] l 004052d8 st 5 sc 1 indx fffff     $L121
+[1728] l 004052b0 st 5 sc 1 indx fffff     $L119
+[1729] l 00405250 st 5 sc 1 indx fffff     $L114
+[1730] l 00405280 st 5 sc 1 indx fffff     $L116
+[1731] l 00000000 st 8 sc 1 indx 0     ../sysdeps/generic/wordcopy.c
+      First symbol: 1649
+[1732] l 00000000 st b sc 1 indx 9e     ../sysdeps/posix/stdio_init.c
+      End+1 symbol: 1890
+[1733] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[1734] l 00000000 st a sc b indx 2     size_t
+      Type: unsigned int
+[1735] l 00000000 st a sc b indx 3     __gnuc_va_list
+      Type: ptr to char
+[1736] l 00000000 st a sc b indx 4     __u_char
+      Type: unsigned char
+[1737] l 00000000 st a sc b indx 5     __u_short
+      Type: unsigned short
+[1738] l 00000000 st a sc b indx 2     __u_int
+      Type: unsigned int
+[1739] l 00000000 st a sc b indx 6     __u_long
+      Type: unsigned long
+[1740] l 00000000 st a sc b indx 0     __u_quad_t
+      Type: nil
+[1741] l 00000000 st a sc b indx 0     __quad_t
+      Type: nil
+[1742] l 00000000 st a sc b indx 7     __qaddr_t
+      Type: ptr to nil
+[1743] l 00000000 st a sc b indx 8     __dev_t
+      Type: int
+[1744] l 00000000 st a sc b indx 2     __uid_t
+      Type: unsigned int
+[1745] l 00000000 st a sc b indx 2     __gid_t
+      Type: unsigned int
+[1746] l 00000000 st a sc b indx 2     __ino_t
+      Type: unsigned int
+[1747] l 00000000 st a sc b indx 2     __mode_t
+      Type: unsigned int
+[1748] l 00000000 st a sc b indx 5     __nlink_t
+      Type: unsigned short
+[1749] l 00000000 st a sc b indx 9     __off_t
+      Type: long
+[1750] l 00000000 st a sc b indx 8     __pid_t
+      Type: int
+[1751] l 00000000 st a sc b indx 8     __ssize_t
+      Type: int
+[1752] l 00000000 st a sc b indx 0     __fsid_t
+      Type: nil
+[1753] l 00000000 st a sc b indx 9     __daddr_t
+      Type: long
+[1754] l 00000000 st a sc b indx 3     __caddr_t
+      Type: ptr to char
+[1755] l 00000000 st a sc b indx 9     __time_t
+      Type: long
+[1756] l 00000000 st a sc b indx 9     __swblk_t
+      Type: long
+[1757] l 00000020 st 7 sc b indx 1c     .0fake
+      End+1 symbol: 1760
+[1758] l 00000000 st 9 sc b indx a     fds_bits
+      Type: array [8 {32 bits}] of unsigned long
+[1759] l 00000000 st 8 sc b indx 19     
+      First symbol: 1757
+[1760] l 00000000 st a sc b indx 10     __fd_set
+      Type: struct .0fake { ifd = 0, index = 1757 }
+[1761] l 00000000 st a sc b indx 13     FILE
+      Type: struct __stdio_file { ifd = 0, index = 1786 }
+[1762] l 00000000 st a sc b indx 9     fpos_t
+      Type: long
+[1763] l 00000004 st 7 sc b indx 28     .1fake
+      End+1 symbol: 1772
+[1764] l 00000000 st 9 sc 8 indx 16     __read
+      Type: unsigned int : 1
+[1765] l 00000001 st 9 sc 8 indx 18     __write
+      Type: unsigned int : 1
+[1766] l 00000002 st 9 sc 8 indx 1a     __append
+      Type: unsigned int : 1
+[1767] l 00000003 st 9 sc 8 indx 1c     __binary
+      Type: unsigned int : 1
+[1768] l 00000004 st 9 sc 8 indx 1e     __create
+      Type: unsigned int : 1
+[1769] l 00000005 st 9 sc 8 indx 20     __exclusive
+      Type: unsigned int : 1
+[1770] l 00000006 st 9 sc 8 indx 22     __truncate
+      Type: unsigned int : 1
+[1771] l 00000000 st 8 sc b indx 1f     
+      First symbol: 1763
+[1772] l 00000000 st a sc b indx 24     __io_mode
+      Type: struct .1fake { ifd = 0, index = 1763 }
+[1773] l 00000014 st 7 sc b indx 30     .2fake
+      End+1 symbol: 1780
+[1774] l 00000000 st 9 sc b indx 27     __read
+      Type: func. ret. 
+[1775] l 00000020 st 9 sc b indx 27     __write
+      Type: func. ret. 
+[1776] l 00000040 st 9 sc b indx 27     __seek
+      Type: func. ret. 
+[1777] l 00000060 st 9 sc b indx 27     __close
+      Type: func. ret. 
+[1778] l 00000080 st 9 sc b indx 27     __fileno
+      Type: func. ret. 
+[1779] l 00000000 st 8 sc b indx 29     
+      First symbol: 1773
+[1780] l 00000000 st a sc b indx 28     __io_functions
+      Type: struct .2fake { ifd = 0, index = 1773 }
+[1781] l 00000008 st 7 sc b indx 35     .3fake
+      End+1 symbol: 1785
+[1782] l 00000000 st 9 sc b indx 27     __input
+      Type: func. ret. 
+[1783] l 00000020 st 9 sc b indx 27     __output
+      Type: func. ret. 
+[1784] l 00000000 st 8 sc b indx 31     
+      First symbol: 1781
+[1785] l 00000000 st a sc b indx 2b     __room_functions
+      Type: struct .3fake { ifd = 0, index = 1781 }
+[1786] l 00000050 st 7 sc b indx 4f     __stdio_file
+      End+1 symbol: 1811
+[1787] l 00000000 st 9 sc b indx 8     __magic
+      Type: int
+[1788] l 00000020 st 9 sc b indx 3     __bufp
+      Type: ptr to char
+[1789] l 00000040 st 9 sc b indx 3     __get_limit
+      Type: ptr to char
+[1790] l 00000060 st 9 sc b indx 3     __put_limit
+      Type: ptr to char
+[1791] l 00000080 st 9 sc b indx 3     __buffer
+      Type: ptr to char
+[1792] l 000000a0 st 9 sc b indx 2     __bufsize
+      Type: unsigned int
+[1793] l 000000c0 st 9 sc b indx 2e     __cookie
+      Type: ptr to int
+[1794] l 000000e0 st 9 sc b indx 2f     __mode
+      Type: struct .1fake { ifd = 0, index = 1763 }
+[1795] l 00000100 st 9 sc b indx 32     __io_funcs
+      Type: struct .2fake { ifd = 0, index = 1773 }
+[1796] l 000001a0 st 9 sc b indx 35     __room_funcs
+      Type: struct .3fake { ifd = 0, index = 1781 }
+[1797] l 000001e0 st 9 sc b indx 9     __offset
+      Type: long
+[1798] l 00000200 st 9 sc b indx 9     __target
+      Type: long
+[1799] l 00000220 st 9 sc b indx 38     __next
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1786 }
+[1800] l 00000240 st 9 sc b indx 3     __pushback_bufp
+      Type: ptr to char
+[1801] l 00000260 st 9 sc b indx 4     __pushback
+      Type: unsigned char
+[1802] l 00000268 st 9 sc 8 indx 3b     __pushed_back
+      Type: unsigned int : 1
+[1803] l 00000269 st 9 sc 8 indx 3d     __eof
+      Type: unsigned int : 1
+[1804] l 0000026a st 9 sc 8 indx 3f     __error
+      Type: unsigned int : 1
+[1805] l 0000026b st 9 sc 8 indx 41     __userbuf
+      Type: unsigned int : 1
+[1806] l 0000026c st 9 sc 8 indx 43     __linebuf
+      Type: unsigned int : 1
+[1807] l 0000026d st 9 sc 8 indx 45     __linebuf_active
+      Type: unsigned int : 1
+[1808] l 0000026e st 9 sc 8 indx 47     __seen
+      Type: unsigned int : 1
+[1809] l 0000026f st 9 sc 8 indx 49     __ispipe
+      Type: unsigned int : 1
+[1810] l 00000000 st 8 sc b indx 36     
+      First symbol: 1786
+[1811] l 00000000 st a sc b indx 9     time_t
+      Type: long
+[1812] l 00000000 st a sc b indx 8     int32_t
+      Type: int
+[1813] l 00000000 st a sc b indx 4b     int16_t
+      Type: short
+[1814] l 00000000 st a sc b indx 4c     int8_t
+      Type: char
+[1815] l 00000000 st a sc b indx 2     u_int32_t
+      Type: unsigned int
+[1816] l 00000000 st a sc b indx 5     u_int16_t
+      Type: unsigned short
+[1817] l 00000000 st a sc b indx 4     u_int8_t
+      Type: unsigned char
+[1818] l 00000040 st 7 sc b indx 69     stat
+      End+1 symbol: 1837
+[1819] l 00000000 st 9 sc b indx 4b     st_dev
+      Type: short
+[1820] l 00000020 st 9 sc b indx 2     st_ino
+      Type: unsigned int
+[1821] l 00000040 st 9 sc b indx 5     st_mode
+      Type: unsigned short
+[1822] l 00000050 st 9 sc b indx 5     st_nlink
+      Type: unsigned short
+[1823] l 00000060 st 9 sc b indx 5     st_uid
+      Type: unsigned short
+[1824] l 00000070 st 9 sc b indx 5     st_gid
+      Type: unsigned short
+[1825] l 00000080 st 9 sc b indx 4b     st_rdev
+      Type: short
+[1826] l 000000a0 st 9 sc b indx 9     st_size
+      Type: long
+[1827] l 000000c0 st 9 sc b indx 9     st_atime
+      Type: long
+[1828] l 000000e0 st 9 sc b indx 6     st_atime_usec
+      Type: unsigned long
+[1829] l 00000100 st 9 sc b indx 9     st_mtime
+      Type: long
+[1830] l 00000120 st 9 sc b indx 6     st_mtime_usec
+      Type: unsigned long
+[1831] l 00000140 st 9 sc b indx 9     st_ctime
+      Type: long
+[1832] l 00000160 st 9 sc b indx 6     st_ctime_usec
+      Type: unsigned long
+[1833] l 00000180 st 9 sc b indx 6     st_blksize
+      Type: unsigned long
+[1834] l 000001a0 st 9 sc b indx 6     st_blocks
+      Type: unsigned long
+[1835] l 000001c0 st 9 sc b indx 4d     st_spare
+      Type: array [2 {32 bits}] of long
+[1836] l 00000000 st 8 sc b indx 56     
+      First symbol: 1818
+[1837] l 00000004 st 7 sc b indx 74     .4fake
+      End+1 symbol: 1848
+[1838] l 00000000 st 9 sc b indx 0     _PC_LINK_MAX
+      Type: nil
+[1839] l 00000001 st 9 sc b indx 0     _PC_MAX_CANON
+      Type: nil
+[1840] l 00000002 st 9 sc b indx 0     _PC_MAX_INPUT
+      Type: nil
+[1841] l 00000003 st 9 sc b indx 0     _PC_NAME_MAX
+      Type: nil
+[1842] l 00000004 st 9 sc b indx 0     _PC_PATH_MAX
+      Type: nil
+[1843] l 00000005 st 9 sc b indx 0     _PC_PIPE_BUF
+      Type: nil
+[1844] l 00000006 st 9 sc b indx 0     _PC_CHOWN_RESTRICTED
+      Type: nil
+[1845] l 00000007 st 9 sc b indx 0     _PC_NO_TRUNC
+      Type: nil
+[1846] l 00000008 st 9 sc b indx 0     _PC_VDISABLE
+      Type: nil
+[1847] l 00000000 st 8 sc b indx 69     
+      First symbol: 1837
+[1848] l 00000004 st 7 sc b indx 91     .5fake
+      End+1 symbol: 1877
+[1849] l 00000000 st 9 sc b indx 0     _SC_ARG_MAX
+      Type: nil
+[1850] l 00000001 st 9 sc b indx 0     _SC_CHILD_MAX
+      Type: nil
+[1851] l 00000002 st 9 sc b indx 0     _SC_CLK_TCK
+      Type: nil
+[1852] l 00000003 st 9 sc b indx 0     _SC_NGROUPS_MAX
+      Type: nil
+[1853] l 00000004 st 9 sc b indx 0     _SC_OPEN_MAX
+      Type: nil
+[1854] l 00000005 st 9 sc b indx 0     _SC_STREAM_MAX
+      Type: nil
+[1855] l 00000006 st 9 sc b indx 0     _SC_TZNAME_MAX
+      Type: nil
+[1856] l 00000007 st 9 sc b indx 0     _SC_JOB_CONTROL
+      Type: nil
+[1857] l 00000008 st 9 sc b indx 0     _SC_SAVED_IDS
+      Type: nil
+[1858] l 00000009 st 9 sc b indx 0     _SC_VERSION
+      Type: nil
+[1859] l 0000000a st 9 sc b indx 0     _SC_PAGESIZE
+      Type: nil
+[1860] l 0000000b st 9 sc b indx 0     _SC_BC_BASE_MAX
+      Type: nil
+[1861] l 0000000c st 9 sc b indx 0     _SC_BC_DIM_MAX
+      Type: nil
+[1862] l 0000000d st 9 sc b indx 0     _SC_BC_SCALE_MAX
+      Type: nil
+[1863] l 0000000e st 9 sc b indx 0     _SC_BC_STRING_MAX
+      Type: nil
+[1864] l 0000000f st 9 sc b indx 0     _SC_COLL_WEIGHTS_MAX
+      Type: nil
+[1865] l 00000010 st 9 sc b indx 0     _SC_EQUIV_CLASS_MAX
+      Type: nil
+[1866] l 00000011 st 9 sc b indx 0     _SC_EXPR_NEST_MAX
+      Type: nil
+[1867] l 00000012 st 9 sc b indx 0     _SC_LINE_MAX
+      Type: nil
+[1868] l 00000013 st 9 sc b indx 0     _SC_RE_DUP_MAX
+      Type: nil
+[1869] l 00000014 st 9 sc b indx 0     _SC_2_VERSION
+      Type: nil
+[1870] l 00000015 st 9 sc b indx 0     _SC_2_C_BIND
+      Type: nil
+[1871] l 00000016 st 9 sc b indx 0     _SC_2_C_DEV
+      Type: nil
+[1872] l 00000017 st 9 sc b indx 0     _SC_2_FORT_DEV
+      Type: nil
+[1873] l 00000018 st 9 sc b indx 0     _SC_2_FORT_RUN
+      Type: nil
+[1874] l 00000019 st 9 sc b indx 0     _SC_2_SW_DEV
+      Type: nil
+[1875] l 0000001a st 9 sc b indx 0     _SC_2_LOCALEDEF
+      Type: nil
+[1876] l 00000000 st 8 sc b indx 74     
+      First symbol: 1848
+[1877] l 00000004 st 7 sc b indx 94     .6fake
+      End+1 symbol: 1880
+[1878] l 00000000 st 9 sc b indx 0     _CS_PATH
+      Type: nil
+[1879] l 00000000 st 8 sc b indx 91     
+      First symbol: 1877
+[1880] l 004053f0 st 6 sc 1 indx 59     __stdio_init_stream
+      End+1 symbol: 1884      Type:  int
+[1881] l 00000004 st 3 sc 4 indx 53     stream
+      Type: ptr to struct __stdio_file { ifd = 0, index = 1786 }
+[1882] l ffffffb0 st 4 sc 5 indx 56     statb
+      Type: struct stat { ifd = 0, index = 1818 }
+[1883] l 00000138 st 8 sc 1 indx 94     __stdio_init_stream
+      First symbol: 1880
+[1884] l 004053f0 st 5 sc 1 indx fffff     gcc2_compiled.
+[1885] l 004053f0 st 5 sc 1 indx fffff     __gnu_compiled_c
+[1886] l 00405500 st 5 sc 1 indx fffff     $L20
+[1887] l 004054a8 st 5 sc 1 indx fffff     $L24
+[1888] l 004054f0 st 5 sc 1 indx fffff     $L25
+[1889] l 00000000 st 8 sc 1 indx 0     ../sysdeps/posix/stdio_init.c
+      First symbol: 1732
+[1890] l 00000000 st b sc 1 indx 3     /var/tmp/cca005IU.s
+      End+1 symbol: 1893
+[1891] l 00405560 st 5 sc 1 indx fffff     syse1
+[1892] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005IU.s
+      First symbol: 1890
+[1893] l 00000000 st b sc 1 indx 3     /var/tmp/cca005Iu.s
+      End+1 symbol: 1896
+[1894] l 004055a0 st 5 sc 1 indx fffff     syse1
+[1895] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005Iu.s
+      First symbol: 1893
+[1896] l 00000000 st b sc 1 indx 3     /var/tmp/cca005IA.s
+      End+1 symbol: 1899
+[1897] l 004055e0 st 5 sc 1 indx fffff     syse1
+[1898] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005IA.s
+      First symbol: 1896
+[1899] l 00000000 st b sc 1 indx 3     /var/tmp/cca005HU.s
+      End+1 symbol: 1902
+[1900] l 00405620 st 5 sc 1 indx fffff     syse1
+[1901] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005HU.s
+      First symbol: 1899
+[1902] l 00000000 st b sc 1 indx 3     /var/tmp/cca005IM.s
+      End+1 symbol: 1905
+[1903] l 00405660 st 5 sc 1 indx fffff     syse1
+[1904] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005IM.s
+      First symbol: 1902
+[1905] l 00000000 st b sc 1 indx 3     /var/tmp/cca005Ha.s
+      End+1 symbol: 1908
+[1906] l 004056a0 st 5 sc 1 indx fffff     syse1
+[1907] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005Ha.s
+      First symbol: 1905
+[1908] l 00000000 st b sc 1 indx 4     /var/tmp/cca005Ze.s
+      End+1 symbol: 1912
+[1909] l 004056d0 st 5 sc 1 indx fffff     down1
+[1910] l 00405700 st 5 sc 1 indx fffff     error
+[1911] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005Ze.s
+      First symbol: 1908
+[1912] l 00000000 st b sc 1 indx 3     /var/tmp/cca005Hv.s
+      End+1 symbol: 1915
+[1913] l 00405740 st 5 sc 1 indx fffff     syse1
+[1914] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005Hv.s
+      First symbol: 1912
+[1915] l 00000000 st b sc 1 indx 6b     ../sysdeps/unix/bsd/__isatty.c
+      End+1 symbol: 2022
+[1916] l 00000000 st a sc b indx 1     __long_double_t
+      Type: double
+[1917] l 00000000 st a sc b indx 2     __u_char
+      Type: unsigned char
+[1918] l 00000000 st a sc b indx 3     __u_short
+      Type: unsigned short
+[1919] l 00000000 st a sc b indx 4     __u_int
+      Type: unsigned int
+[1920] l 00000000 st a sc b indx 5     __u_long
+      Type: unsigned long
+[1921] l 00000000 st a sc b indx 0     __u_quad_t
+      Type: nil
+[1922] l 00000000 st a sc b indx 0     __quad_t
+      Type: nil
+[1923] l 00000000 st a sc b indx 6     __qaddr_t
+      Type: ptr to nil
+[1924] l 00000000 st a sc b indx 7     __dev_t
+      Type: int
+[1925] l 00000000 st a sc b indx 4     __uid_t
+      Type: unsigned int
+[1926] l 00000000 st a sc b indx 4     __gid_t
+      Type: unsigned int
+[1927] l 00000000 st a sc b indx 4     __ino_t
+      Type: unsigned int
+[1928] l 00000000 st a sc b indx 4     __mode_t
+      Type: unsigned int
+[1929] l 00000000 st a sc b indx 3     __nlink_t
+      Type: unsigned short
+[1930] l 00000000 st a sc b indx 8     __off_t
+      Type: long
+[1931] l 00000000 st a sc b indx 7     __pid_t
+      Type: int
+[1932] l 00000000 st a sc b indx 7     __ssize_t
+      Type: int
+[1933] l 00000000 st a sc b indx 0     __fsid_t
+      Type: nil
+[1934] l 00000000 st a sc b indx 8     __daddr_t
+      Type: long
+[1935] l 00000000 st a sc b indx 9     __caddr_t
+      Type: ptr to char
+[1936] l 00000000 st a sc b indx 8     __time_t
+      Type: long
+[1937] l 00000000 st a sc b indx 8     __swblk_t
+      Type: long
+[1938] l 00000020 st 7 sc b indx 1a     .0fake
+      End+1 symbol: 1941
+[1939] l 00000000 st 9 sc b indx a     fds_bits
+      Type: array [8 {32 bits}] of unsigned long
+[1940] l 00000000 st 8 sc b indx 17     
+      First symbol: 1938
+[1941] l 00000000 st a sc b indx 10     __fd_set
+      Type: struct .0fake { ifd = 0, index = 1938 }
+[1942] l 00000000 st a sc b indx 4     size_t
+      Type: unsigned int
+[1943] l 00000004 st 7 sc b indx 27     .1fake
+      End+1 symbol: 1954
+[1944] l 00000000 st 9 sc b indx 0     _PC_LINK_MAX
+      Type: nil
+[1945] l 00000001 st 9 sc b indx 0     _PC_MAX_CANON
+      Type: nil
+[1946] l 00000002 st 9 sc b indx 0     _PC_MAX_INPUT
+      Type: nil
+[1947] l 00000003 st 9 sc b indx 0     _PC_NAME_MAX
+      Type: nil
+[1948] l 00000004 st 9 sc b indx 0     _PC_PATH_MAX
+      Type: nil
+[1949] l 00000005 st 9 sc b indx 0     _PC_PIPE_BUF
+      Type: nil
+[1950] l 00000006 st 9 sc b indx 0     _PC_CHOWN_RESTRICTED
+      Type: nil
+[1951] l 00000007 st 9 sc b indx 0     _PC_NO_TRUNC
+      Type: nil
+[1952] l 00000008 st 9 sc b indx 0     _PC_VDISABLE
+      Type: nil
+[1953] l 00000000 st 8 sc b indx 1c     
+      First symbol: 1943
+[1954] l 00000004 st 7 sc b indx 44     .2fake
+      End+1 symbol: 1983
+[1955] l 00000000 st 9 sc b indx 0     _SC_ARG_MAX
+      Type: nil
+[1956] l 00000001 st 9 sc b indx 0     _SC_CHILD_MAX
+      Type: nil
+[1957] l 00000002 st 9 sc b indx 0     _SC_CLK_TCK
+      Type: nil
+[1958] l 00000003 st 9 sc b indx 0     _SC_NGROUPS_MAX
+      Type: nil
+[1959] l 00000004 st 9 sc b indx 0     _SC_OPEN_MAX
+      Type: nil
+[1960] l 00000005 st 9 sc b indx 0     _SC_STREAM_MAX
+      Type: nil
+[1961] l 00000006 st 9 sc b indx 0     _SC_TZNAME_MAX
+      Type: nil
+[1962] l 00000007 st 9 sc b indx 0     _SC_JOB_CONTROL
+      Type: nil
+[1963] l 00000008 st 9 sc b indx 0     _SC_SAVED_IDS
+      Type: nil
+[1964] l 00000009 st 9 sc b indx 0     _SC_VERSION
+      Type: nil
+[1965] l 0000000a st 9 sc b indx 0     _SC_PAGESIZE
+      Type: nil
+[1966] l 0000000b st 9 sc b indx 0     _SC_BC_BASE_MAX
+      Type: nil
+[1967] l 0000000c st 9 sc b indx 0     _SC_BC_DIM_MAX
+      Type: nil
+[1968] l 0000000d st 9 sc b indx 0     _SC_BC_SCALE_MAX
+      Type: nil
+[1969] l 0000000e st 9 sc b indx 0     _SC_BC_STRING_MAX
+      Type: nil
+[1970] l 0000000f st 9 sc b indx 0     _SC_COLL_WEIGHTS_MAX
+      Type: nil
+[1971] l 00000010 st 9 sc b indx 0     _SC_EQUIV_CLASS_MAX
+      Type: nil
+[1972] l 00000011 st 9 sc b indx 0     _SC_EXPR_NEST_MAX
+      Type: nil
+[1973] l 00000012 st 9 sc b indx 0     _SC_LINE_MAX
+      Type: nil
+[1974] l 00000013 st 9 sc b indx 0     _SC_RE_DUP_MAX
+      Type: nil
+[1975] l 00000014 st 9 sc b indx 0     _SC_2_VERSION
+      Type: nil
+[1976] l 00000015 st 9 sc b indx 0     _SC_2_C_BIND
+      Type: nil
+[1977] l 00000016 st 9 sc b indx 0     _SC_2_C_DEV
+      Type: nil
+[1978] l 00000017 st 9 sc b indx 0     _SC_2_FORT_DEV
+      Type: nil
+[1979] l 00000018 st 9 sc b indx 0     _SC_2_FORT_RUN
+      Type: nil
+[1980] l 00000019 st 9 sc b indx 0     _SC_2_SW_DEV
+      Type: nil
+[1981] l 0000001a st 9 sc b indx 0     _SC_2_LOCALEDEF
+      Type: nil
+[1982] l 00000000 st 8 sc b indx 27     
+      First symbol: 1954
+[1983] l 00000004 st 7 sc b indx 47     .3fake
+      End+1 symbol: 1986
+[1984] l 00000000 st 9 sc b indx 0     _CS_PATH
+      Type: nil
+[1985] l 00000000 st 8 sc b indx 44     
+      First symbol: 1983
+[1986] l 00000006 st 7 sc b indx 4f     tchars
+      End+1 symbol: 1994
+[1987] l 00000000 st 9 sc b indx 13     t_intrc
+      Type: char
+[1988] l 00000008 st 9 sc b indx 13     t_quitc
+      Type: char
+[1989] l 00000010 st 9 sc b indx 13     t_startc
+      Type: char
+[1990] l 00000018 st 9 sc b indx 13     t_stopc
+      Type: char
+[1991] l 00000020 st 9 sc b indx 13     t_eofc
+      Type: char
+[1992] l 00000028 st 9 sc b indx 13     t_brkc
+      Type: char
+[1993] l 00000000 st 8 sc b indx 47     
+      First symbol: 1986
+[1994] l 00000006 st 7 sc b indx 57     ltchars
+      End+1 symbol: 2002
+[1995] l 00000000 st 9 sc b indx 13     t_suspc
+      Type: char
+[1996] l 00000008 st 9 sc b indx 13     t_dsuspc
+      Type: char
+[1997] l 00000010 st 9 sc b indx 13     t_rprntc
+      Type: char
+[1998] l 00000018 st 9 sc b indx 13     t_flushc
+      Type: char
+[1999] l 00000020 st 9 sc b indx 13     t_werasc
+      Type: char
+[2000] l 00000028 st 9 sc b indx 13     t_lnextc
+      Type: char
+[2001] l 00000000 st 8 sc b indx 4f     
+      First symbol: 1994
+[2002] l 00000006 st 7 sc b indx 5e     sgttyb
+      End+1 symbol: 2009
+[2003] l 00000000 st 9 sc b indx 13     sg_ispeed
+      Type: char
+[2004] l 00000008 st 9 sc b indx 13     sg_ospeed
+      Type: char
+[2005] l 00000010 st 9 sc b indx 13     sg_erase
+      Type: char
+[2006] l 00000018 st 9 sc b indx 13     sg_kill
+      Type: char
+[2007] l 00000020 st 9 sc b indx 14     sg_flags
+      Type: short
+[2008] l 00000000 st 8 sc b indx 57     
+      First symbol: 2002
+[2009] l 00000008 st 7 sc b indx 64     winsize
+      End+1 symbol: 2015
+[2010] l 00000000 st 9 sc b indx 3     ws_row
+      Type: unsigned short
+[2011] l 00000010 st 9 sc b indx 3     ws_col
+      Type: unsigned short
+[2012] l 00000020 st 9 sc b indx 3     ws_xpixel
+      Type: unsigned short
+[2013] l 00000030 st 9 sc b indx 3     ws_ypixel
+      Type: unsigned short
+[2014] l 00000000 st 8 sc b indx 5e     
+      First symbol: 2009
+[2015] l 00405750 st 6 sc 1 indx 18     __isatty
+      End+1 symbol: 2019      Type:  int
+[2016] l 00000004 st 3 sc 4 indx 7     fd
+      Type: int
+[2017] l fffffff0 st 4 sc 5 indx 15     term
+      Type: struct sgttyb { ifd = 0, index = 2002 }
+[2018] l 00000070 st 8 sc 1 indx 64     __isatty
+      First symbol: 2015
+[2019] l 00405750 st 5 sc 1 indx fffff     gcc2_compiled.
+[2020] l 00405750 st 5 sc 1 indx fffff     __gnu_compiled_c
+[2021] l 00000000 st 8 sc 1 indx 0     ../sysdeps/unix/bsd/__isatty.c
+      First symbol: 1915
+[2022] l 00000000 st b sc 1 indx 3     /var/tmp/cca005Zn.s
+      End+1 symbol: 2025
+[2023] l 004057f0 st 5 sc 1 indx fffff     syse1
+[2024] l 00000000 st 8 sc 1 indx 0     /var/tmp/cca005Zn.s
+      First symbol: 2022
+
+
