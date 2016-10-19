@@ -82,5 +82,4 @@ int main(int argc, char *argv[]) {
         thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times, results);
         data_finder.sim_ann(t_init, t_final, alpha, max_trials);
     }
-
 }

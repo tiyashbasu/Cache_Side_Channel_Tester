@@ -1196,7 +1196,7 @@ int main (void)
 	unsigned char in[16] = {0x10, 0x11, 0x02, 0x03, 0x04, 0x55, 0x76, 0x07, 0x88, 0x91, 0x0A, 0xB1, 0xCF, 0xDD, 0xEE, 0xF0};
 	unsigned char out[16];
 	unsigned char key[16] = {
-1,2,3,4,5,6,7,0,9,10,11,12,13,14,15,16};
+50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50};
 	aes_key_setup(key, e_key, 128);
 	aes_encrypt(in, out, e_key, 128);
 }

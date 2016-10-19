@@ -2,10 +2,22 @@
 #include <fstream>
 #include <iostream>
 
+int strtoi(std::string str) {
+    bool alphanumeric;
+    for (char c : str) {
+        alphanumeric = (c < 48 || c > 57);
+        if (alphanumeric)
+            break;
+    }
+    if (!alphanumeric)
+        return std::stoi(str) % 256;
+    return str[str.length() - 1];
+}
+
 int main(int argc, char *argv[]) {
     /*checking argument sanity*/
     if (argc < 17) {
-        std::cout << "Usage: aessim-<file/all/lm/sm/dm> <key bytes>\nExample #1: aessim-file 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4\n";
+        std::cerr << "Usage: aessim-<file/all/lm/sm/dm> <key bytes>\nExample #1: aessim-file 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4\n";
         return 1;
     }
 
@@ -13,9 +25,9 @@ int main(int argc, char *argv[]) {
     std::ofstream keys_file;
     std::string key_filename = "./data/key.csv";
     keys_file.open(key_filename, std::ios::out);
-    keys_file << argv[1];
+    keys_file << std::to_string(strtoi(argv[1]));
     for (int i = 2; i < 17; i++)
-        keys_file << "," << std::to_string(std::atoi(argv[i]));
+        keys_file << "," << std::to_string(strtoi(argv[i]));
     keys_file.close();
     system("cat ./data/aes.c.prefix ./data/key.csv ./data/aes.c.suffix > ./data/aes.c");
 
