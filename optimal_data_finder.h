@@ -9,6 +9,8 @@
 #include <random>
 #include <thread>
 #include <unistd.h>
+#include <stdlib.h>
+#include <pthread.h>
 
 namespace thesis {
     std::mt19937_64 seed(time(NULL));
@@ -42,13 +44,9 @@ namespace thesis {
         void run_program() {
             int j, i;
             int temp;
-            std::string pwd;
-            system("pwd > ./temp/pwd.txt");
-            std::ifstream stream("./temp/pwd.txt", std::ios::in);
-            stream >> pwd;
-            stream.close();
-            std::string command = "rm " + results_filename + " > run_program.log 2>&1";
-            system(command.data());
+            std::string command;
+            //removing previous execution results
+            std::remove(results_filename.c_str());
             std::string path = "cd " + program_path + " && ./";
             std::string param_list;
             for (i = 0; i < execution_rounds; i++) {
@@ -58,14 +56,23 @@ namespace thesis {
                     temp = dataset[j][rand1000(seed) % counts[j]];
                     param_list += " " + std::to_string(temp);
                 }
-                command = "echo " + param_list + " > ./temp/inputs.dat";
-                system(command.data());
-                command = path + program + " " + param_list + " > " + pwd + "/temp/temp_results.dat";
-                system(command.data());
-                command = "paste ./temp/inputs.dat ./temp/temp_results.dat >> " + results_filename;
-                system(command.data());
+                //execute the target program
+                char temp_char = ' ';
+                std::string temp_result = "";
+                FILE *in = popen((path + program + " " + param_list).c_str(), "r");
+                while(true) {
+                    temp_char = fgetc(in);
+                    if (temp_char < 0 || temp_char > 255)
+                        break;
+                    temp_result += temp_char;
+                }
+                pclose(in);
+                //save the results
+                std::ofstream results_fp;
+                results_fp.open(results_filename, std::ios::app);
+                results_fp << param_list << " " << temp_result << "\n";
+                results_fp.close();
             }
-            system("rm ./temp/inputs.dat ./temp/temp_results.dat ./temp/pwd.txt");
         }
 
         long get_objective(std::string results_filename) {
@@ -107,7 +114,7 @@ namespace thesis {
             }
         }
 
-        virtual void mutate_dataset(int factor) {
+        virtual void mutate_dataset_bit_flip(int factor) {
             int i, j;
             int flipper[] = {1, 2, 4, 8, 16, 32, 64, 128};
             int mutate_data;
@@ -118,6 +125,24 @@ namespace thesis {
                     if (!mutate_data) {
                         mutate_bit = rand1000(seed) % 8;
                         dataset[i][j] ^= flipper[mutate_bit];
+                    }
+                }
+            }
+        }
+
+        virtual void mutate_dataset(int factor) {
+            int i, j;
+            int flipper[256];
+            for (i = 0; i < 256; i++)
+                flipper[i] = i + 1;
+            bool mutate_data;
+            int mutate_byte;
+            for (i = 0; i < no_of_params; i++) {
+                for (j = 0; j < counts[i]; j++) {
+                    mutate_data = (bool)(rand1000(seed) % factor);
+                    if (!mutate_data) {
+                        mutate_byte = rand1000(seed) % 256;
+                        dataset[i][j] ^= flipper[mutate_byte];
                     }
                 }
             }
@@ -174,7 +199,7 @@ namespace thesis {
                     std::cout << "Objective: " << new_obj;
                     acceptable = new_obj > obj;
                     if (!acceptable && new_obj != obj) {
-                        acceptance_prob = 0.8 * std::exp((new_obj - obj) / t);
+                        acceptance_prob = std::exp((new_obj - obj) / t);
                         acceptable = acceptance_prob > ((double)rand1000(seed) / 1000.0);
                     }
                     if (acceptable) {

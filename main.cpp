@@ -78,8 +78,11 @@ int main(int argc, char *argv[]) {
     int max_trials = 5;
 
     int status = read_config_file(argv[1], &program_path, &program_name, &results, &no_of_params, counts, &exec_times, &t_init, &t_final, &alpha, &max_trials);
+    auto start_time = std::chrono::system_clock::now();
     if (!status) {
         thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times, results);
         data_finder.sim_ann(t_init, t_final, alpha, max_trials);
     }
+    auto duration = std::chrono::system_clock::now() - start_time;
+    std::cout << "Time taken by program: " << duration.count() << " seconds." << std::endl;
 }

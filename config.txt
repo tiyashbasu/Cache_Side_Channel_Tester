@@ -7,21 +7,21 @@ program_path: ./aessim
 program_name: aessim-lm
 
 # The full filename of the results file of the program
-results_filename: ./temp/aessim-results.log
+results_filename: ./current-round-results.log
 
 # The number of parameters the program accepts
 no_of_params: 16
 
 # The size of the the list of choices for each parameter
-counts: 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+counts: 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
 
 # Number of times the program should be executed in each round of execution
-exec_times: 100
+exec_times: 1000
 
 ## The following parameters are related to the simulated annealing process
 
 # The initial temperature
-t_init: 3.0
+t_init: 1.0
 
 # The final temperature
 t_final: 0.01
