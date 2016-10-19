@@ -41,7 +41,7 @@ $ aessim-dm 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
 ##aessim-csv.sh
 Executes the AES wrapper with parameters from a csv file.
 Warning: A small unning it deletes the aessim-results.log file created in the previous run.
-Syntax: aessim-csv.sh <aessim executable> <csv file>
+Syntax: aessim-csv.sh <aessim_executable> <csv_file>
 ###Example
 ```
 $ ./aessim-csv.sh ./aessim-file ./aes-keys.csv
