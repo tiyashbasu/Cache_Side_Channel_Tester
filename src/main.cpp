@@ -1,7 +1,7 @@
 #include <iomanip>
 #include "optimal_data_finder.h"
 
-int read_config_file(std::string config_filename, std::string* prog_path, std::string* prog_name, std::string* results_filename, int* no_of_params, int* counts, int* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
+int read_config_file(std::string config_filename, std::string* prog_path, std::string* prog_name, int* no_of_params, int** counts, unsigned long* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
     std::ifstream config_file;
     std::string line;
     config_file.open(config_filename, std::ios::in);
@@ -21,18 +21,16 @@ int read_config_file(std::string config_filename, std::string* prog_path, std::s
             stream >> param_name;
             stream >> *prog_name;
         }
-        else if (line.find("results_filename") == 0) {
-            stream >> param_name;
-            stream >> *results_filename;
-        }
         else if (line.find("no_of_params") == 0) {
             stream >> param_name;
             stream >> *no_of_params;
         }
         else if (line.find("counts") == 0) {
             stream >> param_name;
-            for (int i = 0; i < *no_of_params; i++)
-                stream >> *(counts + i);
+            *counts = new int[*no_of_params];
+            for (int i = 0; i < *no_of_params; i++) {
+                stream >> (*counts)[i];
+            }
         }
         else if (line.find("exec_times") == 0) {
             stream >> param_name;
@@ -64,25 +62,26 @@ int main(int argc, char *argv[]) {
 		std::cout << "Usage example: ./thesisdev config.txt\n";
 		return 1;
 	}
-	
-    int no_of_params = 16;
-    int counts[no_of_params];
-    for (int i = 0; i < no_of_params; i++)
-        counts[i] = 5;
-    int exec_times = 80;
-    std::string program_path = "./aessim";
-    std::string program_name = "aessim";
-    std::string results = "./aessim/output/aessim-results.log";
 
-    double t_init = 2.0, t_final = 0.01, alpha = 0.9;
-    int max_trials = 5;
+    int no_of_params;
+    int *counts= nullptr;
+    unsigned long exec_times;
+    std::string program_path;
+    std::string program_name;
 
-    int status = read_config_file(argv[1], &program_path, &program_name, &results, &no_of_params, counts, &exec_times, &t_init, &t_final, &alpha, &max_trials);
-    auto start_time = std::chrono::system_clock::now();
+    double t_init, t_final, alpha;
+    int max_trials;
+    long obj;
+
+    int status = read_config_file(argv[1], &program_path, &program_name, &no_of_params, &counts, &exec_times, &t_init, &t_final, &alpha, &max_trials);
     if (!status) {
-        thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times, results);
-        data_finder.sim_ann(t_init, t_final, alpha, max_trials);
+        thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times);
+        obj = data_finder.sim_ann(t_init, t_final, alpha, max_trials);
+        std::cout << "\nFinal objective: " << obj << "\n";
     }
-    auto duration = std::chrono::system_clock::now() - start_time;
-    std::cout << "Time taken by program: " << duration.count() << " seconds." << std::endl;
+    else {
+        std::cout << "Incorrect config file format. Please check the example config file for the correct format." << std::endl;
+    }
+    delete [] counts;
+    return 0;
 }

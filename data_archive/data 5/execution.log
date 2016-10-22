@@ -1,0 +1,486 @@
+Initializing...Initial objective: 57
+Temperature: 1
+Trial #1. Objective: 56
+Trial #2. Objective: 57
+Trial #3. Objective: 60 - Accepted
+Trial #4. Objective: 56
+Trial #5. Objective: 60
+Trial #6. Objective: 59
+Trial #7. Objective: 56
+Trial #8. Objective: 56
+Trial #9. Objective: 59 - Accepted
+Trial #10. Objective: 61 - Accepted
+Temperature: 0.9
+Trial #1. Objective: 55
+Trial #2. Objective: 58
+Trial #3. Objective: 60 - Accepted
+Trial #4. Objective: 60
+Trial #5. Objective: 54
+Trial #6. Objective: 57
+Trial #7. Objective: 56
+Trial #8. Objective: 58
+Trial #9. Objective: 55
+Trial #10. Objective: 59 - Accepted
+Temperature: 0.81
+Trial #1. Objective: 58 - Accepted
+Trial #2. Objective: 57 - Accepted
+Trial #3. Objective: 56
+Trial #4. Objective: 55
+Trial #5. Objective: 59 - Accepted
+Trial #6. Objective: 54
+Trial #7. Objective: 56
+Trial #8. Objective: 56
+Trial #9. Objective: 58
+Trial #10. Objective: 59
+Temperature: 0.729
+Trial #1. Objective: 53
+Trial #2. Objective: 57
+Trial #3. Objective: 60 - Accepted
+Trial #4. Objective: 56
+Trial #5. Objective: 60
+Trial #6. Objective: 56
+Trial #7. Objective: 56
+Trial #8. Objective: 55
+Trial #9. Objective: 57
+Trial #10. Objective: 56
+Temperature: 0.6561
+Trial #1. Objective: 55
+Trial #2. Objective: 58
+Trial #3. Objective: 58
+Trial #4. Objective: 60
+Trial #5. Objective: 57
+Trial #6. Objective: 54
+Trial #7. Objective: 59
+Trial #8. Objective: 56
+Trial #9. Objective: 58
+Trial #10. Objective: 58
+Temperature: 0.59049
+Trial #1. Objective: 60
+Trial #2. Objective: 55
+Trial #3. Objective: 55
+Trial #4. Objective: 58
+Trial #5. Objective: 54
+Trial #6. Objective: 62 - Accepted
+Trial #7. Objective: 55
+Trial #8. Objective: 58
+Trial #9. Objective: 60
+Trial #10. Objective: 56
+Temperature: 0.531441
+Trial #1. Objective: 56
+Trial #2. Objective: 57
+Trial #3. Objective: 54
+Trial #4. Objective: 60
+Trial #5. Objective: 55
+Trial #6. Objective: 64 - Accepted
+Trial #7. Objective: 55
+Trial #8. Objective: 53
+Trial #9. Objective: 57
+Trial #10. Objective: 57
+Temperature: 0.478297
+Trial #1. Objective: 58
+Trial #2. Objective: 58
+Trial #3. Objective: 55
+Trial #4. Objective: 60
+Trial #5. Objective: 58
+Trial #6. Objective: 56
+Trial #7. Objective: 57
+Trial #8. Objective: 59
+Trial #9. Objective: 59
+Trial #10. Objective: 56
+Temperature: 0.430467
+Trial #1. Objective: 56
+Trial #2. Objective: 56
+Trial #3. Objective: 55
+Trial #4. Objective: 60
+Trial #5. Objective: 55
+Trial #6. Objective: 56
+Trial #7. Objective: 57
+Trial #8. Objective: 56
+Trial #9. Objective: 58
+Trial #10. Objective: 55
+Temperature: 0.38742
+Trial #1. Objective: 54
+Trial #2. Objective: 57
+Trial #3. Objective: 57
+Trial #4. Objective: 59
+Trial #5. Objective: 55
+Trial #6. Objective: 56
+Trial #7. Objective: 58
+Trial #8. Objective: 61
+Trial #9. Objective: 52
+Trial #10. Objective: 55
+Temperature: 0.348678
+Trial #1. Objective: 61
+Trial #2. Objective: 56
+Trial #3. Objective: 56
+Trial #4. Objective: 53
+Trial #5. Objective: 59
+Trial #6. Objective: 56
+Trial #7. Objective: 58
+Trial #8. Objective: 56
+Trial #9. Objective: 57
+Trial #10. Objective: 54
+Temperature: 0.313811
+Trial #1. Objective: 59
+Trial #2. Objective: 60
+Trial #3. Objective: 59
+Trial #4. Objective: 58
+Trial #5. Objective: 57
+Trial #6. Objective: 56
+Trial #7. Objective: 54
+Trial #8. Objective: 56
+Trial #9. Objective: 56
+Trial #10. Objective: 55
+Temperature: 0.28243
+Trial #1. Objective: 54
+Trial #2. Objective: 55
+Trial #3. Objective: 58
+Trial #4. Objective: 58
+Trial #5. Objective: 56
+Trial #6. Objective: 56
+Trial #7. Objective: 58
+Trial #8. Objective: 58
+Trial #9. Objective: 57
+Trial #10. Objective: 54
+Temperature: 0.254187
+Trial #1. Objective: 57
+Trial #2. Objective: 57
+Trial #3. Objective: 55
+Trial #4. Objective: 53
+Trial #5. Objective: 62
+Trial #6. Objective: 57
+Trial #7. Objective: 57
+Trial #8. Objective: 61
+Trial #9. Objective: 59
+Trial #10. Objective: 58
+Temperature: 0.228768
+Trial #1. Objective: 58
+Trial #2. Objective: 58
+Trial #3. Objective: 53
+Trial #4. Objective: 59
+Trial #5. Objective: 56
+Trial #6. Objective: 56
+Trial #7. Objective: 56
+Trial #8. Objective: 59
+Trial #9. Objective: 56
+Trial #10. Objective: 57
+Temperature: 0.205891
+Trial #1. Objective: 57
+Trial #2. Objective: 58
+Trial #3. Objective: 57
+Trial #4. Objective: 59
+Trial #5. Objective: 60
+Trial #6. Objective: 60
+Trial #7. Objective: 56
+Trial #8. Objective: 57
+Trial #9. Objective: 55
+Trial #10. Objective: 57
+Temperature: 0.185302
+Trial #1. Objective: 62
+Trial #2. Objective: 58
+Trial #3. Objective: 59
+Trial #4. Objective: 59
+Trial #5. Objective: 54
+Trial #6. Objective: 59
+Trial #7. Objective: 56
+Trial #8. Objective: 56
+Trial #9. Objective: 57
+Trial #10. Objective: 59
+Temperature: 0.166772
+Trial #1. Objective: 58
+Trial #2. Objective: 57
+Trial #3. Objective: 55
+Trial #4. Objective: 57
+Trial #5. Objective: 61
+Trial #6. Objective: 61
+Trial #7. Objective: 58
+Trial #8. Objective: 56
+Trial #9. Objective: 60
+Trial #10. Objective: 59
+Temperature: 0.150095
+Trial #1. Objective: 59
+Trial #2. Objective: 57
+Trial #3. Objective: 57
+Trial #4. Objective: 59
+Trial #5. Objective: 55
+Trial #6. Objective: 57
+Trial #7. Objective: 59
+Trial #8. Objective: 54
+Trial #9. Objective: 59
+Trial #10. Objective: 59
+Temperature: 0.135085
+Trial #1. Objective: 55
+Trial #2. Objective: 57
+Trial #3. Objective: 58
+Trial #4. Objective: 60
+Trial #5. Objective: 60
+Trial #6. Objective: 60
+Trial #7. Objective: 55
+Trial #8. Objective: 56
+Trial #9. Objective: 56
+Trial #10. Objective: 58
+Temperature: 0.121577
+Trial #1. Objective: 59
+Trial #2. Objective: 54
+Trial #3. Objective: 59
+Trial #4. Objective: 56
+Trial #5. Objective: 54
+Trial #6. Objective: 62
+Trial #7. Objective: 58
+Trial #8. Objective: 55
+Trial #9. Objective: 60
+Trial #10. Objective: 58
+Temperature: 0.109419
+Trial #1. Objective: 54
+Trial #2. Objective: 52
+Trial #3. Objective: 55
+Trial #4. Objective: 58
+Trial #5. Objective: 59
+Trial #6. Objective: 59
+Trial #7. Objective: 61
+Trial #8. Objective: 59
+Trial #9. Objective: 58
+Trial #10. Objective: 60
+Temperature: 0.0984771
+Trial #1. Objective: 58
+Trial #2. Objective: 57
+Trial #3. Objective: 61
+Trial #4. Objective: 58
+Trial #5. Objective: 57
+Trial #6. Objective: 59
+Trial #7. Objective: 55
+Trial #8. Objective: 60
+Trial #9. Objective: 61
+Trial #10. Objective: 58
+Temperature: 0.0886294
+Trial #1. Objective: 58
+Trial #2. Objective: 56
+Trial #3. Objective: 58
+Trial #4. Objective: 57
+Trial #5. Objective: 60
+Trial #6. Objective: 56
+Trial #7. Objective: 56
+Trial #8. Objective: 56
+Trial #9. Objective: 54
+Trial #10. Objective: 60
+Temperature: 0.0797664
+Trial #1. Objective: 59
+Trial #2. Objective: 55
+Trial #3. Objective: 61
+Trial #4. Objective: 54
+Trial #5. Objective: 53
+Trial #6. Objective: 59
+Trial #7. Objective: 53
+Trial #8. Objective: 57
+Trial #9. Objective: 59
+Trial #10. Objective: 55
+Temperature: 0.0717898
+Trial #1. Objective: 60
+Trial #2. Objective: 55
+Trial #3. Objective: 58
+Trial #4. Objective: 59
+Trial #5. Objective: 59
+Trial #6. Objective: 60
+Trial #7. Objective: 56
+Trial #8. Objective: 52
+Trial #9. Objective: 61
+Trial #10. Objective: 57
+Temperature: 0.0646108
+Trial #1. Objective: 58
+Trial #2. Objective: 58
+Trial #3. Objective: 53
+Trial #4. Objective: 55
+Trial #5. Objective: 55
+Trial #6. Objective: 57
+Trial #7. Objective: 55
+Trial #8. Objective: 58
+Trial #9. Objective: 55
+Trial #10. Objective: 58
+Temperature: 0.0581497
+Trial #1. Objective: 56
+Trial #2. Objective: 56
+Trial #3. Objective: 53
+Trial #4. Objective: 58
+Trial #5. Objective: 57
+Trial #6. Objective: 57
+Trial #7. Objective: 57
+Trial #8. Objective: 54
+Trial #9. Objective: 58
+Trial #10. Objective: 53
+Temperature: 0.0523348
+Trial #1. Objective: 61
+Trial #2. Objective: 60
+Trial #3. Objective: 56
+Trial #4. Objective: 55
+Trial #5. Objective: 59
+Trial #6. Objective: 54
+Trial #7. Objective: 60
+Trial #8. Objective: 57
+Trial #9. Objective: 63
+Trial #10. Objective: 59
+Temperature: 0.0471013
+Trial #1. Objective: 56
+Trial #2. Objective: 58
+Trial #3. Objective: 58
+Trial #4. Objective: 58
+Trial #5. Objective: 55
+Trial #6. Objective: 53
+Trial #7. Objective: 56
+Trial #8. Objective: 62
+Trial #9. Objective: 59
+Trial #10. Objective: 57
+Temperature: 0.0423912
+Trial #1. Objective: 55
+Trial #2. Objective: 62
+Trial #3. Objective: 57
+Trial #4. Objective: 55
+Trial #5. Objective: 55
+Trial #6. Objective: 53
+Trial #7. Objective: 57
+Trial #8. Objective: 55
+Trial #9. Objective: 59
+Trial #10. Objective: 58
+Temperature: 0.038152
+Trial #1. Objective: 60
+Trial #2. Objective: 53
+Trial #3. Objective: 56
+Trial #4. Objective: 58
+Trial #5. Objective: 59
+Trial #6. Objective: 58
+Trial #7. Objective: 60
+Trial #8. Objective: 59
+Trial #9. Objective: 56
+Trial #10. Objective: 53
+Temperature: 0.0343368
+Trial #1. Objective: 55
+Trial #2. Objective: 61
+Trial #3. Objective: 56
+Trial #4. Objective: 61
+Trial #5. Objective: 56
+Trial #6. Objective: 54
+Trial #7. Objective: 60
+Trial #8. Objective: 60
+Trial #9. Objective: 56
+Trial #10. Objective: 58
+Temperature: 0.0309032
+Trial #1. Objective: 60
+Trial #2. Objective: 56
+Trial #3. Objective: 58
+Trial #4. Objective: 54
+Trial #5. Objective: 57
+Trial #6. Objective: 58
+Trial #7. Objective: 57
+Trial #8. Objective: 55
+Trial #9. Objective: 60
+Trial #10. Objective: 58
+Temperature: 0.0278128
+Trial #1. Objective: 56
+Trial #2. Objective: 58
+Trial #3. Objective: 59
+Trial #4. Objective: 56
+Trial #5. Objective: 59
+Trial #6. Objective: 57
+Trial #7. Objective: 55
+Trial #8. Objective: 59
+Trial #9. Objective: 57
+Trial #10. Objective: 56
+Temperature: 0.0250316
+Trial #1. Objective: 58
+Trial #2. Objective: 60
+Trial #3. Objective: 55
+Trial #4. Objective: 56
+Trial #5. Objective: 58
+Trial #6. Objective: 58
+Trial #7. Objective: 63
+Trial #8. Objective: 54
+Trial #9. Objective: 56
+Trial #10. Objective: 56
+Temperature: 0.0225284
+Trial #1. Objective: 55
+Trial #2. Objective: 59
+Trial #3. Objective: 50
+Trial #4. Objective: 56
+Trial #5. Objective: 58
+Trial #6. Objective: 54
+Trial #7. Objective: 56
+Trial #8. Objective: 60
+Trial #9. Objective: 58
+Trial #10. Objective: 56
+Temperature: 0.0202756
+Trial #1. Objective: 56
+Trial #2. Objective: 55
+Trial #3. Objective: 58
+Trial #4. Objective: 59
+Trial #5. Objective: 55
+Trial #6. Objective: 58
+Trial #7. Objective: 58
+Trial #8. Objective: 56
+Trial #9. Objective: 60
+Trial #10. Objective: 58
+Temperature: 0.018248
+Trial #1. Objective: 59
+Trial #2. Objective: 57
+Trial #3. Objective: 56
+Trial #4. Objective: 58
+Trial #5. Objective: 58
+Trial #6. Objective: 54
+Trial #7. Objective: 58
+Trial #8. Objective: 59
+Trial #9. Objective: 61
+Trial #10. Objective: 60
+Temperature: 0.0164232
+Trial #1. Objective: 60
+Trial #2. Objective: 56
+Trial #3. Objective: 55
+Trial #4. Objective: 59
+Trial #5. Objective: 59
+Trial #6. Objective: 60
+Trial #7. Objective: 57
+Trial #8. Objective: 61
+Trial #9. Objective: 58
+Trial #10. Objective: 60
+Temperature: 0.0147809
+Trial #1. Objective: 59
+Trial #2. Objective: 58
+Trial #3. Objective: 56
+Trial #4. Objective: 59
+Trial #5. Objective: 57
+Trial #6. Objective: 57
+Trial #7. Objective: 57
+Trial #8. Objective: 59
+Trial #9. Objective: 58
+Trial #10. Objective: 54
+Temperature: 0.0133028
+Trial #1. Objective: 58
+Trial #2. Objective: 58
+Trial #3. Objective: 56
+Trial #4. Objective: 53
+Trial #5. Objective: 57
+Trial #6. Objective: 56
+Trial #7. Objective: 58
+Trial #8. Objective: 55
+Trial #9. Objective: 56
+Trial #10. Objective: 56
+Temperature: 0.0119725
+Trial #1. Objective: 60
+Trial #2. Objective: 55
+Trial #3. Objective: 59
+Trial #4. Objective: 56
+Trial #5. Objective: 55
+Trial #6. Objective: 56
+Trial #7. Objective: 56
+Trial #8. Objective: 56
+Trial #9. Objective: 55
+Trial #10. Objective: 61
+Temperature: 0.0107753
+Trial #1. Objective: 58
+Trial #2. Objective: 56
+Trial #3. Objective: 59
+Trial #4. Objective: 58
+Trial #5. Objective: 56
+Trial #6. Objective: 59
+Trial #7. Objective: 62
+Trial #8. Objective: 53
+Trial #9. Objective: 55
+Trial #10. Objective: 55
+Time taken by program: 45796109464518 seconds.

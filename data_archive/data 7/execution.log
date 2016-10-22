@@ -1,0 +1,424 @@
+Initializing...Initial objective: 53
+
+Epoch 1/47. Temperature: 5
+Trial 1. Objective: 54 - Accepted
+Trial 2. Objective: 42
+Trial 3. Objective: 47
+Trial 4. Objective: 37
+Trial 5. Objective: 29
+Trial 6. Objective: 51 - Accepted
+Trial 7. Objective: 19
+Trial 8. Objective: 26
+Trial 9. Objective: 58 - Accepted
+Trial 10. Objective: 39
+Trial 11. Objective: 52
+Trial 12. Objective: 23
+Trial 13. Objective: 57 - Accepted
+Trial 14. Objective: 57
+Trial 15. Objective: 38
+Trial 16. Objective: 58 - Accepted
+Trial 17. Objective: 43
+Trial 18. Objective: 49 - Accepted
+Trial 19. Objective: 15
+Trial 20. Objective: 19
+
+Epoch 2/47. Temperature: 4.6
+Trial 1. Objective: 36
+Trial 2. Objective: 52 - Accepted
+Trial 3. Objective: 49 - Accepted
+Trial 4. Objective: 46
+Trial 5. Objective: 22
+Trial 6. Objective: 47 - Accepted
+Trial 7. Objective: 17
+Trial 8. Objective: 45
+Trial 9. Objective: 50 - Accepted
+Trial 10. Objective: 54 - Accepted
+Trial 11. Objective: 30
+Trial 12. Objective: 36
+Trial 13. Objective: 32
+Trial 14. Objective: 47
+Trial 15. Objective: 52
+Trial 16. Objective: 51
+Trial 17. Objective: 50 - Accepted
+Trial 18. Objective: 52 - Accepted
+Trial 19. Objective: 52
+Trial 20. Objective: 37
+
+Epoch 3/47. Temperature: 4.232
+Trial 1. Objective: 29
+Trial 2. Objective: 28
+Trial 3. Objective: 27
+Trial 4. Objective: 47 - Accepted
+Trial 5. Objective: 53 - Accepted
+Trial 6. Objective: 52 - Accepted
+Trial 7. Objective: 52
+Trial 8. Objective: 44
+Trial 9. Objective: 54 - Accepted
+Trial 10. Objective: 51
+Trial 11. Objective: 51
+Trial 12. Objective: 37
+Trial 13. Objective: 45
+Trial 14. Objective: 24
+Trial 15. Objective: 40
+Trial 16. Objective: 15
+Trial 17. Objective: 21
+Trial 18. Objective: 26
+Trial 19. Objective: 33
+Trial 20. Objective: 46 - Accepted
+
+Epoch 4/47. Temperature: 3.89344
+Trial 1. Objective: 49 - Accepted
+Trial 2. Objective: 54 - Accepted
+Trial 3. Objective: 36
+Trial 4. Objective: 36
+Trial 5. Objective: 50 - Accepted
+Trial 6. Objective: 48 - Accepted
+Trial 7. Objective: 34
+Trial 8. Objective: 48
+Trial 9. Objective: 43
+Trial 10. Objective: 40
+Trial 11. Objective: 50 - Accepted
+Trial 12. Objective: 48 - Accepted
+Trial 13. Objective: 35
+Trial 14. Objective: 46 - Accepted
+Trial 15. Objective: 37
+Trial 16. Objective: 33
+Trial 17. Objective: 49 - Accepted
+Trial 18. Objective: 29
+Trial 19. Objective: 27
+Trial 20. Objective: 50 - Accepted
+
+Epoch 5/47. Temperature: 3.58196
+Trial 1. Objective: 28
+Trial 2. Objective: 49 - Accepted
+Trial 3. Objective: 34
+Trial 4. Objective: 52 - Accepted
+Trial 5. Objective: 26
+Trial 6. Objective: 29
+Trial 7. Objective: 45
+Trial 8. Objective: 43
+Trial 9. Objective: 39
+Trial 10. Objective: 46
+Trial 11. Objective: 26
+Trial 12. Objective: 34
+Trial 13. Objective: 52
+Trial 14. Objective: 52
+Trial 15. Objective: 42
+Trial 16. Objective: 38
+Trial 17. Objective: 19
+Trial 18. Objective: 25
+Trial 19. Objective: 52
+Trial 20. Objective: 47
+
+Epoch 6/47. Temperature: 3.29541
+Trial 1. Objective: 53 - Accepted
+Trial 2. Objective: 49 - Accepted
+Trial 3. Objective: 40 - Accepted
+Trial 4. Objective: 53 - Accepted
+Trial 5. Objective: 41
+Trial 6. Objective: 52
+Trial 7. Objective: 23
+Trial 8. Objective: 55 - Accepted
+Trial 9. Objective: 31
+Trial 10. Objective: 50
+Trial 11. Objective: 33
+Trial 12. Objective: 39
+Trial 13. Objective: 42
+Trial 14. Objective: 20
+Trial 15. Objective: 20
+Trial 16. Objective: 35
+Trial 17. Objective: 38
+Trial 18. Objective: 34
+Trial 19. Objective: 53 - Accepted
+Trial 20. Objective: 34
+
+Epoch 7/47. Temperature: 3.03178
+Trial 1. Objective: 17
+Trial 2. Objective: 51
+Trial 3. Objective: 26
+Trial 4. Objective: 28
+Trial 5. Objective: 47
+Trial 6. Objective: 48 - Accepted
+Trial 7. Objective: 47
+Trial 8. Objective: 48
+Trial 9. Objective: 49 - Accepted
+Trial 10. Objective: 41
+Trial 11. Objective: 48 - Accepted
+Trial 12. Objective: 41 - Accepted
+Trial 13. Objective: 52 - Accepted
+Trial 14. Objective: 49 - Accepted
+Trial 15. Objective: 58 - Accepted
+Trial 16. Objective: 37
+Trial 17. Objective: 52
+Trial 18. Objective: 42
+Trial 19. Objective: 40
+Trial 20. Objective: 51
+
+Epoch 8/47. Temperature: 2.78923
+Trial 1. Objective: 44
+Trial 2. Objective: 45
+Trial 3. Objective: 39
+Trial 4. Objective: 47
+Trial 5. Objective: 48
+Trial 6. Objective: 39
+Trial 7. Objective: 52
+Trial 8. Objective: 46
+Trial 9. Objective: 27
+Trial 10. Objective: 47
+Trial 11. Objective: 54
+Trial 12. Objective: 54
+Trial 13. Objective: 28
+Trial 14. Objective: 15
+Trial 15. Objective: 47
+Trial 16. Objective: 32
+Trial 17. Objective: 54
+Trial 18. Objective: 28
+Trial 19. Objective: 56 - Accepted
+Trial 20. Objective: 52
+
+Epoch 9/47. Temperature: 2.56609
+Trial 1. Objective: 55
+Trial 2. Objective: 51
+Trial 3. Objective: 52
+Trial 4. Objective: 48 - Accepted
+Trial 5. Objective: 44
+Trial 6. Objective: 35
+Trial 7. Objective: 52 - Accepted
+Trial 8. Objective: 36
+Trial 9. Objective: 45
+Trial 10. Objective: 38
+Trial 11. Objective: 41
+Trial 12. Objective: 21
+Trial 13. Objective: 52
+Trial 14. Objective: 42
+Trial 15. Objective: 47 - Accepted
+Trial 16. Objective: 53 - Accepted
+Trial 17. Objective: 42 - Accepted
+Trial 18. Objective: 43 - Accepted
+Trial 19. Objective: 51 - Accepted
+Trial 20. Objective: 35
+
+Epoch 10/47. Temperature: 2.36081
+Trial 1. Objective: 52 - Accepted
+Trial 2. Objective: 34
+Trial 3. Objective: 42
+Trial 4. Objective: 49
+Trial 5. Objective: 31
+Trial 6. Objective: 53 - Accepted
+Trial 7. Objective: 37
+Trial 8. Objective: 31
+Trial 9. Objective: 30
+Trial 10. Objective: 54 - Accepted
+Trial 11. Objective: 51
+Trial 12. Objective: 50
+Trial 13. Objective: 44
+Trial 14. Objective: 51
+Trial 15. Objective: 49
+Trial 16. Objective: 54
+Trial 17. Objective: 52 - Accepted
+Trial 18. Objective: 44
+Trial 19. Objective: 47
+Trial 20. Objective: 38
+
+Epoch 11/47. Temperature: 2.17194
+Trial 1. Objective: 34
+Trial 2. Objective: 51 - Accepted
+Trial 3. Objective: 41
+Trial 4. Objective: 53 - Accepted
+Trial 5. Objective: 51
+Trial 6. Objective: 40
+Trial 7. Objective: 55 - Accepted
+Trial 8. Objective: 52
+Trial 9. Objective: 40
+Trial 10. Objective: 43
+Trial 11. Objective: 51
+Trial 12. Objective: 27
+Trial 13. Objective: 47
+Trial 14. Objective: 39
+Trial 15. Objective: 37
+Trial 16. Objective: 35
+Trial 17. Objective: 51
+Trial 18. Objective: 35
+Trial 19. Objective: 37
+Trial 20. Objective: 49 - Accepted
+
+Epoch 12/47. Temperature: 1.99819
+Trial 1. Objective: 29
+Trial 2. Objective: 54 - Accepted
+Trial 3. Objective: 47
+Trial 4. Objective: 40
+Trial 5. Objective: 38
+Trial 6. Objective: 38
+Trial 7. Objective: 42
+Trial 8. Objective: 40
+Trial 9. Objective: 50
+Trial 10. Objective: 53 - Accepted
+Trial 11. Objective: 52
+Trial 12. Objective: 44
+Trial 13. Objective: 51 - Accepted
+Trial 14. Objective: 47
+Trial 15. Objective: 45
+Trial 16. Objective: 53 - Accepted
+Trial 17. Objective: 42
+Trial 18. Objective: 48
+Trial 19. Objective: 51
+Trial 20. Objective: 41
+
+Epoch 13/47. Temperature: 1.83833
+Trial 1. Objective: 42
+Trial 2. Objective: 55 - Accepted
+Trial 3. Objective: 42
+Trial 4. Objective: 33
+Trial 5. Objective: 54 - Accepted
+Trial 6. Objective: 36
+Trial 7. Objective: 46
+Trial 8. Objective: 18
+Trial 9. Objective: 37
+Trial 10. Objective: 36
+Trial 11. Objective: 41
+Trial 12. Objective: 51
+Trial 13. Objective: 50
+Trial 14. Objective: 35
+Trial 15. Objective: 52 - Accepted
+Trial 16. Objective: 41
+Trial 17. Objective: 52
+Trial 18. Objective: 51 - Accepted
+Trial 19. Objective: 32
+Trial 20. Objective: 55 - Accepted
+
+Epoch 14/47. Temperature: 1.69127
+Trial 1. Objective: 52
+Trial 2. Objective: 39
+Trial 3. Objective: 42
+Trial 4. Objective: 41
+Trial 5. Objective: 36
+Trial 6. Objective: 34
+Trial 7. Objective: 53 - Accepted
+Trial 8. Objective: 35
+Trial 9. Objective: 42
+Trial 10. Objective: 45
+Trial 11. Objective: 37
+Trial 12. Objective: 54 - Accepted
+Trial 13. Objective: 18
+Trial 14. Objective: 34
+Trial 15. Objective: 55 - Accepted
+Trial 16. Objective: 36
+Trial 17. Objective: 40
+Trial 18. Objective: 36
+Trial 19. Objective: 54 - Accepted
+Trial 20. Objective: 25
+
+Epoch 15/47. Temperature: 1.55596
+Trial 1. Objective: 30
+Trial 2. Objective: 49
+Trial 3. Objective: 34
+Trial 4. Objective: 15
+Trial 5. Objective: 40
+Trial 6. Objective: 26
+Trial 7. Objective: 46
+Trial 8. Objective: 42
+Trial 9. Objective: 19
+Trial 10. Objective: 53
+Trial 11. Objective: 53
+Trial 12. Objective: 52 - Accepted
+Trial 13. Objective: 43
+Trial 14. Objective: 25
+Trial 15. Objective: 31
+Trial 16. Objective: 15
+Trial 17. Objective: 47
+Trial 18. Objective: 49
+Trial 19. Objective: 31
+Trial 20. Objective: 26
+
+Epoch 16/47. Temperature: 1.43149
+Trial 1. Objective: 33
+Trial 2. Objective: 14
+Trial 3. Objective: 53 - Accepted
+Trial 4. Objective: 52
+Trial 5. Objective: 46
+Trial 6. Objective: 41
+Trial 7. Objective: 19
+Trial 8. Objective: 39
+Trial 9. Objective: 17
+Trial 10. Objective: 46
+Trial 11. Objective: 35
+Trial 12. Objective: 25
+Trial 13. Objective: 45
+Trial 14. Objective: 28
+Trial 15. Objective: 50 - Accepted
+Trial 16. Objective: 22
+Trial 17. Objective: 48
+Trial 18. Objective: 53 - Accepted
+Trial 19. Objective: 53
+Trial 20. Objective: 37
+
+Epoch 17/47. Temperature: 1.31697
+Trial 1. Objective: 32
+Trial 2. Objective: 50
+Trial 3. Objective: 51
+Trial 4. Objective: 48
+Trial 5. Objective: 51
+Trial 6. Objective: 47
+Trial 7. Objective: 19
+Trial 8. Objective: 36
+Trial 9. Objective: 35
+Trial 10. Objective: 51
+Trial 11. Objective: 24
+Trial 12. Objective: 39
+Trial 13. Objective: 24
+Trial 14. Objective: 28
+Trial 15. Objective: 28
+Trial 16. Objective: 51 - Accepted
+Trial 17. Objective: 36
+Trial 18. Objective: 34
+Trial 19. Objective: 34
+Trial 20. Objective: 27
+
+Epoch 18/47. Temperature: 1.21161
+Trial 1. Objective: 54 - Accepted
+Trial 2. Objective: 33
+Trial 3. Objective: 50
+Trial 4. Objective: 51 - Accepted
+Trial 5. Objective: 41
+Trial 6. Objective: 31
+Trial 7. Objective: 33
+Trial 8. Objective: 37
+Trial 9. Objective: 52 - Accepted
+Trial 10. Objective: 54 - Accepted
+Trial 11. Objective: 45
+Trial 12. Objective: 47
+Trial 13. Objective: 43
+Trial 14. Objective: 51
+Trial 15. Objective: 55 - Accepted
+Trial 16. Objective: 35
+Trial 17. Objective: 43
+Trial 18. Objective: 46
+Trial 19. Objective: 49
+Trial 20. Objective: 11
+
+Epoch 19/47. Temperature: 1.11468
+Trial 1. Objective: 27
+Trial 2. Objective: 22
+Trial 3. Objective: 25
+Trial 4. Objective: 56 - Accepted
+Trial 5. Objective: 41
+Trial 6. Objective: 53
+Trial 7. Objective: 38
+Trial 8. Objective: 49
+Trial 9. Objective: 50
+Trial 10. Objective: 37
+Trial 11. Objective: 41
+Trial 12. Objective: 53 - Accepted
+Trial 13. Objective: 49
+Trial 14. Objective: 45
+Trial 15. Objective: 59 - Accepted
+Trial 16. Objective: 33
+Trial 17. Objective: 38
+Trial 18. Objective: 52
+Trial 19. Objective: 21
+Trial 20. Objective: 29
+
+Epoch 20/47. Temperature: 1.02551
+Trial 1. Objective: 48
+Trial 2. Objective: 39
+Trial 3. 

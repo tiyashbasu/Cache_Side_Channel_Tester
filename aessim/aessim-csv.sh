@@ -2,8 +2,8 @@
 
 i=0
 rm ./aessim-results.log
-while true
-#while [ $i -lt 2000 ]
+#while true
+while [ $i -lt 1000 ]
 do
 	i=`expr $i + 1`
 	test=$(sed "$i!d" $2)
