@@ -1,0 +1,3 @@
+klee --write-smt2s --cache-cfg=cache.cfg --fake-load=fake.load --memory-map=memory.map bf_core.bc
+PID: 8233
+Started: 2016-07-07 12:27:29

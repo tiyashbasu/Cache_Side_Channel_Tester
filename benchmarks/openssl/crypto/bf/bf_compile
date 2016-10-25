@@ -1,0 +1,2 @@
+#!/bin/bash
+llvm-gcc --emit-llvm -O3 -DOPENSSL_NO_INLINE_ASM -DOPENSSL_NO_ASM -o bf_core.bc -c bf_core.c

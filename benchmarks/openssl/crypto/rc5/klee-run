@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#klee --write-smt2s --cache-cfg=cache.cfg --fake-load=fake.load --memory-map=memory.map $1
+klee --write-smt2s --cache-cfg=cache_lru.cfg --fake-load=fake.load --memory-map=memory.map $1
+#klee --write-smt2s --cache-cfg=cache_fifo.cfg --fake-load=fake.load --memory-map=memory.map $1

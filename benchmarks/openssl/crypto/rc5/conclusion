@@ -1,0 +1,7 @@
+- In RC5, there does not exist any input-dependent memory access and hence, 
+no input-dependent cache behavior. Therefore, RC5 does not leak any 
+information for the targeted observation models.
+
+- Used cache sizes : 256 bytes, 512 bytes, 1KB, 2KB, 4KB, 8 KB.
+
+- Time taken approximately: 13 seconds.
