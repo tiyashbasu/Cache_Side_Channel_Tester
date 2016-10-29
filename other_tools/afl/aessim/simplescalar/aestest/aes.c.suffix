@@ -1,4 +1,0 @@
-	
-	KeyExpansion(key, e_key, 128);
-	aes_encrypt(in, out, e_key, 128);
-}

@@ -1,2 +1,0 @@
-#!/bin/sh
-../../../../cde-exec 'sim-outorder' "$@"

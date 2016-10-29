@@ -290,9 +290,10 @@ namespace thesis {
                 logfile.open(logfilename, std::ios::out);
                 std::remove(results_filename.c_str());//removing previous execution temp result
                 run_program();
+                obj = get_objective(results_filename);
                 save_dataset_to_file("data/best-dataset.csv");
                 save_results_to_file("data/best-results.log");
-                obj = get_objective(results_filename);
+                append_results_to_file("data/all-results.log");
                 logfile << "Initial objective: " << obj << std::endl;
                 logfile << "------------------------------------------------------------------\n";
                 logfile << "Elapsed Time\tTemperature\tEpoch\tTrial\tObjective\tAcceptance\n";
@@ -375,6 +376,7 @@ namespace thesis {
                         mutate_dataset(2, usable_flipper_size);
                         run_program();
                         new_obj = get_objective(results_filename);
+                        append_results_to_file("data/all-results.log");
 
                         //Update execution log
                         now = std::chrono::system_clock::now();
@@ -438,8 +440,16 @@ namespace thesis {
         }
 
         void save_results_to_file(std::string filename) {
-            std::ifstream src(results_filename, std::ios::binary);
-            std::ofstream dest(filename, std::ios::binary);
+            std::ifstream src(results_filename, std::ios::in);
+            std::ofstream dest(filename, std::ios::out);
+            dest << src.rdbuf();
+            dest.close();
+            src.close();
+        }
+
+        void append_results_to_file(std::string filename) {
+            std::ifstream src(results_filename, std::ios::in);
+            std::ofstream dest(filename, std::ios::out | std::ios::app);
             dest << src.rdbuf();
             dest.close();
             src.close();

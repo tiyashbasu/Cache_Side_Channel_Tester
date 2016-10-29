@@ -1,0 +1,10 @@
+};
+    unsigned char obuf[512] = {0};
+
+		//klee_make_symbolic(keys, 10 * sizeof(keys[0]), "rc4_key");
+
+    RC4_set_key(&key, 8, &(keys[1]));
+    RC4(&key, 8, &(data[0][0]), obuf);
+
+		return 0;    
+}

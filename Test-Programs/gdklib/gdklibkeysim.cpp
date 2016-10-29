@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
     strcat(strcat(strcpy(cmd, "grep \'store misses\' ./temp/"), ms_ch), "/sim-outorder.log | cut -d\" \" -f11");
     system(cmd);
 #endif
-    strcat(strcat(strcpy(cmd, "rm -f ./cde-package/cde-root/src/"), ms_ch), ".c");
+    strcat(strcat(strcpy(cmd, "rm -f ../cde-package/cde-root/src/"), ms_ch), ".c");
     system(cmd);
     strcat(strcpy(cmd, "rm -rf ./temp/"), ms_ch);
     system(cmd);

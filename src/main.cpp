@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
 
 	if (argc < 3) {
 		std::cout << "Usage: thesisdev <config file> <log file> OR thesisdev <config file> <log file> resume\n"
-            "Examples:\n\t./thesisdev config.txt execution.log\n\t./thesisdev resume config.txt execution.log";
+            "Examples:\n\t./thesisdev config.txt execution.log\n\t./thesisdev config.txt execution.log resume\n";
 		return 1;
 	}
 

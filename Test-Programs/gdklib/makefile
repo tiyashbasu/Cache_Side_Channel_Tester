@@ -33,5 +33,5 @@ gdklib-uni-sm: gdklibkeysim.cpp
 	$(CXX) -std=c++14 -O3 -D KEYUNI -D SM -o gdklib-uni-sm gdklibkeysim.cpp >> make.log 2>&1
 
 clean:
-	-@rm gdklib-name-file gdklib-name-all gdklib-name-dm gdklib-name-lm gdklib-name-sm gdklib-uni-file gdklib-uni-all gdklib-uni-dm gdklib-uni-lm gdklib-uni-sm miss_out
+	-@rm gdklib-name-file gdklib-name-all gdklib-name-dm gdklib-name-lm gdklib-name-sm gdklib-uni-file gdklib-uni-all gdklib-uni-dm gdklib-uni-lm gdklib-uni-sm miss_out mkdir.log
 	-@rm -rf temp/*

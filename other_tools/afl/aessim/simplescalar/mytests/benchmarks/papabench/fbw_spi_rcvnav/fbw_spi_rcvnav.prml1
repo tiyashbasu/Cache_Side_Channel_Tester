@@ -1,5 +1,0 @@
-fbw_spi_rcvnav [    7122,    71780)
-[fbw_spi_rcvnav] wcrt = 29
-[fbw_spi_rcvnav] earliestReq = 7122
-[fbw_spi_rcvnav] earliestFin = 7151
---> [fbw_main_getnav] earliestReq = 7151

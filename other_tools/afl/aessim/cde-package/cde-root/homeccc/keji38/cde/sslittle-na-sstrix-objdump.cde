@@ -1,2 +1,0 @@
-#!/bin/sh
-../../../../cde-exec 'sslittle-na-sstrix-objdump' "$@"
