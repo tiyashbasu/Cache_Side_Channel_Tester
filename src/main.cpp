@@ -1,4 +1,5 @@
 #include <iomanip>
+#include <csignal>
 #include "optimal_data_finder.h"
 
 int read_config_file(std::string config_filename, std::string* prog_path, std::string* prog_name, int* no_of_params, int** counts, unsigned long* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
@@ -58,8 +59,12 @@ int read_config_file(std::string config_filename, std::string* prog_path, std::s
 }
 
 int main(int argc, char *argv[]) {
-	if (argc != 2) {
-		std::cout << "Usage example: ./thesisdev config.txt\n";
+    signal(SIGINT, SIG_IGN);
+    signal(SIGTSTP, SIG_IGN);
+
+	if (argc < 3) {
+		std::cout << "Usage: thesisdev <config file> <log file> OR thesisdev <config file> <log file> resume\n"
+            "Examples:\n\t./thesisdev config.txt execution.log\n\t./thesisdev resume config.txt execution.log";
 		return 1;
 	}
 
@@ -76,11 +81,18 @@ int main(int argc, char *argv[]) {
     int status = read_config_file(argv[1], &program_path, &program_name, &no_of_params, &counts, &exec_times, &t_init, &t_final, &alpha, &max_trials);
     if (!status) {
         thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times);
-        obj = data_finder.sim_ann(t_init, t_final, alpha, max_trials);
-        std::cout << "\nFinal objective: " << obj << "\n";
+        obj = data_finder.sim_ann(t_init, t_final, alpha, max_trials, argv[2], (argc == 4 && !std::string("resume").compare(argv[3])));
+        if (obj >= 0) {
+            std::cout << "\nDone. Final objective: " << obj << "\n";
+            std::ofstream logfile(argv[2], std::ios::app);
+            logfile << "Final objective: " << obj;
+            logfile.close();
+        }
+        else
+            std::cout << "Execution log file is either not present or is invalid." << std::endl;
     }
     else {
-        std::cout << "Incorrect config file format. Please check the example config file for the correct format." << std::endl;
+        std::cout << "Configuration file is either not present or is invalid." << std::endl;
     }
     delete [] counts;
     return 0;

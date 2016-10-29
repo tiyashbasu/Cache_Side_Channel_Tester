@@ -1,9 +1,9 @@
-start_time        : 1476867991
-last_update       : 1476868015
-fuzzer_pid        : 17027
-cycles_done       : 48
-execs_done        : 73510
-execs_per_sec     : 2000.00
+start_time        : 1477670228
+last_update       : 1477670271
+fuzzer_pid        : 2970
+cycles_done       : 119
+execs_done        : 177774
+execs_per_sec     : 2285.71
 paths_total       : 2
 paths_favored     : 1
 paths_found       : 0
@@ -20,7 +20,7 @@ unique_hangs      : 0
 last_path         : 0
 last_crash        : 0
 last_hang         : 0
-execs_since_crash : 73510
+execs_since_crash : 177774
 exec_timeout      : 20
 afl_banner        : afl-aes.o
 afl_version       : 2.35b

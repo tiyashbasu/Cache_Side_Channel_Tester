@@ -1,0 +1,10 @@
+; 
+	const char* keyname = NULL;
+
+	//klee_make_symbolic(&keyval, sizeof(unsigned), "keyval");	
+
+	keyname = gdk_keyval_name(keyval);
+
+	return (keyname != NULL);
+
+}

@@ -6,6 +6,7 @@
 #include <fstream>
 #include <random>
 #include <thread>
+#include <cstring>
 #include "flipper.h"
 //#include <unistd.h> //required for fork()
 //#include <wait.h> //required for waitpid()
@@ -57,6 +58,12 @@ namespace thesis {
             quick_sort(arr, 0, size - 1);
         }
 
+        void sort(long* arr, long* sorted_arr, unsigned long size) {
+            for (int i = 0; i < size; i++)
+                sorted_arr[i] = arr[i];
+            quick_sort(sorted_arr, 0, size - 1);
+        }
+
         void backup_dataset() {
             int i, j;
             for (i = 0; i < no_of_params; i++)
@@ -72,11 +79,11 @@ namespace thesis {
         }
 
         void run_thread(std::string path, std::string param_list) {
-            char output[10] = {0};
+            char output[100] = {0};
             int i = 0;
             FILE *in = popen((path + program + " " + param_list).c_str(), "r");
             while (!feof(in)) {
-                output[i++] = fgetc(in);
+                output[i++] = (char)fgetc(in);
             }
             if(i > 0)
                 output[--i] = 0; //replace -1 at the array's end with null character
@@ -111,7 +118,6 @@ namespace thesis {
                 execution_threads[i].join();
             }
             delete [] execution_threads;
-            std::remove(results_filename.c_str());//removing previous execution temp result
             return;
         }
 
@@ -198,6 +204,7 @@ namespace thesis {
                     dataset[i][j] = temp_rand;
                 }
             }
+            int a = 0;
         }
 
 /* mutating only one bit at a time
@@ -240,7 +247,10 @@ namespace thesis {
             dataset = new int*[no_of_params];
             bkp_dataset = new int*[no_of_params];
             for (int i = 0; i < no_of_params; i++) {
-                this->counts[i] = counts[i];
+                if (counts[i] > 256)
+                    this->counts[i] = 256;
+                else
+                    this->counts[i] = counts[i];
                 dataset[i] = new int[counts[i]];
                 bkp_dataset[i] = new int[counts[i]];
             }
@@ -259,73 +269,157 @@ namespace thesis {
             delete(counts);
         }
 
-        long sim_ann(double t_init, double t_final, double alpha, int max_trials) {
+        long sim_ann(double t_init, double t_final, double alpha, int max_trials, std::string logfilename, bool resume) {
+            std::ofstream logfile;
             bool acceptable;
             long double acceptance_prob;
-            int trial_num;
+            int trial_num, start_trial = 0;
             double temp;
             long obj, new_obj;
             int total_iterations= (int)((std::log(t_final) - std::log(t_init)) / std::log(alpha)) + 1;
-            int iteration = 0;
+            int iteration = 0, acceptanc_count = 0;
 //            double reduc_fact = (double)thesis::flipper_size / (double)total_iterations; //linear reducer
             double reduc_fact = (double)(std::exp((std::log(8) - std::log(thesis::flipper_size)) / total_iterations)); //exponential reducer
             int usable_flipper_size = thesis::flipper_size;
-
-            std::cout << "Initializing..." << std::flush;
-            run_program();
-            save_dataset_to_file("data/best-dataset.csv");
-            save_results_to_file("data/best-results.log");
-            obj = get_objective(results_filename);
-            std::cout << "Done\nInitial objective: " << obj << std::endl;
-            std::cout << "------------------------------------------------------------------\n";
-            std::cout << "Elapsed Time\tTemperature\tEpoch\tObjective\tAcceptance\n";
-            std::cout << "------------------------------------------------------------------\n";
             auto now = std::chrono::system_clock::now();
-            long start_time = (std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch())).count();
-            long elapsed_time;
+            long start_time, elapsed_time;
+            double delta_avg = 0, delta_avg_temp;
+
+            /*Initialization when execution is starting for the first time and not resuming*/
+            if (!resume) {
+                logfile.open(logfilename, std::ios::out);
+                std::remove(results_filename.c_str());//removing previous execution temp result
+                run_program();
+                save_dataset_to_file("data/best-dataset.csv");
+                save_results_to_file("data/best-results.log");
+                obj = get_objective(results_filename);
+                logfile << "Initial objective: " << obj << std::endl;
+                logfile << "------------------------------------------------------------------\n";
+                logfile << "Elapsed Time\tTemperature\tEpoch\tTrial\tObjective\tAcceptance\n";
+                logfile << "------------------------------------------------------------------\n";
+                start_time = (std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch())).count();
+            }
+            /*Initialization when execution is resuming from a previous incomplete run*/
+            else {
+                std::ifstream logfile_in(logfilename, std::ios::in);
+                int lines = 0;
+                std::string line;
+                int start;
+                std::getline(logfile_in, line);
+                start = (int)(line.find(":") + 1);
+                if (!start) {
+                    return -1;
+                }
+                obj = stol(line.substr(start, line.length()));
+                while (!logfile_in.eof()) {
+                    std::getline(logfile_in, line);
+                    start = 0;
+                    start = (int)(line.find("Y", start));
+                    if (start > 0) {
+                        start = (int)(line.find(":", start) + 1);
+                        start = (int)(line.find(":", start) + 1);
+                        start = (int)(line.find("\t", start) + 1);
+                        start = (int)(line.find("\t", start) + 1);
+                        start = (int)(line.find("/", start) + 1);
+                        start = (int)(line.find("\t", start) + 1);
+                        start = (int)(line.find("/", start) + 1);
+                        start = (int)(line.find("\t", start) + 1);
+                        obj = stol(line.substr(start, line.length()));
+                    }
+                    lines++;
+                }
+                logfile_in.clear();
+                logfile_in.seekg(0, std::ios::beg);
+                int i;
+                for (i = 0; i < lines; i++)
+                    std::getline(logfile_in, line);
+                char ch;
+                i = 0;
+                start = 0;
+                //timestamp
+                elapsed_time = 0;
+                elapsed_time += stoi(line.substr(start, line.length())) * 3600000;//hrs*60*60*1000*1000
+                start = (int)(line.find(":") + 1);
+                elapsed_time += stoi(line.substr(start, line.length())) * 60000;
+                start = (int)(line.find(":", start) + 1);
+                elapsed_time += (stod(line.substr(start, line.length())) * 1000);
+                //temperature and usable flipper size
+                start = (int)(line.find("\t", start) + 1);
+                double t_initx = stod(line.substr(start, line.length()));
+                double temp = t_initx;
+                while (temp <= t_init) {
+                    temp /= alpha;
+                    usable_flipper_size *= reduc_fact;
+                }
+                t_init = t_initx;
+                //iteration
+                start = (int)(line.find("\t", start) + 1);
+                iteration = stoi(line.substr(start, line.length())) - 1;
+                //start_trial
+                start = (int)(line.find("\t", start) + 1);
+                start_trial = stoi(line.substr(start, line.length()));
+                logfile_in.close();
+                logfile.open(logfilename, std::ios::app);
+                //start time
+                start_time = (std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch())).count() - elapsed_time;
+            }
+
+            /*Starting simulated annealing process*/
             try {
                 for (temp = t_init; temp >= t_final; temp *= alpha) {
                     ++iteration;
                     usable_flipper_size *= reduc_fact; //exponential reduction in neighbourhood size
 
-                    for (trial_num = 0; trial_num < max_trials; trial_num++) {
+                    for (trial_num = start_trial; trial_num < max_trials; trial_num++) {
+                        //mutate, execute and get objective value
                         mutate_dataset(2, usable_flipper_size);
                         run_program();
                         new_obj = get_objective(results_filename);
 
+                        //Update execution log
                         now = std::chrono::system_clock::now();
-                        elapsed_time = (std::chrono::duration_cast<std::chrono::milliseconds>(
-                                now.time_since_epoch())).count() - start_time;
-                        std::cout << std::setw(12) << format_time(elapsed_time) << '\t';
-                        std::cout << std::setprecision(8) << std::setw(11) << temp << '\t';
-                        std::cout << std::setw(1) << iteration << '/' << total_iterations << '\t';
-                        std::cout << std::setw(6) << new_obj << '\t';
+                        elapsed_time = (std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch())).count() - start_time;
+                        logfile << std::setw(12) << format_time(elapsed_time) << '\t';
+                        logfile << std::setprecision(8) << std::setw(11) << temp << '\t';
+                        logfile << std::setw(1) << iteration << '/' << total_iterations << '\t';
+                        logfile << std::setw(1) << trial_num + 1 << '/' << max_trials << '\t';
+                        logfile << std::setw(6) << new_obj << '\t';
 
+                        //Check acceptance
                         acceptable = new_obj > obj;
                         if (!acceptable && new_obj != obj) {
-                            acceptance_prob = std::exp((new_obj - obj) / temp);
+                            if (!acceptanc_count)
+                                delta_avg = obj - new_obj;
+                            acceptance_prob = std::exp((new_obj - obj) / (temp * delta_avg));
                             acceptable = acceptance_prob > ((double) rand1000(seed) / 1000.0);
                         }
 
+                        //If new objective value has been accepted, update best results and log
                         if (acceptable) {
                             save_dataset_to_file("data/best-dataset.csv");
                             save_results_to_file("data/best-results.log");
                             backup_dataset();
                             obj = new_obj;
-                            std::cout << std::setw(10) << "Y";
-                        } else {
-                            restore_dataset();
-                            std::cout << std::setw(10) << "N";
+                            delta_avg = (delta_avg * (acceptanc_count - 1) + new_obj - obj) / acceptanc_count;
+                            acceptanc_count++;
+                            logfile << std::setw(10) << "Y";
                         }
-
-                        std::cout << std::endl;
+                        //If new objective value has not been accepted, update log
+                        else {
+                            restore_dataset();
+                            logfile << std::setw(10) << "N";
+                        }
+                        logfile << std::endl;
+						std::remove(results_filename.c_str());//removing previous execution temp result
                     }
+                    start_trial = 0;
                 }
             }
             catch(const char* msg) {
                 std::cout << "\nAn exception occurred.\n" << msg << std::endl;
                 return -1;
             }
+            logfile.close();
             return obj;
         }
 
@@ -353,7 +447,7 @@ namespace thesis {
 
         std::string format_time(long milliseconds) {
             long s = milliseconds / 1000;
-            int ms = milliseconds % 1000;
+            int ms = (int)(milliseconds % 1000);
             long m = s / 60;
             s %= 60;
             long h = m / 60;

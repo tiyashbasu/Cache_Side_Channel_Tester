@@ -232,7 +232,7 @@ static void add_instrumentation(void) {
   u8* colon_pos;
 
 #endif /* __APPLE__ */
-
+  printf("\nlala\n%s\nlala\n", input_file);
   if (input_file) {
 
     inf = fopen(input_file, "r");

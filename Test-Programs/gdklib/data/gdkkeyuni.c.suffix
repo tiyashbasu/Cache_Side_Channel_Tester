@@ -1,0 +1,11 @@
+;
+	unsigned keyval, unicode; 
+
+	//klee_make_symbolic(&keystroke, sizeof(int), "keystroke");	
+
+	keyval = gdk_unicode_to_keyval(keystroke);
+	//unicode = gdk_unicode_to_keyval (keyval);
+
+	return (keystroke == unicode);
+
+}
