@@ -63,8 +63,8 @@ int main(int argc, char *argv[]) {
     signal(SIGTSTP, SIG_IGN);
 
 	if (argc < 3) {
-		std::cout << "Usage: thesisdev <config file> <log file> OR thesisdev <config file> <log file> resume\n"
-            "Examples:\n\t./thesisdev config.txt execution.log\n\t./thesisdev config.txt execution.log resume\n";
+		std::cout << "Usage: thesisdev config_file log_file <resume> <quiet> (parameters in <> are optional)\n"
+            "Examples:\n\t./thesisdev config.txt execution.log quiet\n\t./thesisdev config.txt execution.log resume\n";
 		return 1;
 	}
 
@@ -77,15 +77,26 @@ int main(int argc, char *argv[]) {
     double t_init, t_final, alpha;
     int max_trials;
     long obj;
+    bool resume = false;
+    bool quiet = false;
+    if (argc == 4) {
+        resume = !(std::string("resume").compare(argv[3]));
+        quiet = !(std::string("quiet").compare(argv[3]));
+    }
+    if (argc == 5) {
+        resume = !(std::string("resume").compare(argv[3]));
+        quiet = !(std::string("quiet").compare(argv[4]));
+    }
 
     int status = read_config_file(argv[1], &program_path, &program_name, &no_of_params, &counts, &exec_times, &t_init, &t_final, &alpha, &max_trials);
     if (!status) {
         thesis::optimal_data_finder data_finder(no_of_params, counts, program_path, program_name, exec_times);
-        obj = data_finder.sim_ann(t_init, t_final, alpha, max_trials, argv[2], (argc == 4 && !std::string("resume").compare(argv[3])));
+        obj = data_finder.sim_ann(t_init, t_final, alpha, max_trials, argv[2], resume, quiet);
         if (obj >= 0) {
-            std::cout << "\nDone. Final objective: " << obj << "\n";
             std::ofstream logfile(argv[2], std::ios::app);
             logfile << "Final objective: " << obj;
+            if (!quiet)
+                std::cout << "Final objective: " << obj << "\n";
             logfile.close();
         }
         else

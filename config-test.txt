@@ -1,0 +1,30 @@
+## The following parameters are related to the program under test.
+
+# The location of the executable.
+program_path: ./Test-Programs/aessim
+
+# The name of the executable file.
+program_name: aessim-lm
+
+# The number of parameters the program accepts. This should always be placed above 'counts' parameter.
+no_of_params: 16
+
+# The size of the the list of choices for each parameter.
+counts: 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+
+# Number of times the program should be executed in each round of execution.
+exec_times: 200
+
+## The following parameters are related to the simulated annealing process.
+
+# The initial temperature.
+t_init: 0.2001
+
+# The final temperature.
+t_final: 0.2
+
+# Factor of temperature reduction.
+alpha: 0.85
+
+# Maximum number of trials for each temperature.
+max_trials: 10

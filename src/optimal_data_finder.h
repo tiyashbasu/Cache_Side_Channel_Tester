@@ -2,11 +2,14 @@
 #define OPTIMAL_DATA_FINDER
 
 #include <cmath>
+#include <set>
+#include <mutex>
 #include <iostream>
 #include <fstream>
 #include <random>
 #include <thread>
 #include <cstring>
+#include <algorithm>
 #include "flipper.h"
 //#include <unistd.h> //required for fork()
 //#include <wait.h> //required for waitpid()
@@ -17,14 +20,15 @@ namespace thesis {
 
     class optimal_data_finder {
     private:
-        int **dataset;
-        int **bkp_dataset;
+        std::vector<int> *dataset;
+        std::vector<int> *bkp_dataset;
         int *counts;
         int no_of_params;
         std::string program_path;
         std::string program;
         std::string results_filename;
         unsigned long execution_rounds;
+        std::mutex mtx;
 
         inline void swap(long* a, long* b) {
             long temp;
@@ -58,24 +62,22 @@ namespace thesis {
             quick_sort(arr, 0, size - 1);
         }
 
-        void sort(long* arr, long* sorted_arr, unsigned long size) {
-            for (int i = 0; i < size; i++)
-                sorted_arr[i] = arr[i];
-            quick_sort(sorted_arr, 0, size - 1);
-        }
-
         void backup_dataset() {
             int i, j;
-            for (i = 0; i < no_of_params; i++)
+            for (i = 0; i < no_of_params; i++) {
+                bkp_dataset[i].clear();
                 for (j = 0; j < counts[i]; j++)
-                    bkp_dataset[i][j] = dataset[i][j];
+                    bkp_dataset[i].push_back(dataset[i][j]);
+            }
         }
 
         void restore_dataset() {
             int i, j;
-            for (i = 0; i < no_of_params; i++)
+            for (i = 0; i < no_of_params; i++) {
+                dataset[i].clear();
                 for (j = 0; j < counts[i]; j++)
-                    dataset[i][j] = bkp_dataset[i][j];
+                    dataset[i].push_back(bkp_dataset[i][j]);
+            }
         }
 
         void run_thread(std::string path, std::string param_list) {
@@ -90,8 +92,11 @@ namespace thesis {
             pclose(in);
             //save the results
             std::ofstream results_fp;
-            results_fp.open(results_filename, std::ios::app);
-            results_fp << param_list << " " << output << "\n";
+            std::lock_guard<std::mutex> guard(mtx);
+            results_fp.open(results_filename, std::ios::app | std::ios::out);
+            if (!strcmp(output, ""))
+                std::cout << '*' << std::flush;
+            results_fp << param_list << " " << output << std::flush;
             results_fp.close();
             return;
         }
@@ -111,7 +116,7 @@ namespace thesis {
                 }
 //                run_thread(path, param_list);
                 execution_threads[i] = std::thread(&optimal_data_finder::run_thread, this, path, param_list);
-                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                std::this_thread::sleep_for(std::chrono::milliseconds(50));
             }
             int status;
             for (i = 0; i < execution_rounds; i++) {
@@ -153,7 +158,7 @@ namespace thesis {
                     //save the results
                     std::ofstream results_fp;
                     results_fp.open(results_filename, std::ios::app);
-                    results_fp << param_list << " " << output << "\n";
+                    results_fp << param_list << " " << output << std::flush;
                     results_fp.close();
                     std::exit(3);
                 }
@@ -166,31 +171,132 @@ namespace thesis {
         }
 */
 
-        unsigned long get_objective(std::string results_filename) {
-            std::ifstream out_file;
+        void augment_datasets() {
+            std::ifstream results_file;
             unsigned long unique_count = 1;
-            int i, j;
-            long data[execution_rounds][no_of_params], output[execution_rounds];
-            out_file.open(results_filename, std::ios::in);
+            long i, j;
+            //get number of lines in all-results file
+            results_file.open("data/all-results.log", std::ios::in);
+            long no_of_lines = -1;
+            std::string line;
+            while(!results_file.eof()) {
+                std::getline(results_file, line);
+                no_of_lines++;
+            }
+            results_file.clear();
+            results_file.seekg(std::ios::beg);
+            //get data and output in all-results file
+            std::vector<int> *data = new std::vector<int>[no_of_lines];
+            std::vector<long> output;
+            int val_in;
+            long val_out;
+            for (i = 0; i < no_of_lines; i++) {
+                for (j = 0; j < no_of_params; j++) {
+                    results_file >> val_in;
+                    data[i].push_back(val_in);
+                }
+                results_file >> val_out;
+                output.push_back(val_out);
+            }
+            results_file.close();
+            //set objective value
+            std::set<long> output_set(output.begin(), output.end());
+
+            //augment dataset with inputs of extra outputs
+            bool is_not_in;
+            std::set<int> data_col;
+            for (i = 0; i < no_of_params; i++) {
+                data_col.clear();
+                for (j = 0; j < no_of_lines; j++)
+                    data_col.insert(data[j][i]);
+                for (int val : data_col) {
+                    is_not_in = std::find(dataset[i].begin(), dataset[i].end(), val) == dataset[i].end();
+                    if (is_not_in) {
+                        dataset[i].push_back(val);
+                        counts[i]++;
+                    }
+                }
+            }
+            backup_dataset();
+
+            //augment best-results with extra outputs
+            //get actual outputs in a set
+            results_file.open(results_filename, std::ios::in);
+            std::set<long> actual_output;
             for (i = 0; i < execution_rounds; i++) {
+                for (j = 0; j < no_of_params; j++) {
+                    results_file >> val_in;
+                }
+                results_file >> val_out;
+                actual_output.insert(val_out);
+            }
+            results_file.close();
+            //for extra outputs not in actual outputs, add their inputs to results file
+            std::ofstream out_file(results_filename, std::ios::app);
+            output_set.clear();
+            for (i = 0; i < output.size(); i++) {
+                val_out = output[i];
+                is_not_in = std::find(actual_output.begin(), actual_output.end(), val_out) == actual_output.end() && std::find(output_set.begin(), output_set.end(), val_out) == output_set.end();
+                if (is_not_in) {
+                    for (j = 0; j < no_of_params; j++)
+                        out_file << data[i][j] << " ";
+                    out_file << val_out << std::endl;
+                    output_set.insert(val_out);
+                }
+            }
+            out_file.close();
+            delete [] data;
+            return;
+        }
+
+        unsigned long get_objective(std::string results_filename, long no_of_lines) {
+            std::ifstream out_file;
+            int i, j;
+            long data;
+            out_file.open(results_filename, std::ios::in);
+            if (no_of_lines <= 0) {
+                no_of_lines = -1;
+                std::string line;
+                while(!out_file.eof()) {
+                    std::getline(out_file, line);
+                    no_of_lines++;
+                }
+                out_file.clear();
+                out_file.seekg(std::ios::beg);
+            }
+            //array sort method
+            long output[no_of_lines];
+            unsigned long unique_count = 1;
+            for (i = 0; i < no_of_lines; i++) {
                 for (j = 0; j < no_of_params; j++)
-                    out_file >> data[i][j];
+                    out_file >> data;
                 out_file >> output[i];
             }
-            sort(output, execution_rounds);
-            for (i = 1; i < execution_rounds; i++) {
+            sort(output, no_of_lines);
+            for (i = 1; i < no_of_lines; i++) {
                 if (output[i] != output[i - 1])
                     unique_count++;
             }
             out_file.close();
             return unique_count;
+//            //set insert method
+//            std::set<long> output;
+//            for (i = 0; i < no_of_lines; i++) {
+//                for (j = 0; j < no_of_params; j++)
+//                    out_file >> data;
+//                out_file >> data;
+//                output.insert(data);
+//            }
+//            out_file.close();
+//            return output.size();
         }
 
     protected:
-        virtual void randomize_dataset() {
+        virtual void init_datasets() {
             int i, j, k;
             int temp_rand = 0;
             bool not_unique;
+            int len;
             for (i = 0; i < no_of_params; i++) {
                 for (j = 0; j < counts[i]; j++) {
                     not_unique = true;
@@ -201,10 +307,10 @@ namespace thesis {
                                 break;
                         not_unique = (k != j);
                     }
-                    dataset[i][j] = temp_rand;
+                    dataset[i].push_back(temp_rand);
+                    bkp_dataset[i].push_back(temp_rand);
                 }
             }
-            int a = 0;
         }
 
 /* mutating only one bit at a time
@@ -244,60 +350,65 @@ namespace thesis {
         optimal_data_finder(int no_of_params, int* counts, std::string program_path, std::string program, unsigned long execution_rounds) {
             this->no_of_params = no_of_params;
             this->counts = new int[no_of_params];
-            dataset = new int*[no_of_params];
-            bkp_dataset = new int*[no_of_params];
+            dataset = new std::vector<int>[no_of_params];
+            bkp_dataset = new std::vector<int>[no_of_params];
             for (int i = 0; i < no_of_params; i++) {
                 if (counts[i] > 256)
                     this->counts[i] = 256;
                 else
                     this->counts[i] = counts[i];
-                dataset[i] = new int[counts[i]];
-                bkp_dataset[i] = new int[counts[i]];
             }
             this->program_path = program_path;
             this->program = program;
             this->results_filename = "./data/temp-results.log";
             this->execution_rounds = execution_rounds;
-            randomize_dataset();
-            backup_dataset();
+            init_datasets();
         }
 
         ~optimal_data_finder() {
-            for (int i = 0; i < no_of_params; i++) {
-                delete(dataset[i]);
-            }
-            delete(counts);
+            delete [] dataset;
+            delete [] bkp_dataset;
+            delete [] counts;
         }
 
-        long sim_ann(double t_init, double t_final, double alpha, int max_trials, std::string logfilename, bool resume) {
+        long sim_ann(double t_init, double t_final, double alpha, int max_trials, std::string logfilename, bool resume, bool quiet) {
             std::ofstream logfile;
             bool acceptable;
             long double acceptance_prob;
             int trial_num, start_trial = 0;
             double temp;
-            long obj, new_obj;
+            long new_obj, obj;
             int total_iterations= (int)((std::log(t_final) - std::log(t_init)) / std::log(alpha)) + 1;
-            int iteration = 0, acceptanc_count = 0;
+            int iteration = 0, acceptance_count = 0;
 //            double reduc_fact = (double)thesis::flipper_size / (double)total_iterations; //linear reducer
             double reduc_fact = (double)(std::exp((std::log(8) - std::log(thesis::flipper_size)) / total_iterations)); //exponential reducer
             int usable_flipper_size = thesis::flipper_size;
             auto now = std::chrono::system_clock::now();
             long start_time, elapsed_time;
-            double delta_avg = 0, delta_avg_temp;
+            double delta_avg = 0;
 
             /*Initialization when execution is starting for the first time and not resuming*/
             if (!resume) {
                 logfile.open(logfilename, std::ios::out);
                 std::remove(results_filename.c_str());//removing previous execution temp result
+                std::remove("data/all-results.log");
                 run_program();
-                obj = get_objective(results_filename);
-                save_dataset_to_file("data/best-dataset.csv");
-                save_results_to_file("data/best-results.log");
+                obj = get_objective(results_filename, execution_rounds);
+                write_dataset_to_file("data/best-dataset.csv");
+                write_results_to_file("data/best-results.log");
                 append_results_to_file("data/all-results.log");
+                std::remove(results_filename.c_str());//removing temp result
                 logfile << "Initial objective: " << obj << std::endl;
                 logfile << "------------------------------------------------------------------\n";
                 logfile << "Elapsed Time\tTemperature\tEpoch\tTrial\tObjective\tAcceptance\n";
                 logfile << "------------------------------------------------------------------\n";
+                if (!quiet) {
+                    std::cout << "Initial objective: " << obj << std::endl;
+                    std::cout << "--------------------------------------------------------------------------\n";
+                    std::cout << "Elapsed Time\tTemperature\tEpoch\tTrial\tObjective\tAcceptance\n";
+                    std::cout << "--------------------------------------------------------------------------\n";
+                }
+                now = std::chrono::system_clock::now();
                 start_time = (std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch())).count();
             }
             /*Initialization when execution is resuming from a previous incomplete run*/
@@ -375,7 +486,7 @@ namespace thesis {
                         //mutate, execute and get objective value
                         mutate_dataset(2, usable_flipper_size);
                         run_program();
-                        new_obj = get_objective(results_filename);
+                        new_obj = get_objective(results_filename, execution_rounds);
                         append_results_to_file("data/all-results.log");
 
                         //Update execution log
@@ -386,32 +497,53 @@ namespace thesis {
                         logfile << std::setw(1) << iteration << '/' << total_iterations << '\t';
                         logfile << std::setw(1) << trial_num + 1 << '/' << max_trials << '\t';
                         logfile << std::setw(6) << new_obj << '\t';
+                        if (!quiet) {
+                            std::cout << std::setw(12) << format_time(elapsed_time) << '\t';
+                            std::cout << std::setprecision(8) << std::setw(11) << temp << '\t';
+                            std::cout << std::setw(1) << iteration << '/' << total_iterations << '\t';
+                            std::cout << std::setw(1) << trial_num + 1 << '/' << max_trials << '\t';
+                            std::cout << std::setw(6) << new_obj << '\t';
+                        }
 
                         //Check acceptance
                         acceptable = new_obj > obj;
-                        if (!acceptable && new_obj != obj) {
-                            if (!acceptanc_count)
+                        if (new_obj < obj) {
+                            if (!acceptance_count)
                                 delta_avg = obj - new_obj;
-                            acceptance_prob = std::exp((new_obj - obj) / (temp * delta_avg));
+                            acceptance_prob = std::exp((new_obj - obj)/ (temp * delta_avg));
                             acceptable = acceptance_prob > ((double) rand1000(seed) / 1000.0);
                         }
+//                        else {//new_obj >= obj
+//                            augment_datasets();
+//                            write_dataset_to_file("data/best-dataset.csv");
+//                            write_results_to_file("data/best-results.log");
+//                        }
 
                         //If new objective value has been accepted, update best results and log
                         if (acceptable) {
-                            save_dataset_to_file("data/best-dataset.csv");
-                            save_results_to_file("data/best-results.log");
+                            acceptance_count++;
+                            write_dataset_to_file("data/best-dataset.csv");
+                            write_results_to_file("data/best-results.log");
                             backup_dataset();
                             obj = new_obj;
-                            delta_avg = (delta_avg * (acceptanc_count - 1) + new_obj - obj) / acceptanc_count;
-                            acceptanc_count++;
+                            if (new_obj > obj)
+                                delta_avg = (delta_avg * (acceptance_count - 1) + new_obj - obj) / acceptance_count;
+                            else
+                                delta_avg = (delta_avg * (acceptance_count - 1) + obj - new_obj) / acceptance_count;
                             logfile << std::setw(10) << "Y";
+                            if (!quiet)
+                                std::cout << std::setw(13) << "Y";
                         }
                         //If new objective value has not been accepted, update log
                         else {
                             restore_dataset();
                             logfile << std::setw(10) << "N";
+                            if (!quiet)
+                                std::cout << std::setw(13) << "N";
                         }
                         logfile << std::endl;
+                        if (!quiet)
+                            std::cout << std::endl;
 						std::remove(results_filename.c_str());//removing previous execution temp result
                     }
                     start_trial = 0;
@@ -425,7 +557,7 @@ namespace thesis {
             return obj;
         }
 
-        void save_dataset_to_file(std::string filename) {
+        void write_dataset_to_file(std::string filename) {
             int i, j;
             std::ofstream file;
             file.open(filename, std::ios::out);
@@ -439,7 +571,7 @@ namespace thesis {
             file.close();
         }
 
-        void save_results_to_file(std::string filename) {
+        void write_results_to_file(std::string filename) {
             std::ifstream src(results_filename, std::ios::in);
             std::ofstream dest(filename, std::ios::out);
             dest << src.rdbuf();

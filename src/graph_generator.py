@@ -26,14 +26,13 @@ executions = []
 def update_total_vals():
     i = 0
     while (i < execs_per_trial):
+        i += 1
         line_split = allresults_file.readline().split(" ")
         if len(line_split) < 2:
             continue
-        allresults.add(int(line_split[len(line_split) - 1]))
-        i += 1
+        val = int((line_split[len(line_split) - 1]).strip())
+        allresults.add(val)
     total_vals.append(len(allresults))
-
-## Read log results
 
 log_file = open(log_filename, "r")
 allresults_file = open(allresults_filename, "r")
@@ -88,6 +87,7 @@ plt1.grid(True)
 labelstr = "Unique misses in last " + str(execs_per_trial) + " executions"
 plt1.plot(executions, acceptance, "b-", label=labelstr)
 plt1.plot(executions, total_vals, "r-", label="Unique misses in all executions")
+plt1.plot(executions, objective, "b:", alpha=0.6)
 plt.legend(loc='lower right', fontsize=10)
 plt.margins(0, 0.1)
 plt.setp(plt.xticks()[1], rotation=45, fontsize=10)
@@ -96,7 +96,7 @@ plt.setp(plt.yticks()[1], fontsize=10)
 plt2 = fig.add_subplot(2, 1, 2)
 plt2.set_title("Elapsed Time")
 plt2.set_xlabel("Total number of executions")
-plt2.set_ylabel("Time (in miutes)")
+plt2.set_ylabel("Time (in minutes)")
 plt2.set_xticks(ticks)
 plt2.grid(True)
 plt2.plot(executions, time_min)

@@ -1,0 +1,55 @@
+ap_gps_init/ap_gps_init.lb
+Proc: 0
+  0 004001f0 (144) ( 27) [R-1]            
+
+Proc: 1
+  0 00400280 ( 40) (  8) [R-1]   1      P0
+  1 004002a8 ( 80) ( 15) [R-1]            
+Calls procedures: 0
+
+Proc: 2
+  0 004002f8 ( 40) (  8) [R-1]   1        
+  1 00400320 (  8) (  3) [R-1]   3        
+  2 00400328 (  8) (102) [R-1]            
+  3 00400330 (  8) (  2) [R-1]   4      P1
+  4 00400338 (  8) (  3) [R-1]   6        
+  5 00400340 (  8) (102) [R-1]            
+  6 00400348 ( 16) (  3) [R-1]   7        
+  7 00400358 ( 40) (  8) [R-1]            
+Calls procedures: 1
+
+
+3 procedures (main: 2), 11 basic blocks in total (max 8 in proc 2)
+Reverse-topo ordered call graph: 0 1 2
+
+--------------------------------
+
+proc 0:
+
+
+proc 1:
+
+
+proc 2:
+
+
+--------------------------------
+Proc 0: 0
+Proc 1: 1 0
+Proc 2: 7 6 4 3 1 0
+
+--------------------------------
+
+WCET estimation...
+bb 1-0 procedure call 0 wcet: 27
+bb 2-3 procedure call 1 wcet: 50
+
+Time taken (analysis): 0.127875 ms
+
+WCET: 77
+
+Proc 0: 27 (0)
+Proc 1: 50 (0-1)
+Proc 2: 77 (0-1-3-4-6-7)
+
+--------------------------------

@@ -14,12 +14,12 @@ CRYPTO_THREAD_unlock, CRYPTO_THREAD_lock_free, CRYPTO_atomic_add - OpenSSL threa
  int CRYPTO_THREAD_run_once(CRYPTO_ONCE *once, void (*init)(void));
 
  CRYPTO_RWLOCK *CRYPTO_THREAD_lock_new(void);
- int CRYPTO_THREAD_read_lock(CRYPTO_RWLOCK *lock);
- int CRYPTO_THREAD_write_lock(CRYPTO_RWLOCK *lock);
- int CRYPTO_THREAD_unlock(CRYPTO_RWLOCK *lock);
- void CRYPTO_THREAD_lock_free(CRYPTO_RWLOCK *lock);
+ int CRYPTO_THREAD_read_lock(CRYPTO_RWLOCK *results_file_lock);
+ int CRYPTO_THREAD_write_lock(CRYPTO_RWLOCK *results_file_lock);
+ int CRYPTO_THREAD_unlock(CRYPTO_RWLOCK *results_file_lock);
+ void CRYPTO_THREAD_lock_free(CRYPTO_RWLOCK *results_file_lock);
 
- int CRYPTO_atomic_add(int *val, int amount, int *ret, CRYPTO_RWLOCK *lock);
+ int CRYPTO_atomic_add(int *val, int amount, int *ret, CRYPTO_RWLOCK *results_file_lock);
 
 =head1 DESCRIPTION
 
@@ -46,23 +46,23 @@ which can then be used with the locking functions below.
 
 =item *
 CRYPTO_THREAD_lock_new() allocates, initializes and returns a new read/write
-lock.
+results_file_lock.
 
 =item *
-CRYPTO_THREAD_read_lock() locks the provided B<lock> for reading.
+CRYPTO_THREAD_read_lock() locks the provided B<results_file_lock> for reading.
 
 =item *
-CRYPTO_THREAD_write_lock() locks the provided B<lock> for writing.
+CRYPTO_THREAD_write_lock() locks the provided B<results_file_lock> for writing.
 
 =item *
-CRYPTO_THREAD_unlock() unlocks the previously locked B<lock>.
+CRYPTO_THREAD_unlock() unlocks the previously locked B<results_file_lock>.
 
 =item *
-CRYPTO_THREAD_lock_frees() frees the provided B<lock>.
+CRYPTO_THREAD_lock_frees() frees the provided B<results_file_lock>.
 
 =item *
 CRYPTO_atomic_add() atomically adds B<amount> to B<val> and returns the
-result of the operation in B<ret>. B<lock> will be locked, unless atomic
+result of the operation in B<ret>. B<results_file_lock> will be locked, unless atomic
 operations are supported on the specific platform. Because of this, if a
 variable is modified by CRYPTO_atomic_add() then CRYPTO_atomic_add() must
 be the only way that the variable is modified.
@@ -73,7 +73,7 @@ be the only way that the variable is modified.
 
 CRYPTO_THREAD_run_once() returns 1 on success, or 0 on error.
 
-CRYPTO_THREAD_lock_new() returns the allocated lock, or NULL on error.
+CRYPTO_THREAD_lock_new() returns the allocated results_file_lock, or NULL on error.
 
 CRYPTO_THREAD_lock_frees() returns no value.
 
@@ -81,28 +81,28 @@ The other functions return 1 on success or 0 on error.
 
 =head1 EXAMPLE
 
-This example safely initializes and uses a lock.
+This example safely initializes and uses a results_file_lock.
 
   #include <openssl/crypto.h>
 
   static CRYPTO_ONCE once = CRYPTO_ONCE_STATIC_INIT;
-  static CRYPTO_RWLOCK *lock;
+  static CRYPTO_RWLOCK *results_file_lock;
 
   static void myinit(void)
   {
-      lock = CRYPTO_THREAD_lock_new();
+      results_file_lock = CRYPTO_THREAD_lock_new();
   }
 
   static int mylock(void)
   {
-      if (!CRYPTO_THREAD_run_once(&once, void init) || lock == NULL)
+      if (!CRYPTO_THREAD_run_once(&once, void init) || results_file_lock == NULL)
           return 0;
-      return CRYPTO_THREAD_write_lock(lock);
+      return CRYPTO_THREAD_write_lock(results_file_lock);
   }
 
   static int myunlock(void)
   {
-      return CRYPTO_THREAD_unlock(lock);
+      return CRYPTO_THREAD_unlock(results_file_lock);
   }
 
   int serialized(void)
@@ -110,7 +110,7 @@ This example safely initializes and uses a lock.
       int ret = 0;
 
       if (mylock()) {
-          /* Your code here, do not return without releasing the lock! */
+          /* Your code here, do not return without releasing the results_file_lock! */
           ret = ... ;
       }
       myunlock();
@@ -120,7 +120,7 @@ This example safely initializes and uses a lock.
 Finalization of locks is an advanced topic, not covered in this example.
 This can only be done at process exit or when a dynamically loaded library is
 no longer in use and is unloaded.
-The simplest solution is to just "leak" the lock in applications and not
+The simplest solution is to just "leak" the results_file_lock in applications and not
 repeatedly load/unload shared libraries that allocate locks.
 
 =head1 NOTES

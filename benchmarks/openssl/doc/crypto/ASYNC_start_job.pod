@@ -131,11 +131,11 @@ ASYNC_block_pause() twice then you must call ASYNC_unblock_pause() twice in
 order to reenable pausing. If these functions are called while there is no
 currently active job then they have no effect. This functionality can be useful
 to avoid deadlock scenarios. For example during the execution of an ASYNC_JOB an
-application acquires a lock. It then calls some cryptographic function which
+application acquires a results_file_lock. It then calls some cryptographic function which
 invokes ASYNC_pause_job(). This returns control back to the code that created
-the ASYNC_JOB. If that code then attempts to acquire the same lock before
+the ASYNC_JOB. If that code then attempts to acquire the same results_file_lock before
 resuming the original job then a deadlock can occur. By calling
-ASYNC_block_pause() immediately after acquiring the lock and
+ASYNC_block_pause() immediately after acquiring the results_file_lock and
 ASYNC_unblock_pause() immediately before releasing it then this situation cannot
 occur.
 

@@ -1,0 +1,1284 @@
+In file included from sim_wrapper.cpp:9:0:
+aessim.h:1198:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {\n";
+ ^
+aessim.h:1203:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}\n";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:87:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:88:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:91:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:92:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:95:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:96:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:99:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:100:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:9:0:
+aessim.h:1198:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {\n";
+ ^
+aessim.h:1203:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}\n";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:109:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:110:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:113:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:114:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:117:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:118:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:121:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:122:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:9:0:
+aessim.h:1198:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {\n";
+ ^
+aessim.h:1203:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}\n";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:126:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:127:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:128:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:9:0:
+aessim.h:1198:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {\n";
+ ^
+aessim.h:1203:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}\n";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:132:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:133:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:134:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:135:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:9:0:
+aessim.h:1198:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {\n";
+ ^
+aessim.h:1203:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}\n";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:139:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:140:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:141:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:142:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:143:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:11:0:
+gdklibname.h:1345:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned keyval = ";
+ ^
+gdklibname.h:1355:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:87:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:88:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:91:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:92:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:95:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:96:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:99:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:100:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:11:0:
+gdklibname.h:1345:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned keyval = ";
+ ^
+gdklibname.h:1355:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:109:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:110:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:113:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:114:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:117:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:118:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:121:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:122:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:11:0:
+gdklibname.h:1345:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned keyval = ";
+ ^
+gdklibname.h:1355:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:126:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:127:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:128:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:11:0:
+gdklibname.h:1345:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned keyval = ";
+ ^
+gdklibname.h:1355:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:132:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:133:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:134:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:135:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:11:0:
+gdklibname.h:1345:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned keyval = ";
+ ^
+gdklibname.h:1355:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:139:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:140:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:141:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:142:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:143:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:13:0:
+gdklibuni.h:1678:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " int keystroke = ";
+ ^
+gdklibuni.h:1689:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:87:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:88:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:91:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:92:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:95:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:96:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:99:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:100:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:13:0:
+gdklibuni.h:1678:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " int keystroke = ";
+ ^
+gdklibuni.h:1689:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:109:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:110:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:113:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:114:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:117:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:118:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:121:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:122:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:13:0:
+gdklibuni.h:1678:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " int keystroke = ";
+ ^
+gdklibuni.h:1689:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:126:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:127:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:128:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:13:0:
+gdklibuni.h:1678:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " int keystroke = ";
+ ^
+gdklibuni.h:1689:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:132:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:133:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:134:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:135:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:13:0:
+gdklibuni.h:1678:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " int keystroke = ";
+ ^
+gdklibuni.h:1689:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:139:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:140:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:141:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:142:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:143:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:15:0:
+openssl_aessim.h:1211:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {";
+ ^
+openssl_aessim.h:1424:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "#endif";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:87:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:88:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:91:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:92:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:95:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:96:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:99:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:100:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:15:0:
+openssl_aessim.h:1211:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {";
+ ^
+openssl_aessim.h:1424:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "#endif";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:109:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:110:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:113:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:114:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:117:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:118:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:121:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:122:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:15:0:
+openssl_aessim.h:1211:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {";
+ ^
+openssl_aessim.h:1424:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "#endif";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:126:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:127:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:128:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:15:0:
+openssl_aessim.h:1211:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {";
+ ^
+openssl_aessim.h:1424:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "#endif";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:132:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:133:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:134:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:135:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:15:0:
+openssl_aessim.h:1211:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ " unsigned char key[16] = {";
+ ^
+openssl_aessim.h:1424:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "#endif";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:139:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:140:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:141:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:142:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:143:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:17:0:
+openssl_dessim.h:928:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char key_data[8] = {";
+ ^
+openssl_dessim.h:936:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:87:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:88:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:91:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:92:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:95:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:96:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:99:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:100:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:17:0:
+openssl_dessim.h:928:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char key_data[8] = {";
+ ^
+openssl_dessim.h:936:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:109:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:110:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:113:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:114:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:117:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:118:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:121:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:122:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:17:0:
+openssl_dessim.h:928:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char key_data[8] = {";
+ ^
+openssl_dessim.h:936:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:126:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:127:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:128:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:17:0:
+openssl_dessim.h:928:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char key_data[8] = {";
+ ^
+openssl_dessim.h:936:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:132:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:133:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:134:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:135:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:17:0:
+openssl_dessim.h:928:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char key_data[8] = {";
+ ^
+openssl_dessim.h:936:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:139:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:140:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:141:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:142:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:143:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:19:0:
+openssl_rc4sim.h:153:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char keys[10] = {";
+ ^
+openssl_rc4sim.h:163:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:87:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:88:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:91:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:92:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:95:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:96:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:99:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:100:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:19:0:
+openssl_rc4sim.h:153:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char keys[10] = {";
+ ^
+openssl_rc4sim.h:163:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:109:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:110:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:113:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:114:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:117:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:118:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:121:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:122:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:19:0:
+openssl_rc4sim.h:153:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char keys[10] = {";
+ ^
+openssl_rc4sim.h:163:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:126:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:127:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:128:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:19:0:
+openssl_rc4sim.h:153:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char keys[10] = {";
+ ^
+openssl_rc4sim.h:163:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:132:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:133:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:134:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:135:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+In file included from sim_wrapper.cpp:19:0:
+openssl_rc4sim.h:153:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "  unsigned char keys[10] = {";
+ ^
+openssl_rc4sim.h:163:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "}";
+ ^
+sim_wrapper.cpp: In function ‘int main(int, char**)’:
+sim_wrapper.cpp:74:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:76:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:78:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+sim_wrapper.cpp:83:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:84:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:139:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:140:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:141:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:142:32: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(pre, sizeof(pre), fp);
+                                ^
+sim_wrapper.cpp:143:29: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     getline(&line, &len, fp);
+                             ^
+sim_wrapper.cpp:149:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^

@@ -1,0 +1,7 @@
+main 100003b0 gps_east       Type: float 4
+main 100003b8 gps_falt       Type: float 4
+main 100003c0 gps_north       Type: float 4
+main 100003cc gps_fcourse       Type: float 4
+main 100003d0 gps_fspeed       Type: float 4
+main 100003d8 gps_ftow       Type: float 4
+main 100003e0 gps_fclimb       Type: float 4

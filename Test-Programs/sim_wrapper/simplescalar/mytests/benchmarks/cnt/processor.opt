@@ -1,0 +1,1 @@
+ -cache:il1 none -bpred perfect -decode:width 1 -issue:width 1 -commit:width 1 -fetch:ifqsize 2 -ruu:size 2

@@ -1,0 +1,279 @@
+
+ap_gps_nav1:     file format ss-coff-little
+
+Disassembly of section .text:
+00400140 <__start> lw $16,0($29)
+00400148 <__start+0x8> lui $28,4097
+00400150 <__start+0x10> addiu $28,$28,-31984
+00400158 <__start+0x18> addiu $17,$29,4
+00400160 <__start+0x20> addiu $3,$17,4
+00400168 <__start+0x28> sll $2,$16,0x2
+00400170 <__start+0x30> addu $3,$3,$2
+00400178 <__start+0x38> addu $18,$0,$3
+00400180 <__start+0x40> sw $18,-32620($28)
+00400188 <__start+0x48> addiu $29,$29,-24
+00400190 <__start+0x50> addu $4,$0,$16
+00400198 <__start+0x58> addu $5,$0,$17
+004001a0 <__start+0x60> addu $6,$0,$18
+004001a8 <__start+0x68> jal 00400600 <__libc_init>
+004001b0 <__start+0x70> sw $0,-32624($28)
+004001b8 <__start+0x78> addu $4,$0,$16
+004001c0 <__start+0x80> addu $5,$0,$17
+004001c8 <__start+0x88> addu $6,$0,$18
+004001d0 <__start+0x90> jal 004001f0 <main>
+004001d8 <__start+0x98> addu $4,$0,$2
+004001e0 <__start+0xa0> jal 00400630 <exit>
+004001e8 <__start+0xa8> nop 
+main():
+ap_gps_nav1.c:76
+
+/** autopilot/gps_ubx.c */
+// void parse_ubx_static( uint8_t c )
+int main()
+{
+004001f0 <main> addiu $29,$29,-16
+004001f8 <main+0x8> sw $30,8($29)
+00400200 <main+0x10> addu $30,$0,$29
+ap_gps_nav1.c:79
+  uint8_t c;
+
+  if (ubx_status < GOT_PAYLOAD) {
+00400208 <main+0x18> lbu $2,-32656($28)
+00400210 <main+0x20> sltiu $3,$2,7
+00400218 <main+0x28> beq $3,$0,00400260 <main+0x70>
+ap_gps_nav1.c:80
+    ck_a += c;
+00400220 <main+0x30> lbu $2,-32651($28)
+00400228 <main+0x38> lbu $3,0($30)
+00400230 <main+0x40> addu $2,$2,$3
+00400238 <main+0x48> sb $2,-32651($28)
+ap_gps_nav1.c:81
+    ck_b += ck_a;
+00400240 <main+0x50> lbu $2,-32650($28)
+00400248 <main+0x58> lbu $3,-32651($28)
+00400250 <main+0x60> addu $2,$2,$3
+00400258 <main+0x68> sb $2,-32650($28)
+ap_gps_nav1.c:83
+  }
+  switch (ubx_status) {
+00400260 <main+0x70> lbu $2,-32656($28)
+00400268 <main+0x78> sltiu $3,$2,9
+00400270 <main+0x80> beq $3,$0,004005c0 <main+0x3d0>
+00400278 <main+0x88> sll $3,$2,0x2
+00400280 <main+0x90> lui $4,4096
+00400288 <main+0x98> addiu $4,$4,0
+00400290 <main+0xa0> addu $2,$3,$4
+00400298 <main+0xa8> lw $3,0($2)
+004002a0 <main+0xb0> jr $3
+ap_gps_nav1.c:85
+  case UNINIT:
+    if (c == UBX_SYNC1)
+004002a8 <main+0xb8> lbu $2,0($30)
+004002b0 <main+0xc0> addiu $3,$0,181
+004002b8 <main+0xc8> bne $2,$3,004002e0 <main+0xf0>
+ap_gps_nav1.c:86
+      ubx_status++;
+004002c0 <main+0xd0> lbu $2,-32656($28)
+004002c8 <main+0xd8> addiu $3,$2,1
+004002d0 <main+0xe0> addu $2,$0,$3
+004002d8 <main+0xe8> sb $2,-32656($28)
+ap_gps_nav1.c:87
+    break;
+004002e0 <main+0xf0> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:89
+  case GOT_SYNC1:
+    if (c != UBX_SYNC2)
+004002e8 <main+0xf8> lbu $2,0($30)
+004002f0 <main+0x100> addiu $3,$0,98
+004002f8 <main+0x108> beq $2,$3,00400308 <main+0x118>
+ap_gps_nav1.c:90
+      goto error;
+00400300 <main+0x110> j 004005c8 <main+0x3d8>
+ap_gps_nav1.c:91
+    ck_a = 0;
+00400308 <main+0x118> sb $0,-32651($28)
+ap_gps_nav1.c:92
+    ck_b = 0;
+00400310 <main+0x120> sb $0,-32650($28)
+ap_gps_nav1.c:93
+    ubx_status++;
+00400318 <main+0x128> lbu $2,-32656($28)
+00400320 <main+0x130> addiu $3,$2,1
+00400328 <main+0x138> addu $2,$0,$3
+00400330 <main+0x140> sb $2,-32656($28)
+ap_gps_nav1.c:94
+    break;
+00400338 <main+0x148> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:96
+  case GOT_SYNC2:
+    if (gps_msg_received) {
+00400340 <main+0x150> lbu $3,-32596($28)
+00400348 <main+0x158> andi $2,$3,255
+00400350 <main+0x160> beq $2,$0,00400380 <main+0x190>
+ap_gps_nav1.c:98
+      /* Previous message has not yet been parsed: discard this one */
+      gps_nb_ovrn++;
+00400358 <main+0x168> lbu $2,-32572($28)
+00400360 <main+0x170> addiu $3,$2,1
+00400368 <main+0x178> addu $2,$0,$3
+00400370 <main+0x180> sb $2,-32572($28)
+ap_gps_nav1.c:99
+      goto error;
+00400378 <main+0x188> j 004005c8 <main+0x3d8>
+ap_gps_nav1.c:101
+    }
+    ubx_class = c;
+00400380 <main+0x190> lbu $2,0($30)
+00400388 <main+0x198> sb $2,-32648($28)
+ap_gps_nav1.c:102
+    ubx_status++;
+00400390 <main+0x1a0> lbu $2,-32656($28)
+00400398 <main+0x1a8> addiu $3,$2,1
+004003a0 <main+0x1b0> addu $2,$0,$3
+004003a8 <main+0x1b8> sb $2,-32656($28)
+ap_gps_nav1.c:103
+    break;
+004003b0 <main+0x1c0> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:105
+  case GOT_CLASS:
+    ubx_id = c;
+004003b8 <main+0x1c8> lbu $2,0($30)
+004003c0 <main+0x1d0> sb $2,-32649($28)
+ap_gps_nav1.c:106
+    ubx_status++;
+004003c8 <main+0x1d8> lbu $2,-32656($28)
+004003d0 <main+0x1e0> addiu $3,$2,1
+004003d8 <main+0x1e8> addu $2,$0,$3
+004003e0 <main+0x1f0> sb $2,-32656($28)
+ap_gps_nav1.c:107
+    break;    
+004003e8 <main+0x1f8> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:109
+  case GOT_ID:
+    ubx_len = c;
+004003f0 <main+0x200> lbu $2,0($30)
+004003f8 <main+0x208> sh $2,-32654($28)
+ap_gps_nav1.c:110
+    ubx_status++;
+00400400 <main+0x210> lbu $2,-32656($28)
+00400408 <main+0x218> addiu $3,$2,1
+00400410 <main+0x220> addu $2,$0,$3
+00400418 <main+0x228> sb $2,-32656($28)
+ap_gps_nav1.c:111
+    break;
+00400420 <main+0x230> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:113
+  case GOT_LEN1:
+    ubx_len |= (c<<8);
+00400428 <main+0x238> lbu $2,0($30)
+00400430 <main+0x240> sll $3,$2,0x8
+00400438 <main+0x248> lhu $2,-32654($28)
+00400440 <main+0x250> or $2,$2,$3
+00400448 <main+0x258> sh $2,-32654($28)
+ap_gps_nav1.c:114
+    if (ubx_len > UBX_MAX_PAYLOAD)
+00400450 <main+0x260> lhu $2,-32654($28)
+00400458 <main+0x268> sltiu $3,$2,256
+00400460 <main+0x270> bne $3,$0,00400470 <main+0x280>
+ap_gps_nav1.c:115
+      goto error;
+00400468 <main+0x278> j 004005c8 <main+0x3d8>
+ap_gps_nav1.c:116
+    ubx_msg_idx = 0;
+00400470 <main+0x280> sb $0,-32652($28)
+ap_gps_nav1.c:117
+    ubx_status++;
+00400478 <main+0x288> lbu $2,-32656($28)
+00400480 <main+0x290> addiu $3,$2,1
+00400488 <main+0x298> addu $2,$0,$3
+00400490 <main+0x2a0> sb $2,-32656($28)
+ap_gps_nav1.c:118
+    break;
+00400498 <main+0x2a8> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:120
+  case GOT_LEN2:
+    ubx_msg_buf[ubx_msg_idx] = c;
+004004a0 <main+0x2b0> lbu $2,-32652($28)
+004004a8 <main+0x2b8> lbu $3,0($30)
+004004b0 <main+0x2c0> lui $1,4096
+004004b8 <main+0x2c8> addu $1,$1,$2
+004004c0 <main+0x2d0> sb $3,1072($1)
+ap_gps_nav1.c:121
+    ubx_msg_idx++;
+004004c8 <main+0x2d8> lbu $2,-32652($28)
+004004d0 <main+0x2e0> addiu $3,$2,1
+004004d8 <main+0x2e8> addu $2,$0,$3
+004004e0 <main+0x2f0> sb $2,-32652($28)
+ap_gps_nav1.c:122
+    if (ubx_msg_idx >= ubx_len) {
+004004e8 <main+0x2f8> lbu $2,-32652($28)
+004004f0 <main+0x300> andi $3,$2,65535
+004004f8 <main+0x308> lhu $2,-32654($28)
+00400500 <main+0x310> sltu $3,$3,$2
+00400508 <main+0x318> bne $3,$0,00400530 <main+0x340>
+ap_gps_nav1.c:123
+      ubx_status++;
+00400510 <main+0x320> lbu $2,-32656($28)
+00400518 <main+0x328> addiu $3,$2,1
+00400520 <main+0x330> addu $2,$0,$3
+00400528 <main+0x338> sb $2,-32656($28)
+ap_gps_nav1.c:125
+    }
+    break;
+00400530 <main+0x340> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:127
+  case GOT_PAYLOAD:
+    if (c != ck_a)
+00400538 <main+0x348> lbu $2,0($30)
+00400540 <main+0x350> lbu $3,-32651($28)
+00400548 <main+0x358> beq $2,$3,00400558 <main+0x368>
+ap_gps_nav1.c:128
+      goto error;
+00400550 <main+0x360> j 004005c8 <main+0x3d8>
+ap_gps_nav1.c:129
+    ubx_status++;
+00400558 <main+0x368> lbu $2,-32656($28)
+00400560 <main+0x370> addiu $3,$2,1
+00400568 <main+0x378> addu $2,$0,$3
+00400570 <main+0x380> sb $2,-32656($28)
+ap_gps_nav1.c:130
+    break;
+00400578 <main+0x388> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:132
+  case GOT_CHECKSUM1:
+    if (c != ck_b)
+00400580 <main+0x390> lbu $2,0($30)
+00400588 <main+0x398> lbu $3,-32650($28)
+00400590 <main+0x3a0> beq $2,$3,004005a0 <main+0x3b0>
+ap_gps_nav1.c:133
+      goto error;
+00400598 <main+0x3a8> j 004005c8 <main+0x3d8>
+ap_gps_nav1.c:134
+    gps_msg_received = TRUE;
+004005a0 <main+0x3b0> addiu $2,$0,1
+004005a8 <main+0x3b8> sb $2,-32596($28)
+ap_gps_nav1.c:135
+    goto restart;
+004005b0 <main+0x3c0> j 004005d0 <main+0x3e0>
+ap_gps_nav1.c:136
+    break;
+004005b8 <main+0x3c8> j 004005c0 <main+0x3d0>
+ap_gps_nav1.c:138
+  }
+  return;
+004005c0 <main+0x3d0> j 004005e0 <main+0x3f0>
+004005c8 <main+0x3d8> nop 
+ap_gps_nav1.c:141
+ error:  
+ restart:
+  ubx_status = UNINIT;
+004005d0 <main+0x3e0> sb $0,-32656($28)
+ap_gps_nav1.c:142
+  return;
+004005d8 <main+0x3e8> j 004005e0 <main+0x3f0>
+ap_gps_nav1.c:143
+}
+004005e0 <main+0x3f0> addu $29,$0,$30
+004005e8 <main+0x3f8> lw $30,8($29)
+004005f0 <main+0x400> addiu $29,$29,16
+004005f8 <main+0x408> jr $31

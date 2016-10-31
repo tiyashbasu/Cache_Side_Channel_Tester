@@ -41,7 +41,7 @@ print<<___;
 OPENSSL_atomic_add:
 	movl	($arg1),%eax
 .Lspin:	leaq	($arg2,%rax),%r8
-	.byte	0xf0		# lock
+	.byte	0xf0		# results_file_lock
 	cmpxchgl	%r8d,($arg1)
 	jne	.Lspin
 	movl	%r8d,%eax
@@ -323,7 +323,7 @@ OPENSSL_instrument_bus:
 	mov	%eax,$lasttick	# lasttick = tick
 	mov	\$0,$lastdiff	# lastdiff = 0
 	clflush	($out)
-	.byte	0xf0		# lock
+	.byte	0xf0		# results_file_lock
 	add	$lastdiff,($out)
 	jmp	.Loop
 .align	16
@@ -333,7 +333,7 @@ OPENSSL_instrument_bus:
 	mov	%edx,$lasttick
 	mov	%eax,$lastdiff
 	clflush	($out)
-	.byte	0xf0		# lock
+	.byte	0xf0		# results_file_lock
 	add	%eax,($out)
 	lea	4($out),$out
 	sub	\$1,$cnt
@@ -357,7 +357,7 @@ OPENSSL_instrument_bus2:
 	mov	\$0,$lastdiff	# lastdiff = 0
 
 	clflush	($out)
-	.byte	0xf0		# lock
+	.byte	0xf0		# results_file_lock
 	add	$lastdiff,($out)
 
 	rdtsc			# collect 1st diff
@@ -367,7 +367,7 @@ OPENSSL_instrument_bus2:
 	mov	%eax,$lastdiff	# lastdiff = diff
 .Loop2:
 	clflush	($out)
-	.byte	0xf0		# lock
+	.byte	0xf0		# results_file_lock
 	add	%eax,($out)	# accumulate diff
 
 	sub	\$1,$max

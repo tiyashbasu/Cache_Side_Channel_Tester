@@ -87,6 +87,10 @@ void run_program() { //parallel execution using threads
 }
 
 int main(int argc, char *argv[]) {
+	if (argc < 4) {
+		std::cout << "Usage: csv-exec <executable path> <executable name> <input csv file>" << std::endl;
+		return 1;
+	}
     path = "cd ";
     path += argv[1];
     path += " && ./";

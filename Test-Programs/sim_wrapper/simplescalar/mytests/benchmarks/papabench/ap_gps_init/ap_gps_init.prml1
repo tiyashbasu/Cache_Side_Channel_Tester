@@ -1,0 +1,4 @@
+ap_gps_init [     413,    17518)
+[ap_gps_init] wcrt = 77
+[ap_gps_init] earliestReq = 413
+[ap_gps_init] earliestFin = 490

@@ -219,7 +219,7 @@ $code.=<<___;
 	li	$diff,0
 
 	dcbf	0,$out			# flush cache line
-	lwarx	$tick,0,$out		# load and lock
+	lwarx	$tick,0,$out		# load and results_file_lock
 	add	$tick,$tick,$diff
 	stwcx.	$tick,0,$out
 	stwx	$tick,0,$out
@@ -228,7 +228,7 @@ Loop:	mftb	$tick
 	sub	$diff,$tick,$lasttick
 	mr	$lasttick,$tick
 	dcbf	0,$out			# flush cache line
-	lwarx	$tick,0,$out		# load and lock
+	lwarx	$tick,0,$out		# load and results_file_lock
 	add	$tick,$tick,$diff
 	stwcx.	$tick,0,$out
 	stwx	$tick,0,$out
@@ -252,7 +252,7 @@ Loop:	mftb	$tick
 	li	$diff,0
 
 	dcbf	0,$out			# flush cache line
-	lwarx	$tick,0,$out		# load and lock
+	lwarx	$tick,0,$out		# load and results_file_lock
 	add	$tick,$tick,$diff
 	stwcx.	$tick,0,$out
 	stwx	$tick,0,$out
@@ -263,7 +263,7 @@ Loop:	mftb	$tick
 	mr	$lastdiff,$diff
 Loop2:
 	dcbf	0,$out			# flush cache line
-	lwarx	$tick,0,$out		# load and lock
+	lwarx	$tick,0,$out		# load and results_file_lock
 	add	$tick,$tick,$diff
 	stwcx.	$tick,0,$out
 	stwx	$tick,0,$out

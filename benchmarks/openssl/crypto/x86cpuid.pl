@@ -285,7 +285,7 @@ for (@ARGV) { $sse2=1 if (/-DOPENSSL_IA32_SSE2/); }
 &set_label("spin");
 	&lea	("ebx",&DWP(0,"eax","ecx"));
 	&nop	();
-	&data_word(0x1ab10ff0);	# lock;	cmpxchg	%ebx,(%edx)	# %eax is envolved and is always reloaded
+	&data_word(0x1ab10ff0);	# results_file_lock;	cmpxchg	%ebx,(%edx)	# %eax is envolved and is always reloaded
 	&jne	(&label("spin"));
 	&mov	("eax","ebx");	# OpenSSL expects the new value
 	&pop	("ebx");
@@ -414,7 +414,7 @@ my $max = "ebp";
 	&mov	($lasttick,"eax");	# lasttick = tick
 	&mov	($lastdiff,0);		# lastdiff = 0
 	&clflush(&DWP(0,$out));
-	&data_byte(0xf0);		# lock
+	&data_byte(0xf0);		# results_file_lock
 	&add	(&DWP(0,$out),$lastdiff);
 	&jmp	(&label("loop"));
 
@@ -425,7 +425,7 @@ my $max = "ebp";
 	&mov	($lasttick,"edx");	# lasttick = tick
 	&mov	($lastdiff,"eax");	# lastdiff = diff
 	&clflush(&DWP(0,$out));
-	&data_byte(0xf0);		# lock
+	&data_byte(0xf0);		# results_file_lock
 	&add	(&DWP(0,$out),"eax");	# accumulate diff
 	&lea	($out,&DWP(4,$out));	# ++$out
 	&sub	($cnt,1);		# --$cnt
@@ -454,7 +454,7 @@ my $max = "ebp";
 	&mov	($lastdiff,0);		# lastdiff = 0
 
 	&clflush(&DWP(0,$out));
-	&data_byte(0xf0);		# lock
+	&data_byte(0xf0);		# results_file_lock
 	&add	(&DWP(0,$out),$lastdiff);
 
 	&rdtsc	();			# collect 1st diff
@@ -466,7 +466,7 @@ my $max = "ebp";
 
 &set_label("loop2",16);
 	&clflush(&DWP(0,$out));
-	&data_byte(0xf0);		# lock
+	&data_byte(0xf0);		# results_file_lock
 	&add	(&DWP(0,$out),"eax");	# accumulate diff
 
 	&sub	($max,1);
