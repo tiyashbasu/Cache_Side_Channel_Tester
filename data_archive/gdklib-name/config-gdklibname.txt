@@ -4,27 +4,28 @@
 program_path: ./Test-Programs/sim_wrapper
 
 # The name of the executable file.
-program_name: openssl-aes-lm
+program_name: gdklibname-lm
 
 # The number of parameters the program accepts. This should always be placed above 'counts' parameter.
-no_of_params: 16
+no_of_params: 1
 
 # The size of the the list of choices for each parameter.
-counts: 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+counts: 50
 
 # Number of times the program should be executed in each round of execution.
-exec_times: 1000
+exec_times: 50
+
 
 ## The following parameters are related to the simulated annealing process.
 
 # The initial temperature.
-t_init: 1.4
+t_init: 4.0
 
 # The final temperature.
 t_final: 0.1
 
 # Factor of temperature reduction.
-alpha: 0.9
+alpha: 0.92
 
 # Maximum number of trials for each temperature.
 max_trials: 10

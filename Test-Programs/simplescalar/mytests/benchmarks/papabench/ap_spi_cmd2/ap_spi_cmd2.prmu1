@@ -1,7 +1,0 @@
-ap_spi_cmd2 [     888,    47370)
-[ap_spi_cmd2] wcrt = 12121
-[ap_spi_cmd2] latestReq = 35249
-[ap_spi_cmd2] latestFin = 47370
---> [ap_spi_cmd3] latestReq = 47370
---> [ap_modem_update2] latestReq = 58195
---> [ap_spi_cmd3] latestReq = 47370

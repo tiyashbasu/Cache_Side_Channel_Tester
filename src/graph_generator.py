@@ -4,7 +4,7 @@ import numpy as np
 
 if len(argv) == 1:
     print("Incorrect usage.")
-    print("Usage: graph_generator.py <log file name> <all results file name> <executions per trial> <output figure filename>")
+    print("Usage: graph_generator.py <log file name> <all results file name> <executions per trial> <no. of parmateres> <output figure filename>")
     quit()
 
 log_filename = str(argv[1])
@@ -27,7 +27,7 @@ def update_total_vals():
     i = 0
     while (i < execs_per_trial):
         i += 1
-        line_split = allresults_file.readline().split(" ")
+        line_split = allresults_file.readline().split('\t')
         if len(line_split) < 2:
             continue
         val = int((line_split[len(line_split) - 1]).strip())
