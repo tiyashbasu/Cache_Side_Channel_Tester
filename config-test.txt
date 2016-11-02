@@ -1,7 +1,7 @@
 ## The following parameters are related to the program under test.
 
 # The location of the executable.
-program_path: ./Test-Programs/sim_wrapper
+program_path: ./Test-Programs/simasdad_wrapper
 
 # The name of the executable file.
 program_name: aessim-lm
@@ -13,18 +13,18 @@ no_of_params: 16
 counts: 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
 
 # Number of times the program should be executed in each round of execution.
-exec_times: 100
+exec_times: 10
 
 ## The following parameters are related to the simulated annealing process.
 
 # The initial temperature.
-t_init: 0.3
+t_init: 6.0
 
 # The final temperature.
 t_final: 0.2
 
 # Factor of temperature reduction.
-alpha: 0.85
+alpha: 0.7
 
 # Maximum number of trials for each temperature.
-max_trials: 10
+max_trials: 1

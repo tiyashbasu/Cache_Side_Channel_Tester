@@ -1,19 +1,19 @@
 ## The following parameters are related to the program under test.
 
 # The location of the executable.
-program_path: ./Test-Programs/rc4-openssl
+program_path: ./Test-Programs/sim_wrapper
 
 # The name of the executable file.
-program_name: rc4sim-lm
+program_name: openssl-rc4-lm
 
 # The number of parameters the program accepts. This should always be placed above 'counts' parameter.
 no_of_params: 10
 
 # The size of the the list of choices for each parameter.
-counts: 15 15 15 15 15 15 15 15 15 15 15
+counts: 5 5 5 5 5 5 5 5 5 5
 
 # Number of times the program should be executed in each round of execution.
-exec_times: 50
+exec_times: 100
 
 ## The following parameters are related to the simulated annealing process.
 
@@ -24,7 +24,7 @@ t_init: 1.5
 t_final: 0.1
 
 # Factor of temperature reduction.
-alpha: 0.92
+alpha: 0.9
 
 # Maximum number of trials for each temperature.
 max_trials: 10

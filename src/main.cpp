@@ -1,5 +1,6 @@
 #include <iomanip>
 #include <csignal>
+#include <sys/stat.h>
 #include "optimal_data_finder.h"
 
 int read_config_file(std::string config_filename, std::string* prog_path, std::string* prog_name, int* no_of_params, int** counts, unsigned long* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
@@ -7,7 +8,7 @@ int read_config_file(std::string config_filename, std::string* prog_path, std::s
     std::string line;
     config_file.open(config_filename, std::ios::in);
     if (!config_file.is_open())
-        return 1;
+        return -2;
     while (!config_file.eof()) {
         std::getline(config_file, line);
         if (line.empty() || line[0] == '#')
@@ -55,7 +56,8 @@ int read_config_file(std::string config_filename, std::string* prog_path, std::s
         }
     }
     config_file.close();
-    return 0;
+    struct stat buffer;
+    return (stat ((*prog_path + "/" + *prog_name).c_str(), &buffer));
 }
 
 int main(int argc, char *argv[]) {
@@ -102,9 +104,10 @@ int main(int argc, char *argv[]) {
         else
             std::cout << "Execution log file is either not present or is invalid." << std::endl;
     }
-    else {
-        std::cout << "Configuration file is either not present or is invalid." << std::endl;
-    }
+    else if (status == -1)
+        std::cout << "Target program could not be found." << std::endl;
+    else if (status == 2)
+        std::cout << "Configuration file is either absent or invalid." << std::endl;
     delete [] counts;
     return 0;
 }

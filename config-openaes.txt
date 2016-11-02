@@ -18,7 +18,7 @@ exec_times: 1000
 ## The following parameters are related to the simulated annealing process.
 
 # The initial temperature.
-t_init: 1.4
+t_init: 1.5
 
 # The final temperature.
 t_final: 0.1

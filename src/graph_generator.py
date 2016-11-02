@@ -73,6 +73,7 @@ for line in log_file:
     executions.append(execs_per_trial * count)
     count += 1
 log_file.close()
+allresults_file.close()
 
 ticks = np.arange(start=0, stop=execs_per_trial*count+1, step=execs_per_trial*10)
 

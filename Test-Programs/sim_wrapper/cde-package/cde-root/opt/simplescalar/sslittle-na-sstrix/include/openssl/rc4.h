@@ -15,6 +15,7 @@
 
 # ifndef OPENSSL_NO_RC4
 # include <stddef.h>
+//#define size_t unsigned long
 #ifdef  __cplusplus
 extern "C" {
 #endif

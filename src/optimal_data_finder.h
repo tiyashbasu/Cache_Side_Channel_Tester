@@ -120,7 +120,7 @@ namespace thesis {
             long h = m / 60;
             m %= 60;
             std::ostringstream ms_str;
-            ms_str << std::setprecision(4) << ms;
+            ms_str << std::fixed << std::setprecision(4) << ms;
             return (std::to_string(h) + ":" + std::to_string(m) + ":" + std::to_string(s) + "." + ms_str.str());
         }
 
@@ -128,23 +128,35 @@ namespace thesis {
             char output_ch[100] = {0};
             char cmd[256] = {0};
             int i, temp_rand;
+            int test[10] = {154, 209, 252, 199, 232 ,139, 140 ,85 ,99 ,63};
+            FILE* in;
 
             //preparing command
             strcpy(cmd, program);
 
-            //preparing input
-            for (i = 0; i < no_of_params; i++) {
-                temp_rand = dataset[i][rand1000(seed) % counts[i]];
-                strcat(strcat(cmd, " "), std::to_string(temp_rand).data());
-                params[round_num][i] = temp_rand;
+            while (1) {
+                //preparing input
+                for (i = 0; i < no_of_params; i++) {
+                    temp_rand = dataset[i][rand1000(seed) % counts[i]];
+                    temp_rand = test[i];
+                    strcat(strcat(cmd, " "), std::to_string(temp_rand).data());
+                    params[round_num][i] = temp_rand;
+                }
+
+                //executing target and recording results in output_ch
+                in = popen(cmd, "r");
+                output_ch[0] = (char)fgetc(in);
+                if (output_ch[0] == 'S')
+                    pclose(in);
+                else
+                    break;
             }
 
-            //executing target and recording results in output_ch
-            i = 0;
-            FILE *in = popen(cmd, "r");
+            i = 1;
             while (!feof(in)) {
                 output_ch[i++] = (char)fgetc(in);
             }
+
             if(i > 0)
                 output_ch[--i] = 0; //replace -1 at the array's end with null character
             pclose(in);
@@ -156,14 +168,17 @@ namespace thesis {
         void run_program() { //parallel execution using threads
             int i, j;
             int temp;
+
             std::thread *execution_threads = new std::thread[execution_rounds];
             std::string path = "cd " + program_path + " && ./" + program;
+
             std::string param_list;
             for (i = 0; i < execution_rounds; i++) {
 //                run_thread(path.data(), i);
                 execution_threads[i] = std::thread(&optimal_data_finder::run_thread, this, path.data(), i);
                 std::this_thread::sleep_for(std::chrono::milliseconds(10));
             }
+
             std::ofstream out_file(temp_results_file, std::ios::app);
             for (i = 0; i < execution_rounds; i++) {
                 execution_threads[i].join();
@@ -172,6 +187,7 @@ namespace thesis {
                 out_file << outputs[i] << '\n';
             }
             out_file.close();
+
             delete [] execution_threads;
             return;
         }
@@ -212,13 +228,16 @@ namespace thesis {
             std::ofstream logfile(logfilename, std::ios::out);
             std::remove(temp_results_file.c_str());//removing previous execution temp result
             std::remove("data/all-results.log");
+            if (!quiet) {
+                std::cout << "Initializing..." << std::flush;
+            }
             run_program();
             *obj = get_objective(temp_results_file, execution_rounds);
             write_dataset_to_file("data/best-dataset.csv");
             write_results_to_file("data/best-results.log");
             append_results_to_file("data/all-results.log");
             std::remove(temp_results_file.c_str());//removing temp result
-            logfile << "Initial objective: " << *obj << std::endl;
+            logfile << "Done. Initial objective: " << *obj << std::endl;
             logfile << "------------------------------------------------------------------\n";
             logfile << "Elapsed Time\tTemperature\tEpoch\tTrial\tObjective\tAcceptance\n";
             logfile << "------------------------------------------------------------------\n";
@@ -297,20 +316,20 @@ namespace thesis {
             std::ofstream logfile(logfilename, std::ios::app);
 
             logfile << std::setw(12) << format_time(elapsed_time) << '\t';
-            logfile << std::setprecision(8) << std::setw(11) << temp << '\t';
-            logfile << std::setw(1) << iteration << '/' << total_iterations << '\t';
-            logfile << std::setw(1) << trial_num + 1 << '/' << max_trials << '\t';
-            logfile << std::setw(6) << new_obj << '\t';
+            logfile << std::fixed << std::setprecision(6) << std::setw(11) << temp << '\t';
+            logfile << std::setw(2) << iteration << '/' << total_iterations << '\t';
+            logfile << std::setw(2) << trial_num + 1 << '/' << max_trials << '\t';
+            logfile << std::setw(9) << new_obj << '\t';
             logfile << std::setw(10) << (is_accepted? 'Y' : 'N') << std::endl;
             logfile.close();
 
             if (!quiet) {
                 std::cout << std::setw(12) << format_time(elapsed_time) << '\t';
-                std::cout << std::setprecision(8) << std::setw(11) << temp << '\t';
-                std::cout << std::setw(1) << iteration << '/' << total_iterations << '\t';
-                std::cout << std::setw(1) << trial_num + 1 << '/' << max_trials << '\t';
-                std::cout << std::setw(6) << new_obj << '\t';
-                std::cout << std::setw(13) << (is_accepted? 'Y' : 'N') << std::endl;
+                std::cout << std::fixed << std::setprecision(6) << std::setw(11) << temp << '\t';
+                std::cout << std::setw(2) << iteration << '/' << total_iterations << '\t';
+                std::cout << std::setw(2) << trial_num + 1 << '/' << max_trials << '\t';
+                std::cout << std::setw(9) << new_obj << '\t';
+                std::cout << std::setw(10) << (is_accepted? 'Y' : 'N') << std::endl;
             }
 
             return;
@@ -381,7 +400,7 @@ namespace thesis {
             delete [] dataset;
             delete [] bkp_dataset;
             delete [] counts;
-            for (int i = 0; i < no_of_params; i++)
+            for (int i = 0; i < execution_rounds; i++)
                 delete [] params[i];
             delete [] params;
             delete [] outputs;
@@ -389,9 +408,9 @@ namespace thesis {
 
         long sim_ann(double t_init, double t_final, double alpha, int max_trials, std::string logfilename, bool resume, bool quiet) {
             std::ofstream logfile;
-            bool acceptable;
+            bool is_accepted;
             long double acceptance_prob;
-            double delta_avg = 0;
+            double delta_avg = 0, obj_avg = 0;
             int trial_num, start_trial = 0;
             double temp;
             long new_obj, obj;
@@ -406,6 +425,7 @@ namespace thesis {
             /*Initialization when execution is starting for the first time and not resuming*/
             if (!resume) {
                 init_start_simann(logfilename, &obj, quiet);
+                obj_avg = obj;
                 now = std::chrono::system_clock::now();
                 start_time = (std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch())).count();
             }
@@ -435,24 +455,26 @@ namespace thesis {
                         elapsed_time = (std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch())).count() - start_time;
 
                         //Check acceptance
-                        acceptable = new_obj > obj;
+                        is_accepted = new_obj > obj;
                         if (new_obj < obj) {
                             if (!acceptance_count)
                                 delta_avg = obj - new_obj;
-                            acceptance_prob = std::exp((new_obj - obj)/ (temp * delta_avg));
-                            acceptable = acceptance_prob > ((double) rand1000(seed) / 1000.0);
+//                            acceptance_prob = std::exp((new_obj - obj)/ (temp * delta_avg));
+                            acceptance_prob = std::exp((new_obj - obj) * 30 / (temp * obj_avg));
+                            is_accepted = acceptance_prob > ((double) rand1000(seed) / 1000.0);
                         }
 
                         //If new objective value has been accepted, update best results and log
-                        if (acceptable) {
+                        if (is_accepted) {
                             acceptance_count++;
                             write_dataset_to_file("data/best-dataset.csv");
                             write_results_to_file("data/best-results.log");
                             backup_dataset();
-                            if (new_obj > obj)
-                                delta_avg = (delta_avg * (acceptance_count - 1) + new_obj - obj) / acceptance_count;
-                            else
-                                delta_avg = (delta_avg * (acceptance_count - 1) + obj - new_obj) / acceptance_count;
+//                            if (new_obj > obj)
+//                                delta_avg = (delta_avg * (acceptance_count - 1) + new_obj - obj) / acceptance_count;
+//                            else
+//                                delta_avg = (delta_avg * (acceptance_count - 1) + obj - new_obj) / acceptance_count;
+                            obj_avg = (obj_avg * (acceptance_count - 1) + new_obj) / acceptance_count;
                             obj = new_obj;
                         }
                         //If new objective value has not been accepted, update log
@@ -460,7 +482,7 @@ namespace thesis {
                             restore_dataset();
                         }
 
-                        logger_thread = std::thread(&optimal_data_finder::logger, this, logfilename, elapsed_time, temp, iteration, total_iterations, trial_num, max_trials, new_obj, acceptable, quiet);
+                        logger_thread = std::thread(&optimal_data_finder::logger, this, logfilename, elapsed_time, temp, iteration, total_iterations, trial_num, max_trials, new_obj, is_accepted, quiet);
 
 						std::remove(temp_results_file.c_str());//removing previous execution temp result
                     }
