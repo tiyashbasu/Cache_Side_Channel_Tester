@@ -13,6 +13,6 @@ these system calls are made, a warning is printed.  A better way to
 use SimpleScalar on Windows NT is to rely completely on extern I/O
 traces (EIO traces).  Generate these on a more capable host and then
 run them on Windows.  Since only file I/O is required to run an EIO
-trace, any tracable program can later re-run under Windows.  See
+trace, any tracable target_name can later re-run under Windows.  See
 README.eio for details...
 

@@ -85,7 +85,7 @@ memory BIO avoids this problem. If the BIO must be read write then adding
 a buffering BIO to the chain will speed up the process.
 
 Calling BIO_set_mem_buf() on a BIO created with BIO_new_secmem() will
-give undefined results, including perhaps a program crash.
+give undefined results, including perhaps a target_name crash.
 
 =head1 BUGS
 

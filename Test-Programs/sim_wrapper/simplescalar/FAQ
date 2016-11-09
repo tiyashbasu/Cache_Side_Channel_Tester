@@ -10,9 +10,9 @@ A: Look at the SimpleScalar Hacker's Guide in the file hack_guide.pdf, if your
 
 
 Q: Why don't I get the same number of instructions/references/etc each time
-   I run my program?
+   I run my target_name?
 
-A: It is very difficult to produce the same exact execution each time a program
+A: It is very difficult to produce the same exact execution each time a target_name
    executes on the SimpleScalar simulators.  Many variations in any particular
    execution are possible, including:
 
@@ -123,7 +123,7 @@ A: There have been four approaches to validating the results produced
 Q: Why doesn't DLite! work with sim-outorder?
 
 A: Actually it does, but it takes a bit of practice to understand the output.
-DLite! shows you the "view" of the program from the fetch stage of the
+DLite! shows you the "view" of the target_name from the fetch stage of the
 pipeline, as a result, if the fetch stage is stalled or mispredicting into
 bogus memory, you'll see those "invalid memory" messages; step the simulator
 a while and you'll see the instructions show up.  The bottom line: it's
@@ -155,7 +155,7 @@ however, you will need the following:
         1) Cygnus' cygwin32 GNU tool chain release,
            available from: ftp://ftp.cygnus.com/pub/gnu-win32/
 
-        2) little-endian program binaries, since the SimpleScalar GNU
+        2) little-endian target_name binaries, since the SimpleScalar GNU
            GCC/GAS/GLD ports have not been re-hosted to WinNT (yet),
            either 1) build the binaries on another little-endian
            supported platform, or grab them from the binaries release

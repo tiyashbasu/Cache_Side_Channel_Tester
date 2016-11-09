@@ -23,7 +23,7 @@ available.
 # -q                    false # initialize and terminate immediately
 # -chkpt               <null> # restore EIO trace execution from <fname>
 # -redir:sim           <null> # redirect simulator output to file (non-interactive only)
-# -redir:prog          <null> # redirect simulated program output to file
+# -redir:prog          <null> # redirect simulated target_name output to file
 -nice                       0 # simulator scheduling priority
 -max:inst                   0 # maximum number of inst's to execute
 -all                    false # enable all profile options
@@ -844,14 +844,14 @@ sim_num_insn_by_pc.start_dist
 0x405b20 1 0.02
 sim_num_insn_by_pc.end_dist
 
-ld_text_base             0x00400000 # program text (code) segment base
-ld_text_size                  23648 # program text (code) size in bytes
-ld_data_base             0x10000000 # program initialized data segment base
-ld_data_size                   4096 # program init'ed `.data' and uninit'ed `.bss' size in bytes
-ld_stack_base            0x7fffc000 # program stack segment base (highest address in stack)
-ld_stack_size                 16384 # program initial stack size
-ld_prog_entry            0x00400140 # program entry point (initial PC)
-ld_environ_base          0x7fff8000 # program environment base address address
+ld_text_base             0x00400000 # target_name text (code) segment base
+ld_text_size                  23648 # target_name text (code) size in bytes
+ld_data_base             0x10000000 # target_name initialized data segment base
+ld_data_size                   4096 # target_name init'ed `.data' and uninit'ed `.bss' size in bytes
+ld_stack_base            0x7fffc000 # target_name stack segment base (highest address in stack)
+ld_stack_size                 16384 # target_name initial stack size
+ld_prog_entry            0x00400140 # target_name entry point (initial PC)
+ld_environ_base          0x7fff8000 # target_name environment base address address
 ld_target_big_endian              0 # target executable endian-ness, non-zero if big endian
 mem.page_count                   12 # total number of pages allocated
 mem.page_mem                    48k # total size of memory pages allocated

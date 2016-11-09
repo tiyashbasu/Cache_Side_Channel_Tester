@@ -1143,7 +1143,7 @@ Version 1.35b:
 Version 1.34b:
 --------------
 
-  - Performed a substantial documentation and program output cleanup to
+  - Performed a substantial documentation and target_name output cleanup to
     better explain the QEMU feature.
 
 --------------
@@ -2460,7 +2460,7 @@ Version 0.25b:
 Version 0.24b:
 --------------
 
-  - Added program name to the status screen, plus the -T parameter to go with
+  - Added target_name name to the status screen, plus the -T parameter to go with
     it.
 
 --------------

@@ -9,7 +9,7 @@ Installation instructions
 1) Linux on x86
 ---------------
 
-This platform is expected to work well. Compile the program with:
+This platform is expected to work well. Compile the target_name with:
 
 $ make
 
@@ -20,7 +20,7 @@ install it with:
 
 There are no special dependencies to speak of; you will need GNU make and a
 working compiler (gcc or clang). Some of the optional scripts bundled with the
-program may depend on bash, gdb, and similar basic tools.
+target_name may depend on bash, gdb, and similar basic tools.
 
 If you are using clang, please review llvm_mode/README.llvm; the LLVM
 integration mode can offer substantial performance gains compared to the
@@ -116,7 +116,7 @@ If you're not sure what you need, you need the LLVM mode. To get it, try:
 
 $ AFL_NO_X86=1 gmake && gmake -C llvm_mode
 
-...and compile your target program with afl-clang-fast or afl-clang-fast++
+...and compile your target target_name with afl-clang-fast or afl-clang-fast++
 instead of the traditional afl-gcc or afl-clang wrappers.
 
 5) Solaris on x86
@@ -172,7 +172,7 @@ It's possible that all you need is this workaround:
 
 Joshua J. Drake notes that the Android linker adds a shim that automatically
 intercepts SIGSEGV and related signals. To fix this issue and be able to see
-crashes, you need to put this at the beginning of the fuzzed program:
+crashes, you need to put this at the beginning of the fuzzed target_name:
 
   signal(SIGILL, SIG_DFL);
   signal(SIGABRT, SIG_DFL);

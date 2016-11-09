@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-s_client - SSL/TLS client program
+s_client - SSL/TLS client target_name
 
 =head1 SYNOPSIS
 
@@ -124,7 +124,7 @@ then an attempt is made to connect to the local host on port 4433.
 
 =item B<-proxy host:port>
 
-When used with the B<-connect> flag, the program uses the host and port
+When used with the B<-connect> flag, the target_name uses the host and port
 specified with this flag and issues an HTTP CONNECT command to connect
 to the desired server.
 
@@ -248,7 +248,7 @@ certificate itself is displayed.
 
 =item B<-prexit>
 
-print session information when the program exits. This will always attempt
+print session information when the target_name exits. This will always attempt
 to print out information even if the connection fails. Normally information
 will only be printed out once if the connection succeeds. This option is useful
 because the cipher in use may be renegotiated or the connection may fail
@@ -533,10 +533,10 @@ option: any verify errors are then returned aborting the handshake.
 
 =head1 BUGS
 
-Because this program has a lot of options and also because some of the
+Because this target_name has a lot of options and also because some of the
 techniques used are rather old, the C source of B<s_client> is rather hard to
 read and not a model of how things should be done.
-A typical SSL client program would be much simpler.
+A typical SSL client target_name would be much simpler.
 
 The B<-prexit> option is a bit of a hack. We should really report
 information whenever a session is renegotiated.

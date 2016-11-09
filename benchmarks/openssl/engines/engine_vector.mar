@@ -14,7 +14,7 @@
 	JMP	routine+2
 	.ENDM FTRANSFER_ENTRY
 ;
-; Place entries in own program section.
+; Place entries in own target_name section.
 ;
 	.PSECT $$ENGINE,QUAD,PIC,USR,CON,REL,LCL,SHR,EXE,RD,NOWRT
 ENGINE_xfer:

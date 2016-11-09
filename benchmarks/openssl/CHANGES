@@ -888,7 +888,7 @@
      to use callback. Always run all selftests even if one fails.
      [Steve Henson]
 
-  *) XTS support including algorithm test driver in the fips_gcmtest program.
+  *) XTS support including algorithm test driver in the fips_gcmtest target_name.
      Note: this does increase the maximum key length from 32 to 64 bytes but
      there should be no binary compatibility issues as existing applications
      will never use XTS mode.
@@ -916,7 +916,7 @@
   *) Add ECDH code to fips module and fips_ecdhvs for primitives only testing.
      [Steve Henson]
 
-  *) New algorithm test program fips_dhvs to handle DH primitives only testing.
+  *) New algorithm test target_name fips_dhvs to handle DH primitives only testing.
      [Steve Henson]
 
   *) New function DH_compute_key_padded() to compute a DH key and pad with
@@ -2048,7 +2048,7 @@
 
      This will reject various cases including garbage after signature
      (thanks to Antti Karjalainen and Tuomo Untinen from the Codenomicon CROSS
-     program for discovering this case) and use of BER or invalid ASN.1 INTEGERs
+     target_name for discovering this case) and use of BER or invalid ASN.1 INTEGERs
      (negative or with leading zeroes).
 
      Further analysis was conducted and fixes were developed by Stephen Henson
@@ -5504,7 +5504,7 @@
 
   *) Wrapped the definition of EVP_MAX_MD_SIZE in a #ifdef OPENSSL_FIPS.
      The value now differs depending on if you build for FIPS or not.
-     BEWARE!  A program linked with a shared FIPSed libcrypto can't be
+     BEWARE!  A target_name linked with a shared FIPSed libcrypto can't be
      safely run with a non-FIPSed libcrypto, as it may crash because of
      the difference induced by this change.
      [Andy Polyakov]
@@ -6521,7 +6521,7 @@
      Also rename "DSO_up()" function to more descriptive "DSO_up_ref()".
      [Geoff Thorpe]
 
-  *) Add EVP test program.
+  *) Add EVP test target_name.
      [Ben Laurie]
 
   *) Add symmetric cipher support to ENGINE. Expect the API to change!
@@ -7413,9 +7413,9 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      [Steve Henson]
 
   *) Add functionality to apps/openssl.c for detecting locking
-     problems: As the program is single-threaded, all we have
+     problems: As the target_name is single-threaded, all we have
      to do is register a locking callback using an array for
-     storing which locks are currently held by the program.
+     storing which locks are currently held by the target_name.
      [Bodo Moeller]
 
   *) Use a results_file_lock around the call to CRYPTO_get_ex_new_index() in
@@ -9756,7 +9756,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      (Check if this is true? OpenPGP calls them "strong".)
      [Ulf Möller]
 
-  *) Merge the functionality of "dh" and "gendh" programs into a new program
+  *) Merge the functionality of "dh" and "gendh" programs into a new target_name
      "dhparam". The old programs are retained for now but will handle DH keys
      (instead of parameters) in future.
      [Steve Henson]
@@ -9790,7 +9790,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      as the root CA.
      [Steve Henson]
 
-  *) Fixes to X509_ATTRIBUTE utilities, change the 'req' program so it uses
+  *) Fixes to X509_ATTRIBUTE utilities, change the 'req' target_name so it uses
      the new code. Add documentation for this stuff.
      [Steve Henson]
 
@@ -10085,7 +10085,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      and the application can add dynamic ones if needed. The file
      crypto/x509v3/ext_dat.h now has the info: this file needs to be
      updated whenever a new extension is added to the core code and kept
-     in ext_nid order. There is a simple program 'tabtest.c' which checks
+     in ext_nid order. There is a simple target_name 'tabtest.c' which checks
      this. New extensions are not added too often so this file can readily
      be maintained manually.
 
@@ -10136,7 +10136,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      to set them. If not set then assume SSL clients will verify SSL servers
      and vice versa.
 
-     Two new options to the verify program: -untrusted allows a set of
+     Two new options to the verify target_name: -untrusted allows a set of
      untrusted certificates to be passed in and -purpose which sets the
      intended purpose of the certificate. If a purpose is set then the
      new chain verify code is used to check extension consistency.
@@ -10403,7 +10403,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      from a file (which may not be in ASN.1 format).
      [Steve Henson]
 
-  *) Fix for pkcs12 program. It was hashing an invalid certificate pointer
+  *) Fix for pkcs12 target_name. It was hashing an invalid certificate pointer
      when producing the local key id.
      [Richard Levitte <levitte@stacken.kth.se>]
 
@@ -10467,9 +10467,9 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      of calling RSA_public_decrypt() and RSA_private_encrypt().
      [Steve Henson]
 
-  *) Add new -verify -CAfile and -CApath options to the crl program, these
+  *) Add new -verify -CAfile and -CApath options to the crl target_name, these
      will lookup a CRL issuers certificate and verify the signature in a
-     similar way to the verify program. Tidy up the crl program so it
+     similar way to the verify target_name. Tidy up the crl target_name so it
      no longer accesses structures directly. Make the ASN1 CRL parsing a bit
      less strict. It will now permit CRL extensions even if it is not
      a V2 CRL: this will allow it to tolerate some broken CRLs.
@@ -10604,7 +10604,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      [Andrija Antonijevic <TheAntony2@bigfoot.com>]
 
   *) Fix -startdate and -enddate (which was missing) arguments to 'ca'
-     program.
+     target_name.
      [Steve Henson]
 
   *) New function DSA_dup_DH, which duplicates DSA parameters/keys as
@@ -10628,7 +10628,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
   *) Avoid memory leak in i2d_DHparams.
      [Bodo Moeller]
 
-  *) Allow the -k option to be used more than once in the enc program:
+  *) Allow the -k option to be used more than once in the enc target_name:
      this allows the same encrypted message to be read by multiple recipients.
      [Steve Henson]
 
@@ -11789,7 +11789,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
   *) Add new function, EVP_MD_CTX_copy() to replace frequent use of memcpy.
      [Eric A. Young, (from changes to C2Net SSLeay, integrated by Mark Cox)]
 
-  *) Make sure `make rehash' target really finds the `openssl' program.
+  *) Make sure `make rehash' target really finds the `openssl' target_name.
      [Ralf S. Engelschall, Matthias Loepfe <Matthias.Loepfe@adnovum.ch>]
 
   *) Squeeze another 7% of speed out of MD5 assembler, at least on a P2. I'd
@@ -11802,7 +11802,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
   *) Fixed ms/32all.bat script: `no_asm' -> `no-asm'
      [Rainer W. Gerling <gerling@mpg-gv.mpg.de>]
   
-  *) New program nseq to manipulate netscape certificate sequences
+  *) New target_name nseq to manipulate netscape certificate sequences
      [Steve Henson]
 
   *) Modify crl2pkcs7 so it supports multiple -certfile arguments. Fix a
@@ -11823,7 +11823,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
   *) Add several PKIX and private extended key usage OIDs.
      [Steve Henson]
 
-  *) Modify the 'ca' program to handle the new extension code. Modify
+  *) Modify the 'ca' target_name to handle the new extension code. Modify
      openssl.cnf for new extension format, add comments.
      [Steve Henson]
 
@@ -11920,7 +11920,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
   *) Sort openssl functions by name.
      [Ben Laurie]
 
-  *) Get the gendsa program working (hopefully) and add it to app list. Remove
+  *) Get the gendsa target_name working (hopefully) and add it to app list. Remove
      encryption from sample DSA keys (in case anyone is interested the password
      was "1234").
      [Steve Henson]
@@ -11974,7 +11974,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      demos/maurice/example2.c work, amongst others, probably.
      [Steve Henson and Ben Laurie]
 
-  *) First cut of a cleanup for apps/. First the `ssleay' program is now named
+  *) First cut of a cleanup for apps/. First the `ssleay' target_name is now named
      `openssl' and second, the shortcut symlinks for the `openssl <command>'
      are no longer created. This way we have a single and consistent command
      line interface `openssl <command>', similar to `cvs <command>'.
@@ -12131,17 +12131,17 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
      available).
      [Eric A. Young]
 
-  *) Add -strparse option to asn1pars program which parses nested 
+  *) Add -strparse option to asn1pars target_name which parses nested
      binary structures 
      [Dr Stephen Henson <shenson@bigfoot.com>]
 
   *) Added "oid_file" to ssleay.cnf for "ca" and "req" programs.
      [Eric A. Young]
 
-  *) DSA fix for "ca" program.
+  *) DSA fix for "ca" target_name.
      [Eric A. Young]
 
-  *) Added "-genkey" option to "dsaparam" program.
+  *) Added "-genkey" option to "dsaparam" target_name.
      [Eric A. Young]
 
   *) Added RIPE MD160 (rmd160) message digest.

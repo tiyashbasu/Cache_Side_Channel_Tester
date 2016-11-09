@@ -55,7 +55,7 @@ Radamsa was written by Aki Helin at OUSPG.")
          (cl-rules
             `((help "-h" "--help" comment "show this thing")
               (about "-a" "--about" comment "what is this thing?")
-              (version "-V" "--version" comment "show program version")
+              (version "-V" "--version" comment "show target_name version")
               (output-pattern "-o" "--output" has-arg default "-" cook ,(λ (x) x)
                   comment "output pattern, e.g. out.bin /tmp/fuzz-%n.%s, -, :80 or 127.0.0.1:80")
               (count "-n" "--count" cook ,string->count

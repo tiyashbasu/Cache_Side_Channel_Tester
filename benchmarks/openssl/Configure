@@ -1506,11 +1506,11 @@ if ($builder eq "unified") {
         }
 
         foreach (@programs) {
-            my $program = cleanfile($buildd, $_, $blddir);
-            if ($unified_info{rename}->{$program}) {
-                $program = $unified_info{rename}->{$program};
+            my $target_name = cleanfile($buildd, $_, $blddir);
+            if ($unified_info{rename}->{$target_name}) {
+                $target_name = $unified_info{rename}->{$target_name};
             }
-            $unified_info{programs}->{$program} = 1;
+            $unified_info{programs}->{$target_name} = 1;
         }
 
         foreach (@libraries) {

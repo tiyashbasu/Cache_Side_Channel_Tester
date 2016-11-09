@@ -56,7 +56,7 @@ in a matter of microseconds on the receiving end, and to effortlessly fit
 within L2 cache.
 
 This form of coverage provides considerably more insight into the execution
-path of the program than simple block coverage. In particular, it trivially
+path of the target_name than simple block coverage. In particular, it trivially
 distinguishes between the following execution traces:
 
   A -> B -> C -> D -> E (tuples: AB, BC, CD, DE)
@@ -89,7 +89,7 @@ transitions in the execution trace (i.e., produce no new tuples) are discarded,
 even if their overall control flow sequence is unique.
 
 This approach allows for a very fine-grained and long-term exploration of
-program state while not having to perform any computationally intensive and
+target_name state while not having to perform any computationally intensive and
 fragile global comparisons of complex execution traces, and while avoiding the
 scourge of path explosion.
 
@@ -116,7 +116,7 @@ an 8-position bitmap relied on by the fuzzer executable to keep track of the
 already-seen execution counts for each tuple.
 
 Changes within the range of a single bucket are ignored; transition from one
-bucket to another is flagged as an interesting change in program control flow,
+bucket to another is flagged as an interesting change in target_name control flow,
 and is routed to the evolutionary process outlined in the section below.
 
 The hit count behavior provides a way to distinguish between potentially
@@ -138,7 +138,7 @@ limits are not worth the cost.
 3) Evolving the input queue
 ---------------------------
 
-Mutated test cases that produced new state transitions within the program are
+Mutated test cases that produced new state transitions within the target_name are
 added to the input queue and used as a starting point for future rounds of
 fuzzing. They supplement, but do not automatically replace, existing finds.
 
@@ -164,7 +164,7 @@ and 10k entries; approximately 10-30% of this is attributable to the discovery
 of new tuples, and the remainder is associated with changes in hit counts.
 
 The following table compares the relative ability to discover file syntax and
-explore program states when using several different approaches to guided
+explore target_name states when using several different approaches to guided
 fuzzing. The instrumented target was GNU patch 2.7.3 compiled with -O3 and
 seeded with a dummy text file; the session consisted of a single pass over the
 input queue with afl-fuzz:
@@ -346,7 +346,7 @@ investigated and are discussed in the aforementioned blog post.
 
 For the reasons discussed in historical_notes.txt (chiefly, performance,
 simplicity, and reliability), AFL generally does not try to reason about the
-relationship between specific mutations and program states; the fuzzing steps
+relationship between specific mutations and target_name states; the fuzzing steps
 are nominally blind, and are guided only by the evolutionary design of the
 input queue.
 
@@ -393,7 +393,7 @@ post mentioned above.
 Interestingly, the AFL instrumentation also allows the fuzzer to automatically
 isolate syntax tokens already present in an input file. It can do so by looking
 for run of bytes that, when flipped, produce a consistent change to the
-program's execution path; this is suggestive of an underlying atomic comparison
+target_name's execution path; this is suggestive of an underlying atomic comparison
 to a predefined value baked into the code. The fuzzer relies on this signal
 to build compact "auto dictionaries" that are then used in conjunction with
 other fuzzing strategies.
@@ -435,7 +435,7 @@ A detailed discussion of the value of this approach can be found here:
   http://lcamtuf.blogspot.com/2014/11/afl-fuzz-crash-exploration-mode.html
 
 The method uses instrumentation feedback to explore the state of the crashing
-program to get past the ambiguous faulting condition and then isolate the
+target_name to get past the ambiguous faulting condition and then isolate the
 newly-found inputs for human review.
 
 On the subject of crashes, it is worth noting that in contrast to normal
@@ -462,12 +462,12 @@ usually between 1.5x and 2x. It is also possible to:
 
   - Use the fork server in manual ("deferred") mode, skipping over larger,
     user-selected chunks of initialization code. It requires very modest
-    code changes to the targeted program, and With some targets, can
+    code changes to the targeted target_name, and With some targets, can
     produce 10x+ performance gains.
 
   - Enable "persistent" mode, where a single process is used to try out
     multiple inputs, greatly limiting the overhead of repetitive fork()
-    calls. This generally requires some code changes to the targeted program,
+    calls. This generally requires some code changes to the targeted target_name,
     but can improve the performance of fast targets by a factor of 5 or more
     - approximating the benefits of in-process fuzzing jobs while still
     maintaining very robust isolation between the fuzzer process and the
@@ -546,7 +546,7 @@ It uses the following classification scheme:
     non-atomically compared keywords or magic values, etc.
 
   - "Suspected length field" - small, atomic integer that, when touched in
-    any way, causes a consistent change to program control flow, suggestive
+    any way, causes a consistent change to target_name control flow, suggestive
     of a failed length check.
 
   - "Suspected cksum or magic int" - an integer that behaves similarly to a

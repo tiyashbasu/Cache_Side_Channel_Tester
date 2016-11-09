@@ -13,6 +13,10 @@ void escapify(std::string* str, std::string to_escape) {
 
 int main(int argc, char* argv[])
 {
+    if (argc < 3) {
+        std::cout << "Usage: fomatter prefix_filename suffix_filename output_filename\n";
+        return -1;
+    }
     std::string pre_filename = argv[1];
     std::string suf_filename = argv[2];
     std::string outfilename = argv[3];

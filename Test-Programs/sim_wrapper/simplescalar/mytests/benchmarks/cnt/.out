@@ -25,7 +25,7 @@ available.
 -q               <true|false>     #        false # initialize and terminate immediately
 -chkpt           <string>         #       <null> # restore EIO trace execution from <fname>
 -redir:sim       <string>         #       <null> # redirect simulator output to file (non-interactive only)
--redir:prog      <string>         #       <null> # redirect simulated program output to file
+-redir:prog      <string>         #       <null> # redirect simulated target_name output to file
 -nice            <int>            #            0 # simulator scheduling priority
 -max:inst        <uint>           #            0 # maximum number of inst's to execute
 -all             <true|false>     #        false # enable all profile options

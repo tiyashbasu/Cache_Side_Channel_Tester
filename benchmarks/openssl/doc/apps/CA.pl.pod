@@ -52,7 +52,7 @@ is like B<-newreq> except that the private key will not be encrypted.
 
 =item B<-newca>
 
-creates a new CA hierarchy for use with the B<ca> program (or the B<-signcert>
+creates a new CA hierarchy for use with the B<ca> target_name (or the B<-signcert>
 and B<-xsign> options). The user is prompted to enter the filename of the CA
 certificates (which should also contain the private key) or by hitting ENTER
 details of the CA will be prompted for. The relevant files and directories
@@ -71,7 +71,7 @@ list box), otherwise the name "My Certificate" is used.
 
 =item B<-sign>, B<-signreq>, B<-xsign>
 
-calls the B<ca> program to sign a certificate request. It expects the request
+calls the B<ca> target_name to sign a certificate request. It expects the request
 to be in the file "newreq.pem". The new certificate is written to the file
 "newcert.pem" except in the case of the B<-xsign> option when it is written
 to standard output.
@@ -171,7 +171,7 @@ be wrong. In this case the command:
 can be used and the B<OPENSSL_CONF> environment variable changed to point to
 the correct path of the configuration file "openssl.cnf".
 
-The script is intended as a simple front end for the B<openssl> program for use
+The script is intended as a simple front end for the B<openssl> target_name for use
 by a beginner. Its behaviour isn't always what is wanted. For more control over the
 behaviour of the certificate commands call the B<openssl> command directly.
 

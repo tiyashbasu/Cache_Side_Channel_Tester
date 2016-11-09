@@ -1,30 +1,30 @@
-## The following parameters are related to the program under test.
+## The following parameters are related to the target_name under test.
 
 # The location of the executable.
-program_path: ./Test-Programs/simasdad_wrapper
+target_dir: ./Test-Programs/sim_wrapper
 
 # The name of the executable file.
-program_name: aessim-lm
+program_name: openssl-rc4-lm
 
-# The number of parameters the program accepts. This should always be placed above 'counts' parameter.
-no_of_params: 16
+# The number of parameters the target_name accepts. This should always be placed above 'counts' parameter.
+no_of_params: 10
 
 # The size of the the list of choices for each parameter.
-counts: 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+counts: 5 5 5 5 5 5 5 5 5 5
 
-# Number of times the program should be executed in each round of execution.
-exec_times: 10
+# Number of times the target_name should be executed in each round of execution.
+exec_times: 105
 
 ## The following parameters are related to the simulated annealing process.
 
 # The initial temperature.
-t_init: 6.0
+t_init: 1.5
 
 # The final temperature.
-t_final: 0.2
+t_final: 0.1
 
 # Factor of temperature reduction.
-alpha: 0.7
+alpha: 0.9
 
 # Maximum number of trials for each temperature.
-max_trials: 1
+max_trials: 10

@@ -20,7 +20,7 @@
 extern "C" {
 #endif
 
-typedef char RC4_INT;
+typedef unsigned char RC4_INT;
 
 typedef struct rc4_key_st {
     RC4_INT x, y;

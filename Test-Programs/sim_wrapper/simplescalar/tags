@@ -7568,9 +7568,9 @@ ld_data_size	./target-pisa/loader.c	/^unsigned int ld_data_size = 0;$/;"	v
 ld_environ_base	./loader.c	/^md_addr_t ld_environ_base = 0;$/;"	v
 ld_environ_base	./target-alpha/loader.c	/^md_addr_t ld_environ_base = 0;$/;"	v
 ld_environ_base	./target-pisa/loader.c	/^md_addr_t ld_environ_base = 0;$/;"	v
-ld_load_prog	./loader.c	/^ld_load_prog(char *fname,		\/* program to load *\/$/;"	f
-ld_load_prog	./target-alpha/loader.c	/^ld_load_prog(char *fname,		\/* program to load *\/$/;"	f
-ld_load_prog	./target-pisa/loader.c	/^ld_load_prog(char *fname,		\/* program to load *\/$/;"	f
+ld_load_prog	./loader.c	/^ld_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
+ld_load_prog	./target-alpha/loader.c	/^ld_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
+ld_load_prog	./target-pisa/loader.c	/^ld_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
 ld_prog_entry	./loader.c	/^md_addr_t ld_prog_entry = 0;$/;"	v
 ld_prog_entry	./target-alpha/loader.c	/^md_addr_t ld_prog_entry = 0;$/;"	v
 ld_prog_entry	./target-pisa/loader.c	/^md_addr_t ld_prog_entry = 0;$/;"	v
@@ -8423,8 +8423,8 @@ regs	./sim-profile.c	/^static struct regs_t regs;$/;"	v	typeref:struct:regs_t	fi
 regs	./sim-safe.c	/^static struct regs_t regs;$/;"	v	typeref:struct:regs_t	file:
 regs_C	./regs.h	/^  md_ctrl_t regs_C;		\/* control register file *\/$/;"	m	struct:regs_t
 regs_F	./regs.h	/^  md_fpr_t regs_F;		\/* floating point register file *\/$/;"	m	struct:regs_t
-regs_NPC	./regs.h	/^  md_addr_t regs_NPC;		\/* next-cycle program counter *\/$/;"	m	struct:regs_t
-regs_PC	./regs.h	/^  md_addr_t regs_PC;		\/* program counter *\/$/;"	m	struct:regs_t
+regs_NPC	./regs.h	/^  md_addr_t regs_NPC;		\/* next-cycle target_name counter *\/$/;"	m	struct:regs_t
+regs_PC	./regs.h	/^  md_addr_t regs_PC;		\/* target_name counter *\/$/;"	m	struct:regs_t
 regs_PC	./sim-outorder.c	/^  md_addr_t regs_PC, pred_PC;		\/* current PC, predicted next PC *\/$/;"	m	struct:fetch_rec	file:
 regs_R	./regs.h	/^  md_gpr_t regs_R;		\/* (signed) integer register file *\/$/;"	m	struct:regs_t
 regs_create	./regs.c	/^regs_create(void)$/;"	f
@@ -8484,15 +8484,15 @@ rslink_init	./sim-outorder.c	/^rslink_init(int nlinks)			\/* total number of RS_
 rspec_dump	./sim-outorder.c	/^rspec_dump(FILE *stream)			\/* output stream *\/$/;"	f	file:
 rss	./target-alpha/ecoff.h	/^  sword_t rss;$/;"	m	struct:ecoff_fdr
 rss	./target-pisa/ecoff.h	/^  sword_t rss;$/;"	m	struct:ecoff_fdr
-rt_NPC	./machine.h	/^  rt_NPC,		\/* next program counter *\/$/;"	e	enum:md_reg_type
-rt_NPC	./target-alpha/alpha.h	/^  rt_NPC,		\/* next program counter *\/$/;"	e	enum:md_reg_type
-rt_NPC	./target-pisa/pisa.h	/^  rt_NPC,		\/* next program counter *\/$/;"	e	enum:md_reg_type
+rt_NPC	./machine.h	/^  rt_NPC,		\/* next target_name counter *\/$/;"	e	enum:md_reg_type
+rt_NPC	./target-alpha/alpha.h	/^  rt_NPC,		\/* next target_name counter *\/$/;"	e	enum:md_reg_type
+rt_NPC	./target-pisa/pisa.h	/^  rt_NPC,		\/* next target_name counter *\/$/;"	e	enum:md_reg_type
 rt_NUM	./machine.h	/^  rt_NUM$/;"	e	enum:md_reg_type
 rt_NUM	./target-alpha/alpha.h	/^  rt_NUM$/;"	e	enum:md_reg_type
 rt_NUM	./target-pisa/pisa.h	/^  rt_NUM$/;"	e	enum:md_reg_type
-rt_PC	./machine.h	/^  rt_PC,		\/* program counter *\/$/;"	e	enum:md_reg_type
-rt_PC	./target-alpha/alpha.h	/^  rt_PC,		\/* program counter *\/$/;"	e	enum:md_reg_type
-rt_PC	./target-pisa/pisa.h	/^  rt_PC,		\/* program counter *\/$/;"	e	enum:md_reg_type
+rt_PC	./machine.h	/^  rt_PC,		\/* target_name counter *\/$/;"	e	enum:md_reg_type
+rt_PC	./target-alpha/alpha.h	/^  rt_PC,		\/* target_name counter *\/$/;"	e	enum:md_reg_type
+rt_PC	./target-pisa/pisa.h	/^  rt_PC,		\/* target_name counter *\/$/;"	e	enum:md_reg_type
 rt_ctrl	./machine.h	/^  rt_ctrl,		\/* control register *\/$/;"	e	enum:md_reg_type
 rt_ctrl	./target-alpha/alpha.h	/^  rt_ctrl,		\/* control register *\/$/;"	e	enum:md_reg_type
 rt_ctrl	./target-pisa/pisa.h	/^  rt_ctrl,		\/* control register *\/$/;"	e	enum:md_reg_type
@@ -8712,13 +8712,13 @@ sim_init	./sim-outorder.c	/^sim_init(void)$/;"	f
 sim_init	./sim-profile.c	/^sim_init(void)$/;"	f
 sim_init	./sim-safe.c	/^sim_init(void)$/;"	f
 sim_invalid_addrs	./sim-outorder.c	/^static counter_t sim_invalid_addrs;$/;"	v	file:
-sim_load_prog	./sim-bpred.c	/^sim_load_prog(char *fname,		\/* program to load *\/$/;"	f
-sim_load_prog	./sim-cache.c	/^sim_load_prog(char *fname,		\/* program to load *\/$/;"	f
-sim_load_prog	./sim-eio.c	/^sim_load_prog(char *fname,		\/* program to load *\/$/;"	f
-sim_load_prog	./sim-fast.c	/^sim_load_prog(char *fname,		\/* program to load *\/$/;"	f
-sim_load_prog	./sim-outorder.c	/^sim_load_prog(char *fname,		\/* program to load *\/$/;"	f
-sim_load_prog	./sim-profile.c	/^sim_load_prog(char *fname,		\/* program to load *\/$/;"	f
-sim_load_prog	./sim-safe.c	/^sim_load_prog(char *fname,		\/* program to load *\/$/;"	f
+sim_load_prog	./sim-bpred.c	/^sim_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
+sim_load_prog	./sim-cache.c	/^sim_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
+sim_load_prog	./sim-eio.c	/^sim_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
+sim_load_prog	./sim-fast.c	/^sim_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
+sim_load_prog	./sim-outorder.c	/^sim_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
+sim_load_prog	./sim-profile.c	/^sim_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
+sim_load_prog	./sim-safe.c	/^sim_load_prog(char *fname,		\/* target_name to load *\/$/;"	f
 sim_main	./sim-bpred.c	/^sim_main(void)$/;"	f
 sim_main	./sim-cache.c	/^sim_main(void)$/;"	f
 sim_main	./sim-eio.c	/^sim_main(void)$/;"	f

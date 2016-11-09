@@ -60,7 +60,7 @@ structures.  Since the application data can be anything at all it is passed
 and retrieved as a B<void *> type.
 
 Exdata types are identified by an B<index>, an integer guaranteed to be
-unique within structures for the lifetime of the program.  Applications
+unique within structures for the lifetime of the target_name.  Applications
 using exdata typically call B<CRYPTO_get_ex_new_index> at startup, and
 store the result in a global variable, or write a wrapper function to
 provide lazy evaluation.  The B<class_index> should be one of the

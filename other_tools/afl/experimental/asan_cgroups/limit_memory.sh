@@ -17,7 +17,7 @@
 #
 #   http://www.apache.org/licenses/LICENSE-2.0
 #
-# This tool allows the amount of actual memory allocated to a program
+# This tool allows the amount of actual memory allocated to a target_name
 # to be limited on Linux systems using cgroups, instead of the traditional
 # setrlimit() API. This helps avoid the address space problems discussed in
 # docs/notes_for_asan.txt.

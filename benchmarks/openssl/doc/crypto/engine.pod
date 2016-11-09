@@ -310,20 +310,20 @@ If no ENGINE API functions are called at all in an application, then there
 are no inherent memory leaks to worry about from the ENGINE functionality.
 However, prior to OpenSSL 1.1.0 if any ENGINEs are loaded, even if they are
 never registered or used, it was necessary to use the ENGINE_cleanup() function
-to correspondingly cleanup before program exit, if the caller wishes to avoid
+to correspondingly cleanup before target_name exit, if the caller wishes to avoid
 memory leaks. This mechanism used an internal callback registration table
 so that any ENGINE API functionality that knows it requires cleanup can
 register its cleanup details to be called during ENGINE_cleanup(). This
 approach allowed ENGINE_cleanup() to clean up after any ENGINE functionality
-at all that your program uses, yet doesn't automatically create linker
+at all that your target_name uses, yet doesn't automatically create linker
 dependencies to all possible ENGINE functionality - only the cleanup
 callbacks required by the functionality you do use will be required by the
 linker. From OpenSSL 1.1.0 it is no longer necessary to explicitly call
 ENGINE_cleanup and this function is deprecated. Cleanup automatically takes
-place at program exit.
+place at target_name exit.
 
 The fact that ENGINEs are made visible to OpenSSL (and thus are linked into
-the program and loaded into memory at run-time) does not mean they are
+the target_name and loaded into memory at run-time) does not mean they are
 "registered" or called into use by OpenSSL automatically - that behaviour
 is something for the application to control. Some applications
 will want to allow the user to specify exactly which ENGINE they want used

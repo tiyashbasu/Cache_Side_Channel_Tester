@@ -88,7 +88,7 @@ $t2="r11";
 $t3="r12";
 ############	r13 is stack pointer
 $Ktbl="r14";
-############	r15 is program counter
+############	r15 is target_name counter
 
 $Aoff=8*0;
 $Boff=8*1;

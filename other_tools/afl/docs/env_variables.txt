@@ -112,7 +112,7 @@ checks or alter some of the more exotic semantics of the tool:
     of afl-fuzz than would be prudent (if you really want to).
 
   - AFL_SKIP_CRASHES causes AFL to tolerate crashing files in the input
-    queue. This can help with rare situations where a program crashes only
+    queue. This can help with rare situations where a target_name crashes only
     intermittently, but it's not really recommended under normal operating
     conditions.
 

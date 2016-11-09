@@ -9,7 +9,7 @@ Notes for using ASAN with afl-fuzz
 ----------------
 
 ASAN on 64-bit systems requests a lot of memory in a way that can't be easily
-distinguished from a misbehaving program bent on crashing your system.
+distinguished from a misbehaving target_name bent on crashing your system.
 
 Because of this, fuzzing with ASAN is recommended only in four scenarios:
 
@@ -102,7 +102,7 @@ specify '-m none' when calling afl-fuzz).
 Using recidivm or running with no limits aside, there are two other decent
 alternatives: build a corpus of test cases using a non-ASAN binary, and then
 examine them with ASAN, Valgrind, or other heavy-duty tools in a more
-controlled setting; or compile the target program with -m32 (32-bit mode)
+controlled setting; or compile the target target_name with -m32 (32-bit mode)
 if your system supports that.
 
 3) Interactions with the QEMU mode

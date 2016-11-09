@@ -65,10 +65,10 @@ more than one such object appears in the file.
 =head2 Script Configuration
 
 The B<c_rehash> script
-uses the B<openssl> program to compute the hashes and
+uses the B<openssl> target_name to compute the hashes and
 fingerprints. If not found in the user's B<PATH>, then set the
 B<OPENSSL> environment variable to the full pathname.
-Any program can be used, it will be invoked as follows for either
+Any target_name can be used, it will be invoked as follows for either
 a certificate or CRL:
 
   $OPENSSL x509 -hash -fingerprint -noout -in FILENAME

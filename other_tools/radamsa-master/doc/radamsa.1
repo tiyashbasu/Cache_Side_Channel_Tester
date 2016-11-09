@@ -9,7 +9,7 @@ Radamsa is a general purpose data fuzzer. It reads data from given sample files,
 or standard input if none are given, and outputs modified data. It is usually 
 used to generate malformed data for testing programs.
 .SH OPTIONS
-This program follows the usual GNU command line syntax, with long
+This target_name follows the usual GNU command line syntax, with long
 options starting with two dashes (`-').
 A summary of options is included below.
 .TP
@@ -17,7 +17,7 @@ A summary of options is included below.
 Show a shorter summary of options.
 .TP
 .B \-V, \-\-version
-Show program version.
+Show target_name version.
 .TP
 .B \-o, \-\-output pattern
 Specify where to write the modified data. By default the data is written to standard output. The pattern can be a path, in which %n is filled to be the test case number if present, :n to have the data sent to TCP clients connecting to local port n, or a.b.c.d:n to have radamsa connect to port n of IPv4 address a.b.c.d to send each output.
@@ -49,8 +49,8 @@ Request the mutation patterns manually. This is generally not recommended and th
 .B \-g, \-\-generators string
 Request the data stream generator probabilities manually. This is generally not recommended and the options will change in the future versions.
 .SH EXAMPLES
- $ cat file | radamsa | program -
- $ radamsa samples/*.foo | program -
+ $ cat file | radamsa | target_name -
+ $ radamsa samples/*.foo | target_name -
  $ radamsa -o test-%n.foo -n 100 samples/*.foo
  $ radamsa -o :80 -n inf samples/*.resp 
  $ radamsa -o 127.0.0.1:80 -n inf samples/*.req 

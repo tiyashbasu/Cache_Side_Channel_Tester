@@ -49,7 +49,7 @@ collected together and form a set of programs, libraries, engines and
 scripts to be produced, source files, dependencies, etc etc etc.
 
 Let's have a pretend example, a very limited contraption of OpenSSL,
-composed of the program 'apps/openssl', the libraries 'libssl' and
+composed of the target_name 'apps/openssl', the libraries 'libssl' and
 'libcrypto', an engine 'engines/ossltest' and their sources and
 dependencies.
 
@@ -76,12 +76,12 @@ anything that will end up in each library, and that the library
 
 This is the build.info file in 'apps/', one may notice that all file
 paths mentioned are relative to the directory the build.info file is
-located in.  This one tells us that there's a program to be built
+located in.  This one tells us that there's a target_name to be built
 called 'apps/openssl' (the file name extension will depend on the
 platform and is therefore not mentioned in the build.info file).  It's
 built from one source file, 'apps/openssl.c', and building it requires
 the use of '.' and 'include' include directories (both are declared
-from the point of view of the 'apps/' directory), and that the program
+from the point of view of the 'apps/' directory), and that the target_name
 depends on the library 'libssl' to function properly.
 
     # crypto/build.info
@@ -178,7 +178,7 @@ variables must only be source files (possibly generated)
 
 INCLUDE and DEPEND shows a relationship between different files
 (usually produced files) or between files and directories, such as a
-program depending on a library, or between an object file and some
+target_name depending on a library, or between an object file and some
 extra source file.
 
 When Configure processes the build.info files, it will take it as

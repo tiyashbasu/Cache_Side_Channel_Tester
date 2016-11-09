@@ -12,7 +12,7 @@ BEGIN {
   }
 }
 
-die "This is the test program for Text::Template version 1.46.
+die "This is the test target_name for Text::Template version 1.46.
 You are using version $Text::Template::VERSION instead.
 That does not make sense.\n
 Aborting"
@@ -60,7 +60,7 @@ $n++;
 
 # (2-3)  "Joel Appelbaum" <joel@orbz.com> <000701c0ac2c$aed1d6e0$0201a8c0@prime>
 # "Contrary to the documentation the $OUT variable is not always
-# undefined at the start of each program fragment.  The $OUT variable
+# undefined at the start of each target_name fragment.  The $OUT variable
 # is never undefined after it is used once if you are using the SAFE
 # option.  The result is that every fragment after the fragment that
 # $OUT was used in is replaced by the old $OUT value instead of the

@@ -60,7 +60,7 @@ instructions and addressing modes from the MIPS-IV and RS/6000
 instruction set definitions.  SimpleScalar PISA instructions employ a
 64-bit encoding to facilitate instruction set research, e.g., it's
 possible to synthesize instructions or annotate existing instructions,
-or vary the number of registers a program uses.  The Alpha AXP
+or vary the number of registers a target_name uses.  The Alpha AXP
 architecture is a RISC instruction set developed by DEC.
 
 The SimpleScalar simulator suite includes a wide range of simulation tools
@@ -70,7 +70,7 @@ simulators are included in this release:
 
 	sim-fast	-> a very fast functional (i.e., no timing) simulator
 	sim-safe	-> the minimal functional SimpleScalar simulator
-	sim-profile	-> a program profiling simulator
+	sim-profile	-> a target_name profiling simulator
 	sim-cache	-> a multi-level cache simulator
 	sim-cheetah	-> a single-pass multi-configuration cache simulator
 	sim-bpred	-> a branch predictor simulator
@@ -111,7 +111,7 @@ WHY WOULD I NOT WANT TO USE THE SIMPLESCALAR TOOL SET?
 	  only supports simulation of the user-level instructions, any
 	  execution within the operation system is not simulated, instead
 	  the SimpleScalar simulators execute the system-level instruction
-	  on behalf of the simulated program, other simulation environments
+	  on behalf of the simulated target_name, other simulation environments
 	  support system simulation, such as SimOS from Stanford
 
 
@@ -181,8 +181,8 @@ Lots!  Here's a list of the major new features...
 
     * All simulators now support external I/O traces (EIO traces).
       Generated with a new simulator (sim-eio), EIO traces capture
-      initial program state and all subsequent external interactions a
-      program has with the operating system.  Using this external I/O
+      initial target_name state and all subsequent external interactions a
+      target_name has with the operating system.  Using this external I/O
       trace, any SimpleScalar simulator can re-execute the same
       execution using only the EIO file; no options, binaries, files,
       system calls, etc, are needed to re-create the same execution.
@@ -216,7 +216,7 @@ Lots!  Here's a list of the major new features...
       up an experiment into a single file.  Within the EIO trace file
       are the options, user environment, file accesses, network I/O,
       etc.  used to create the original experiment.  Moreover, EIO
-      traces also capture the output of a program, e.g., writes, network
+      traces also capture the output of a target_name, e.g., writes, network
       output, etc.  The simulators check any output attempted against
       that recorded in the EIO trace file, making EIO trace files
       self-validating.  An EIO trace file may be compressed with GZIP or
@@ -286,7 +286,7 @@ SimpleScalar 2.0 release:
 
     * added option "-max:inst" to limit number of instructions analyzed
 
-    * added simulator and program output redirection (via "-redir:sim"
+    * added simulator and target_name output redirection (via "-redir:sim"
       and "redir:prog" options, respectively)
 
     * added "-nice" option that resets simulator scheduling priority to

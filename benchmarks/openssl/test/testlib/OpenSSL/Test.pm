@@ -354,7 +354,7 @@ sub run {
     my $e = 0;
 
     # The dance we do with $? is the same dance the Unix shells appear to
-    # do.  For example, a program that gets aborted (and therefore signals
+    # do.  For example, a target_name that gets aborted (and therefore signals
     # SIGABRT = 6) will appear to exit with the code 134.  We mimic this
     # to make it easier to compare with a manual run of the command.
     if ($opts{capture}) {
@@ -872,7 +872,7 @@ sub __fixup_cmd {
     }
 
     if (defined($prog)) {
-	# Make sure to quotify the program file on platforms that may
+	# Make sure to quotify the target_name file on platforms that may
 	# have spaces or similar in their path name.
 	# To our knowledge, VMS is the exception where quotifying should
 	# never happem.
@@ -895,7 +895,7 @@ sub __build_cmd {
 
     # We do a little dance, as $path_builder might return a list of
     # more than one.  If so, only the first is to be considered a
-    # program to fix up, the rest is part of the arguments.  This
+    # target_name to fix up, the rest is part of the arguments.  This
     # happens for perl scripts, where $path_builder will return
     # a list of two, $^X and the script name.
     # Also, if $path_builder returned more than one, we don't apply

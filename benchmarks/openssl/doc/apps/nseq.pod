@@ -69,7 +69,7 @@ It is used by Netscape certificate server for example.
 
 =head1 BUGS
 
-This program needs a few more options: like allowing DER or PEM input and
+This target_name needs a few more options: like allowing DER or PEM input and
 output files and allowing multiple certificate files to be used.
 
 =head1 COPYRIGHT

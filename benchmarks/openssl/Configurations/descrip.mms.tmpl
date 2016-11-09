@@ -342,7 +342,7 @@ install_dev : check_INSTALLTOP
 install_runtime : check_INSTALLTOP
         @ ! {- output_off() if $disabled{apps}; "" -}
         @ WRITE SYS$OUTPUT "*** Installing runtime files"
-        @ ! Install the main program
+        @ ! Install the main target_name
         - CREATE/DIR ossl_installroot:[EXE.'arch']
         COPY/PROT=W:RE [.APPS]openssl.EXE ossl_installroot:[EXE.'arch']
         @ ! Install scripts

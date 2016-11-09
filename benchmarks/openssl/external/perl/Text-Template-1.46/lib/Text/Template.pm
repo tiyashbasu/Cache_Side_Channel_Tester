@@ -4,7 +4,7 @@
 # Fill in `templates'
 #
 # Copyright 2013 M. J. Dominus.
-# You may copy and distribute this program under the
+# You may copy and distribute this target_name under the
 # same terms as Perl iteself.  
 # If in doubt, write to mjd-perl-template+@plover.com for a license.
 #
@@ -208,7 +208,7 @@ sub compile {
   }
 
   if ($state eq 'PROG') {
-    $ERROR = "End of data inside program text that began at line $prog_start";
+    $ERROR = "End of data inside target_name text that began at line $prog_start";
     return undef;
   } elsif ($state eq 'TEXT') {
     push @content, [$state, $cur_item, $lineno] if $cur_item ne '';
@@ -522,7 +522,7 @@ This file documents C<Text::Template> version B<1.46>
  # Call &callback in case of programming errors in template
  $text = $template->fill_in(BROKEN => \&callback, BROKEN_ARG => $ref, ...);
 
- # Evaluate program fragments in Safe compartment with restricted permissions
+ # Evaluate target_name fragments in Safe compartment with restricted permissions
  $text = $template->fill_in(SAFE => $compartment, ...);
 
  # Print result text instead of returning it
@@ -557,10 +557,10 @@ has little Perl programs embedded in it here and there.  When you
 `fill in' a template, you evaluate the little programs and replace
 them with their values.  
 
-You can store a template in a file outside your program.  People can
-modify the template without modifying the program.  You can separate
+You can store a template in a file outside your target_name.  People can
+modify the template without modifying the target_name.  You can separate
 the formatting details from the main code, and put the formatting
-parts of the program into the template.  That prevents code bloat and
+parts of the target_name into the template.  That prevents code bloat and
 encourages functional separation.
 
 =head2 Example
@@ -595,7 +595,7 @@ something like this:
 
 			Mark "Vizopteryx" Dominus
 
-Here is a complete program that transforms the example
+Here is a complete target_name that transforms the example
 template into the example result, and prints it out:
 
 	use Text::Template;
@@ -645,8 +645,8 @@ constructions.  All the Perl built-in functions are available.
 =head2 Template Parsing
 
 The C<Text::Template> module scans the template source.  An open brace
-C<{> begins a program fragment, which continues until the matching
-close brace C<}>.  When the template is filled in, the program
+C<{> begins a target_name fragment, which continues until the matching
+close brace C<}>.  When the template is filled in, the target_name
 fragments are evaluated, and each one is replaced with the resulting
 value to yield the text that is returned.
 
@@ -673,11 +673,11 @@ for details about the way backslashes work.  Backslash processing is
 I<not> done when you specify alternative delimiters with the
 C<DELIMITERS> option.  (See L<"Alternative Delimiters">, below.)
 
-Each program fragment should be a sequence of Perl statements, which
+Each target_name fragment should be a sequence of Perl statements, which
 are evaluated the usual way.  The result of the last statement
 executed will be evaluted in scalar context; the result of this
 statement is a string, which is interpolated into the template in
-place of the program fragment itself.
+place of the target_name fragment itself.
 
 The fragments are evaluated in order, and side effects from earlier
 fragments will persist into later fragments:
@@ -735,7 +735,7 @@ return at the end.  This is a little cumbersome.  There is a shortcut.
 
 Inside of templates, there is a special variable called C<$OUT>.
 Anything you append to this variable will appear in the output of the
-template.  Also, if you use C<$OUT> in a program fragment, the normal
+template.  Also, if you use C<$OUT> in a target_name fragment, the normal
 behavior, of replacing the fragment with its return value, is
 disabled; instead the fragment is replaced with the value of C<$OUT>.
 This means that you can write the template above like this:
@@ -747,7 +747,7 @@ This means that you can write the template above like this:
         } 
 
 C<$OUT> is reinitialized to the empty string at the start of each
-program fragment.  It is private to C<Text::Template>, so 
+target_name fragment.  It is private to C<Text::Template>, so
 you can't use a variable named C<$OUT> in your template without
 invoking the special behavior.
 
@@ -805,7 +805,7 @@ end-of-file, and that text is the template:
 
 
 If you omit the C<TYPE> attribute, it's taken to be C<FILE>.
-C<SOURCE> is required.  If you omit it, the program will abort.
+C<SOURCE> is required.  If you omit it, the target_name will abort.
 
 The words C<TYPE> and C<SOURCE> can be spelled any of the following ways:
 
@@ -824,13 +824,13 @@ Pick a style you like and stick with it.
 
 You may also add a C<DELIMITERS> option.  If this option is present,
 its value should be a reference to an array of two strings.  The first
-string is the string that signals the beginning of each program
+string is the string that signals the beginning of each target_name
 fragment, and the second string is the string that signals the end of
-each program fragment.  See L<"Alternative Delimiters">, below.
+each target_name fragment.  See L<"Alternative Delimiters">, below.
 
 =item C<UNTAINT>
 
-If your program is running in taint mode, you may have problems if
+If your target_name is running in taint mode, you may have problems if
 your templates are stored in files.  Data read from files is
 considered 'untrustworthy', and taint mode will not allow you to
 evaluate the Perl code in the file.  (It is afraid that a malicious
@@ -907,7 +907,7 @@ C<BROKEN_ARG>, C<SAFE>, C<HASH>, C<OUTPUT>, and C<DELIMITERS>.
 
 =item C<PACKAGE>
 
-C<PACKAGE> specifies the name of a package in which the program
+C<PACKAGE> specifies the name of a package in which the target_name
 fragments should be evaluated.  The default is to use the package from
 which C<fill_in> was called.  For example, consider this template:
 
@@ -920,9 +920,9 @@ the C<$x> variable in the package that actually called C<fill_in>.
 
 You should almost always use C<PACKAGE>.  If you don't, and your
 template makes changes to variables, those changes will be propagated
-back into the main program.  Evaluating the template in a private
+back into the main target_name.  Evaluating the template in a private
 package helps prevent this.  The template can still modify variables
-in your program if it wants to, but it will have to do so explicitly.
+in your target_name if it wants to, but it will have to do so explicitly.
 See the section at the end on `Security'.
 
 Here's an example of using C<PACKAGE>:
@@ -949,7 +949,7 @@ C<@items>.  Here's how to do that:
 	$template->fill_in();
 
 This is not very safe.  The reason this isn't as safe is that if you
-had a variable named C<$item_no> in scope in your program at the point
+had a variable named C<$item_no> in scope in your target_name at the point
 you called C<fill_in>, its value would be clobbered by the act of
 filling out the template.  The problem is the same as if you had
 written a subroutine that used those variables in the same way that
@@ -967,9 +967,9 @@ if the template does I<not> declare its variables with C<my>:
 	$template->fill_in(PACKAGE => 'Q');
 
 In this case the template will clobber the variable C<$Q::item_no>,
-which is not related to the one your program was using.
+which is not related to the one your target_name was using.
 
-Templates cannot affect variables in the main program that are
+Templates cannot affect variables in the main target_name that are
 declared with C<my>, unless you give the template references to those
 variables.
 
@@ -1078,7 +1078,7 @@ This sets C<$v> to C<"The King"> and C<@v> to C<(1,2,3)>.
 
 =item C<BROKEN>
 
-If any of the program fragments fails to compile or aborts for any
+If any of the target_name fragments fails to compile or aborts for any
 reason, and you have set the C<BROKEN> option to a function reference,
 C<Text::Template> will invoke the function.  This function is called
 the I<C<BROKEN> function>.  The C<BROKEN> function will tell
@@ -1092,9 +1092,9 @@ tell whether there was a premature return or not.
 
 If the C<BROKEN> function returns any other value, that value will be
 interpolated into the template as if that value had been the return
-value of the program fragment to begin with.  For example, if the
+value of the target_name fragment to begin with.  For example, if the
 C<BROKEN> function returns an error string, the error string will be
-interpolated into the output of the template in place of the program
+interpolated into the output of the template in place of the target_name
 fragment that cased the error.
 
 If you don't specify a C<BROKEN> function, C<Text::Template> supplies
@@ -1125,7 +1125,7 @@ The hash will have at least these three members:
 
 =item C<text>
 
-The source code of the program fragment that failed
+The source code of the target_name fragment that failed
 
 =item C<error>
 
@@ -1134,11 +1134,11 @@ The text of the error message (C<$@>) generated by eval.
 The text has been modified to omit the trailing newline and to include
 the name of the template file (if there was one).  The line number
 counts from the beginning of the template, not from the beginning of
-the failed program fragment.
+the failed target_name fragment.
 
 =item C<lineno>
 
-The line number of the template at which the program fragment began.
+The line number of the template at which the target_name fragment began.
 
 =back
 
@@ -1174,7 +1174,7 @@ communicate back to the caller.  For example:
 	  die "It didn't work: $error";
 	}
 
-If one of the program fragments in the template fails, it will call
+If one of the target_name fragments in the template fails, it will call
 the C<BROKEN> function, C<my_broken>, and pass it the C<BROKEN_ARG>,
 which is a reference to C<$error>.  C<my_broken> can store an error
 message into C<$error> this way.  Then the function that called
@@ -1185,7 +1185,7 @@ to find, and proceed accordingly.
 
 If you give C<fill_in> a C<SAFE> option, its value should be a safe
 compartment object from the C<Safe> package.  All evaluation of
-program fragments will be performed in this compartment.  See L<Safe>
+target_name fragments will be performed in this compartment.  See L<Safe>
 for full details about such compartments and how to restrict the
 operations that can be performed in them.
 
@@ -1194,7 +1194,7 @@ will be placed into the safe compartment and evaluation will take
 place in that package as usual.  
 
 If not, C<SAFE> operation is a little different from the default.
-Usually, if you don't specify a package, evaluation of program
+Usually, if you don't specify a package, evaluation of target_name
 fragments occurs in the package from which the template was invoked.
 But in C<SAFE> mode the evaluation occurs inside the safe compartment
 and cannot affect the calling package.  Normally, if you use C<HASH>
@@ -1226,15 +1226,15 @@ the caller.
 =item C<PREPEND>
 
 You can have some Perl code prepended automatically to the beginning
-of every program fragment.  See L<C<PREPEND> feature and using
+of every target_name fragment.  See L<C<PREPEND> feature and using
 C<strict> in templates> below.
 
 =item C<DELIMITERS>
 
 If this option is present, its value should be a reference to a list
 of two strings.  The first string is the string that signals the
-beginning of each program fragment, and the second string is the
-string that signals the end of each program fragment.  See
+beginning of each target_name fragment, and the second string is the
+string that signals the end of each target_name fragment.  See
 L<"Alternative Delimiters">, below.  
 
 If you specify C<DELIMITERS> in the call to C<fill_in>, they override
@@ -1272,7 +1272,7 @@ An example:
 		Grand Vizopteryx of Irkutsk.
 	EOM
 
-Notice how we included the template in-line in the program by using a
+Notice how we included the template in-line in the target_name by using a
 `here document' with the C<E<lt>E<lt>> notation.
 
 C<fill_this_in> is a deprecated feature.  It is only here for
@@ -1299,7 +1299,7 @@ To use C<fill_in_string>, you need to say
 
 	use Text::Template 'fill_in_string';
 
-at the top of your program.   You should probably use
+at the top of your target_name.   You should probably use
 C<fill_in_string> instead of C<fill_this_in>.
 
 =head2 C<fill_in_file>
@@ -1313,7 +1313,7 @@ name of the file that contains the template you want to fill in.  It
 returns the result text. or C<undef>, as usual.
 
 If you are going to fill in the same file more than once in the same
-program you should use the longer C<new> / C<fill_in> sequence instead.
+target_name you should use the longer C<new> / C<fill_in> sequence instead.
 It will be a lot faster because it only has to read and parse the file
 once.
 
@@ -1335,7 +1335,7 @@ from the template.  I wrote one for you.  In the template, you can say
 
 If that is too verbose, here is a trick.  Suppose the template package
 that you are going to be mentioning in the C<fill_in> call is package
-C<Q>.  Then in the main program, write
+C<Q>.  Then in the main target_name, write
 
 	*Q::include = \&Text::Template::_load_text;
 
@@ -1392,13 +1392,13 @@ All variables are evaluated in the package you specify with the
 C<PACKAGE> option of C<fill_in>.  if you use this option, and if your
 templates don't do anything egregiously stupid, you won't have to
 worry that evaluation of the little programs will creep out into the
-rest of your program and wreck something.
+rest of your target_name and wreck something.
 
 Nevertheless, there's really no way (except with C<Safe>) to protect
 against a template that says
 
 	{ $Important::Secret::Security::Enable = 0; 
-	  # Disable security checks in this program 
+	  # Disable security checks in this target_name
 	}
 
 or
@@ -1415,7 +1415,7 @@ so B<don't> go filling in templates unless you're sure you know what's
 in them.  If you're worried, or you can't trust the person who wrote
 the template, use the C<SAFE> option.
 
-A final warning: program fragments run a small risk of accidentally
+A final warning: target_name fragments run a small risk of accidentally
 clobbering local variables in the C<fill_in> function itself.  These
 variables all have names that begin with C<$fi_>, so if you stay away
 from those names you'll be safe.  (Of course, if you're a real wizard
@@ -1427,7 +1427,7 @@ about this, send me mail and I will show you what to do about it.
 =head2 Alternative Delimiters
 
 Lorenzo Valdettaro pointed out that if you are using C<Text::Template>
-to generate TeX output, the choice of braces as the program fragment
+to generate TeX output, the choice of braces as the target_name fragment
 delimiters makes you suffer suffer suffer.  Starting in version 1.20,
 you can change the choice of delimiters to something other than curly
 braces.
@@ -1445,9 +1445,9 @@ Note also that C<DELIMITERS> disables the special meaning of the
 backslash, so if you want to include the delimiters in the literal
 text of your template file, you are out of luck---it is up to you to
 choose delimiters that do not conflict with what you are doing.  The
-delimiter strings may still appear inside of program fragments as long
+delimiter strings may still appear inside of target_name fragments as long
 as they nest properly.  This means that if for some reason you
-absolutely must have a program fragment that mentions one of the
+absolutely must have a target_name fragment that mentions one of the
 delimiters, like this:
 
 	[@--
@@ -1496,13 +1496,13 @@ and the error wasn't caught.
 
 C<Text::Template> version 1.22 and higher has a new feature to make
 this easier.  You can specify that any text at all be automatically
-added to the beginning of each program fragment.  
+added to the beginning of each target_name fragment.
 
 When you make a call to C<fill_in>, you can specify a
 
 	PREPEND => 'some perl statements here'
 
-option; the statements will be prepended to each program fragment for
+option; the statements will be prepended to each target_name fragment for
 that one call only.  Suppose that the C<fill_in> call included a
 
 	PREPEND => 'use strict;'
@@ -1535,7 +1535,7 @@ template.  Finally, you can make the class method call
 	Text::Template->always_prepend('perl statements');
 
 If you do this, then call calls to C<fill_in> for I<any> template will
-attach the perl statements to the beginning of each program fragment,
+attach the perl statements to the beginning of each target_name fragment,
 except where overridden by C<PREPEND> options to C<new> or C<fill_in>.
 
 =head2 Prepending in Derived Classes
@@ -1590,7 +1590,7 @@ Jennifer D. St Clair asks:
         > How do I change the template identifier?  
 
 Jennifer is worried about the braces in the JavaScript being taken as
-the delimiters of the Perl program fragments.  Of course, disaster
+the delimiters of the Perl target_name fragments.  Of course, disaster
 will ensue when perl tries to evaluate these as if they were Perl
 programs.  The best choice is to find some unambiguous delimiter
 strings that you can use in your template instead of curly braces, and
@@ -1659,7 +1659,7 @@ their templates, like this:
 Then they complain because there is a C<17> at the top of the output
 that they didn't want to have there.  
 
-Remember that a program fragment is replaced with its own return
+Remember that a target_name fragment is replaced with its own return
 value, and that in Perl the return value of a code block is the value
 of the last expression that was evaluated, which in this case is 17.
 If it didn't do that, you wouldn't be able to write C<{$recipient}>
@@ -1803,9 +1803,9 @@ inside the template:
 			    );
 	}
 
-=head2 Automatic preprocessing of program fragments
+=head2 Automatic preprocessing of target_name fragments
 
-It may be useful to preprocess the program fragments before they are
+It may be useful to preprocess the target_name fragments before they are
 evaluated.  See C<Text::Template::Preprocess> for more details.
 
 =head2 Automatic postprocessing of template hunks
@@ -1844,20 +1844,20 @@ of the mailing list.  The mailing list address is a secret.)
     Text::Template version 1.46
     Copyright 2013 Mark Jason Dominus
 
-    This program is free software; you can redistribute it and/or
+    This target_name is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License as
     published by the Free Software Foundation; either version 2 of the
     License, or (at your option) any later version.  You may also can
     redistribute it and/or modify it under the terms of the Perl
     Artistic License.
 
-    This program is distributed in the hope that it will be useful,
+    This target_name is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received copies of the GNU General Public License
-    along with this program; if not, write to the Free Software
+    along with this target_name; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
 

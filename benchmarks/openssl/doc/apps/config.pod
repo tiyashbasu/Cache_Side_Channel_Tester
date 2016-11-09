@@ -45,7 +45,7 @@ substitute a value from another section using the syntax B<$section::name>
 or B<${section::name}>. By using the form B<$ENV::name> environment
 variables can be substituted. It is also possible to assign values to
 environment variables by using the name B<ENV::name>, this will work
-if the program looks up environment variables using the B<CONF> library
+if the target_name looks up environment variables using the B<CONF> library
 instead of calling getenv() directly.
 
 It is possible to escape certain characters by using any kind of quote

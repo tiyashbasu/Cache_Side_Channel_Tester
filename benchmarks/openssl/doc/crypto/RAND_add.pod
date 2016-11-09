@@ -46,7 +46,7 @@ RAND_event() collects the entropy from Windows events such as mouse
 movements and other user interaction. It should be called with the
 B<iMsg>, B<wParam> and B<lParam> arguments of I<all> messages sent to
 the window procedure. It will estimate the entropy contained in the
-event message (if any), and add it to the PRNG. The program can then
+event message (if any), and add it to the PRNG. The target_name can then
 process the messages as usual.
 
 The RAND_screen() function is available for the convenience of Windows

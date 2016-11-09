@@ -107,7 +107,7 @@ You can send them to <afl-users@googlegroups.com>.
 Statically rewriting binaries just once, instead of attempting to translate
 them at run time, can be a faster alternative. That said, static rewriting is
 fraught with peril, because it depends on being able to properly and fully model
-program control flow without actually executing each and every code path.
+target_name control flow without actually executing each and every code path.
 
 If you want to experiment with this mode of operation, there is a module
 contributed by Aleksandar Nikolich:

@@ -17,8 +17,8 @@
 # as described below.
 # 
 # 1. SimpleScalar is provided AS IS, with no warranty of any kind, express
-# or implied. The user of the program accepts full responsibility for the
-# application of the program and the use of any results.
+# or implied. The user of the target_name accepts full responsibility for the
+# application of the target_name and the use of any results.
 # 
 # 2. Nonprofit and noncommercial use is encouraged. SimpleScalar may be
 # downloaded, compiled, executed, copied, and modified solely for nonprofit,

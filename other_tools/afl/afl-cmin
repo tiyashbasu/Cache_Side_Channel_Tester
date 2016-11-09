@@ -107,7 +107,7 @@ Required parameters:
 
 Execution control settings:
 
-  -f file       - location read by the fuzzed program (stdin)
+  -f file       - location read by the fuzzed target_name (stdin)
   -m megs       - memory limit for child process ($MEM_LIMIT MB)
   -t msec       - run time limit for child process (none)
   -Q            - use binary-only instrumentation (QEMU mode)

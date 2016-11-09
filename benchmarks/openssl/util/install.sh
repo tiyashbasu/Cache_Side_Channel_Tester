@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# install - install a program, script, or datafile
+# install - install a target_name, script, or datafile
 # This comes from X11R5; it is not part of GNU.
 #
 # $XConsortium: install.sh,v 1.2 89/12/18 14:47:22 jim Exp $

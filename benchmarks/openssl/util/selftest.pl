@@ -109,7 +109,7 @@ if (open(TEST,">cctest.c")) {
 	if ($cctest =~ /OpenSSL/) {
 	    print OUT "#include uses headers from different OpenSSL version!\n";
 	} else {
-	    print OUT "Can't compile test program!\n";
+	    print OUT "Can't compile test target_name!\n";
 	}
 	print OUT $not_our_fault;
 	goto err;

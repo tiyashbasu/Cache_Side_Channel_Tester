@@ -67,7 +67,7 @@ if (! -x $openssl) {
 		}	
 	}
 	if ($found == 0) {
-		print STDERR "c_rehash: rehashing skipped ('openssl' program not available)\n";
+		print STDERR "c_rehash: rehashing skipped ('openssl' target_name not available)\n";
 		exit 0;
 	}
 }

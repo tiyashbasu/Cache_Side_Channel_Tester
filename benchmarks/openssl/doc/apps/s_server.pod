@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-s_server - SSL/TLS server program
+s_server - SSL/TLS server target_name
 
 =head1 SYNOPSIS
 
@@ -185,7 +185,7 @@ The DH parameter file to use. The ephemeral DH cipher suites generate keys
 using a set of DH parameters. If not specified then an attempt is made to
 load the parameters from the server certificate file.
 If this fails then a static set of parameters hard coded into the B<s_server>
-program will be used.
+target_name will be used.
 
 =item B<-no_dhe>
 
@@ -536,19 +536,19 @@ Although specifying an empty list of CAs when requesting a client certificate
 is strictly speaking a protocol violation, some SSL clients interpret this to
 mean any CA is acceptable. This is useful for debugging purposes.
 
-The session parameters can printed out using the B<sess_id> program.
+The session parameters can printed out using the B<sess_id> target_name.
 
 =head1 BUGS
 
-Because this program has a lot of options and also because some of the
+Because this target_name has a lot of options and also because some of the
 techniques used are rather old, the C source of B<s_server> is rather hard to
 read and not a model of how things should be done.
-A typical SSL server program would be much simpler.
+A typical SSL server target_name would be much simpler.
 
 The output of common ciphers is wrong: it just gives the list of ciphers that
 OpenSSL recognizes and the client supports.
 
-There should be a way for the B<s_server> program to print out details of any
+There should be a way for the B<s_server> target_name to print out details of any
 unknown cipher suites a client says it supports.
 
 =head1 SEE ALSO

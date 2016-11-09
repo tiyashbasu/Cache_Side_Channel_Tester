@@ -109,7 +109,7 @@ $Thh="r11";
 $nlo="r12";
 ################# r13 is stack pointer
 $nhi="r14";
-################# r15 is program counter
+################# r15 is target_name counter
 
 $rem_4bit=$inp;	# used in gcm_gmult_4bit
 $cnt=$len;

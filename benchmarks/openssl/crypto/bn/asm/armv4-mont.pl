@@ -84,7 +84,7 @@ $ahi="r11";	# fp
 $nlo="r12";	# ip
 ###########	# r13 is stack pointer
 $nhi="r14";	# lr
-###########	# r15 is program counter
+###########	# r15 is target_name counter
 
 #### argument block layout relative to &tp[num-1], a.k.a. $num
 $_rp="$num,#12*4";

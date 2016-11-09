@@ -33,10 +33,10 @@ relies on coverage signals to select a subset of interesting seeds from a
 massive, high-quality corpus of candidate files, and then fuzz them by
 traditional means. The approach works exceptionally well, but requires such
 a corpus to be readily available. In addition, block coverage measurements
-provide only a very simplistic understanding of program state, and are less
+provide only a very simplistic understanding of target_name state, and are less
 useful for guiding the fuzzing effort in the long haul.
 
-Other, more sophisticated research has focused on techniques such as program
+Other, more sophisticated research has focused on techniques such as target_name
 flow analysis ("concolic execution"), symbolic execution, or static analysis.
 All these methods are extremely promising in experimental settings, but tend
 to suffer from reliability and performance problems in practical uses - and
@@ -48,7 +48,7 @@ currently do not offer a viable alternative to "dumb" fuzzing techniques.
 American Fuzzy Lop is a brute-force fuzzer coupled with an exceedingly simple
 but rock-solid instrumentation-guided genetic algorithm. It uses a modified
 form of edge coverage to effortlessly pick up subtle, local-scale changes to
-program control flow.
+target_name control flow.
 
 Simplifying a bit, the overall algorithm can be summed up as:
 
@@ -57,7 +57,7 @@ Simplifying a bit, the overall algorithm can be summed up as:
   2) Take next input file from the queue,
 
   3) Attempt to trim the test case to the smallest size that doesn't alter
-     the measured behavior of the program,
+     the measured behavior of the target_name,
 
   4) Repeatedly mutate the file using a balanced and well-researched variety
      of traditional fuzzing strategies,
@@ -92,7 +92,7 @@ The instrumentation has a fairly modest performance impact; in conjunction with
 other optimizations implemented by afl-fuzz, most programs can be fuzzed as fast
 or even faster than possible with traditional tools.
 
-The correct way to recompile the target program may vary depending on the
+The correct way to recompile the target target_name may vary depending on the
 specifics of the build process, but a nearly-universal approach would be:
 
 $ CC=/path/to/afl/afl-gcc ./configure
@@ -104,7 +104,7 @@ The clang wrappers (afl-clang and afl-clang++) can be used in the same way;
 clang users may also opt to leverage a higher-performance instrumentation mode,
 as described in llvm_mode/README.llvm.
 
-When testing libraries, you need to find or write a simple program that reads
+When testing libraries, you need to find or write a simple target_name that reads
 data from stdin or from a file and passes it to the tested library. In such a
 case, it is essential to link this executable against a static version of the
 instrumented library, or to make sure that the correct .so file is loaded at
@@ -163,22 +163,22 @@ exercise different code paths in the target binary.
 6) Fuzzing binaries
 -------------------
 
-The fuzzing process itself is carried out by the afl-fuzz utility. This program
+The fuzzing process itself is carried out by the afl-fuzz utility. This target_name
 requires a read-only directory with initial test cases, a separate place to
 store its findings, plus a path to the binary to test.
 
 For target binaries that accept input directly from stdin, the usual syntax is:
 
-$ ./afl-fuzz -i testcase_dir -o findings_dir /path/to/program [...params...]
+$ ./afl-fuzz -i testcase_dir -o findings_dir /path/to/target_name [...params...]
 
 For programs that take input from a file, use '@@' to mark the location in
 the target's command line where the input file name should be placed. The
 fuzzer will substitute this for you:
 
-$ ./afl-fuzz -i testcase_dir -o findings_dir /path/to/program @@
+$ ./afl-fuzz -i testcase_dir -o findings_dir /path/to/target_name @@
 
 You can also use the -f option to have the mutated data written to a specific
-file. This is useful if the program expects a particular file extension or so.
+file. This is useful if the target_name expects a particular file extension or so.
 
 Non-instrumented binaries can be fuzzed in the QEMU mode (add -Q in the command
 line) or in a traditional, blind-fuzzer mode (specify -n).
@@ -216,11 +216,11 @@ in real time:
                it to a smaller size using the afl-cmin tool. The tool will find
                a smaller subset of files offering equivalent edge coverage.
 
-  - crashes/ - unique test cases that cause the tested program to receive a
+  - crashes/ - unique test cases that cause the tested target_name to receive a
                fatal signal (e.g., SIGSEGV, SIGILL, SIGABRT). The entries are 
                grouped by the received signal.
 
-  - hangs/   - unique test cases that cause the tested program to time out. Note
+  - hangs/   - unique test cases that cause the tested target_name to time out. Note
                that when default (aggressive) timeout settings are in effect,
                this can be slightly noisy due to latency spikes and other
                natural phenomena.
@@ -313,7 +313,7 @@ code analysis work. To assist with this task, afl-fuzz supports a very unique
 
 In this mode, the fuzzer takes one or more crashing test cases as the input,
 and uses its feedback-driven fuzzing strategies to very quickly enumerate all
-code paths that can be reached in the program while keeping it in the
+code paths that can be reached in the target_name while keeping it in the
 crashing state.
 
 Mutations that do not result in a crash are rejected; so are any changes that
@@ -327,7 +327,7 @@ beneath.
 Oh, one more thing: for test case minimization, give afl-tmin a try. The tool
 can be operated in a very simple way:
 
-$ ./afl-tmin -i test_case -o minimized_result -- /path/to/program [...]
+$ ./afl-tmin -i test_case -o minimized_result -- /path/to/target_name [...]
 
 The tool works with crashing and non-crashing test cases alike. In the crash
 mode, it will happily accept instrumented and non-instrumented binaries. In the
@@ -339,7 +339,7 @@ afl-fuzz.
 
 Another recent addition to AFL is the afl-analyze tool. It takes an input
 file, attempts to sequentially flip bytes, and observes the behavior of the
-tested program. It then color-codes the input based on which sections appear to
+tested target_name. It then color-codes the input based on which sections appear to
 be critical, and which are not; while not bulletproof, it can often offer quick
 insights into complex file formats. More info about its operation can be found
 near the end of technical_details.txt.

@@ -164,7 +164,7 @@ Use NULL cipher (no encryption or decryption of input).
 
 =head1 NOTES
 
-The program can be called either as B<openssl ciphername> or
+The target_name can be called either as B<openssl ciphername> or
 B<openssl enc -ciphername>. But the first form doesn't work with
 engine-provided ciphers, because this form is processed before the
 configuration file is read and any ENGINEs loaded.
@@ -217,7 +217,7 @@ unsupported options (for example B<openssl enc -help>) includes a
 list of ciphers, supported by your version of OpenSSL, including
 ones provided by configured engines.
 
-The B<enc> program does not support authenticated encryption modes
+The B<enc> target_name does not support authenticated encryption modes
 like CCM and GCM. The utility does not store or retrieve the
 authentication tag.
 
@@ -328,9 +328,9 @@ The B<-A> option when used with large files doesn't work properly.
 
 There should be an option to allow an iteration count to be included.
 
-The B<enc> program only supports a fixed number of algorithms with
+The B<enc> target_name only supports a fixed number of algorithms with
 certain parameters. So if, for example, you want to use RC2 with a
-76 bit key or RC4 with an 84 bit key you can't use this program.
+76 bit key or RC4 with an 84 bit key you can't use this target_name.
 
 =head1 HISTORY
 

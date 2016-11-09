@@ -43,7 +43,7 @@ found by AFL in that earlier run. This demonstrates the basic principle:
 
   for i in <out_dir>/queue/id*; do
     LD_PRELOAD=/path/to/libtokencap.so \
-      /path/to/target/program [...params, including $i...]
+      /path/to/target/target_name [...params, including $i...]
   done
 
   sort -u temp_output.txt >afl_dictionary.txt

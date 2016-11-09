@@ -20,7 +20,7 @@ In each table entry, the following keys are significant:
         cc              => The compiler command, usually one of "cc",
                            "gcc" or "clang".  This command is normally
                            also used to link object files and
-                           libraries into the final program.
+                           libraries into the final target_name.
         cflags          => Flags that are used at all times when
                            compiling.
         defines         => As an alternative, macro definitions may be

@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-s_time - SSL/TLS performance timing program
+s_time - SSL/TLS performance timing target_name
 
 =head1 SYNOPSIS
 
@@ -110,8 +110,8 @@ turns on non-blocking I/O.
 these options disable the use of certain SSL or TLS protocols. By default
 the initial handshake uses a method which should be compatible with all
 servers and permit them to use SSL v3 or TLS as appropriate.
-The timing program is not as rich in options to turn protocols on and off as
-the L<s_client(1)> program and may not connect to all servers.
+The timing target_name is not as rich in options to turn protocols on and off as
+the L<s_client(1)> target_name and may not connect to all servers.
 
 Unfortunately there are a lot of ancient and broken servers in use which
 cannot handle this technique and will fail to connect. Some servers only
@@ -171,8 +171,8 @@ on the command line is no guarantee that the certificate works.
 
 =head1 BUGS
 
-Because this program does not have all the options of the
-L<s_client(1)> program to turn protocols on and off, you may not be
+Because this target_name does not have all the options of the
+L<s_client(1)> target_name to turn protocols on and off, you may not be
 able to measure the performance of all protocols with all servers.
 
 The B<-verify> option should really exit if the server verification

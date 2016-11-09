@@ -7,7 +7,7 @@ print "1..5\n";
 
 $n=1;
 
-die "This is the test program for Text::Template version 1.46.
+die "This is the test target_name for Text::Template version 1.46.
 You are using version $Text::Template::VERSION instead.
 That does not make sense.\n
 Aborting"

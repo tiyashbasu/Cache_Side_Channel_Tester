@@ -57,7 +57,7 @@ There's one important thing to watch out for: if the tool is not finding new
 paths within several minutes of starting, you're probably not invoking the
 target binary correctly and it never gets to parse the input files we're
 throwing at it; another possible explanations are that the default memory limit
-(-m) is too restrictive, and the program exits after failing to allocate a
+(-m) is too restrictive, and the target_name exits after failing to allocate a
 buffer very early on; or that the input files are patently invalid and always
 fail a basic header check.
 
@@ -134,7 +134,7 @@ input corpus.
 Be wary of extremes:
 
   - Absolute numbers below 200 or so suggest one of three things: that the
-    program is extremely simple; that it is not instrumented properly (e.g.,
+    target_name is extremely simple; that it is not instrumented properly (e.g.,
     due to being linked against a non-instrumented copy of the target
     library); or that it is bailing out prematurely on your input test cases.
     The fuzzer will try to mark this in pink, just to make you aware.
@@ -143,7 +143,7 @@ Be wary of extremes:
     that make heavy use of template-generated code.
 
     Because high bitmap density makes it harder for the fuzzer to reliably
-    discern new program states, I recommend recompiling the binary with
+    discern new target_name states, I recommend recompiling the binary with
     AFL_INST_RATIO=10 or so and trying again (see env_variables.txt).
 
     The fuzzer will flag high percentages in red. Chances are, you will never
@@ -215,7 +215,7 @@ now. It tells you about the current stage, which can be any of:
 
 The remaining fields should be fairly self-evident: there's the exec count
 progress indicator for the current stage, a global exec counter, and a
-benchmark for the current program execution speed. This may fluctuate from
+benchmark for the current target_name execution speed. This may fluctuate from
 one test case to another, but the benchmark should be ideally over 500 execs/sec
 most of the time - and if it stays below 100, the job will probably take very
 long.
@@ -296,7 +296,7 @@ imported from other fuzzer instances when doing parallelized fuzzing; and the
 number of inputs that produce seemingly variable behavior in the tested binary.
 
 That last bit is actually fairly interesting: it measures the consistency of
-observed traces. If a program always behaves the same for the same input data,
+observed traces. If a target_name always behaves the same for the same input data,
 it will earn a score of 100%. When the value is lower but still shown in purple,
 the fuzzing process is unlikely to be negatively affected. If it goes into red,
 you may be in trouble, since AFL will have difficulty discerning between
@@ -311,7 +311,7 @@ there are several things to look at:
 
   - Attempts to manipulate persistent resources, such as left over temporary
     files or shared memory objects. This is usually harmless, but you may want
-    to double-check to make sure the program isn't bailing out prematurely.
+    to double-check to make sure the target_name isn't bailing out prematurely.
     Running out of disk space, SHM handles, or other global resources can
     trigger this, too.
 

@@ -23,7 +23,7 @@ SSL_free() also calls the free()ing procedures for indirectly affected items, if
 applicable: the buffering BIO, the read and write BIOs,
 cipher lists specially created for this B<ssl>, the B<SSL_SESSION>.
 Do not explicitly free these indirectly freed up items before or after
-calling SSL_free(), as trying to free things twice may lead to program
+calling SSL_free(), as trying to free things twice may lead to target_name
 failure.
 
 The ssl session has reference counts from two users: the SSL object, for

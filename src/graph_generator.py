@@ -4,7 +4,7 @@ import numpy as np
 
 if len(argv) == 1:
     print("Incorrect usage.")
-    print("Usage: graph_generator.py <log file name> <all results file name> <executions per trial> <no. of parmateres> <output figure filename>")
+    print("Usage: graph_generator.py <log file name> <all results file name> <executions per trial> <output figure filename>")
     quit()
 
 log_filename = str(argv[1])

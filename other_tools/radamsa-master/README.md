@@ -1,6 +1,6 @@
 # A Crash Course to Radamsa
 
-Radamsa is a test case generator for robustness testing, a.k.a. a fuzzer. It is typically used to test how well a program can withstand malformed and potentially malicious inputs. It works by reading sample files of valid data and generating interestringly different outputs from them. The main selling points of radamsa are that it has already found a slew of bugs in programs that actually matter, it is easily scriptable and easy to get up and running.
+Radamsa is a test case generator for robustness testing, a.k.a. a fuzzer. It is typically used to test how well a target_name can withstand malformed and potentially malicious inputs. It works by reading sample files of valid data and generating interestringly different outputs from them. The main selling points of radamsa are that it has already found a slew of bugs in programs that actually matter, it is easily scriptable and easy to get up and running.
 
 ## Nutshell:
 
@@ -15,11 +15,11 @@ Radamsa is a test case generator for robustness testing, a.k.a. a fuzzer. It is 
 
 Programming is hard. All nontrivial programs have bugs in them. What's more, even the simplest typical mistakes are in some of the most widely used programming languages usually enough for attackers to gain undesired powers.
 
-Fuzzing is one of the techniques to find such unexpected behavior from programs. The idea is simply to subject the program to various kinds of inputs and see what happens. There are two parts in this process: getting the various kinds of inputs and how to see what happens. Radamsa is a solution to the first part, and the second part is typically a short shell script. Testers usually have a more or less vague idea what should *not* happen, and they try to find out if this is so. This kind of testing is often referred to as negative testing, being the opposite of positive unit- or integration testing. Developers know a service should not crash, should not exponential amounts of memory, should not get stuck in an infinite loop, etc. Attackers know that they can probably turn certain kinds of memory safety bugs into exploits, so they fuzz typically instrumented versions of the target programs and wait for such errors to be found. In theory, the idea is to counterprove by finding a counterexample a theorem about the program stating that for all inputs something doesn't happen.
+Fuzzing is one of the techniques to find such unexpected behavior from programs. The idea is simply to subject the target_name to various kinds of inputs and see what happens. There are two parts in this process: getting the various kinds of inputs and how to see what happens. Radamsa is a solution to the first part, and the second part is typically a short shell script. Testers usually have a more or less vague idea what should *not* happen, and they try to find out if this is so. This kind of testing is often referred to as negative testing, being the opposite of positive unit- or integration testing. Developers know a service should not crash, should not exponential amounts of memory, should not get stuck in an infinite loop, etc. Attackers know that they can probably turn certain kinds of memory safety bugs into exploits, so they fuzz typically instrumented versions of the target programs and wait for such errors to be found. In theory, the idea is to counterprove by finding a counterexample a theorem about the target_name stating that for all inputs something doesn't happen.
 
-There are many kinds of fuzzers and ways to apply them. Some trace the target program and generate test cases based on the behavior. Some need to know the format of the data and generate test cases based on that information. Radamsa is an extremely "black-box" fuzzer, because it needs no information about the program nor the format of the data. One can pair it with coverage analysis during testing to likely improve the quality of the sample set during a continuous test run, but this is not mandatory. The main goal is to first get tests running easily, and then refine the technique applied if necessary.
+There are many kinds of fuzzers and ways to apply them. Some trace the target target_name and generate test cases based on the behavior. Some need to know the format of the data and generate test cases based on that information. Radamsa is an extremely "black-box" fuzzer, because it needs no information about the target_name nor the format of the data. One can pair it with coverage analysis during testing to likely improve the quality of the sample set during a continuous test run, but this is not mandatory. The main goal is to first get tests running easily, and then refine the technique applied if necessary.
 
-Radamsa is intended to be a good general purpose fuzzer for all kinds of data. The goal is to be able to find issues no matter what kind of data the program processes, whether it's xml or mp3, and conversely that not finding bugs implies that other similar tools likely won't find them either. This is accomplished by having various kinds of heuristics and change patterns, which are varied during the tests. Sometimes there is just one change, sometimes there a slew of them, sometimes there are bit flips, sometimes something more advanced and novel.
+Radamsa is intended to be a good general purpose fuzzer for all kinds of data. The goal is to be able to find issues no matter what kind of data the target_name processes, whether it's xml or mp3, and conversely that not finding bugs implies that other similar tools likely won't find them either. This is accomplished by having various kinds of heuristics and change patterns, which are varied during the tests. Sometimes there is just one change, sometimes there a slew of them, sometimes there are bit flips, sometimes something more advanced and novel.
 
 Radamsa is a side-product of OUSPG's Protos Genome Project, in which some techniques to automatically analyze and examine the structure of communication protocols were explored. A subset of one of the tools turned out to be a surprisingly effective file fuzzer. The first prototype black-box fuzzer tools mainly used regular and context-free formal languages to represent the inferred model of the data.
 
@@ -55,7 +55,7 @@ This section assumes some familiarity with UNIX scripting.
 
 Radamsa can be thought as the cat UNIX tool, which manages to break the data in often interesting ways as it flows through. It has also support for generating more than one output at a time and acting as a TCP server or client, in case such things are needed.
 
-Use of radamsa will be demonstrated by means of small examples. We will use the bc arbitrary precision calculator as an example target program.
+Use of radamsa will be demonstrated by means of small examples. We will use the bc arbitrary precision calculator as an example target target_name.
 
 In the simplest case, from scripting point of view, radamsa can be used to fuzz data going through a pipe.
 
@@ -119,14 +119,14 @@ Or to test decompression:
  $ gzip -c /bin/bash | radamsa -n 1000 | gzip -d > /dev/null
 ```
 
-Typically however one might want separate runs for the program for each output. Basic shell scripting makes this easy. Usually we want a test script to run continuously, so we'll use an infinite loop here:
+Typically however one might want separate runs for the target_name for each output. Basic shell scripting makes this easy. Usually we want a test script to run continuously, so we'll use an infinite loop here:
 
 ```
  $ gzip -c /bin/bash > sample.gz
  $ while true; do radamsa sample.gz | gzip -d > /dev/null; done
 ```
 
-Notice that we are here giving the sample as a file instead of running Radamsa in a pipe. Like cat Radamsa will by default write the output to stdout, but unlike cat when given more than one file it will usually use only one or a few of them to create one output. This test will go about throwing fuzzed data against gzip, but doesn't care what happens then. One simple way to find out if something bad happened to a (simple single-threaded) program is to check whether the exit value is greater than 127, which would indicate a fatal program termination. This can be done for example as follows:
+Notice that we are here giving the sample as a file instead of running Radamsa in a pipe. Like cat Radamsa will by default write the output to stdout, but unlike cat when given more than one file it will usually use only one or a few of them to create one output. This test will go about throwing fuzzed data against gzip, but doesn't care what happens then. One simple way to find out if something bad happened to a (simple single-threaded) target_name is to check whether the exit value is greater than 127, which would indicate a fatal target_name termination. This can be done for example as follows:
 
 ```
  $ gzip -c /bin/bash > sample.gz
@@ -140,7 +140,7 @@ Notice that we are here giving the sample as a file instead of running Radamsa i
 
 This will run for as long as it takes to crash gzip, which hopefully is no longer even possible, and the fuzzed.gz can be used to check the issue if the script has stopped. We have found a few such cases, the last one of which took about 3 months to find, but all of them have as usual been filed as bugs and have been promptly fixed by the upstream.
 
-One thing to note is that since most of the outputs are based on data in the given samples (standard input or files given at command line) it is usually a good idea to try to find good samples, and preferably more than one of them. In a more real-world test script radamsa will usually be used to generate more than one output at a time based on tens or thousands of samples, and the consequences of the outputs are tested mostly in parallel, often by giving each of the output on command line to the target program. We'll make a simple such script for bc, which accepts files from command line. The -o flag can be used to give a file name to which radamsa should write the output instead of standard output. If more than one output is generated, the path should have a %n in it, which will be expanded to the number of the output.
+One thing to note is that since most of the outputs are based on data in the given samples (standard input or files given at command line) it is usually a good idea to try to find good samples, and preferably more than one of them. In a more real-world test script radamsa will usually be used to generate more than one output at a time based on tens or thousands of samples, and the consequences of the outputs are tested mostly in parallel, often by giving each of the output on command line to the target target_name. We'll make a simple such script for bc, which accepts files from command line. The -o flag can be used to give a file name to which radamsa should write the output instead of standard output. If more than one output is generated, the path should have a %n in it, which will be expanded to the number of the output.
 
 ```
  $ echo "1 + 2" > sample-1
@@ -158,9 +158,9 @@ One thing to note is that since most of the outputs are based on data in the giv
  done
 ```
 
-This will again run up to obviously interesting times indicated by the large exit value, or up to the target program getting stuck.
+This will again run up to obviously interesting times indicated by the large exit value, or up to the target target_name getting stuck.
 
-In practice many programs fail in unique ways. Some common ways to catch obvious errors are to check the exit value, enable fatal signal printing in kernel and checking if something new turns up in dmesg, run a program under strace, gdb or valgrind and see if something interesting is caught, check if an error reporter process has been started after starting the program, etc.
+In practice many programs fail in unique ways. Some common ways to catch obvious errors are to check the exit value, enable fatal signal printing in kernel and checking if something new turns up in dmesg, run a target_name under strace, gdb or valgrind and see if something interesting is caught, check if an error reporter process has been started after starting the target_name, etc.
 
 ## Output Options
 
@@ -192,7 +192,7 @@ A non-exhaustive list of related free tools:
  * Peach (http://peachfuzzer.com/)
  * Sulley (http://code.google.com/p/sulley/)
 
-Tools which are intended to improve security are usually complementary and should be used in parallel to improve the results. Radamsa aims to be an easy-to-set-up general purpose shotgun test to expose the easiest (and often severe due to being reachable from via input streams) cracks which might be exploitable by getting the program to process malicious data. It has also turned out to be useful for catching regressions when combined with continuous automatic testing.
+Tools which are intended to improve security are usually complementary and should be used in parallel to improve the results. Radamsa aims to be an easy-to-set-up general purpose shotgun test to expose the easiest (and often severe due to being reachable from via input streams) cracks which might be exploitable by getting the target_name to process malicious data. It has also turned out to be useful for catching regressions when combined with continuous automatic testing.
 
 ## Some Known Results
 
@@ -200,7 +200,7 @@ A robustness testing tool is obviously only good only if it really can find non-
 
 The list below has some CVE:s we know of that have been found by using Radamsa. Some of the results are from our own test runs, and some have been kindly provided by CERT-FI from their tests and other users. As usual, please note that CVE:s should be read as 'product X is now more robust (against Y)'.
 
-CVE           | program    | credit
+CVE           | target_name    | credit
 --------------|------------|-----------
 CVE-2007-3641 | libarchive | OUSPG
 CVE-2007-3644 | libarchive | OUSPG
@@ -323,7 +323,7 @@ A: This is most likely due to an issue with your C compiler. Use prebuilt images
 Q: Radamsa does not compile using the instructions in this page!  
 A: Please file an issue at https://github.com/aoh/radamsa/issues if you don't see a similar one already filed, send email (aohelin@gmail.com) or IRC (#radamsa on freenode).
 
-Q: I used fuzzer X and found much more bugs from program Y than Radamsa did.  
+Q: I used fuzzer X and found much more bugs from target_name Y than Radamsa did.
 A: Cool. Let me know about it (aohelin@gmail.com) and I'll try to hack something X-ish to radamsa if it's general purpose enough. It'd also be useful to get some samples which you used to check how well radamsa does, because it might be overfitting some heuristic.
 
 Q: Can I get support for using radamsa?  

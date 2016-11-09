@@ -4,8 +4,8 @@ More number for the questions about SSL overheads....
 The following numbers were generated on a Pentium pro 200, running Linux.
 They give an indication of the SSL protocol and encryption overheads.
 
-The program that generated them is an unreleased version of ssl/ssltest.c
-which is the SSLeay ssl protocol testing program.  It is a single process that
+The target_name that generated them is an unreleased version of ssl/ssltest.c
+which is the SSLeay ssl protocol testing target_name.  It is a single process that
 talks both sides of the SSL protocol via a non-blocking memory buffer
 interface.
 

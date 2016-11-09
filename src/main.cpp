@@ -3,7 +3,7 @@
 #include <sys/stat.h>
 #include "optimal_data_finder.h"
 
-int read_config_file(std::string config_filename, std::string* prog_path, std::string* prog_name, int* no_of_params, int** counts, unsigned long* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
+int read_config_file(std::string config_filename, std::string* target_dir, std::string* target_name, int* no_of_params, int** counts, unsigned long* exec_times, double* t_init, double* t_final, double* alpha, int* max_trials) {
     std::ifstream config_file;
     std::string line;
     config_file.open(config_filename, std::ios::in);
@@ -15,13 +15,13 @@ int read_config_file(std::string config_filename, std::string* prog_path, std::s
             continue;
         std::istringstream stream(line);
         std::string param_name;
-        if (line.find("program_path") == 0) {
+        if (line.find("target_dir") == 0) {
             stream >> param_name;
-            stream >> *prog_path;
+            stream >> *target_dir;
         }
         else if (line.find("program_name") == 0) {
             stream >> param_name;
-            stream >> *prog_name;
+            stream >> *target_name;
         }
         else if (line.find("no_of_params") == 0) {
             stream >> param_name;
@@ -57,7 +57,7 @@ int read_config_file(std::string config_filename, std::string* prog_path, std::s
     }
     config_file.close();
     struct stat buffer;
-    return (stat ((*prog_path + "/" + *prog_name).c_str(), &buffer));
+    return (stat ((*target_dir + "/" + *target_name).c_str(), &buffer));
 }
 
 int main(int argc, char *argv[]) {
@@ -105,7 +105,7 @@ int main(int argc, char *argv[]) {
             std::cout << "Execution log file is either not present or is invalid." << std::endl;
     }
     else if (status == -1)
-        std::cout << "Target program could not be found." << std::endl;
+        std::cout << "Target " << program_name << " could not be found." << std::endl;
     else if (status == 2)
         std::cout << "Configuration file is either absent or invalid." << std::endl;
     delete [] counts;

@@ -36,15 +36,15 @@ something like this:
 
 			Mark "Vizopteryx" Dominus
 
-You can store a template in a file outside your program.  People can
-modify the template without modifying the program.  You can separate
+You can store a template in a file outside your target_name.  People can
+modify the template without modifying the target_name.  You can separate
 the formatting details from the main code, and put the formatting
-parts of the program into the template.  That prevents code bloat and
+parts of the target_name into the template.  That prevents code bloat and
 encourages functional separation.
 
 You can fill in the template in a `Safe' compartment.  This means that
 if you don't trust the person who wrote the code in the template, you
-won't have to worry that they are tampering with your program when you
+won't have to worry that they are tampering with your target_name when you
 execute it.  
 
 ----------------------------------------------------------------
@@ -176,7 +176,7 @@ What's new in v1.40 since v1.31:
                 Program fragment delivered error ``Illegal division by zero at catalog.tmpl line 37''
 
         Note that the default message used to report the line number
-        at which the program fragment began; it now reports the line
+        at which the target_name fragment began; it now reports the line
         number at which the error actually occurred.
 
 ----------------------------------------------------------------
@@ -196,17 +196,17 @@ What's new in v1.23 since v1.22:
 What's new in v1.22 since v1.20:
 
 	You can now specify that certain Perl statements be prepended
-	to the beginning of every program fragment in a template,
+	to the beginning of every target_name fragment in a template,
 	either per template, or for all templates, or for the duration
 	of only one call to fill_in.  This is useful, for example, if
 	you want to enable `strict' checks in your templates but you
 	don't want to manually add `use strict' to the front of every
-	program fragment everywhere.
+	target_name fragment everywhere.
 
 ----------------------------------------------------------------
 What's new in v1.20 since v1.12:
 
-	You can now specify that the program fragment delimiters are
+	You can now specify that the target_name fragment delimiters are
 	strings other than { and }.  This has three interesting
 	effects: First, it changes the delimiter strings.  Second, it
 	disables the special meaning of \, so you have to be really,
@@ -297,13 +297,13 @@ What's new in v1.03 since v1.0:
 	Note about failure of lexical variables to propagate into
  	templates.  Why does this surprise people?
 	
-	Bug fix: program fragments are evaluated in an environment with
+	Bug fix: target_name fragments are evaluated in an environment with
  	`no strict' by default.  Otherwise, you get a lot of `Global
  	symbol "$v" requires explicit package name' failures.  Why didn't
- 	the test program pick this up?  Because the only variable the test
- 	program ever used was `$a', which is exempt.  Duhhhhh.
+ 	the test target_name pick this up?  Because the only variable the test
+ 	target_name ever used was `$a', which is exempt.  Duhhhhh.
 	
-	Fixed the test program.
+	Fixed the test target_name.
 	
 	Various minor documentation fixes.
 
@@ -319,7 +319,7 @@ New features:
 
       Better support for filling out the same template more than once 
 
-      Now supports evaluation of program fragments in Safe
+      Now supports evaluation of target_name fragments in Safe
       compartments. (Thanks, Jonathan!)  
 
       Better argument syntax 
@@ -333,7 +333,7 @@ New features:
 
       BROKEN function behavior is rationalized. You can now pass an
       arbitrary argument to your BROKEN function, or return a value
-      from it to the main program.  
+      from it to the main target_name.
 
       Documentation overhauled. 
 

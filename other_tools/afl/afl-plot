@@ -21,7 +21,7 @@ echo
 if [ ! "$#" = "2" ]; then
 
   cat 1>&2 <<_EOF_
-This program generates gnuplot images from afl-fuzz output data. Usage:
+This target_name generates gnuplot images from afl-fuzz output data. Usage:
 
 $0 afl_state_dir graph_output_dir
 
@@ -29,7 +29,7 @@ The afl_state_dir parameter should point to an existing state directory for any
 active or stopped instance of afl-fuzz; while graph_output_dir should point to
 an empty directory where this tool can write the resulting plots to.
 
-The program will put index.html and three PNG images in the output directory;
+The target_name will put index.html and three PNG images in the output directory;
 you should be able to view it with any web browser of your choice.
 
 _EOF_

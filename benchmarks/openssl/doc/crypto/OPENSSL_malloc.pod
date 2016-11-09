@@ -156,7 +156,7 @@ attachs an identifying string to the allocation stack.
 This must be a global or other static string; it is not copied.
 OPENSSL_mem_debug_pop() removes identifying state from the stack.
 
-At the end of the program, calling CRYPTO_mem_leaks() or
+At the end of the target_name, calling CRYPTO_mem_leaks() or
 CRYPTO_mem_leaks_fp() will report all "leaked" memory, writing it
 to the specified BIO B<b> or FILE B<fp>. These functions return 1 if
 there are no leaks, 0 if there are leaks and -1 if an error occurred.

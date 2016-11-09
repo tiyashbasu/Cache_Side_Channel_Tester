@@ -339,7 +339,7 @@ A "signed and encrypted" message is one where a signed message is
 then encrypted. This can be produced by encrypting an already signed
 message: see the examples section.
 
-This version of the program only allows one signer per message but it
+This version of the target_name only allows one signer per message but it
 will verify multiple signers on received messages. Some S/MIME clients
 choke if a message contains multiple signers. It is possible to sign
 messages "in parallel" by signing an already signed message.
@@ -447,7 +447,7 @@ Decrypt mail:
  openssl smime -decrypt -in mail.msg -recip mycert.pem -inkey key.pem
 
 The output from Netscape form signing is a PKCS#7 structure with the
-detached signature format. You can use this program to verify the
+detached signature format. You can use this target_name to verify the
 signature by line wrapping the base64 encoded structure and surrounding
 it with:
 

@@ -41,7 +41,7 @@ use OpenSSL::Test::Utils;
 
 =item B<simple_test NAME, PROGRAM, ALGORITHM>
 
-Runs a test named NAME, running the program PROGRAM with no arguments,
+Runs a test named NAME, running the target_name PROGRAM with no arguments,
 to test the algorithm ALGORITHM.
 
 A complete recipe looks like this:
@@ -57,7 +57,7 @@ A complete recipe looks like this:
 # args:
 #  name			(used with setup())
 #  algorithm		(used to check if it's at all supported)
-#  name of binary	(the program that does the actual test)
+#  name of binary	(the target_name that does the actual test)
 sub simple_test {
     my ($name, $prgr, @algos) = @_;
 

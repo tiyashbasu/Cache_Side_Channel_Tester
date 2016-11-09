@@ -318,12 +318,12 @@ in PEM format.
 
 =head1 VERIFY OPERATION
 
-The B<verify> program uses the same functions as the internal SSL and S/MIME
+The B<verify> target_name uses the same functions as the internal SSL and S/MIME
 verification, therefore this description applies to these verify operations
 too.
 
 There is one crucial difference between the verify operations performed
-by the B<verify> program: wherever possible an attempt is made to continue
+by the B<verify> target_name: wherever possible an attempt is made to continue
 after an error whereas normally the verify operation would halt on the
 first error. This allows all the problems with a certificate chain to be
 determined.

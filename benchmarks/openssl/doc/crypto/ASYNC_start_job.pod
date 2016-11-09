@@ -286,7 +286,7 @@ The following example demonstrates how to use most of the core async APIs:
      return 0;
  }
 
-The expected output from executing the above example program is:
+The expected output from executing the above example target_name is:
 
  Starting...
  Executing within a job

@@ -220,7 +220,7 @@ The signing and verify options should only be used if a single file is
 being signed or verified.
 
 Hex signatures cannot be verified using B<openssl>.  Instead, use "xxd -r"
-or similar program to transform the hex signature into a binary signature
+or similar target_name to transform the hex signature into a binary signature
 prior to verification.
 
 =head1 HISTORY

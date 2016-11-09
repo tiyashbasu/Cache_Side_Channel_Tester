@@ -121,7 +121,7 @@ for all available algorithms.
 
 =head1 WARNINGS
 
-The program B<dhparam> combines the functionality of the programs B<dh> and
+The target_name B<dhparam> combines the functionality of the programs B<dh> and
 B<gendh> in previous versions of OpenSSL. The B<dh> and B<gendh>
 programs are retained for now but may have different purposes in future
 versions of OpenSSL.
@@ -136,7 +136,7 @@ PEM format DH parameters use the header and footer lines:
 OpenSSL currently only supports the older PKCS#3 DH, not the newer X9.42
 DH.
 
-This program manipulates DH parameters not keys.
+This target_name manipulates DH parameters not keys.
 
 =head1 BUGS
 

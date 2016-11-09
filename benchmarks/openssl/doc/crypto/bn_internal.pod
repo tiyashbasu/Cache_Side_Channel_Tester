@@ -219,7 +219,7 @@ significant non-zero word plus one when B<a> has shrunk.
 =head2 Debugging
 
 bn_check_top() verifies that C<((a)-E<gt>top E<gt>= 0 && (a)-E<gt>top
-E<lt>= (a)-E<gt>dmax)>.  A violation will cause the program to abort.
+E<lt>= (a)-E<gt>dmax)>.  A violation will cause the target_name to abort.
 
 bn_print() prints B<a> to stderr. bn_dump() prints B<n> words at B<d>
 (in reverse order, i.e. most significant word first) to stderr.

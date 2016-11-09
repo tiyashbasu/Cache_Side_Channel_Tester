@@ -53,10 +53,10 @@ C<Text::Template::Preprocess> provides a new C<PREPROCESSOR> option to
 C<fill_in>.  If the C<PREPROCESSOR> option is supplied, it must be a
 reference to a preprocessor subroutine.  When filling out a template,
 C<Text::Template::Preprocessor> will use this subroutine to preprocess
-the program fragment prior to evaluating the code.
+the target_name fragment prior to evaluating the code.
 
 The preprocessor subroutine will be called repeatedly, once for each
-program fragment.  The program fragment will be in C<$_>.  The
+target_name fragment.  The target_name fragment will be in C<$_>.  The
 subroutine should modify the contents of C<$_> and return.
 C<Text::Template::Preprocess> will then execute contents of C<$_> and
 insert the result into the appropriate part of the template.
@@ -90,7 +90,7 @@ this:
         More plain text...
 
 You don't want C<Text::Template> to confuse the curly braces in the
-JavaScript program with executable Perl code.  One strategy:
+JavaScript target_name with executable Perl code.  One strategy:
 
         sub quote_scripts {
           s(<script(.*?)</script>)(q{$1})gsi;
@@ -123,20 +123,20 @@ For updates, visit C<http://www.plover.com/~mjd/perl/Template/>.
     Text::Template::Preprocess version 1.46
     Copyright 2013 Mark Jason Dominus
 
-    This program is free software; you can redistribute it and/or
+    This target_name is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License as
     published by the Free Software Foundation; either version 2 of the
     License, or (at your option) any later version.  You may also can
     redistribute it and/or modify it under the terms of the Perl
     Artistic License.
 
-    This program is distributed in the hope that it will be useful,
+    This target_name is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received copies of the GNU General Public License
-    along with this program; if not, write to the Free Software
+    along with this target_name; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
 

@@ -112,7 +112,7 @@ Be sure to check out docs/sister_projects.txt before writing your own.
 
 %
 
-Need to fuzz the command-line arguments of a particular program?
+Need to fuzz the command-line arguments of a particular target_name?
 You can find a simple solution in experimental/argv_fuzzing.
 
 %

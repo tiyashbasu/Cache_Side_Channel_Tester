@@ -196,7 +196,7 @@ numeric OID. Following parameter sets are supported:
 
 =head1 NOTES
 
-The use of the genpkey program is encouraged over the algorithm specific
+The use of the genpkey target_name is encouraged over the algorithm specific
 utilities because additional algorithm options and ENGINE provided algorithms
 can be used.
 

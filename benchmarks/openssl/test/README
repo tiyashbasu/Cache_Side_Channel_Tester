@@ -33,7 +33,7 @@ The number {nn} is (somewhat loosely) grouped as follows:
 A recipe that just runs a test executable
 =========================================
 
-A script that just runs a program looks like this:
+A script that just runs a target_name looks like this:
 
     #! /usr/bin/perl
     
