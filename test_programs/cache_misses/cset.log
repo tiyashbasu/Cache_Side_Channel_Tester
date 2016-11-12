@@ -1,0 +1,18 @@
+cset: --> activating shielding:
+cset: moving 328 tasks from root into system cpuset...
+[                                                  ]%==================================================]
+cset: "system" cpuset of CPUSPEC(1-3) with 328 tasks running
+cset: "user" cpuset of CPUSPEC(0) with 0 tasks running
+cset: --> activating kthread shielding
+cset: kthread shield activated, moving 82 tasks into system cpuset...
+[                                                  ]%==================================================]
+cset: **> 63 tasks are not movable, impossible to move
+cset: done
+cset: "user" cpuset of CPUSPEC(0) with 0 tasks running
+cset: done
+cset: --> deactivating/reseting shielding
+cset: moving 0 tasks from "/user" user set to root set...
+cset: moving 349 tasks from "/system" system set to root set...
+[                                                  ]%==================================================]
+cset: deleting "/user" and "/system" sets
+cset: done

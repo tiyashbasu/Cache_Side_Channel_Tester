@@ -1,0 +1,82 @@
+Round 1
+L1 Data Accesses: 40082
+L1 Data Misses: 92
+-----------------
+Round 2
+L1 Data Accesses: 40095
+L1 Data Misses: 63
+-----------------
+Round 3
+L1 Data Accesses: 40090
+L1 Data Misses: 62
+-----------------
+Round 4
+L1 Data Accesses: 40079
+L1 Data Misses: 69
+-----------------
+Round 5
+L1 Data Accesses: 40086
+L1 Data Misses: 75
+-----------------
+Round 6
+L1 Data Accesses: 40085
+L1 Data Misses: 107
+-----------------
+Round 7
+L1 Data Accesses: 40080
+L1 Data Misses: 70
+-----------------
+Round 8
+L1 Data Accesses: 40261
+L1 Data Misses: 93
+-----------------
+Round 9
+L1 Data Accesses: 40071
+L1 Data Misses: 77
+-----------------
+Round 10
+L1 Data Accesses: 40078
+L1 Data Misses: 80
+-----------------
+Round 11
+L1 Data Accesses: 40092
+L1 Data Misses: 51
+-----------------
+Round 12
+L1 Data Accesses: 40080
+L1 Data Misses: 69
+-----------------
+Round 13
+L1 Data Accesses: 40070
+L1 Data Misses: 51
+-----------------
+Round 14
+L1 Data Accesses: 40088
+L1 Data Misses: 64
+-----------------
+Round 15
+L1 Data Accesses: 40085
+L1 Data Misses: 81
+-----------------
+Round 16
+L1 Data Accesses: 40069
+L1 Data Misses: 57
+-----------------
+Round 17
+L1 Data Accesses: 40077
+L1 Data Misses: 69
+-----------------
+Round 18
+L1 Data Accesses: 40085
+L1 Data Misses: 76
+-----------------
+Round 19
+L1 Data Accesses: 40092
+L1 Data Misses: 58
+-----------------
+Round 20
+L1 Data Accesses: 40055
+L1 Data Misses: 91
+-----------------
+Average L1 Data Accesses: 40090
+Average L1 Data Misses: 72.75

@@ -1,0 +1,20 @@
+In file included from src/cache_misses.cpp:16:0:
+src/aes.h:1207:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "\n"
+ ^
+src/aes.h:1263:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ "\n"
+ ^
+src/cache_misses.cpp: In function ‘int main(int, char**)’:
+src/cache_misses.cpp:80:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^
+src/cache_misses.cpp:95:33: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+         getline(&line, &len, fp);
+                                 ^
+src/cache_misses.cpp:98:33: warning: ignoring return value of ‘__ssize_t getline(char**, size_t*, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+         getline(&line, &len, fp);
+                                 ^
+src/cache_misses.cpp:113:16: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+                ^

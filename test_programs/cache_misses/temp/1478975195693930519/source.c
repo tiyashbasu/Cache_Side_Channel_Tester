@@ -1203,7 +1203,7 @@ int main (void)
     unsigned int e_key[128];
 	unsigned char in[16] = {0x10, 0x11, 0x02, 0x03, 0x04, 0x55, 0x76, 0x07, 0x88, 0x91, 0x0A, 0xB1, 0xCF, 0xDD, 0xEE, 0xF0};
 	unsigned char out[16];
-	unsigned char key[16] = {};
+	unsigned char key[16] = {110,47,179,103,171,13,203,96,158,130,195,39,199,200,60,52};
 
     long a_fd, m_fd;
     long long accesses, misses;
@@ -1239,7 +1239,7 @@ int main (void)
     /*end of section - activity to measure*/
 
     /*stopping perf*/
-    ioctl(m_fd, PERF_EVENT_IOC_DISABLE, 0);
+    ioctl(a_fd, PERF_EVENT_IOC_DISABLE, 0);
     
     /*reading outputs and printing them*/
     read(m_fd, &misses, sizeof(long long));

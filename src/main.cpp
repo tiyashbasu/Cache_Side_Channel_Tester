@@ -22,6 +22,7 @@ int read_config_file(std::string config_filename, std::string* target_dir, std::
         else if (line.find("program_name") == 0) {
             stream >> param_name;
             stream >> *target_name;
+//            std::getline(stream, *target_name, '\n');
         }
         else if (line.find("no_of_params") == 0) {
             stream >> param_name;

@@ -34,6 +34,7 @@ namespace thesis {
         unsigned long execution_rounds;
         int **params;
         int *outputs;
+        int output_offset;
 
         void backup_dataset() {
             int i, j;
@@ -114,6 +115,8 @@ namespace thesis {
 
         void run_thread(const char* program, int round_num) {
             char output_ch[20] = {0};
+            char* offset_line;
+            size_t offset_len = 0;
             char cmd[256] = {0};
             int i, temp_rand;
             FILE* in;
@@ -131,6 +134,10 @@ namespace thesis {
 
                 /*executing target*/
                 in = popen(cmd, "r");
+
+                /*skipping all lines marked till output_offset*/
+                for (i = 0; i < output_offset; i++)
+                    getline(&offset_line, &offset_len, in);
 
                 /*breaking if target does not report failure*/
                 output_ch[0] = (char)fgetc(in);
@@ -158,14 +165,21 @@ namespace thesis {
         void run_program() {
             int i, j;
             int total_executions = 0;
-            std::thread *execution_threads = new std::thread[MAX_THREADS];
             std::string path = "cd " + target_dir + " && ./" + target_name;
+
+#if defined PARALLEL
+            std::thread *execution_threads = new std::thread[MAX_THREADS];
+#endif
 
             while (total_executions < execution_rounds) {
 
+#if defined SERIAL
+                run_thread(path.data(), total_executions);
+                total_executions++;
+
+#elif defined PARALLEL
                 /*spawning a batch of threads to execute target*/
                 for (i = 0; i < MAX_THREADS && total_executions < execution_rounds; i++) {
-//                run_thread(path.data(), i);
                     execution_threads[i] = std::thread(&optimal_data_finder::run_thread, this, path.data(), total_executions);
                     std::this_thread::sleep_for(std::chrono::milliseconds(10));
                     total_executions++;
@@ -175,19 +189,26 @@ namespace thesis {
                 for (j = 0; j < i; j++) {
                     execution_threads[j].join();
                 }
+#endif
             }
 
             /*writing results to output file.*/
+            int datax;
             std::ofstream temp_results_fp(single_run_results_filename, std::ios::out);
             for (i = 0; i < execution_rounds; i++) {
-                for (j = 0; j < no_of_params; j++)
+                for (j = 0; j < no_of_params; j++) {
+                    datax = params[i][j];
                     temp_results_fp << params[i][j] << '\t';
+                }
+                datax = outputs[i];
                 temp_results_fp << outputs[i] << '\n';
             }
             temp_results_fp.close();
 
             /*cleanup and exit*/
+#if defined PARALLEL
             delete [] execution_threads;
+#endif
             return;
         }
 
@@ -219,7 +240,7 @@ namespace thesis {
             }
 
             /*sorting the array*/
-            thesis::array_sorter sorter;
+            thesis::array_sorter<long> sorter;
             sorter.sort(output, (unsigned long)no_of_lines);
 
             /*counting unique values in the array*/
@@ -269,7 +290,7 @@ namespace thesis {
             return;
         }
 
-        void init_resume_simann(const std::string report_filename, long* obj, double* t_init, const double alpha, int* usable_flipper_size, const double reduc_fact, int* epoch, int* start_trial, long *elapsed_time) {
+        void init_resume_simann(const std::string report_filename, long* obj, double* t_init, const double alpha, int* usable_flipper_size, const double reduc_fact, int* epoch, int* start_trial, const int max_trials, long *elapsed_time) {
             std::ifstream report_fp(report_filename, std::ios::in);
             int lines = 0;
             std::string line;
@@ -327,7 +348,7 @@ namespace thesis {
             start = (int)(line.find("\t", start) + 1);
             *start_trial = stoi(line.substr(start, line.length()));
 
-            if (*start_trial == 10) {
+            if (*start_trial == max_trials) {
                 *start_trial = 0;
                 *t_init *= alpha;
                 (*epoch)++;
@@ -435,6 +456,7 @@ namespace thesis {
             for (int i = 0; i < execution_rounds; i++) {
                 this->params[i] = new int[no_of_params];
             }
+            this->output_offset = 0;
         }
 
         ~optimal_data_finder() {
@@ -472,7 +494,7 @@ namespace thesis {
             }
             /*Initialization when execution is resuming from a previous incomplete run*/
             else {
-                init_resume_simann(report_filename, &obj, &t_init, alpha, &flipper_size, flipper_reduction_factor, &epoch, &trial_start_index, &elapsed_time);
+                init_resume_simann(report_filename, &obj, &t_init, alpha, &flipper_size, flipper_reduction_factor, &epoch, &trial_start_index, max_trials, &elapsed_time);
                 now = std::chrono::system_clock::now();
                 start_time = (std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch())).count() - elapsed_time;
             }
