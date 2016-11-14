@@ -1,4 +1,4 @@
-char* prefix = "/*\n"
+const char* prefix = "/*\n"
 " * Copyright 1995-2016 The OpenSSL Project Authors. All Rights Reserved.\n"
 " *\n"
 " * Licensed under the OpenSSL license (the \"License\").  You may not use\n"
@@ -934,7 +934,7 @@ char* prefix = "/*\n"
 "    /* DES key */\n"
 "    unsigned char key_data[8] = {";
 
-char* suffix = "};\n"
+const char* suffix = "};\n"
 "\n"
 "    long a_fd, m_fd;\n"
 "    long long accesses, misses;\n"

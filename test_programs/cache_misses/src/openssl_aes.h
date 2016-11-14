@@ -1,4 +1,4 @@
-char* prefix = "/*\n"
+const char* prefix = "/*\n"
 " * Copyright 2002-2016 The OpenSSL Project Authors. All Rights Reserved.\n"
 " *\n"
 " * Licensed under the OpenSSL license (the \"License\").  You may not use\n"
@@ -1218,7 +1218,7 @@ char* prefix = "/*\n"
 "{\n"
 "	unsigned char key[16] = {";
 
-char* suffix = "};\n"
+const char* suffix = "};\n"
 "	AES_KEY e_key;\n"
 "	int i;\n"
 "	unsigned char in[16] = {0x10, 0x11, 0x02, 0x03, 0x04, 0x55, 0x76, 0x07, 0x88, 0x91, 0x0A, 0xB1, 0xCF, 0xDD, 0xEE, 0xF0};\n"

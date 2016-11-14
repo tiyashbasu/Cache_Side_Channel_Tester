@@ -1,4 +1,4 @@
-char* prefix = "/*********************************************************************\n"
+const char* prefix = "/*********************************************************************\n"
 "* Filename:   aes.h\n"
 "* Author:     Brad Conte (brad AT bradconte.com)\n"
 "* Copyright:\n"
@@ -1205,7 +1205,7 @@ char* prefix = "/***************************************************************
 "	unsigned char out[16];\n"
 "	unsigned char key[16] = {";
 
-char* suffix = "};\n"
+const char* suffix = "};\n"
 "\n"
 "    long a_fd, m_fd;\n"
 "    long long accesses, misses;\n"

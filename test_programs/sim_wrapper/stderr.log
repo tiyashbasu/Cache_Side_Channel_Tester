@@ -5,9 +5,9 @@ non-commercial use.  No portion of this work may be used by any commercial
 entity, or for any commercial purpose, without the prior written permission
 of SimpleScalar, LLC (info@simplescalar.com).
 
-sim: command line: ./simplescalar/sim-outorder -config ./simplescalar/processor.config ./temp/1478968754822356878/binary.o 
+sim: command line: ./simplescalar/sim-outorder -config ./simplescalar/processor.config ./temp/1479061693823431988/binary.o 
 
-sim: simulation started @ Sat Nov 12 17:39:14 2016, options follow:
+sim: simulation started @ Sun Nov 13 19:28:14 2016, options follow:
 
 sim-outorder: This simulator implements a very detailed out-of-order issue
 superscalar processor with a two-level memory system and speculative
@@ -132,31 +132,31 @@ latency of all pipeline operations.
 sim: ** starting performance simulation **
 
 sim: ** simulation statistics **
-sim_num_insn                  17746 # total number of instructions committed
-sim_num_refs                   8305 # total number of loads and stores committed
-sim_num_loads                  6351 # total number of loads committed
-sim_num_stores            1954.0000 # total number of stores committed
-sim_num_branches                693 # total number of branches committed
+sim_num_insn                  10998 # total number of instructions committed
+sim_num_refs                   4847 # total number of loads and stores committed
+sim_num_loads                  3386 # total number of loads committed
+sim_num_stores            1461.0000 # total number of stores committed
+sim_num_branches               1227 # total number of branches committed
 sim_elapsed_time                  1 # total simulation time in seconds
-sim_inst_rate            17746.0000 # simulation speed (in insts/sec)
-sim_total_insn                17745 # total number of instructions executed
-sim_total_refs                 8305 # total number of loads and stores executed
-sim_total_loads                6351 # total number of loads executed
-sim_total_stores          1954.0000 # total number of stores executed
-sim_total_branches              693 # total number of branches executed
-dl1.accesses                   8305 # total number of accesses
-dl1.hits                       8093 # total number of hits
-dl1.misses                      212 # total number of misses
-dl1.replacements                163 # total number of replacements
-dl1.writebacks                   42 # total number of writebacks
-dl1.invalidations                32 # total number of invalidations
-dl1.miss_rate                0.0255 # miss rate (i.e., misses/ref)
-dl1.repl_rate                0.0196 # replacement rate (i.e., repls/ref)
-dl1.wb_rate                  0.0051 # writeback rate (i.e., wrbks/ref)
-dl1.inv_rate                 0.0039 # invalidation rate (i.e., invs/ref)
+sim_inst_rate            10998.0000 # simulation speed (in insts/sec)
+sim_total_insn                10997 # total number of instructions executed
+sim_total_refs                 4847 # total number of loads and stores executed
+sim_total_loads                3386 # total number of loads executed
+sim_total_stores          1461.0000 # total number of stores executed
+sim_total_branches             1227 # total number of branches executed
+dl1.accesses                   4847 # total number of accesses
+dl1.hits                       4750 # total number of hits
+dl1.misses                       97 # total number of misses
+dl1.replacements                 31 # total number of replacements
+dl1.writebacks                   44 # total number of writebacks
+dl1.invalidations                44 # total number of invalidations
+dl1.miss_rate                0.0200 # miss rate (i.e., misses/ref)
+dl1.repl_rate                0.0064 # replacement rate (i.e., repls/ref)
+dl1.wb_rate                  0.0091 # writeback rate (i.e., wrbks/ref)
+dl1.inv_rate                 0.0091 # invalidation rate (i.e., invs/ref)
 sim_invalid_addrs                 0 # total non-speculative bogus addresses seen (debug var)
 ld_text_base             0x00400000 # program text (code) segment base
-ld_text_size                  62384 # program text (code) size in bytes
+ld_text_size                  29280 # program text (code) size in bytes
 ld_data_base             0x10000000 # program initialized data segment base
 ld_data_size                   4096 # program init'ed `.data' and uninit'ed `.bss' size in bytes
 ld_stack_base            0x7fffc000 # program stack segment base (highest address in stack)

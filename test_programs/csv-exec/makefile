@@ -1,9 +1,11 @@
 CXX=g++
 
-all: csv-exec
+all: csvexec
 
-csv-exec: csv-exec.cpp
-	$(CXX) -std=c++14 -O3 -lpthread -pthread -o csv-exec csv-exec.cpp
+csvexec: csvexec.cpp
+	$(CXX) -std=c++14 -O3 -lpthread -pthread -D PARALLEL -o csvexec_p csvexec.cpp
+	$(CXX) -std=c++14 -O3 -lpthread -pthread -D SERIAL -o csvexec_s csvexec.cpp
 
 clean:
-	-@rm csv-exec
+	-@rm csvexec_p
+	-@rm csvexec_s

@@ -1,0 +1,30 @@
+## The following parameters are related to the target_name under test.
+
+# The location of the executable.
+target_dir: ./test_programs/cache_misses
+
+# The name of the executable file.
+program_name: ./gdklib_uni
+
+# The number of parameters the target_name accepts. This should always be placed above 'counts' parameter.
+no_of_params: 1
+
+# The size of the the list of choices for each parameter.
+counts: 20
+
+# Number of times the target_name should be executed in each round of execution.
+exec_times: 20
+
+## The following parameters are related to the simulated annealing process.
+
+# The initial temperature.
+t_init: 1.5
+
+# The final temperature.
+t_final: 0.1
+
+# Factor of temperature reduction.
+alpha: 0.9
+
+# Maximum number of trials for each temperature.
+max_trials: 5

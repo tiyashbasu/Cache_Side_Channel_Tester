@@ -1,4 +1,4 @@
-char* prefix = "//#include <config.h>\n"
+const char* prefix = "//#include <config.h>\n"
 "//#include \"gdk.h\"\n"
 "#include <stdio.h>\n"
 "#include <string.h>\n"
@@ -1684,7 +1684,7 @@ char* prefix = "//#include <config.h>\n"
 "\n"
 "	int keystroke = ";
 
-char* suffix = ";\n"
+const char* suffix = ";\n"
 "	unsigned keyval, unicode; \n"
 "    \n"
 "    long a_fd, m_fd;\n"

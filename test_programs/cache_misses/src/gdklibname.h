@@ -1,4 +1,4 @@
-char* prefix = "#include <stdio.h>\n"
+const char* prefix = "#include <stdio.h>\n"
 "#include <string.h>\n"
 "#include <stdlib.h>\n"
 "#include <unistd.h>\n"
@@ -1350,7 +1350,7 @@ char* prefix = "#include <stdio.h>\n"
 "\n"
 "	unsigned keyval = ";
 
-char* suffix = ";\n"
+const char* suffix = ";\n"
 "	const char* keyname = NULL;\n"
 "    \n"
 "    long a_fd, m_fd;\n"

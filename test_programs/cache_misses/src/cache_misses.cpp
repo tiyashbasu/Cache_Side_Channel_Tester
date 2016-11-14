@@ -9,9 +9,9 @@
 #include "sort.h"
 
 #define L1_CACHE_SIZE 1310720
-#define MAX_EXECS 2000
+#define MAX_EXECS 3000
 
-#if defined AES
+#if defined BASIC_AES
     #include "aes.h"
 #elif defined GDKLIB_NAME
     #include "gdklibname.h"

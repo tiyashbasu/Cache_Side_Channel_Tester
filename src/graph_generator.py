@@ -106,4 +106,4 @@ plt.setp(plt.yticks()[1], fontsize=10)
 
 fig.tight_layout()
 plt.savefig(savefig_filename, bbox_inches="tight")
-plt.show()
+#plt.show()
