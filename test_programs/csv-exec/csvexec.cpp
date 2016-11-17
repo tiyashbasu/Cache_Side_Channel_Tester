@@ -5,6 +5,8 @@
 #include <thread>
 #include <csignal>
 #include <set>
+#include <map>
+#include <cstring>
 
 #ifndef MAX_EXECS
 #define MAX_EXECS 3000
@@ -90,19 +92,41 @@ void run_thread(std::string param_list, int index) {
     return;
 }
 
-void run_program() { //parallel execution using threads
+void run_program(bool resume) { //parallel execution using threads
     long i, j;
     std::string line;
-    unsigned long total_execution_count;
+    unsigned long total_execution_count = 0;
     unsigned long round_exec_count;
+    std::map<std::string, long> iomap;
+    std::map<std::string, long>::iterator i_finder;
 
     /*open input and out file streams*/
     input_fp.open(input_filename, std::ios::in);
 
-//    for (i = 0; i < 116100; i++)
-//        std::getline(input_fp, line);
+    if (resume) {
 
-    total_execution_count = 0;
+        std::ifstream output_fp(output_filename, std::ios::in);
+        std::string line1, line2;
+
+        while (!output_fp.eof()) {
+
+            std::getline(output_fp, line1);
+            output_set.insert(atoi(line1.data()));
+            total_execution_count++;
+
+            std::getline(output_fp, line2);
+            if (line2.length()) {
+                output_set.insert(atoi(line2.data()));
+                total_execution_count++;
+            }
+        }
+        total_execution_count -= 2;
+        output_fp.close();
+        output_set.erase(-1);
+
+        for (i = 0; i < total_execution_count; i++)
+            std::getline(input_fp, line);
+    }
 
     while (!input_fp.eof() && total_execution_count < MAX_EXECS) {
 
@@ -113,19 +137,37 @@ void run_program() { //parallel execution using threads
 #if defined SERIAL
             std::getline(input_fp, line);
             sanitize(&line);
-            run_thread(line, round_exec_count++);
+            i_finder = iomap.find(line);
+
+            if (i_finder == iomap.end()) {
+                run_thread(line, round_exec_count);
+                iomap.insert(std::pair<std::string, long>(line, output_values[round_exec_count]));
+            } else {
+                output_values[round_exec_count] = i_finder->second;
+            }
+
+            round_exec_count++;
             total_execution_count++;
 
 #elif defined PARALLEL
             for (i = 0; i < MAX_THREADS && round_exec_count < execs_per_round && !input_fp.eof() && total_execution_count < MAX_EXECS; i++, total_execution_count++) {
                 std::getline(input_fp, line);
                 sanitize(&line);
-                execution_threads[i] = std::thread(run_thread, line, round_exec_count++);
-                std::this_thread::sleep_for(std::chrono::milliseconds(THREAD_SLEEP_PERIOD));
+                i_finder = iomap.find(line);
+
+                if (i_finder == iomap.end()) {
+                    execution_threads[i] = std::thread(run_thread, line, round_exec_count++);
+                    std::this_thread::sleep_for(std::chrono::milliseconds(THREAD_SLEEP_PERIOD));
+                    iomap.insert(std::pair<std::string, long>(line, output_values[round_exec_count]));
+                } else {
+                    output_values[round_exec_count] = i_finder->second;
+                }
+
             }
 
             for (j = 0; j < i; j++) {
-                execution_threads[j].join();
+                if (execution_threads[j].joinable())
+                    execution_threads[j].join();
             }
 #endif
         }
@@ -161,7 +203,7 @@ int main(int argc, char *argv[]) {
     signal(SIGTERM, handle_signal);
 
 	if (argc < 7) {
-		std::cout << "Usage: csvexec <executable directory> <executable name> <input csv file> <output_values file> <report file> <rounds per run>" << std::endl;
+		std::cout << "Usage: csvexec <executable directory> <executable name> <input csv file> <output_values file> <report file> <rounds per run> <resume>" << std::endl;
 		return 1;
 	}
 
@@ -172,27 +214,35 @@ int main(int argc, char *argv[]) {
     report_filename = argv[5];
     execs_per_round = atoi(argv[6]);
     output_values = new int[execs_per_round];
+    bool resume = false;
 
 #if defined PARALLEL
     execution_threads = new std::thread[(MAX_THREADS < execs_per_round) ? MAX_THREADS : execs_per_round];
 #endif
 
-    /*removing existing files*/
-    std::remove(report_filename.data());
-    std::remove(output_filename.data());
 
-    /*printing headers to report file*/
-    report_fp.open(report_filename, std::ios::out);
-    report_fp << "--------------------------------------" << '\n';
-    report_fp << "Executions completed\tUnique Outputs" << '\n';
-    report_fp << "--------------------------------------" << std::endl;
-    report_fp.close();
+
+    if (argc == 8 && !std::strcmp(argv[7], "resume")) {
+        resume = true;
+    }
+    else {
+        /*removing existing files*/
+        std::remove(report_filename.data());
+        std::remove(output_filename.data());
+        /*printing headers to report file*/
+        report_fp.open(report_filename, std::ios::out);
+        report_fp << "--------------------------------------" << '\n';
+        report_fp << "Executions completed\tUnique Outputs" << '\n';
+        report_fp << "--------------------------------------" << std::endl;
+        report_fp.close();
+    }
+
     std::cout << "--------------------------------------" << '\n';
     std::cout << "Executions completed\tUnique Outputs" << '\n';
     std::cout << "--------------------------------------" << std::endl;
 
     /*starting threaded execution process*/
-    run_program();
+    run_program(resume);
 
     /*cleanup and exit*/
     delete [] output_values;

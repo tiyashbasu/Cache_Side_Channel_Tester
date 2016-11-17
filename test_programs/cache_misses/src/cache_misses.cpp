@@ -1,15 +1,13 @@
-#include <cstdlib>
 #include <cstring>
 #include <fstream>
 #include <iostream>
 #include <future>
-#include <cmath>
 #include <signal.h>
-#include <set>
 #include "sort.h"
 
 #define L1_CACHE_SIZE 1310720
-#define MAX_EXECS 3000
+#define MAX_EXECS_FALLBACK 1000
+#define CPU_NO_FALLBACK -1
 
 #if defined BASIC_AES
     #include "aes.h"
@@ -44,6 +42,23 @@ int main(int argc, char *argv[]) {
 
     char cmd[256], filename[256];
     int i, params[PARAM_LEN];
+    char src[L1_CACHE_SIZE], dest[L1_CACHE_SIZE];
+
+    FILE *fp;
+    char* line;
+    size_t len = 0;
+
+    /*getting environment variables*/
+    char* max_execs_ch = getenv("MAX_EXECS");
+    long max_execs = (max_execs_ch != NULL) ? std::stol(max_execs_ch) : MAX_EXECS_FALLBACK;
+//    delete [] max_execs_ch;
+
+    char* cpu_no_ch = getenv("CPU_NO");
+    int cpu_no = (cpu_no_ch != NULL) ? std::stoi(cpu_no_ch) : CPU_NO_FALLBACK;
+//    delete [] cpu_no_ch;
+
+
+    long accesses[max_execs], misses[max_execs];
 
     /*creating execution folder*/
     strcat(strcat(strcpy(cmd, "mkdir ./temp/"), ms_ch), ">mkdir.log 2>&1");
@@ -73,42 +88,39 @@ int main(int argc, char *argv[]) {
     strcat(strcat(strcat(strcat(strcpy(cmd, "gcc -o ./temp/"), ms_ch), "/binary.o ./temp/"), ms_ch), "/source.c");
     system(cmd);
 
-    /*start of section - execution with cpu isolation using*/
-//    double m_avg = 0, a_avg = 0;
-    double accesses[MAX_EXECS], misses[MAX_EXECS];
-    FILE *fp;
-    char* line;
-    size_t len = 0;
-    char src[L1_CACHE_SIZE], dest[L1_CACHE_SIZE];
+    /*building execution command*/
+    if (cpu_no == -1)
+        strcpy(cmd, ("./temp/" + ms_str + "/binary.o").data());
+    else
+        strcpy(cmd, ("taskset -c " + std::to_string(cpu_no) + " ./temp/" + ms_str + "/binary.o").data());
 
-    strcat(strcat(strcpy(cmd, "./temp/"), ms_ch), "/binary.o");
-    std::memcpy(dest, src, L1_CACHE_SIZE);
-    for (i = 0; i < MAX_EXECS; i++) {
-//        system(insmod ./wbinvdk/wbinvdk.ko && rmmod wbinvdk);
+    /*executing max_execs times*/
+    for (i = 0; i < max_execs; i++) {
+        /*cache flushing (loosely termed)*/
+//        system("insmod ./wbinvdk/wbinvdk.ko && rmmod wbinvdk");
+        std::memcpy(dest, src, L1_CACHE_SIZE);
+
+        /*open execution pipe*/
         fp = popen(cmd, "r");
+
+        /*read L1 accesses*/
         getline(&line, &len, fp);
-        *(accesses + i) = (std::stoi(line));
-//        a_avg += *(accesses + i);
+//        *(accesses + i) = (std::stoi(line));
+
+        /*read L1 misses*/
         getline(&line, &len, fp);
-        *(misses + i) = (std::stoi(line));
-//        m_avg += *(misses + i);
+        *(misses + i) = (std::stol(line));
+
+        /*when done, close execution pipe*/
         pclose(fp);
     }
 
-//    a_avg /= MAX_EXECS;
-//    m_avg /= MAX_EXECS;
+    /*sorting the output array*/
+    thesis::array_sorter<long> sorter;
+    sorter.sort(misses, max_execs);
 
-    thesis::array_sorter<double> sorter;
-    sorter.sort(accesses, MAX_EXECS);
-    sorter.sort(misses, MAX_EXECS);
-
-//    std::cout << "Average L1 Data Accesses: " << a_avg << '\n';
-//    std::cout << "Average L1 Data Misses: " << m_avg << '\n';
-//    std::cout << "Average miss percentage: " << (m_avg * 100 / a_avg) << "%\n\n";
-//    std::cout << "Median L1 Data Accesses: " << accesses[MAX_EXECS / 2] << '\n';
-//    std::cout << "Median L1 Data Misses: " << misses[MAX_EXECS / 2] << '\n';
-//    std::cout << "Median miss percentage: " << (misses[MAX_EXECS / 2] * 100 / accesses[MAX_EXECS / 2]) << "\%\n";
-    std::cout << misses[MAX_EXECS / 2] << '\n';
+    /*reporting final output*/
+    std::cout << misses[max_execs / 2] << '\n';
 
     /*end of section*/
     strcat(strcpy(cmd, "rm -rf ./temp/"), ms_ch);

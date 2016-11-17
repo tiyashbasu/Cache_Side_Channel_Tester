@@ -67,8 +67,15 @@ int main(int argc, char *argv[]) {
     }
 
     /*fetching and sanitizing params*/
-    for (i = 1; i <= PARAM_LEN; i++)
-        params[i - 1] = (unsigned char)atoi(argv[i]);
+    if (argc > PARAM_LEN)
+        for (i = 1; i <= PARAM_LEN; i++)
+            params[i - 1] = (unsigned char)atoi(argv[i]);
+//    else
+//        for (i = 0; i < PARAM_LEN; i++) {
+//            std::string in;
+//            std::cin >> in;
+//            params[i] = (unsigned char) atoi(in.data());
+//        }
 
     /*preparing source.c source file*/
     strcat(strcat(strcpy(source_filename, "./cde-package/cde-root/src/"), ms_charr), ".c");
