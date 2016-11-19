@@ -1,6 +1,0 @@
-main 10000394 UBRR0L       Type: int 4
-main 10000398 UBRR0H       Type: int 4
-main 1000039c UCSR0C       Type: int 4
-main 100003a0 UCSR0A       Type: int 4
-main 100003a8 UCSR0B       Type: int 4
-main fffffef8 str       Type: array [256 {8 bits}] of char 4

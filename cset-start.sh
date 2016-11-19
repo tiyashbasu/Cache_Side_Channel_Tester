@@ -7,3 +7,6 @@ cset proc -m -f root -t system
 cset proc -k -f root -t system
 
 cset set -lr
+
+echo
+echo "Shielded cpu 0 and 1. Use cset-stop.sh script to unshield."

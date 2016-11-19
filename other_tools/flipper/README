@@ -1,7 +1,0 @@
-##flipper.h
-
-Run to generate flipper.h file.
-flipper.h contains binary values in the order of increasing numbers of 1's in them.
-Used in optimal_data_finder.h.
-
-Run ```./flipper.o``` to generate flipper.h.

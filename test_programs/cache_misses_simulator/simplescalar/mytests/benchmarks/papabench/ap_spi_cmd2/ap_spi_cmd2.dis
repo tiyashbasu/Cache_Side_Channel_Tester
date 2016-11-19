@@ -1,0 +1,243 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-32032
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32508($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       00400690 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32512($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       00400508 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       004006c0 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+EventUpdate():
+ap_spi_cmd2.c:317
+004001f0 <EventUpdate> jr        $31
+ir_gain_calib():
+ap_spi_cmd2.c:332
+004001f8 <ir_gain_calib> lhu       $3,-32492($28)
+ap_spi_cmd2.c:333
+00400200 <ir_gain_calib+0x8> l.d       $f0,-32696($28)
+ap_spi_cmd2.c:332
+00400208 <ir_gain_calib+0x10> subu      $3,$0,$3
+ap_spi_cmd2.c:333
+00400210 <ir_gain_calib+0x18> sll       $2,$3,0x10
+00400218 <ir_gain_calib+0x20> sra       $2,$2,0x10
+00400220 <ir_gain_calib+0x28> mtc1      $2,$f2
+00400228 <ir_gain_calib+0x30> cvt.d.w   $f2,$f2
+00400230 <ir_gain_calib+0x38> div.d     $f0,$f0,$f2
+ap_spi_cmd2.c:332
+00400238 <ir_gain_calib+0x40> sh        $3,-32744($28)
+ap_spi_cmd2.c:333
+00400240 <ir_gain_calib+0x48> cvt.s.d   $f0,$f0
+00400248 <ir_gain_calib+0x50> s.s       $f0,-32732($28)
+00400250 <ir_gain_calib+0x58> jr        $31
+ground_calibrate():
+ap_spi_cmd2.c:354
+00400258 <ground_calibrate> lbu       $3,-32688($28)
+ap_spi_cmd2.c:349
+00400260 <ground_calibrate+0x8> addiu     $29,$29,-280
+ap_spi_cmd2.c:354
+00400268 <ground_calibrate+0x10> addiu     $4,$0,1
+ap_spi_cmd2.c:349
+00400270 <ground_calibrate+0x18> sw        $31,272($29)
+ap_spi_cmd2.c:354
+00400278 <ground_calibrate+0x20> beq       $3,$4,00400308
+00400280 <ground_calibrate+0x28> slti      $2,$3,2
+00400288 <ground_calibrate+0x30> beq       $2,$0,00400418
+00400290 <ground_calibrate+0x38> bne       $3,$0,00400418
+ap_spi_cmd2.c:357
+00400298 <ground_calibrate+0x40> lhu       $2,-32708($28)
+004002a0 <ground_calibrate+0x48> sltiu     $2,$2,10
+004002a8 <ground_calibrate+0x50> beq       $2,$0,00400418
+004002b0 <ground_calibrate+0x58> lbu       $2,-32752($28)
+004002b8 <ground_calibrate+0x60> bne       $2,$4,00400418
+ap_spi_cmd2.c:359
+004002c0 <ground_calibrate+0x68> addiu     $2,$0,1
+004002c8 <ground_calibrate+0x70> sb        $2,-32688($28)
+ap_spi_cmd2.c:361
+004002d0 <ground_calibrate+0x78> addiu     $2,$0,77
+004002d8 <ground_calibrate+0x80> sb        $2,16($29)
+ap_spi_cmd2.c:363
+004002e0 <ground_calibrate+0x88> addiu     $2,$0,83
+ap_spi_cmd2.c:362
+004002e8 <ground_calibrate+0x90> sb        $0,17($29)
+ap_spi_cmd2.c:363
+004002f0 <ground_calibrate+0x98> sb        $2,18($29)
+ap_spi_cmd2.c:364
+004002f8 <ground_calibrate+0xa0> sb        $0,19($29)
+ap_spi_cmd2.c:368
+00400300 <ground_calibrate+0xa8> j         00400418
+ap_spi_cmd2.c:370
+00400308 <ground_calibrate+0xb0> lui       $2,4096
+00400310 <ground_calibrate+0xb8> lhu       $2,1154($2)
+00400318 <ground_calibrate+0xc0> addiu     $2,$2,4800
+00400320 <ground_calibrate+0xc8> andi      $2,$2,65535
+00400328 <ground_calibrate+0xd0> sltiu     $2,$2,8001
+00400330 <ground_calibrate+0xd8> bne       $2,$0,00400418
+ap_spi_cmd2.c:372
+00400338 <ground_calibrate+0xe0> jal       004001f8 <ir_gain_calib> 
+ap_spi_cmd2.c:384
+00400340 <ground_calibrate+0xe8> l.s       $f0,-32476($28)
+ap_spi_cmd2.c:387
+00400348 <ground_calibrate+0xf0> lhu       $5,-32740($28)
+ap_spi_cmd2.c:388
+00400350 <ground_calibrate+0xf8> lhu       $6,-32736($28)
+ap_spi_cmd2.c:389
+00400358 <ground_calibrate+0x100> lhu       $7,-32744($28)
+ap_spi_cmd2.c:375
+00400360 <ground_calibrate+0x108> addiu     $2,$0,2
+00400368 <ground_calibrate+0x110> sb        $2,-32688($28)
+ap_spi_cmd2.c:378
+00400370 <ground_calibrate+0x118> addiu     $2,$0,77
+00400378 <ground_calibrate+0x120> sb        $2,16($29)
+ap_spi_cmd2.c:380
+00400380 <ground_calibrate+0x128> addiu     $2,$0,67
+00400388 <ground_calibrate+0x130> sb        $2,18($29)
+ap_spi_cmd2.c:384
+00400390 <ground_calibrate+0x138> cvt.w.s   $f2,$f0
+00400398 <ground_calibrate+0x140> mfc1      $4,$f2
+ap_spi_cmd2.c:373
+004003a0 <ground_calibrate+0x148> l.s       $f2,-32732($28)
+ap_spi_cmd2.c:385
+004003a8 <ground_calibrate+0x150> l.s       $f0,-32456($28)
+ap_spi_cmd2.c:379
+004003b0 <ground_calibrate+0x158> sb        $0,17($29)
+ap_spi_cmd2.c:381
+004003b8 <ground_calibrate+0x160> sb        $0,19($29)
+ap_spi_cmd2.c:384
+004003c0 <ground_calibrate+0x168> sb        $4,20($29)
+ap_spi_cmd2.c:387
+004003c8 <ground_calibrate+0x170> sb        $5,23($29)
+ap_spi_cmd2.c:388
+004003d0 <ground_calibrate+0x178> sb        $6,24($29)
+ap_spi_cmd2.c:389
+004003d8 <ground_calibrate+0x180> sb        $7,25($29)
+ap_spi_cmd2.c:385
+004003e0 <ground_calibrate+0x188> cvt.w.s   $f4,$f0
+004003e8 <ground_calibrate+0x190> mfc1      $2,$f4
+ap_spi_cmd2.c:386
+004003f0 <ground_calibrate+0x198> cvt.w.s   $f0,$f2
+004003f8 <ground_calibrate+0x1a0> mfc1      $3,$f0
+ap_spi_cmd2.c:373
+00400400 <ground_calibrate+0x1a8> s.s       $f2,-32488($28)
+ap_spi_cmd2.c:385
+00400408 <ground_calibrate+0x1b0> sb        $2,21($29)
+ap_spi_cmd2.c:386
+00400410 <ground_calibrate+0x1b8> sb        $3,22($29)
+ap_spi_cmd2.c:397
+00400418 <ground_calibrate+0x1c0> lw        $31,272($29)
+00400420 <ground_calibrate+0x1c8> addiu     $29,$29,280
+00400428 <ground_calibrate+0x1d0> jr        $31
+events_update():
+ap_spi_cmd2.c:405
+00400430 <events_update> lhu       $4,-32684($28)
+00400438 <events_update+0x8> lbu       $2,-32704($28)
+ap_spi_cmd2.c:402
+00400440 <events_update+0x10> addiu     $29,$29,-24
+ap_spi_cmd2.c:405
+00400448 <events_update+0x18> addu      $5,$0,$0
+ap_spi_cmd2.c:402
+00400450 <events_update+0x20> sw        $31,16($29)
+ap_spi_cmd2.c:405
+00400458 <events_update+0x28> bne       $2,$0,00400488
+00400460 <events_update+0x30> lui       $2,4096
+00400468 <events_update+0x38> lh        $2,1162($2)
+00400470 <events_update+0x40> slti      $2,$2,7201
+00400478 <events_update+0x48> bne       $2,$0,00400488
+00400480 <events_update+0x50> addiu     $5,$0,1
+00400488 <events_update+0x58> lbu       $6,-32494($28)
+00400490 <events_update+0x60> jal       004001f0 <EventUpdate> 
+ap_spi_cmd2.c:406
+00400498 <events_update+0x68> lhu       $4,-32680($28)
+004004a0 <events_update+0x70> lbu       $2,-32704($28)
+004004a8 <events_update+0x78> addu      $5,$0,$0
+004004b0 <events_update+0x80> bne       $2,$0,004004e0
+004004b8 <events_update+0x88> lui       $2,4096
+004004c0 <events_update+0x90> lh        $2,1162($2)
+004004c8 <events_update+0x98> slti      $2,$2,-7200
+004004d0 <events_update+0xa0> beq       $2,$0,004004e0
+004004d8 <events_update+0xa8> addiu     $5,$0,1
+004004e0 <events_update+0xb0> lbu       $6,-32460($28)
+004004e8 <events_update+0xb8> jal       004001f0 <EventUpdate> 
+ap_spi_cmd2.c:407
+004004f0 <events_update+0xc0> lw        $31,16($29)
+004004f8 <events_update+0xc8> addiu     $29,$29,24
+00400500 <events_update+0xd0> jr        $31
+main():
+ap_spi_cmd2.c:419
+00400508 <main> lbu       $3,-32752($28)
+ap_spi_cmd2.c:416
+00400510 <main+0x8> addiu     $29,$29,-24
+ap_spi_cmd2.c:419
+00400518 <main+0x10> addiu     $2,$0,1
+ap_spi_cmd2.c:416
+00400520 <main+0x18> sw        $31,16($29)
+ap_spi_cmd2.c:419
+00400528 <main+0x20> bne       $3,$2,004005f8
+ap_spi_cmd2.c:421
+00400530 <main+0x28> lui       $2,4096
+00400538 <main+0x30> lh        $2,1154($2)
+00400540 <main+0x38> l.s       $f4,-32676($28)
+00400548 <main+0x40> mtc1      $2,$f2
+00400550 <main+0x48> cvt.s.w   $f2,$f2
+00400558 <main+0x50> div.s     $f2,$f2,$f4
+ap_spi_cmd2.c:422
+00400560 <main+0x58> lui       $2,4096
+00400568 <main+0x60> lh        $2,1156($2)
+00400570 <main+0x68> mtc1      $2,$f0
+00400578 <main+0x70> cvt.s.w   $f0,$f0
+00400580 <main+0x78> div.s     $f0,$f0,$f4
+ap_spi_cmd2.c:421
+00400588 <main+0x80> l.d       $f4,-32672($28)
+00400590 <main+0x88> cvt.d.s   $f2,$f2
+00400598 <main+0x90> mul.d     $f2,$f2,$f4
+ap_spi_cmd2.c:422
+004005a0 <main+0x98> l.d       $f4,-32664($28)
+004005a8 <main+0xa0> cvt.d.s   $f0,$f0
+004005b0 <main+0xa8> mul.d     $f0,$f0,$f4
+ap_spi_cmd2.c:421
+004005b8 <main+0xb0> mtc1      $0,$f4
+004005c0 <main+0xb8> mtc1      $0,$f5
+004005c8 <main+0xc0> add.d     $f2,$f2,$f4
+ap_spi_cmd2.c:422
+004005d0 <main+0xc8> add.d     $f0,$f0,$f4
+ap_spi_cmd2.c:421
+004005d8 <main+0xd0> cvt.s.d   $f2,$f2
+ap_spi_cmd2.c:422
+004005e0 <main+0xd8> cvt.s.d   $f0,$f0
+ap_spi_cmd2.c:421
+004005e8 <main+0xe0> s.s       $f2,-32768($28)
+ap_spi_cmd2.c:422
+004005f0 <main+0xe8> s.s       $f0,-32764($28)
+ap_spi_cmd2.c:424
+004005f8 <main+0xf0> sltiu     $2,$3,2
+00400600 <main+0xf8> beq       $2,$0,00400620
+ap_spi_cmd2.c:426
+00400608 <main+0x100> lui       $2,4096
+00400610 <main+0x108> lhu       $2,1152($2)
+00400618 <main+0x110> sh        $2,-32482($28)
+ap_spi_cmd2.c:434
+00400620 <main+0x118> lui       $2,4096
+00400628 <main+0x120> lbu       $2,1170($2)
+ap_spi_cmd2.c:435
+00400630 <main+0x128> lui       $3,4096
+00400638 <main+0x130> lbu       $3,1173($3)
+ap_spi_cmd2.c:434
+00400640 <main+0x138> sb        $2,-32544($28)
+ap_spi_cmd2.c:435
+00400648 <main+0x140> sb        $3,-32451($28)
+ap_spi_cmd2.c:437
+00400650 <main+0x148> jal       00400430

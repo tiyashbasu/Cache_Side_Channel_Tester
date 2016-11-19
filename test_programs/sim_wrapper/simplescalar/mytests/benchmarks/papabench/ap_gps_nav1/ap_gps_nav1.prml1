@@ -1,6 +1,0 @@
-ap_gps_nav1 [    4166,    67340)
-[ap_gps_nav1] wcrt = 23
-[ap_gps_nav1] earliestReq = 4166
-[ap_gps_nav1] earliestFin = 4189
---> [ap_gps_nav2] earliestReq = 4189
---> [ap_gps_nav2] earliestReq = 4189

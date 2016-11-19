@@ -1,0 +1,301 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-32032
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32620($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       00400830 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32624($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       00400230 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       00400860 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+fabs():
+ludcmp.c:74
+004001f0 <fabs> mtc1      $0,$f0
+004001f8 <fabs+0x8> mtc1      $0,$f1
+00400200 <fabs+0x10> c.le.d    $f0,$f12
+00400208 <fabs+0x18> bc1f      00400220
+ludcmp.c:75
+00400210 <fabs+0x20> mov.d     $f0,$f12
+00400218 <fabs+0x28> j         00400228
+ludcmp.c:77
+00400220 <fabs+0x30> neg.d     $f0,$f12
+ludcmp.c:79
+00400228 <fabs+0x38> jr        $31
+main():
+ludcmp.c:83
+00400230 <main> addiu     $29,$29,-24
+ludcmp.c:85
+00400238 <main+0x8> addiu     $4,$0,5
+ludcmp.c:88
+00400240 <main+0x10> l.d       $f6,-32768($28)
+ludcmp.c:90
+00400248 <main+0x18> addu      $6,$0,$0
+00400250 <main+0x20> addu      $9,$0,$0
+00400258 <main+0x28> l.d       $f4,-32760($28)
+00400260 <main+0x30> lui       $8,4096
+00400268 <main+0x38> addiu     $8,$8,960
+00400270 <main+0x40> lui       $7,4096
+00400278 <main+0x48> addiu     $7,$7,1760
+ludcmp.c:83
+00400280 <main+0x50> sw        $31,16($29)
+ludcmp.c:91
+00400288 <main+0x58> mtc1      $0,$f2
+00400290 <main+0x60> mtc1      $0,$f3
+ludcmp.c:92
+00400298 <main+0x68> addu      $5,$0,$0
+004002a0 <main+0x70> bne       $9,$0,00400320
+004002a8 <main+0x78> addu      $3,$0,$7
+ludcmp.c:93
+004002b0 <main+0x80> addiu     $2,$5,2
+004002b8 <main+0x88> addu      $2,$6,$2
+004002c0 <main+0x90> mtc1      $2,$f0
+004002c8 <main+0x98> cvt.d.w   $f0,$f0
+004002d0 <main+0xa0> s.d       $f0,0($3)
+ludcmp.c:94
+004002d8 <main+0xa8> bne       $6,$5,004002f0
+ludcmp.c:95
+004002e0 <main+0xb0> mul.d     $f0,$f0,$f4
+004002e8 <main+0xb8> s.d       $f0,0($3)
+ludcmp.c:96
+004002f0 <main+0xc0> l.d       $f0,0($3)
+004002f8 <main+0xc8> add.d     $f2,$f2,$f0
+ludcmp.c:92
+00400300 <main+0xd0> addiu     $5,$5,1
+00400308 <main+0xd8> slt       $2,$4,$5
+00400310 <main+0xe0> addiu     $3,$3,8
+00400318 <main+0xe8> beq       $2,$0,004002b0
+ludcmp.c:98
+00400320 <main+0xf0> s.d       $f2,0($8)
+ludcmp.c:90
+00400328 <main+0xf8> addiu     $8,$8,8
+00400330 <main+0x100> addiu     $7,$7,400
+00400338 <main+0x108> addiu     $6,$6,1
+00400340 <main+0x110> slt       $2,$4,$6
+00400348 <main+0x118> beq       $2,$0,00400288
+ludcmp.c:101
+00400350 <main+0x120> dmfc1     $6,$f6
+00400358 <main+0x128> jal       00400380 <ludcmp> 
+ludcmp.c:103
+00400360 <main+0x130> addu      $2,$0,$0
+ludcmp.c:105
+00400368 <main+0x138> lw        $31,16($29)
+00400370 <main+0x140> addiu     $29,$29,24
+00400378 <main+0x148> jr        $31
+ludcmp():
+ludcmp.c:109
+00400380 <ludcmp> addiu     $29,$29,-808
+00400388 <ludcmp+0x8> addu      $15,$0,$4
+00400390 <ludcmp+0x10> dmtc1     $6,$f2
+ludcmp.c:114
+00400398 <ludcmp+0x18> slti      $2,$15,100
+004003a0 <ludcmp+0x20> beq       $2,$0,004003c8
+004003a8 <ludcmp+0x28> mtc1      $0,$f0
+004003b0 <ludcmp+0x30> mtc1      $0,$f1
+004003b8 <ludcmp+0x38> c.le.d    $f2,$f0
+004003c0 <ludcmp+0x40> bc1f      004003d8
+ludcmp.c:115
+004003c8 <ludcmp+0x48> addiu     $2,$0,999
+004003d0 <ludcmp+0x50> j         00400820
+ludcmp.c:116
+004003d8 <ludcmp+0x58> addu      $10,$0,$0
+004003e0 <ludcmp+0x60> lui       $13,4096
+004003e8 <ludcmp+0x68> addiu     $13,$13,1760
+004003f0 <ludcmp+0x70> addiu     $11,$13,400
+004003f8 <ludcmp+0x78> addu      $14,$0,$13
+ludcmp.c:117
+00400400 <ludcmp+0x80> sll       $7,$10,0x3
+00400408 <ludcmp+0x88> addu      $9,$0,$14
+00400410 <ludcmp+0x90> addiu     $6,$13,400
+00400418 <ludcmp+0x98> addiu     $8,$13,2400
+ludcmp.c:118
+00400420 <ludcmp+0xa0> addu      $2,$7,$6
+00400428 <ludcmp+0xa8> l.d       $f4,0($2)
+ludcmp.c:120
+00400430 <ludcmp+0xb0> addu      $3,$0,$0
+00400438 <ludcmp+0xb8> addu      $5,$0,$6
+00400440 <ludcmp+0xc0> addu      $4,$0,$13
+ludcmp.c:121
+00400448 <ludcmp+0xc8> addu      $2,$7,$4
+00400450 <ludcmp+0xd0> l.d       $f2,0($5)
+00400458 <ludcmp+0xd8> l.d       $f0,0($2)
+00400460 <ludcmp+0xe0> mul.d     $f2,$f2,$f0
+ludcmp.c:120
+00400468 <ludcmp+0xe8> addiu     $4,$4,400
+ludcmp.c:121
+00400470 <ludcmp+0xf0> sub.d     $f4,$f4,$f2
+ludcmp.c:120
+00400478 <ludcmp+0xf8> addiu     $3,$3,1
+00400480 <ludcmp+0x100> addiu     $5,$5,8
+00400488 <ludcmp+0x108> slti      $2,$3,5
+00400490 <ludcmp+0x110> bne       $2,$0,00400448
+ludcmp.c:122
+00400498 <ludcmp+0x118> l.d       $f0,0($9)
+004004a0 <ludcmp+0x120> div.d     $f0,$f4,$f0
+004004a8 <ludcmp+0x128> addu      $2,$7,$6
+ludcmp.c:117
+004004b0 <ludcmp+0x130> addiu     $6,$6,400
+ludcmp.c:122
+004004b8 <ludcmp+0x138> s.d       $f0,0($2)
+ludcmp.c:117
+004004c0 <ludcmp+0x140> slt       $2,$6,$8
+004004c8 <ludcmp+0x148> bne       $2,$0,00400420
+ludcmp.c:124
+004004d0 <ludcmp+0x150> addiu     $6,$0,1
+004004d8 <ludcmp+0x158> addu      $12,$0,$11
+004004e0 <ludcmp+0x160> addiu     $7,$11,8
+004004e8 <ludcmp+0x168> addiu     $8,$0,8
+ludcmp.c:125
+004004f0 <ludcmp+0x170> l.d       $f4,0($7)
+ludcmp.c:126
+004004f8 <ludcmp+0x178> addu      $3,$0,$0
+00400500 <ludcmp+0x180> addu      $9,$0,$8
+00400508 <ludcmp+0x188> addu      $5,$0,$12
+00400510 <ludcmp+0x190> addu      $4,$0,$13
+ludcmp.c:127
+00400518 <ludcmp+0x198> addu      $2,$9,$4
+00400520 <ludcmp+0x1a0> l.d       $f2,0($5)
+00400528 <ludcmp+0x1a8> l.d       $f0,0($2)
+00400530 <ludcmp+0x1b0> mul.d     $f2,$f2,$f0
+ludcmp.c:126
+00400538 <ludcmp+0x1b8> addiu     $4,$4,400
+ludcmp.c:127
+00400540 <ludcmp+0x1c0> sub.d     $f4,$f4,$f2
+ludcmp.c:126
+00400548 <ludcmp+0x1c8> addiu     $3,$3,1
+00400550 <ludcmp+0x1d0> addiu     $5,$5,8
+00400558 <ludcmp+0x1d8> slti      $2,$3,6
+00400560 <ludcmp+0x1e0> bne       $2,$0,00400518
+ludcmp.c:128
+00400568 <ludcmp+0x1e8> s.d       $f4,0($7)
+ludcmp.c:124
+00400570 <ludcmp+0x1f0> addiu     $7,$7,8
+00400578 <ludcmp+0x1f8> addiu     $8,$8,8
+00400580 <ludcmp+0x200> addiu     $6,$6,1
+00400588 <ludcmp+0x208> slti      $2,$6,6
+00400590 <ludcmp+0x210> bne       $2,$0,004004f0
+ludcmp.c:116
+00400598 <ludcmp+0x218> addiu     $11,$11,400
+004005a0 <ludcmp+0x220> addiu     $14,$14,408
+004005a8 <ludcmp+0x228> addiu     $10,$10,1
+004005b0 <ludcmp+0x230> slti      $2,$10,5
+004005b8 <ludcmp+0x238> bne       $2,$0,00400400
+ludcmp.c:132
+004005c0 <ludcmp+0x240> addiu     $10,$0,1
+004005c8 <ludcmp+0x248> addiu     $8,$29,8
+ludcmp.c:131
+004005d0 <ludcmp+0x250> lui       $2,4096
+004005d8 <ludcmp+0x258> addiu     $2,$2,960
+004005e0 <ludcmp+0x260> l.d       $f0,0($2)
+ludcmp.c:132
+004005e8 <ludcmp+0x268> lui       $7,4096
+004005f0 <ludcmp+0x270> addiu     $7,$7,2160
+004005f8 <ludcmp+0x278> addiu     $5,$2,8
+ludcmp.c:131
+00400600 <ludcmp+0x280> s.d       $f0,0($29)
+ludcmp.c:133
+00400608 <ludcmp+0x288> l.d       $f4,0($5)
+ludcmp.c:134
+00400610 <ludcmp+0x290> addu      $6,$0,$0
+00400618 <ludcmp+0x298> addu      $4,$0,$29
+00400620 <ludcmp+0x2a0> addu      $3,$0,$7
+ludcmp.c:135
+00400628 <ludcmp+0x2a8> l.d       $f0,0($3)
+00400630 <ludcmp+0x2b0> l.d       $f2,0($4)
+00400638 <ludcmp+0x2b8> mul.d     $f0,$f0,$f2
+ludcmp.c:134
+00400640 <ludcmp+0x2c0> addiu     $6,$6,1
+ludcmp.c:135
+00400648 <ludcmp+0x2c8> sub.d     $f4,$f4,$f0
+ludcmp.c:134
+00400650 <ludcmp+0x2d0> slti      $2,$6,5
+00400658 <ludcmp+0x2d8> addiu     $4,$4,8
+00400660 <ludcmp+0x2e0> addiu     $3,$3,8
+00400668 <ludcmp+0x2e8> bne       $2,$0,00400628
+ludcmp.c:136
+00400670 <ludcmp+0x2f0> s.d       $f4,0($8)
+ludcmp.c:132
+00400678 <ludcmp+0x2f8> addiu     $8,$8,8
+00400680 <ludcmp+0x300> addiu     $7,$7,400
+00400688 <ludcmp+0x308> addiu     $5,$5,8
+00400690 <ludcmp+0x310> addiu     $10,$10,1
+00400698 <ludcmp+0x318> slti      $2,$10,6
+004006a0 <ludcmp+0x320> bne       $2,$0,00400608
+ludcmp.c:138
+004006a8 <ludcmp+0x328> sll       $4,$15,0x3
+004006b0 <ludcmp+0x330> addu      $5,$4,$29
+004006b8 <ludcmp+0x338> lui       $3,4096
+004006c0 <ludcmp+0x340> addiu     $3,$3,1760
+004006c8 <ludcmp+0x348> sll       $2,$15,0x1
+004006d0 <ludcmp+0x350> addu      $2,$2,$15
+004006d8 <ludcmp+0x358> sll       $2,$2,0x3
+004006e0 <ludcmp+0x360> addu      $2,$2,$15
+004006e8 <ludcmp+0x368> sll       $2,$2,0x4
+004006f0 <ludcmp+0x370> addu      $2,$2,$3
+004006f8 <ludcmp+0x378> addu      $2,$4,$2
+00400700 <ludcmp+0x380> l.d       $f2,0($5)
+00400708 <ludcmp+0x388> l.d       $f0,0($2)
+00400710 <ludcmp+0x390> div.d     $f2,$f2,$f0
+ludcmp.c:139
+00400718 <ludcmp+0x398> addiu     $10,$0,4
+00400720 <ludcmp+0x3a0> lui       $11,4096
+00400728 <ludcmp+0x3a8> addiu     $11,$11,1360
+00400730 <ludcmp+0x3b0> addiu     $9,$11,32
+00400738 <ludcmp+0x3b8> addiu     $8,$3,1632
+00400740 <ludcmp+0x3c0> addiu     $3,$3,1600
+00400748 <ludcmp+0x3c8> addiu     $7,$29,32
+ludcmp.c:138
+00400750 <ludcmp+0x3d0> lui       $1,4096
+00400758 <ludcmp+0x3d8> addu      $1,$4,$1
+00400760 <ludcmp+0x3e0> s.d       $f2,1360($1)
+ludcmp.c:140
+00400768 <ludcmp+0x3e8> l.d       $f4,0($7)
+ludcmp.c:141
+00400770 <ludcmp+0x3f0> addiu     $6,$0,1
+00400778 <ludcmp+0x3f8> addiu     $5,$11,8
+00400780 <ludcmp+0x400> addiu     $4,$3,8
+ludcmp.c:142
+00400788 <ludcmp+0x408> l.d       $f0,0($4)
+00400790 <ludcmp+0x410> l.d       $f2,0($5)
+00400798 <ludcmp+0x418> mul.d     $f0,$f0,$f2
+ludcmp.c:141
+004007a0 <ludcmp+0x420> addiu     $6,$6,1
+ludcmp.c:142
+004007a8 <ludcmp+0x428> sub.d     $f4,$f4,$f0
+ludcmp.c:141
+004007b0 <ludcmp+0x430> slti      $2,$6,6
+004007b8 <ludcmp+0x438> addiu     $5,$5,8
+004007c0 <ludcmp+0x440> addiu     $4,$4,8
+004007c8 <ludcmp+0x448> bne       $2,$0,00400788
+ludcmp.c:143
+004007d0 <ludcmp+0x450> l.d       $f0,0($8)
+004007d8 <ludcmp+0x458> div.d     $f0,$f4,$f0
+ludcmp.c:139
+004007e0 <ludcmp+0x460> addiu     $3,$3,-400
+004007e8 <ludcmp+0x468> addiu     $7,$7,-8
+004007f0 <ludcmp+0x470> addiu     $10,$10,-1
+004007f8 <ludcmp+0x478> addiu     $8,$8,-408
+ludcmp.c:143
+00400800 <ludcmp+0x480> s.d       $f0,0($9)
+ludcmp.c:139
+00400808 <ludcmp+0x488> addiu     $9,$9,-8
+00400810 <ludcmp+0x490> bgez      $10,00400768
+ludcmp.c:145
+00400818 <ludcmp+0x498> addu      $2,$0,$0
+ludcmp.c:147
+00400820 <ludcmp+0x4a0> addiu     $29,$29,808
+00400828 <ludcmp+0x4a8> jr        $31
+end_addr

@@ -1,0 +1,11 @@
+10
+ir_pitch_neutral 2 1
+ir_roll_neutral 2 1
+simul_ir_pitch 2 1
+simul_ir_roll 2 1
+UBRR0H 4 1
+UBRR0L 4 1
+ubx_status 1 1
+UCSR0A 4 1
+UCSR0B 4 3
+UCSR0C 4 1

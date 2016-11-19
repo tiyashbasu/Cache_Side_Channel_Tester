@@ -1,0 +1,473 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-31904
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32636($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       00400ab0 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32640($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       00400a40 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       00400ae0 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+fdct():
+fdct.c:62
+004001f0 <fdct> addiu     $29,$29,-88
+004001f8 <fdct+0x8> sw        $30,80($29)
+00400200 <fdct+0x10> addu      $30,$0,$4
+00400208 <fdct+0x18> sw        $22,72($29)
+00400210 <fdct+0x20> addu      $22,$0,$5
+fdct.c:75
+00400218 <fdct+0x28> addu      $25,$0,$30
+fdct.c:62
+00400220 <fdct+0x30> sw        $23,76($29)
+fdct.c:77
+00400228 <fdct+0x38> sll       $23,$22,0x1
+00400230 <fdct+0x40> addiu     $11,$25,2
+fdct.c:62
+00400238 <fdct+0x48> sw        $21,68($29)
+00400240 <fdct+0x50> sw        $20,64($29)
+00400248 <fdct+0x58> sw        $19,60($29)
+00400250 <fdct+0x60> sw        $18,56($29)
+00400258 <fdct+0x68> sw        $17,52($29)
+00400260 <fdct+0x70> sw        $16,48($29)
+fdct.c:77
+00400268 <fdct+0x78> sw        $0,0($29)
+fdct.c:79
+00400270 <fdct+0x80> lh        $10,0($25)
+00400278 <fdct+0x88> lh        $9,12($11)
+fdct.c:100
+00400280 <fdct+0x90> addiu     $12,$0,4433
+fdct.c:81
+00400288 <fdct+0x98> lh        $8,0($11)
+00400290 <fdct+0xa0> lh        $6,10($11)
+fdct.c:83
+00400298 <fdct+0xa8> lh        $7,2($11)
+004002a0 <fdct+0xb0> lh        $4,8($11)
+fdct.c:85
+004002a8 <fdct+0xb8> lh        $5,4($11)
+004002b0 <fdct+0xc0> lh        $3,6($11)
+fdct.c:79
+004002b8 <fdct+0xc8> addu      $21,$10,$9
+fdct.c:81
+004002c0 <fdct+0xd0> addu      $20,$8,$6
+fdct.c:83
+004002c8 <fdct+0xd8> addu      $18,$7,$4
+fdct.c:85
+004002d0 <fdct+0xe0> addu      $17,$5,$3
+fdct.c:93
+004002d8 <fdct+0xe8> subu      $13,$21,$17
+fdct.c:95
+004002e0 <fdct+0xf0> subu      $14,$20,$18
+fdct.c:101
+004002e8 <fdct+0xf8> addu      $2,$14,$13
+004002f0 <fdct+0x100> mult      $2,$12
+004002f8 <fdct+0x108> mflo      $15
+fdct.c:102
+00400300 <fdct+0x110> addiu     $12,$0,6270
+fdct.c:103
+00400308 <fdct+0x118> mult      $13,$12
+00400310 <fdct+0x120> mflo      $16
+fdct.c:104
+00400318 <fdct+0x128> addiu     $12,$0,-15137
+fdct.c:105
+00400320 <fdct+0x130> mult      $14,$12
+fdct.c:80
+00400328 <fdct+0x138> subu      $10,$10,$9
+fdct.c:82
+00400330 <fdct+0x140> subu      $8,$8,$6
+fdct.c:84
+00400338 <fdct+0x148> subu      $24,$7,$4
+fdct.c:115
+00400340 <fdct+0x150> addu      $6,$24,$10
+fdct.c:86
+00400348 <fdct+0x158> subu      $13,$5,$3
+fdct.c:114
+00400350 <fdct+0x160> addu      $9,$13,$8
+fdct.c:105
+00400358 <fdct+0x168> mflo      $4
+fdct.c:117
+00400360 <fdct+0x170> addu      $2,$9,$6
+fdct.c:116
+00400368 <fdct+0x178> addiu     $12,$0,9633
+fdct.c:117
+00400370 <fdct+0x180> mult      $2,$12
+00400378 <fdct+0x188> mflo      $19
+fdct.c:119
+00400380 <fdct+0x190> addiu     $12,$0,2446
+fdct.c:120
+00400388 <fdct+0x198> mult      $13,$12
+fdct.c:103
+00400390 <fdct+0x1a0> addu      $3,$15,$16
+fdct.c:105
+00400398 <fdct+0x1a8> addu      $4,$15,$4
+fdct.c:112
+004003a0 <fdct+0x1b0> addu      $15,$13,$10
+fdct.c:120
+004003a8 <fdct+0x1b8> mflo      $13
+fdct.c:121
+004003b0 <fdct+0x1c0> addiu     $12,$0,16819
+fdct.c:122
+004003b8 <fdct+0x1c8> mult      $24,$12
+fdct.c:113
+004003c0 <fdct+0x1d0> addu      $14,$24,$8
+fdct.c:122
+004003c8 <fdct+0x1d8> mflo      $24
+fdct.c:123
+004003d0 <fdct+0x1e0> addiu     $12,$0,25172
+fdct.c:124
+004003d8 <fdct+0x1e8> mult      $8,$12
+004003e0 <fdct+0x1f0> mflo      $8
+fdct.c:125
+004003e8 <fdct+0x1f8> addiu     $12,$0,12299
+fdct.c:126
+004003f0 <fdct+0x200> mult      $10,$12
+004003f8 <fdct+0x208> mflo      $10
+fdct.c:127
+00400400 <fdct+0x210> addiu     $12,$0,-7373
+fdct.c:128
+00400408 <fdct+0x218> mult      $15,$12
+00400410 <fdct+0x220> mflo      $15
+fdct.c:129
+00400418 <fdct+0x228> addiu     $12,$0,-20995
+fdct.c:130
+00400420 <fdct+0x230> mult      $14,$12
+00400428 <fdct+0x238> mflo      $14
+fdct.c:131
+00400430 <fdct+0x240> addiu     $12,$0,-16069
+fdct.c:132
+00400438 <fdct+0x248> mult      $9,$12
+fdct.c:94
+00400440 <fdct+0x250> addu      $7,$20,$18
+fdct.c:92
+00400448 <fdct+0x258> addu      $5,$21,$17
+fdct.c:77
+00400450 <fdct+0x260> lw        $16,0($29)
+fdct.c:132
+00400458 <fdct+0x268> mflo      $9
+fdct.c:103
+00400460 <fdct+0x270> sra       $3,$3,0xb
+fdct.c:77
+00400468 <fdct+0x278> addiu     $16,$16,1
+00400470 <fdct+0x280> sw        $16,0($29)
+fdct.c:133
+00400478 <fdct+0x288> addiu     $12,$0,-3196
+fdct.c:134
+00400480 <fdct+0x290> mult      $6,$12
+fdct.c:105
+00400488 <fdct+0x298> sra       $4,$4,0xb
+fdct.c:97
+00400490 <fdct+0x2a0> addu      $2,$5,$7
+00400498 <fdct+0x2a8> sll       $2,$2,0x2
+004004a0 <fdct+0x2b0> sh        $2,0($25)
+fdct.c:147
+004004a8 <fdct+0x2b8> addu      $25,$25,$23
+fdct.c:98
+004004b0 <fdct+0x2c0> subu      $2,$5,$7
+004004b8 <fdct+0x2c8> sll       $2,$2,0x2
+004004c0 <fdct+0x2d0> sh        $2,6($11)
+fdct.c:103
+004004c8 <fdct+0x2d8> sh        $3,2($11)
+fdct.c:105
+004004d0 <fdct+0x2e0> sh        $4,10($11)
+fdct.c:139
+004004d8 <fdct+0x2e8> addu      $2,$13,$15
+fdct.c:136
+004004e0 <fdct+0x2f0> addu      $9,$9,$19
+fdct.c:139
+004004e8 <fdct+0x2f8> addu      $2,$2,$9
+004004f0 <fdct+0x300> sra       $2,$2,0xb
+004004f8 <fdct+0x308> sh        $2,12($11)
+fdct.c:141
+00400500 <fdct+0x310> addu      $2,$8,$14
+fdct.c:134
+00400508 <fdct+0x318> mflo      $6
+fdct.c:141
+00400510 <fdct+0x320> addu      $2,$2,$9
+00400518 <fdct+0x328> sra       $2,$2,0xb
+00400520 <fdct+0x330> sh        $2,4($11)
+fdct.c:140
+00400528 <fdct+0x338> addu      $2,$24,$14
+fdct.c:137
+00400530 <fdct+0x340> addu      $6,$6,$19
+fdct.c:140
+00400538 <fdct+0x348> addu      $2,$2,$6
+00400540 <fdct+0x350> sra       $2,$2,0xb
+00400548 <fdct+0x358> sh        $2,8($11)
+fdct.c:142
+00400550 <fdct+0x360> addu      $2,$10,$15
+00400558 <fdct+0x368> addu      $2,$2,$6
+00400560 <fdct+0x370> sra       $2,$2,0xb
+00400568 <fdct+0x378> sh        $2,0($11)
+fdct.c:147
+00400570 <fdct+0x380> addu      $11,$11,$23
+fdct.c:77
+00400578 <fdct+0x388> slti      $2,$16,8
+00400580 <fdct+0x390> bne       $2,$0,00400270
+fdct.c:153
+00400588 <fdct+0x398> addu      $25,$0,$30
+fdct.c:155
+00400590 <fdct+0x3a0> sll       $2,$22,0x1
+00400598 <fdct+0x3a8> addu      $16,$25,$2
+004005a0 <fdct+0x3b0> addu      $2,$2,$22
+004005a8 <fdct+0x3b8> sw        $2,8($29)
+004005b0 <fdct+0x3c0> sll       $2,$2,0x1
+004005b8 <fdct+0x3c8> addu      $2,$25,$2
+004005c0 <fdct+0x3d0> sll       $4,$22,0x2
+004005c8 <fdct+0x3d8> sw        $2,24($29)
+004005d0 <fdct+0x3e0> addu      $2,$4,$22
+004005d8 <fdct+0x3e8> sll       $2,$2,0x1
+004005e0 <fdct+0x3f0> addu      $2,$25,$2
+004005e8 <fdct+0x3f8> sll       $3,$22,0x3
+004005f0 <fdct+0x400> sw        $2,32($29)
+004005f8 <fdct+0x408> subu      $2,$3,$22
+00400600 <fdct+0x410> sll       $2,$2,0x1
+00400608 <fdct+0x418> addu      $30,$25,$2
+00400610 <fdct+0x420> addu      $23,$25,$4
+00400618 <fdct+0x428> addu      $22,$25,$3
+00400620 <fdct+0x430> sw        $0,0($29)
+00400628 <fdct+0x438> sw        $16,16($29)
+fdct.c:159
+00400630 <fdct+0x440> lw        $16,16($29)
+00400638 <fdct+0x448> lh        $8,0($16)
+fdct.c:157
+00400640 <fdct+0x450> lh        $10,0($25)
+fdct.c:159
+00400648 <fdct+0x458> lw        $16,8($29)
+fdct.c:157
+00400650 <fdct+0x460> lh        $9,0($30)
+fdct.c:178
+00400658 <fdct+0x468> addiu     $12,$0,4433
+fdct.c:159
+00400660 <fdct+0x470> sll       $11,$16,0x2
+fdct.c:161
+00400668 <fdct+0x478> lw        $16,32($29)
+00400670 <fdct+0x480> lh        $7,0($23)
+fdct.c:163
+00400678 <fdct+0x488> lh        $3,0($22)
+fdct.c:161
+00400680 <fdct+0x490> lh        $4,0($16)
+fdct.c:159
+00400688 <fdct+0x498> addu      $11,$11,$25
+00400690 <fdct+0x4a0> lh        $6,0($11)
+fdct.c:163
+00400698 <fdct+0x4a8> lw        $16,24($29)
+fdct.c:157
+004006a0 <fdct+0x4b0> addu      $21,$10,$9
+fdct.c:159
+004006a8 <fdct+0x4b8> addu      $20,$8,$6
+fdct.c:163
+004006b0 <fdct+0x4c0> lh        $5,0($16)
+fdct.c:161
+004006b8 <fdct+0x4c8> addu      $18,$7,$4
+fdct.c:173
+004006c0 <fdct+0x4d0> subu      $14,$20,$18
+fdct.c:163
+004006c8 <fdct+0x4d8> addu      $17,$5,$3
+fdct.c:171
+004006d0 <fdct+0x4e0> subu      $13,$21,$17
+fdct.c:179
+004006d8 <fdct+0x4e8> addu      $2,$14,$13
+004006e0 <fdct+0x4f0> mult      $2,$12
+004006e8 <fdct+0x4f8> mflo      $15
+fdct.c:180
+004006f0 <fdct+0x500> addiu     $12,$0,6270
+fdct.c:181
+004006f8 <fdct+0x508> mult      $13,$12
+00400700 <fdct+0x510> mflo      $16
+fdct.c:182
+00400708 <fdct+0x518> addiu     $12,$0,-15137
+fdct.c:183
+00400710 <fdct+0x520> mult      $14,$12
+fdct.c:158
+00400718 <fdct+0x528> subu      $10,$10,$9
+fdct.c:160
+00400720 <fdct+0x530> subu      $8,$8,$6
+fdct.c:162
+00400728 <fdct+0x538> subu      $24,$7,$4
+fdct.c:193
+00400730 <fdct+0x540> addu      $6,$24,$10
+fdct.c:164
+00400738 <fdct+0x548> subu      $13,$5,$3
+fdct.c:192
+00400740 <fdct+0x550> addu      $9,$13,$8
+fdct.c:183
+00400748 <fdct+0x558> mflo      $4
+fdct.c:195
+00400750 <fdct+0x560> addu      $2,$9,$6
+fdct.c:194
+00400758 <fdct+0x568> addiu     $12,$0,9633
+fdct.c:195
+00400760 <fdct+0x570> mult      $2,$12
+00400768 <fdct+0x578> mflo      $19
+fdct.c:197
+00400770 <fdct+0x580> addiu     $12,$0,2446
+fdct.c:198
+00400778 <fdct+0x588> mult      $13,$12
+fdct.c:181
+00400780 <fdct+0x590> addu      $3,$15,$16
+fdct.c:183
+00400788 <fdct+0x598> addu      $4,$15,$4
+fdct.c:190
+00400790 <fdct+0x5a0> addu      $15,$13,$10
+fdct.c:198
+00400798 <fdct+0x5a8> mflo      $13
+fdct.c:199
+004007a0 <fdct+0x5b0> addiu     $12,$0,16819
+fdct.c:200
+004007a8 <fdct+0x5b8> mult      $24,$12
+fdct.c:191
+004007b0 <fdct+0x5c0> addu      $14,$24,$8
+fdct.c:200
+004007b8 <fdct+0x5c8> mflo      $24
+fdct.c:201
+004007c0 <fdct+0x5d0> addiu     $12,$0,25172
+fdct.c:202
+004007c8 <fdct+0x5d8> mult      $8,$12
+004007d0 <fdct+0x5e0> mflo      $8
+fdct.c:203
+004007d8 <fdct+0x5e8> addiu     $12,$0,12299
+fdct.c:204
+004007e0 <fdct+0x5f0> mult      $10,$12
+004007e8 <fdct+0x5f8> mflo      $10
+fdct.c:205
+004007f0 <fdct+0x600> addiu     $12,$0,-7373
+fdct.c:206
+004007f8 <fdct+0x608> mult      $15,$12
+00400800 <fdct+0x610> mflo      $15
+fdct.c:207
+00400808 <fdct+0x618> addiu     $12,$0,-20995
+fdct.c:208
+00400810 <fdct+0x620> mult      $14,$12
+00400818 <fdct+0x628> mflo      $14
+fdct.c:209
+00400820 <fdct+0x630> addiu     $12,$0,-16069
+fdct.c:210
+00400828 <fdct+0x638> mult      $9,$12
+fdct.c:172
+00400830 <fdct+0x640> addu      $7,$20,$18
+fdct.c:170
+00400838 <fdct+0x648> addu      $5,$21,$17
+fdct.c:155
+00400840 <fdct+0x650> lw        $16,0($29)
+fdct.c:210
+00400848 <fdct+0x658> mflo      $9
+fdct.c:181
+00400850 <fdct+0x660> sra       $3,$3,0x12
+fdct.c:211
+00400858 <fdct+0x668> addiu     $12,$0,-3196
+fdct.c:212
+00400860 <fdct+0x670> mult      $6,$12
+fdct.c:155
+00400868 <fdct+0x678> addiu     $16,$16,1
+00400870 <fdct+0x680> sw        $16,0($29)
+fdct.c:183
+00400878 <fdct+0x688> sra       $4,$4,0x12
+fdct.c:175
+00400880 <fdct+0x690> addu      $2,$5,$7
+00400888 <fdct+0x698> sra       $2,$2,0x5
+00400890 <fdct+0x6a0> sh        $2,0($25)
+fdct.c:176
+00400898 <fdct+0x6a8> subu      $2,$5,$7
+004008a0 <fdct+0x6b0> sra       $2,$2,0x5
+004008a8 <fdct+0x6b8> sh        $2,0($22)
+fdct.c:181
+004008b0 <fdct+0x6c0> sh        $3,0($23)
+fdct.c:183
+004008b8 <fdct+0x6c8> sh        $4,0($11)
+fdct.c:217
+004008c0 <fdct+0x6d0> addu      $2,$13,$15
+fdct.c:214
+004008c8 <fdct+0x6d8> addu      $9,$9,$19
+fdct.c:217
+004008d0 <fdct+0x6e0> addu      $2,$2,$9
+004008d8 <fdct+0x6e8> sra       $2,$2,0x12
+004008e0 <fdct+0x6f0> sh        $2,0($30)
+fdct.c:212
+004008e8 <fdct+0x6f8> mflo      $6
+fdct.c:218
+004008f0 <fdct+0x700> addu      $2,$24,$14
+004008f8 <fdct+0x708> lw        $16,32($29)
+fdct.c:215
+00400900 <fdct+0x710> addu      $6,$6,$19
+fdct.c:218
+00400908 <fdct+0x718> addu      $2,$2,$6
+00400910 <fdct+0x720> sra       $2,$2,0x12
+00400918 <fdct+0x728> sh        $2,0($16)
+fdct.c:219
+00400920 <fdct+0x730> addu      $2,$8,$14
+00400928 <fdct+0x738> lw        $16,24($29)
+00400930 <fdct+0x740> addu      $2,$2,$9
+00400938 <fdct+0x748> sra       $2,$2,0x12
+00400940 <fdct+0x750> sh        $2,0($16)
+fdct.c:220
+00400948 <fdct+0x758> addu      $2,$10,$15
+00400950 <fdct+0x760> lw        $16,16($29)
+00400958 <fdct+0x768> addu      $2,$2,$6
+00400960 <fdct+0x770> sra       $2,$2,0x12
+00400968 <fdct+0x778> sh        $2,0($16)
+fdct.c:223
+00400970 <fdct+0x780> addiu     $16,$16,2
+00400978 <fdct+0x788> sw        $16,16($29)
+00400980 <fdct+0x790> lw        $16,24($29)
+00400988 <fdct+0x798> addiu     $16,$16,2
+00400990 <fdct+0x7a0> sw        $16,24($29)
+00400998 <fdct+0x7a8> lw        $16,32($29)
+004009a0 <fdct+0x7b0> addiu     $22,$22,2
+004009a8 <fdct+0x7b8> addiu     $25,$25,2
+004009b0 <fdct+0x7c0> addiu     $16,$16,2
+004009b8 <fdct+0x7c8> sw        $16,32($29)
+fdct.c:155
+004009c0 <fdct+0x7d0> lw        $16,0($29)
+fdct.c:223
+004009c8 <fdct+0x7d8> addiu     $23,$23,2
+004009d0 <fdct+0x7e0> addiu     $30,$30,2
+fdct.c:155
+004009d8 <fdct+0x7e8> slti      $2,$16,8
+004009e0 <fdct+0x7f0> bne       $2,$0,00400630
+fdct.c:225
+004009e8 <fdct+0x7f8> lw        $30,80($29)
+004009f0 <fdct+0x800> lw        $23,76($29)
+004009f8 <fdct+0x808> lw        $22,72($29)
+00400a00 <fdct+0x810> lw        $21,68($29)
+00400a08 <fdct+0x818> lw        $20,64($29)
+00400a10 <fdct+0x820> lw        $19,60($29)
+00400a18 <fdct+0x828> lw        $18,56($29)
+00400a20 <fdct+0x830> lw        $17,52($29)
+00400a28 <fdct+0x838> lw        $16,48($29)
+00400a30 <fdct+0x840> addiu     $29,$29,88
+00400a38 <fdct+0x848> jr        $31
+main():
+fdct.c:228
+00400a40 <main> addiu     $29,$29,-24
+00400a48 <main+0x8> sw        $16,16($29)
+fdct.c:231
+00400a50 <main+0x10> lui       $16,4096
+00400a58 <main+0x18> addiu     $16,$16,96
+00400a60 <main+0x20> addu      $4,$0,$16
+00400a68 <main+0x28> addiu     $5,$0,8
+fdct.c:228
+00400a70 <main+0x30> sw        $31,20($29)
+fdct.c:231
+00400a78 <main+0x38> jal       004001f0 <fdct> 
+fdct.c:237
+00400a80 <main+0x40> lh        $2,0($16)
+fdct.c:238
+00400a88 <main+0x48> lw        $31,20($29)
+00400a90 <main+0x50> lw        $16,16($29)
+00400a98 <main+0x58> addiu     $29,$29,24
+00400aa0 <main+0x60> jr        $31
+00400aa8 <main+0x68> nop       
+end_addr

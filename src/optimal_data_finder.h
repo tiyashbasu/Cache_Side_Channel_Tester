@@ -135,10 +135,6 @@ namespace thesis {
                 /*executing target*/
                 in = popen(cmd, "r");
 
-                /*skipping all lines marked till output_offset*/
-                for (i = 0; i < output_offset; i++)
-                    getline(&offset_line, &offset_len, in);
-
                 /*breaking if target does not report failure*/
                 output_ch[0] = (char)fgetc(in);
                 if (output_ch[0] == 'F')
@@ -552,7 +548,7 @@ namespace thesis {
                     }
                     logger_thread.join();
                     trial_start_index = 0;
-                    flipper_size *= flipper_reduction_factor; //exponential reduction in neighbourhood size
+                    // flipper_size *= flipper_reduction_factor; //exponential reduction in neighbourhood size
                 }
             }
             catch(const char* msg) {

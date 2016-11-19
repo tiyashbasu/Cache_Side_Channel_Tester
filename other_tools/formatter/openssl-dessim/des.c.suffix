@@ -1,9 +1,0 @@
-};
-
-		//klee_make_symbolic(key_data, 8 * sizeof(key_data[0]), "des_key");
-
-    DES_set_key_unchecked(&key_data, &ks);
-    memcpy(in, plain_data[0], 8);
-   	DES_ecb_encrypt(&in, &out, &ks, DES_ENCRYPT);
-}
-
