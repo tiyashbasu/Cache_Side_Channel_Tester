@@ -8,40 +8,41 @@ This program can be run in two different ways:
 
 **1. Using isolcpus instruction.**
 
-	To use this method, you need to execute 'isolcpus=xx' as a kernel command, when your system is booting up. Here, xx is the CPU core number you want to isolate. 	For example '0', '1', '0,1' or '0-2'.
+To use this method, you need to execute 'isolcpus=xx' as a kernel command, when your system is booting up. Here, xx is the CPU core number you want to isolate. 	For example '0', '1', '0,1' or '0-2'.
 
-	To execute the isolcpus command, this (works in ubuntu) is one of the many ways:
+To execute the isolcpus command, this (works in ubuntu) is one of the many ways:
 
-	a. Open /etc/default/grub
+a. Open /etc/default/grub
 
-	b. Locate the line which looks something like this: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+b. Locate the line which looks something like this: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 
-	c. Add 'isolcpus=xx command to it'. For example, edit it to lmake it look like GRUB_CMDLINE_LINUX_DEFAULT="quiet splash isolcpus=0,1"
+c. Add 'isolcpus=xx command to it'. For example, edit it to lmake it look like GRUB_CMDLINE_LINUX_DEFAULT="quiet splash isolcpus=0,1"
 
-	d. Run update-grub in your command line. You probably need to run it with admin rights (sudo).
+d. Run update-grub in your command line. You probably need to run it with admin rights (sudo).
 
-	e. Reboot your system.
+e. Reboot your system.
 
-	f. Once rebooted, you will have isolated your CPU core(s) successfully *from user threads*, which you can check n=by running *top* and then pressing 1. Kernel threads may and probably will run on it.
-	
-	For further isolation, you could set IRQ affinity to other CPU cores by using the script set_irq_affinity.sh. Running it with the affinity mask as its parameter. For example
+f. Once rebooted, you will have isolated your CPU core(s) successfully *from user threads*, which you can check n=by running *top* and then pressing 1. Kernel threads may and probably will run on it.
 
-	```
-	$ ./set_irq_parameter.sh 0c
-	```
+For further isolation, you could set IRQ affinity to other CPU cores by using the script set_irq_affinity.sh. Running it with the affinity mask as its parameter. For example
 
-	Here 0c is the affininty mask corresponding to 'isolcpus=0,1'.
-	Once the CPU cores are successfully isolated, set CPU_NO (see Environment Variables section) to run the program in your desired CPU core.
+```
+$ ./set_irq_parameter.sh 0c
+```
+
+Here 0c is the affininty mask corresponding to 'isolcpus=0,1'.
+Once the CPU cores are successfully isolated, set CPU_NO (see Environment Variables section) to run the program in your desired CPU core.
+
 
 **2. Using cpusets.**
 
-	CPU cores can also be shielded (similar to isolated) using cset command (install package *cpuset* for this). The following steps should suffice:
+CPU cores can also be shielded (similar to isolated) using cset command (install package *cpuset* for this). The following steps should suffice:
 
-	a. To shield CPU cores 0 and 1, run script cset-start.sh given in the root folder.
+a. To shield CPU cores 0 and 1, run script cset-start.sh given in the root folder.
 
-	b. Then execute the script cset-exec.sh, also given in the root folder, in this format: ./cset-exec.sh cpu_no(e.g., 0, 1) executable_name arguments. An example is present in the script file itself.
+b. Then execute the script cset-exec.sh, also given in the root folder, in this format: ./cset-exec.sh cpu_no(e.g., 0, 1) executable_name arguments. An example is present in the script file itself.
 
-	c. Once you are done with the execution, unshield the CPU cores using the script cset-stop.sh, also given in the root folder.
+c. Once you are done with the execution, unshield the CPU cores using the script cset-stop.sh, also given in the root folder.
 
 One could use both methods together, like running the isolcpus command first, and then running the program using cpusets. However, only isolcpus should be sufficient.
 
