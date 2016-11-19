@@ -6,7 +6,7 @@ Here is the source to make executables which compile the benchmarks with the giv
 
 This program can be run in two different ways:
 
-**1. Using isolcpus instruction.**
+1. Using isolcpus instruction.
 
 	To use this method, you need to execute 'isolcpus=xx' as a kernel command, when your system is booting up. Here, xx is the CPU core number you want to isolate. 	For example '0', '1', '0,1' or '0-2'.
 
@@ -33,7 +33,7 @@ This program can be run in two different ways:
 	Here 0c is the affininty mask corresponding to 'isolcpus=0,1'.
 	Once the CPU cores are successfully isolated, set CPU_NO (see Environment Variables section) to run the program in your desired CPU core.
 
-**2. Using cpusets.**
+2. Using cpusets.
 
 	CPU cores can also be shielded (similar to isolated) using cset command (install package *cpuset* for this). The following steps should suffice:
 
