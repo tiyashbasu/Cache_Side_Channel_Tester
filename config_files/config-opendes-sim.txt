@@ -1,0 +1,30 @@
+## The following parameters are related to the target_name under test.
+
+# The location of the executable.
+target_dir: ./Test-Programs/openssl-dessim
+
+# The name of the executable file.
+program_name: dessim-lm
+
+# The number of parameters the target_name accepts. This should always be placed above 'counts' parameter.
+no_of_params: 8
+
+# The size of the the list of choices for each parameter.
+counts: 5 5 5 5 5 5 5 5
+
+# Number of times the target_name should be executed in each round of execution.
+exec_times: 1000
+
+## The following parameters are related to the simulated annealing process.
+
+# The initial temperature.
+t_init: 3
+
+# The final temperature.
+t_final: 0.2
+
+# Factor of temperature reduction.
+alpha: 0.85
+
+# Maximum number of trials for each temperature.
+max_trials: 15

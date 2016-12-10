@@ -1,38 +1,87 @@
-# Tiyash Basu - Master Thesis Project
+# Cache Side-Channel Leakage Tester
 
-This project aims to develop a system which generates test data sets automatically, for a given target_name, by running simulated annealing on the target_name inputs.
+Cache timing attacks retrieve secret information (e.g. a secret key) about a program by analyzing the cache behaviour in program executions. It is, therefore, crucial to understand whether a program is vulnerable to cache timing attacks. But how can we test a program to discover its vulnerability against cache timing attacks? In this repository, we present a test generation methodology that systematically discovers the cache side-channel leakage of arbitrary software binaries. At the core of our test generation is a method that systematically search the program input space and it adapts based on the observed cache performance in the executed tests. We have implemented our test generator and evaluated it with several open-source subject programs, including programs from OpenSSL and Linux GDK libraries. Our evaluation effectively reveals cache side-channel leakage in such real-world programs. We also empirically show that our test generator is more effective in revealing cache side-channel leakage than traditional fuzz testing tools Radamsa and AFL.
 
 
-## Build instructions
+## Build Instructions
 
+To build the test generator, please run the following command in the root directory:
 Execute
 ```
 make clean all
 ```
 
-The build generates two executable binaries: thesisdev_s and thesisdev_p
+This generates two executable binaries: cache_sc_tester_s and cache_sc_tester_p
 
-thesisdev_s executes the target serially, i.e., one by one. Ideally, this should be used when parallel executions of a target will affect each other's output.
+*cache_sc_tester_s* executes the target serially, i.e., one by one. Ideally, this should be used when parallel executions of a target will affect each other's output.
 
-thesisdev_p executes the target parallely. Ideally, this should be used when parallel executions of a target will not affect each other's output.
+*cache_sc_tester_p* executes the target parallely. Ideally, this should be used when parallel executions of a target will not affect each other's output.
 
 
-## Execution instruction
+To run tests on the benchmarks we have evaluated, one needs to build the provided wrappers first. These wrappers execute instrumented code for the relevant platform (simplescalar simulator or local native hardware). Please run the following commands to build these wrappers:
+```
+cd ./wrappers/cache_misses_local
+make all
+cd ../cache_misses_simulator
+make all
+cd ../csv-exec
+make all
+cd ../..
+```
 
-Input Parameters:
-1. A configuration file. Look at sample present in the root folder.
-2. The name of the output report file
+Please note that for all the commands mentioned above, the working directory of shell should be this tool's folder. For example, if one extracts the contents of this repository to 'cache-side-channel-tester' folder, then the working directry of the shell prompt is '/path/to/cache-side-channel-tester'.
+
+
+## Execution Instructions
+
+To run the test generator, the following input parameters are required:
+1. A configuration file (for example, config-sim.txt and config-real.txt)
+2. The name of the output log file
 
 Example:
 ```
-$ ./thesisdev_p config.txt report.txt
+$ ./cache_sc_tester_p config_sim.txt evaluation.log
 ```
 
-On execution, additional output files are generated in 'data' folder.
+On execution, the output files are generated in 'data' folder.
 
 
-### Graph to view progress
+## Running a Small Test
 
-A script to generate a graph from the execution data is included. Run plotter.sh to generate all graphs from the already done experiments.
+A script named *test.sh* has been provided in this directory. This script runs two tests on a basic AES implementation: one on the simplscalar based simluator, and another one on the local machine. The results of the tests are stored in the folders *basic_aes_sim_results* and *basic_aes_real_results* respectively.
 
-*_Only works on *nix platforms_*
+This script also evaluates the results against inputs generates by AFL and Radamsa for the same program. The comparison plots are saved as basic_aes_sim_results.png and basic_aes_local_results.png respectively.
+
+Please note that this script does not generate fresh test inputs from AFL and Radamsa. It just uses some inputs which had been generated before, stored in the folder *test*, in files afl-aes.csv and radamsa-aes.csv.
+
+To generate fresh test inputs from AFL, please perform the following steps:
+1. Download AFL and extract it to the folder named 'AFL', which is present in this directory.
+2. Build AFL by running ```make```.
+3. Run the following command from AFL directory:
+```
+./fuzz-aes.sh
+```
+This will start AFL's execution on the source file *AFL/test_sources/aes.c*.
+4. Press Ctrl+C to stop AFL when around 600000 tests are generated. This terminates AFL, and the tests generated by AFL are saved in a file named *afl-aes.csv*.
+5. Copy *afl-aes.csv* to the folder named *test*, present in the root location. Overwrite if prompted.
+
+Now *test.sh* will use the tests which AFL just generated.
+
+To generate fresh test inputs from Radamsa, please perform the following steps:
+1. Download and extract Radamsa (in any directory).
+2. Build Radamsa by running ```make```.
+3. Run the following command from AFL Radamsa
+```
+echo "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16" | bin/radamsa -n 600000 > radamsa-aes.csv
+```
+This will start AFL's execution on the source file *AFL/test_sources/aes.c*.
+4. After this command's execution, the tests generated by Radamsa are saved in a file named *radamsa-aes.csv*.
+5. Copy *radamsa-aes.csv* to the folder named *test*, present in the root location of this software. Overwrite if prompted.
+
+Now *test.sh* will use the tests which Radamsa just generated.
+
+
+## Recreating the experiment results
+Please run the script *recreate.sh* to recreate the experiments we conducted. Again, for AFL and Radamsa, previously created inputs are used here. For creating fresh inputs using AFL and Radamsa, please follow the steps mentioned above. For AFL, additional scripts, e.g., fuzz-gdklib_name.sh, fuzz-openssl_aes.sh, etc. have been provided.
+
+Please note that recreating the experiments can take a *very long* time. Please feel free to tweak the config files, provided in the folder named 'config_files', to shorten the execution duration for their respective tests.

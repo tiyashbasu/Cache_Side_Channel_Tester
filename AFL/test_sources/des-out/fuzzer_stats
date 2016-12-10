@@ -1,0 +1,27 @@
+start_time        : 1479399508
+last_update       : 1479399515
+fuzzer_pid        : 16468
+cycles_done       : 18
+execs_done        : 28443
+execs_per_sec     : 1066.67
+paths_total       : 2
+paths_favored     : 1
+paths_found       : 0
+paths_imported    : 0
+max_depth         : 1
+cur_path          : 0
+pending_favs      : 0
+pending_total     : 0
+variable_paths    : 0
+stability         : 100.00%
+bitmap_cvg        : 0.02%
+unique_crashes    : 0
+unique_hangs      : 0
+last_path         : 0
+last_crash        : 0
+last_hang         : 0
+execs_since_crash : 28443
+exec_timeout      : 20
+afl_banner        : openssl_des
+afl_version       : 2.35b
+command_line      : ./afl-fuzz -i ./test_sources/des-in -o ./test_sources/des-out -f ./test_sources/afl-mutations ./test_sources/openssl_des @@
