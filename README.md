@@ -1,6 +1,6 @@
 # Cache Side-Channel Leakage Tester
 
-## Winner of the BEST PAPER AWARD at ITEQS 2017
+## Winner of the BEST PAPER AWARD at 10th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW), 2017 
 
 Cache timing attacks retrieve secret information (e.g. a secret key) about a program by analyzing the cache behaviour in program executions. It is, therefore, crucial to understand whether a program is vulnerable to cache timing attacks. But how can we test a program to discover its vulnerability against cache timing attacks? In this repository, we present a test generation methodology that systematically discovers the cache side-channel leakage of arbitrary software binaries. At the core of our test generation is a method that systematically search the program input space and it adapts based on the observed cache performance in the executed tests. We have implemented our test generator and evaluated it with several open-source subject programs, including programs from OpenSSL and Linux GDK libraries. Our evaluation effectively reveals cache side-channel leakage in such real-world programs. We also empirically show that our test generator is more effective in revealing cache side-channel leakage than traditional fuzz testing tools Radamsa and AFL.
 
