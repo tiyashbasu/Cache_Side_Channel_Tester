@@ -62,9 +62,9 @@ rc('axes',edgecolor='grey')
 plt.figure(figsize=(10,6))
 
 #plotting the data
-plt.plot(x_axis_points, our_results_plot_data, 'k-', linewidth='1', label='Our test generation tool')
-plt.plot(x_axis_points, afl_results_plot_data, 'k--', linewidth='2', color='0.4', label='AFL')
-plt.plot(x_axis_points, rad_results_plot_data, 'k-.', linewidth='3', color='0.2', label='Radamsa')
+plt.plot(x_axis_points, our_results_plot_data, 'k-', linewidth='3', label='Our test generation tool')
+plt.plot(x_axis_points, afl_results_plot_data, 'k--', linewidth='4', label='AFL')
+plt.plot(x_axis_points, rad_results_plot_data, 'k-.', linewidth='5', label='Radamsa')
 
 #adding labels to the plot
 plt.xlabel("Number of tests", fontsize=large_fontsize)
