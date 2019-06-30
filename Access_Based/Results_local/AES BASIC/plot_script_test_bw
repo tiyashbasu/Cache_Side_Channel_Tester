@@ -1,0 +1,31 @@
+set terminal png
+#set size 1.2,1.0
+unset grid
+#set title "Cache Side-channel Leakage and Refinement (observation via miss count)"
+set ylabel "Number of unique cache sets accessed"
+set xlabel "Number of tests"
+#set xrange [1:16]
+#set yrange [1:100]
+#set logscale y
+#set xtics ("" 0, "cnt" 1, "fir" 2, "fdct" 3, "expint" 4, "qurt" 5, "nsichneu" 6, "edn" 7, "ludcmp" 8, "ns" 9, "ndes" 10, "bsort100" 11, "adpcm" 12, "st" 13)
+#set xtics ("1" 0, "2" 1, "3" 2, "4" 3, "5" 4, "6" 5, "7" 6, "8" 7, "9" 8, "10" 9, "11" 10, "12" 11, "13" 12, "14" 13, "15" 14, "16" 15)
+#set xtics mirror rotate by -45
+#unset xtics
+set boxwidth 0.9 relative
+#set style histogram
+#set style data histogram
+#set style fill solid 1.0 border -1
+set border
+set key above
+#unset key
+set style data lines
+
+#plot 'aes.decision.time' using (150+$1):2 lw 2 ps 2 title 'AES from OpenSSL',\
+#		 'des.decision.time' using (91+$1):(column(0)) lw 1 ps 2 title 'DES from OpenSSL'
+
+unset title
+set output 'aes_leakage.png'
+plot 'CLANK_plot.log'  using 2 lw 3 lt -1 title 'Our test generation tool',\
+ 'AFL_plot.log' using 2 lw 3 dashtype "." title 'AFL',\
+ 'RADAMSA_plot.log' using 2 lw 3 dashtype "._"  title 'RADAMSA'
+
